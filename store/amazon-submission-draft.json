@@ -1,5 +1,5 @@
 {
-  "status": "console_draft_created_forms_in_progress",
+  "status": "saved_in_amazon_console_incomplete_not_submitted",
   "app": {
     "internal_title": "Possessory",
     "package_name": "app.possessory",
@@ -9,8 +9,8 @@
     "category_preference": "Productivity",
     "operator": "O. Bankole",
     "support_email": "banksmi@mail.com",
-    "support_url": null,
-    "privacy_policy_url": null
+    "support_url": "https://github.com/lanray07/Possessory",
+    "privacy_policy_url": "https://github.com/lanray07/Possessory/blob/main/docs/privacy.md"
   },
   "listing": {
     "locale": "en-GB",
@@ -74,17 +74,14 @@
     "exports": "User-selected destination may be a cloud document provider.",
     "billing": "When configured, Amazon user ID and purchase receipt ID are sent to the verification service; currently disabled.",
     "localization": "Static text resources; no runtime translation provider.",
-    "note": "Assess Amazon SDK and speech-provider behaviour against the questionnaire definitions before saving final privacy declarations."
+    "note": "Voice/sound recording collection for app functionality saved for review. Transfer marked No under Amazon user-initiated/service-provider exceptions. Reassess when production billing and device speech providers are configured."
   },
   "reviewer_notes": "No app account or login is required. On first launch create a household and rooms, then add belongings. Optional microphone and notification permissions may be declined. Billing is disabled in this engineering preview. This build is not ready for production submission.",
   "owner_inputs_pending": [
-    "Developer-console sign-in and actual app entry",
-    "Public support and approved privacy-policy URLs",
-    "Final package identity and release signing configuration",
-    "Amazon app/product identifiers and deployed verification service",
-    "Device screenshots and real Fire-device validation",
-    "Approved listing translations and release language selection",
-    "Any legal declarations, identity, banking or tax details requested by the account"
+    "Release signing configuration and production readiness",
+    "Real device screenshots and validation",
+    "Export-compliance declaration based on owner review",
+    "Amazon product configuration before enabling paid upgrades"
   ],
   "sources": [
     "https://developer.amazon.com/docs/app-submission/appstore-details.html",
@@ -94,6 +91,25 @@
   "console": {
     "app_id": "amzn1.devportal.mobileapp.f034ddb4f3e14a5297befed9c46e03e8",
     "release_id": "amzn1.devportal.apprelease.2ad9ee167e1e48019eca90bc7c489cb1",
-    "submitted": false
+    "submitted": false,
+    "saved_sections": [
+      "app title and support contact",
+      "English release language",
+      "English US listing descriptions, five features and keywords",
+      "free app pricing",
+      "worldwide availability",
+      "adult target audience",
+      "complete content-rating questionnaire",
+      "voice privacy declaration saved for review",
+      "public privacy URL",
+      "512px and 114px icons",
+      "promotional banner"
+    ],
+    "remaining_required": [
+      "release-signed APK",
+      "supported device selection after binary upload",
+      "at least three accurate device screenshots",
+      "owner export-compliance declaration"
+    ]
   }
 }

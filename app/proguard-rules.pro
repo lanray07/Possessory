@@ -1,0 +1,7 @@
+-keep class com.googlecode.tesseract.** { *; }
+-keep class app.possessory.data.** { *; }
+-keep class app.possessory.services.Snapshot { *; }
+-keep class app.possessory.services.LicenseClaims { *; }
+-keep class app.possessory.services.SignedLicense { *; }
+-keep class com.amazon.** { *; }
+-dontwarn com.amazon.**

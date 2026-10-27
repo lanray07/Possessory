@@ -1,0 +1,21 @@
+{
+  "title": "Possessory – Accueil Inventaire & Suivi de garantie",
+  "short_description": "Gardez les effets personnels, les reçus et les détails de garantie bien organisés sur votre appareil.",
+  "description": "Donnez tout ce que vous possédez. Possessory Les fonctions de base de l'inventaire fonctionnent hors ligne et aucun compte n'est requis. Créez des registres d'inventaire entretenus par l'utilisateur et choisissez ce qu'il faut inclure avant d'exporter. La reconnaissance vocale dépend du support de l'appareil et peut utiliser un service réseau. Les rapports ne sont pas des évaluations certifiées par l'assureur. Cette liste est une ébauche et ne doit pas être publiée avant validation de la version.",
+  "hero_headline": "Accueil Suivi des stocks",
+  "hero_caption": "Gardez tout ce que vous possédez magnifiquement organisé.",
+  "rooms_headline": "Organisez les Appartenances par Chambre",
+  "rooms_caption": "Trouvez les articles ménagers rapidement et facilement.",
+  "warranties_headline": "Reçu et suivi de garantie",
+  "warranties_caption": "Conservez les reçus et les détails de garantie ensemble.",
+  "ocr_headline": "Scanner les reçus et enregistrer les enregistrements",
+  "ocr_caption": "Vérifiez les détails d'achat avec moins de frappe.",
+  "reports_headline": "Rapports des stocks d'assurance habitation",
+  "reports_caption": "Créer des registres organisés des effets personnels des ménages.",
+  "voice_headline": "Gestionnaire d'inventaire à puissance vocale",
+  "voice_caption": "Utilisez des commandes vocales prises en charge sur des appareils compatibles.",
+  "offline_headline": "Application d'inventaire hors ligne",
+  "offline_caption": "Accédez à votre inventaire sans internet.",
+  "reminders_headline": "Rappels d'expiration de garantie",
+  "reminders_caption": "Gardez une trace des prochaines dates de garantie."
+}

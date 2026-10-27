@@ -1,0 +1,16 @@
+{
+  "title": "Possessory destek desteği desteği desteği",
+  "getting_started": "Bir ev oluşturun, parasını seçin ve odaları ekleyin. Satın alma detayları ve opsiyonel garanti tarihi ile bir eşya ekleyin.",
+  "where_is_my_data": "Bu cihazda uygulamanın özel depolamasında zorunlu kayıtlar ve ekler depolanır. Hiçbir şey sessiz bir şekilde senkronize edilmez. Yerel verileri kaldırmak, böylece ilk bir yedek doğrulamak.",
+  "receipts": "Bir eşya açın ve bir makbul görüntü veya ekleyin PDFYorum kullanın ve inceleme imajını döndürmek veya bitirmek için makbuz kullanın ve cihazınızda İngilizce metin ekstraksiyonu çalıştırın.Uygulamadan önce her öneriyi kontrol edin.The complete original ek is protected; PDF Ekstraksiyon ilk sayfayı kullanır.",
+  "backup": "Ayarlarda, bir tasarruf ZIP Metadata ve eks ile yedekleme. Seçmeli olarak şifre korumayı seçin ve en az on iki karakter kullanın. Şifreyi güvenli bir şekilde tut: geri kazanılamaz. geri yükleme boyutu limiti geri kazanılamaz. 100 MiB Dekompresyon; bireysel ek ithalat sınırlı 25 MiB.",
+  "restore": "Ayarlarda bir yedek açın, şifresini girin ve ithalat önizlemesini inceler. Possessory şemayı kontrol edin, ekinler ve kayıt referansları. Mevcut kayıt kimlikleri tutulur ve sadece yeni kayıtları birleştirilir. Eşyalarınızı ve eklerinizi geri yüklemeden sonra onaylayın.",
+  "reminders": "Ayarlarda enable isteğe bağlı hatırlatmalar ve ne zaman talep edildiğinde bildirimleri izin verin. Possessory Önümüzdeki garanti tarihlerini kontrol edin ve yaklaşık günlük bakım planlayın. Cihazın gücü yönetimi bildirimleri geciktirebilir. Hatırlatmalar profesyonel güvenlik denetimlerini değiştirmezler.",
+  "voice": "Mikrofon kısayolunu kullanın, tanınan kelimeleri gözden geçirin ve istenen ekranı açın. Desteklenen İngilizce komutları, dizüstü bilgisayarımı bul, mutfakdaki eşyaları göster, yeni bir öğe ekleyin ve envanter özetini gösterin. Cihazın tanınmamış hizmeti yoksa bir komut yazın.",
+  "reports": "Bir oda seçin, kayıt filtre ve çıktı formatı. İnceleme seri numarası ve kaydedilen değer ayarları tasarruf etmeden önce. Ekrandaki önbellekli ilk altı eşleştirme kayıtlarını gösterir. Raporlar kullanıcı tarafından korunan envanter kayıtlarıdır ve sigortalanmamış değerlemelerdir.",
+  "premium": "Amazon alışverişleri ürün ve doğrulama servisi yapılandırılırsa kullanılamaz. Doğrulanmış bir Premium satın alma yeni-item ve ev limitlerini kaldırır. Satın alma tanımlayıcıları, yapılandırılmış maküla servisi ile kontrol edilir. Offline imzalanmış erişim devam eder. 90 Rahatlamadan önce günler. Mevcut kayıtlarınız ve kesinti araçlarınız Premium olmadan erişilebilir kalır.",
+  "warranties": "Garanti tarihleri ve koşullar sizin tarafından sağlanır. Üretici garantileri ve yasal tüketici hakları ayrıdır. Possessory Sorumluluk belirlemez veya kesin yasal tavsiye sağlar.",
+  "delete": "Kayıtlarını, eklerini ve bakım girişlerini kaldırmak için ayrıntılı ekrandan bir eşya seçin. Her yerel kaydı kaldırmak ve ayarlamak için, tüm yerel verileri Ayarlarda kullanın ve başka yerlerde ihraç ettiğiniz dosyalar silinmez.",
+  "contact_label": "İletişim desteği",
+  "draft_notice": "Mühendislik önizleme desteği taslağı. Cihazın özel geçerliliği ve çeviri incelemesi bekliyor."
+}

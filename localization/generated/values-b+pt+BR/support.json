@@ -1,0 +1,16 @@
+{
+  "title": "Possessory apoio",
+  "getting_started": "Criar uma casa, escolher sua moeda e adicionar quartos, adicionar um pertence com seus detalhes de compra e garantia opcional data de expiração.",
+  "where_is_my_data": "Registros de inventário e anexos são armazenados no armazenamento privado do aplicativo neste dispositivo, nada é sincronizado silenciosamente, desinstalar remove dados locais, então salve e verifique um backup primeiro.",
+  "receipts": "Abra um pertence e anexe uma imagem de recibo ou PDFUse a revisão e a extração do recibo para rodar ou aparar a imagem da revisão e executar a extração de texto em inglês em seu dispositivo. PDF A extração usa a primeira página.",
+  "backup": "Em configurações, salve um ZIP Opcionalmente, escolha a proteção de senha e use pelo menos 12 caracteres, mantenha a senha segura, não pode ser recuperada, o limite de tamanho da restauração é de 12 caracteres. 100 MiB As importações de anexos individuais são limitadas a 25 MiB.",
+  "restore": "Abra um backup em Configurações, digite sua senha se criptografada e inspecione a pré-visualização da importação. Possessory Verifica o esquema, os hashes de anexos e as referências de registros, as identidades de registros existentes são mantidas e só novos registros são mesclados, verifique seus pertences e anexos após a restauração.",
+  "reminders": "Ative lembretes opcionais em Configurações e permita notificações quando solicitado. Possessory O gerenciamento de energia de dispositivos pode atrasar as notificações, lembretes não substituem as inspeções de segurança profissional.",
+  "voice": "Use o atalho do microfone, reveja as palavras reconhecidas e abra a tela solicitada.",
+  "reports": "Escolha uma sala, filtro de registro e formato de saída, reveja as configurações de número de série e valor gravado antes de salvar, a pré-visualização na tela mostra os primeiros seis registros correspondentes, relatórios são registros de inventário mantidos pelo usuário e não são avaliações certificadas pela seguradora.",
+  "premium": "As compras da Amazon não estão disponíveis até que o produto e o serviço de verificação estejam configurados. 90 Seus registros existentes e ferramentas de eliminação permanecem acessíveis sem o Premium.",
+  "warranties": "As datas e termos de garantia são fornecidos por você, as garantias do fabricante e os direitos legais do consumidor são separados. Possessory não determina a elegibilidade ou fornece aconselhamento legal definitivo.",
+  "delete": "Para remover todos os registros e configurações locais, use Excluir todos os dados locais nas configurações e confirme.",
+  "contact_label": "Contato de suporte",
+  "draft_notice": "Validação específica de dispositivos e revisão de tradução estão pendentes."
+}

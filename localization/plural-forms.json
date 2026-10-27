@@ -1,0 +1,6 @@
+{
+  "pl": {
+    "inventory_count": {"one":"%d przedmiot", "few":"%d przedmioty", "many":"%d przedmiotów", "other":"%d przedmiotów"},
+    "reminder_count": {"one":"%d przypomnienie domowe wymaga uwagi.", "few":"%d przypomnienia domowe wymagają uwagi.", "many":"%d przypomnień domowych wymaga uwagi.", "other":"%d przypomnień domowych wymaga uwagi."}
+  }
+}

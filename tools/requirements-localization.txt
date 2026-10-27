@@ -1,0 +1,4 @@
+ctranslate2==4.8.4
+sentencepiece==0.2.2
+sacremoses==0.1.1
+subword-nmt==0.3.8

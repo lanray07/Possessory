@@ -1,0 +1,21 @@
+{
+  "title": "Possessory – Home Inventário e rastreador de garantia",
+  "short_description": "Mantenha os pertences, recibos e detalhes de garantia lindamente organizados em seu dispositivo.",
+  "description": "Dá tudo o que tens. Possessory ajuda- o a gravar os pertences domésticos por sala, anexar recibos e fotografias, acompanhar as datas da garantia e organizar a manutenção. Funções do inventário principal funcionam offline e nenhuma conta é necessária. Crie registos de inventário mantidos pelo utilizador e escolha o que incluir antes de exportar. O reconhecimento de voz depende do suporte do dispositivo e pode usar um serviço de rede. Os relatórios não são avaliações certificadas pela seguradora. Esta listagem é um rascunho e não deve ser publicada antes da validação da versão.",
+  "hero_headline": "Rastreador de Inventário Home",
+  "hero_caption": "Mantenha tudo o que você possui lindamente organizado.",
+  "rooms_headline": "Organize Pertencentes por Quarto",
+  "rooms_caption": "Encontre itens domésticos de forma rápida e fácil.",
+  "warranties_headline": "Monitor de recepção e garantia",
+  "warranties_caption": "Mantenha recibos e detalhes de garantia juntos.",
+  "ocr_headline": "Digitalizar recibos e salvar registros",
+  "ocr_caption": "Reveja detalhes de compra com menos digitação.",
+  "reports_headline": "Relatórios de Inventário de Seguros Domésticos",
+  "reports_caption": "Criar registros organizados de bens domésticos.",
+  "voice_headline": "Gestor de Inventário de Voz",
+  "voice_caption": "Usar comandos de voz suportados em dispositivos compatíveis.",
+  "offline_headline": "Aplicação de Inventário Offline Home",
+  "offline_caption": "Acesse seu inventário sem internet.",
+  "reminders_headline": "Avisos de expiração da Garantia",
+  "reminders_caption": "Acompanhe as próximas datas de garantia."
+}

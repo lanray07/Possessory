@@ -1,0 +1,21 @@
+{
+  "title": "Possessory Home Inventory & Warranty Tracker",
+  "short_description": "Håll tillhörigheter, kvitton och garanti detaljer vackert organiserade på din enhet.",
+  "description": "Ge allt du äger en plats. Possessory hjälper dig att spela in hushållstillhörigheter per rum, bifoga kvitton och foton, spåra garantidatum och organisera underhåll. Kärninventeringsfunktioner fungerar offline och inget konto krävs. Skapa användarupprätthållna lagerrekord och välj vad som ska inkluderas innan du exporterar. Talkigenkänning beror på enhetsstöd och kan använda en nätverkstjänst. Rapporter är inte försäkringscertifierade värderingar. Denna lista är ett utkast och får inte publiceras innan release validering.",
+  "hero_headline": "Home Inventory Tracker",
+  "hero_caption": "Håll allt du äger vackert organiserat.",
+  "rooms_headline": "Organisera tillhörigheter av rummet",
+  "rooms_caption": "Hitta hushållsartiklar snabbt och enkelt.",
+  "warranties_headline": "Receipt & Warranty Tracker",
+  "warranties_caption": "Håll kvitton och garanti detaljer tillsammans.",
+  "ocr_headline": "Scan Receipts & Save Records",
+  "ocr_caption": "Granska inköpsdetaljer med mindre typning.",
+  "reports_headline": "Home Insurance Inventory Reports",
+  "reports_caption": "Skapa organiserade register över hushållens tillhörigheter.",
+  "voice_headline": "Voice-Powered Inventory Manager",
+  "voice_caption": "Använd stödda röstkommandon på kompatibla enheter.",
+  "offline_headline": "Offline Home Inventory App",
+  "offline_caption": "Få tillgång till ditt lager utan internet.",
+  "reminders_headline": "Garantiförfall påminner",
+  "reminders_caption": "Håll koll på kommande garantidatum."
+}

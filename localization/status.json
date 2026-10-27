@@ -1,0 +1,192 @@
+{
+  "en-GB": {
+    "state": "validated",
+    "human_reviewer": null,
+    "release_approved": false,
+    "provider": "English source with regional spelling",
+    "issues": [
+      "Regional and release review pending"
+    ],
+    "bundled_in_preview": true
+  },
+  "en-US": {
+    "state": "validated",
+    "human_reviewer": null,
+    "release_approved": false,
+    "provider": "English source with regional spelling",
+    "issues": [
+      "Regional and release review pending"
+    ],
+    "bundled_in_preview": true
+  },
+  "en-AU": {
+    "state": "validated",
+    "human_reviewer": null,
+    "release_approved": false,
+    "provider": "English source with regional spelling",
+    "issues": [
+      "Regional and release review pending"
+    ],
+    "bundled_in_preview": true
+  },
+  "es-ES": {
+    "state": "machine_translated",
+    "human_reviewer": null,
+    "release_approved": false,
+    "provider": "Argos/CTranslate2 (development only)",
+    "issues": [
+      "Human translation, regional terminology, plurals, RTL and layout review pending"
+    ],
+    "bundled_in_preview": true
+  },
+  "es-419": {
+    "state": "machine_translated",
+    "human_reviewer": null,
+    "release_approved": false,
+    "provider": "Argos/CTranslate2 (development only)",
+    "issues": [
+      "Human translation, regional terminology, plurals, RTL and layout review pending"
+    ],
+    "bundled_in_preview": true
+  },
+  "fr-FR": {
+    "state": "machine_translated",
+    "human_reviewer": null,
+    "release_approved": false,
+    "provider": "Argos/CTranslate2 (development only)",
+    "issues": [
+      "Human translation, regional terminology, plurals, RTL and layout review pending"
+    ],
+    "bundled_in_preview": true
+  },
+  "fr-CA": {
+    "state": "machine_translated",
+    "human_reviewer": null,
+    "release_approved": false,
+    "provider": "Argos/CTranslate2 (development only)",
+    "issues": [
+      "Human translation, regional terminology, plurals, RTL and layout review pending"
+    ],
+    "bundled_in_preview": true
+  },
+  "de-DE": {
+    "state": "machine_translated",
+    "human_reviewer": null,
+    "release_approved": false,
+    "provider": "Argos/CTranslate2 (development only)",
+    "issues": [
+      "Human translation, regional terminology, plurals, RTL and layout review pending"
+    ],
+    "bundled_in_preview": true
+  },
+  "it-IT": {
+    "state": "machine_translated",
+    "human_reviewer": null,
+    "release_approved": false,
+    "provider": "Argos/CTranslate2 (development only)",
+    "issues": [
+      "Human translation, regional terminology, plurals, RTL and layout review pending"
+    ],
+    "bundled_in_preview": true
+  },
+  "pt-BR": {
+    "state": "machine_translated",
+    "human_reviewer": null,
+    "release_approved": false,
+    "provider": "Argos/CTranslate2 (development only)",
+    "issues": [
+      "Human translation, regional terminology, plurals, RTL and layout review pending"
+    ],
+    "bundled_in_preview": true
+  },
+  "pt-PT": {
+    "state": "machine_translated",
+    "human_reviewer": null,
+    "release_approved": false,
+    "provider": "Argos/CTranslate2 (development only)",
+    "issues": [
+      "Human translation, regional terminology, plurals, RTL and layout review pending"
+    ],
+    "bundled_in_preview": true
+  },
+  "nl-NL": {
+    "state": "machine_translated",
+    "human_reviewer": null,
+    "release_approved": false,
+    "provider": "Argos/CTranslate2 (development only)",
+    "issues": [
+      "Human translation, regional terminology, plurals, RTL and layout review pending"
+    ],
+    "bundled_in_preview": true
+  },
+  "pl-PL": {
+    "state": "machine_translated",
+    "human_reviewer": null,
+    "release_approved": false,
+    "provider": "Argos/CTranslate2 (development only)",
+    "issues": [
+      "Human translation, regional terminology, plurals, RTL and layout review pending"
+    ],
+    "bundled_in_preview": true
+  },
+  "sv-SE": {
+    "state": "machine_translated",
+    "human_reviewer": null,
+    "release_approved": false,
+    "provider": "Argos/CTranslate2 (development only)",
+    "issues": [
+      "Human translation, regional terminology, plurals, RTL and layout review pending"
+    ],
+    "bundled_in_preview": true
+  },
+  "ja-JP": {
+    "state": "machine_translated",
+    "human_reviewer": null,
+    "release_approved": false,
+    "provider": "Argos/CTranslate2 (development only)",
+    "issues": [
+      "Human translation, regional terminology, plurals, RTL and layout review pending"
+    ],
+    "bundled_in_preview": true
+  },
+  "hi-IN": {
+    "state": "machine_translated",
+    "human_reviewer": null,
+    "release_approved": false,
+    "provider": "Argos/CTranslate2 (development only)",
+    "issues": [
+      "Human translation, regional terminology, plurals, RTL and layout review pending"
+    ],
+    "bundled_in_preview": true
+  },
+  "ar": {
+    "state": "machine_translated",
+    "human_reviewer": null,
+    "release_approved": false,
+    "provider": "Argos/CTranslate2 (development only)",
+    "issues": [
+      "Human translation, regional terminology, plurals, RTL and layout review pending"
+    ],
+    "bundled_in_preview": true
+  },
+  "tr-TR": {
+    "state": "machine_translated",
+    "human_reviewer": null,
+    "release_approved": false,
+    "provider": "Argos/CTranslate2 (development only)",
+    "issues": [
+      "Human translation, regional terminology, plurals, RTL and layout review pending"
+    ],
+    "bundled_in_preview": true
+  },
+  "id-ID": {
+    "state": "machine_translated",
+    "human_reviewer": null,
+    "release_approved": false,
+    "provider": "Argos/CTranslate2 (development only)",
+    "issues": [
+      "Human translation, regional terminology, plurals, RTL and layout review pending"
+    ],
+    "bundled_in_preview": true
+  }
+}

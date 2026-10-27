@@ -1,0 +1,23 @@
+{
+  "title":"Possessory – Home Inventory & Warranty Tracker",
+  "operator":"O. Bankole",
+  "support_email":"banksmi@mail.com",
+  "short_description":"Keep belongings, receipts and warranty details beautifully organised on your device.",
+  "description":"Give everything you own a place. Possessory helps you record household belongings by room, attach receipts and photos, track warranty dates and organise maintenance. Core inventory functions work offline and no account is required. Create user-maintained inventory records and choose what to include before exporting. Speech recognition depends on device support and may use a network service. Reports are not insurer-certified valuations. This listing is a draft and must not be published before release validation.",
+  "hero_headline":"Home Inventory Tracker",
+  "hero_caption":"Keep everything you own beautifully organised.",
+  "rooms_headline":"Organise Belongings by Room",
+  "rooms_caption":"Find household items quickly and easily.",
+  "warranties_headline":"Receipt & Warranty Tracker",
+  "warranties_caption":"Keep receipts and warranty details together.",
+  "ocr_headline":"Scan Receipts & Save Records",
+  "ocr_caption":"Review purchase details with less typing.",
+  "reports_headline":"Home Insurance Inventory Reports",
+  "reports_caption":"Create organised records of household belongings.",
+  "voice_headline":"Voice-Powered Inventory Manager",
+  "voice_caption":"Use supported voice commands on compatible devices.",
+  "offline_headline":"Offline Home Inventory App",
+  "offline_caption":"Access your inventory without internet.",
+  "reminders_headline":"Warranty Expiry Reminders",
+  "reminders_caption":"Keep track of upcoming warranty dates."
+}

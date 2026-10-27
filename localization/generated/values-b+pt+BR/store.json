@@ -1,0 +1,21 @@
+{
+  "title": "Possessory - Inventário e rastreador de garantia",
+  "short_description": "Mantenha pertences, recibos e detalhes de garantia bem organizados em seu dispositivo.",
+  "description": "Dê tudo o que tem. Possessory O reconhecimento de fala depende do suporte do dispositivo e pode usar um serviço de rede.",
+  "hero_headline": "Rastreador de Inventário Home",
+  "hero_caption": "Mantenha tudo bem organizado.",
+  "rooms_headline": "Organize Pertencentes por Quarto",
+  "rooms_caption": "Encontre itens domésticos rápido e facilmente.",
+  "warranties_headline": "Recibo e Rastreador de Garantia",
+  "warranties_caption": "Mantenha recibos e detalhes da garantia juntos.",
+  "ocr_headline": "Scan Recipts & Save Records",
+  "ocr_caption": "Reveja detalhes de compra com menos digitação.",
+  "reports_headline": "Relatórios de Inventário de Seguros",
+  "reports_caption": "Criar registros organizados de pertences domésticos.",
+  "voice_headline": "Gerente de Inventário de Voz",
+  "voice_caption": "Use comandos de voz suportados em dispositivos compatíveis.",
+  "offline_headline": "Aplicativo de Inventário Offline",
+  "offline_caption": "Acesse seu inventário sem internet.",
+  "reminders_headline": "Avisos de expiração da garantia",
+  "reminders_caption": "Acompanhe as próximas datas de garantia."
+}

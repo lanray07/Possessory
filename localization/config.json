@@ -1,0 +1,8 @@
+{
+  "source": "EN",
+  "locales": {"en-GB":"EN-GB", "en-US":"EN-US", "en-AU":"EN-GB", "es-ES":"ES", "es-419":"ES", "fr-FR":"FR", "fr-CA":"FR", "de-DE":"DE", "it-IT":"IT", "pt-BR":"PT-BR", "pt-PT":"PT-PT", "nl-NL":"NL", "pl-PL":"PL", "sv-SE":"SV", "ja-JP":"JA", "hi-IN":"HI", "ar":"AR", "tr-TR":"TR", "id-ID":"ID"},
+  "glossary": {"Possessory":"Possessory"},
+  "provider": "ArgosLocal",
+  "endpoint": "https://api-free.deepl.com/v2/translate",
+  "review_states": ["not_started", "extracted", "machine_translated", "validated", "human_reviewed", "release_approved"]
+}

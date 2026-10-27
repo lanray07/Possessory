@@ -1,0 +1,26 @@
+{
+  "runtime_translation": false,
+  "machine_review_pending": true,
+  "source_sha256": "76ed7634d8fb4df34658710807d490fd3f757fab144a108ba332114e90937bf6",
+  "locales": [
+    "en-GB",
+    "en-US",
+    "en-AU",
+    "es-ES",
+    "es-419",
+    "fr-FR",
+    "fr-CA",
+    "de-DE",
+    "it-IT",
+    "pt-BR",
+    "pt-PT",
+    "nl-NL",
+    "pl-PL",
+    "sv-SE",
+    "ja-JP",
+    "hi-IN",
+    "ar",
+    "tr-TR",
+    "id-ID"
+  ]
+}

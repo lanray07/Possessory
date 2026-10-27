@@ -1,0 +1,86 @@
+[
+  {
+    "language": "ar",
+    "package_version": "1.0",
+    "source": "https://data.argosopentech.com/argospm/v1/translate-en_ar-1_0.argosmodel",
+    "sha256": "e2a6e84337f7ebbb55f9dc61dcba3a861c0d786ae5a46fa198fd8d6473f5c775"
+  },
+  {
+    "language": "de",
+    "package_version": "1.3",
+    "source": "https://data.argosopentech.com/argospm/v1/translate-en_de-1_3.argosmodel",
+    "sha256": "6cd847f0c06c9c66013e6b0932e07fd54a6d90894659c02bf6c5247b72fb25b1"
+  },
+  {
+    "language": "es",
+    "package_version": "1.0",
+    "source": "https://data.argosopentech.com/argospm/v1/translate-en_es-1_0.argosmodel",
+    "sha256": "d698d0ef87ad70d5d184b7fa6965905bf4368f09a2bb9ffb165a79bac96af0c4"
+  },
+  {
+    "language": "fr",
+    "package_version": "1.9",
+    "source": "https://data.argosopentech.com/argospm/v1/translate-en_fr-1_9.argosmodel",
+    "sha256": "3a65ed83364f4e7b06e30f9dd823db1934899ed3ce839e63f46dc7b09dc797b4"
+  },
+  {
+    "language": "hi",
+    "package_version": "1.1",
+    "source": "https://data.argosopentech.com/argospm/v1/translate-en_hi-1_1.argosmodel",
+    "sha256": "60470a003a9c7339db8c060ed8eafc7cf999ba90dfa5dceebd8d0a4f75f1d3f0"
+  },
+  {
+    "language": "id",
+    "package_version": "1.9",
+    "source": "https://data.argosopentech.com/argospm/v1/translate-en_id-1_9.argosmodel",
+    "sha256": "fe5773201222806cfc802a094c5758ada6c25e10dbdd306d0c46bf200aac25fd"
+  },
+  {
+    "language": "it",
+    "package_version": "1.0",
+    "source": "https://data.argosopentech.com/argospm/v1/translate-en_it-1_0.argosmodel",
+    "sha256": "dde2180001a47904ecbbd688a41e35db8a040e4fd5b52e4f29b4bb499516ab32"
+  },
+  {
+    "language": "ja",
+    "package_version": "1.1",
+    "source": "https://data.argosopentech.com/argospm/v1/translate-en_ja-1_1.argosmodel",
+    "sha256": "16300cc4eaa85320520cabcf433b63d01be40ef6966251de72043a083408f716"
+  },
+  {
+    "language": "nl",
+    "package_version": "1.8",
+    "source": "https://data.argosopentech.com/argospm/v1/translate-en_nl-1_8.argosmodel",
+    "sha256": "91406f040619fb519e16af9c304709e9f3195297e626eec6924d62c7c981a33b"
+  },
+  {
+    "language": "pb",
+    "package_version": "1.9",
+    "source": "https://data.argosopentech.com/argospm/v1/translate-en_pb-1_9.argosmodel",
+    "sha256": "1d1cd5e9540c6b38c258bed002a42d3b311b8a189acb74feaa311ef30d175c5b"
+  },
+  {
+    "language": "pl",
+    "package_version": "1.9",
+    "source": "https://data.argosopentech.com/argospm/v1/translate-en_pl-1_9.argosmodel",
+    "sha256": "85d865369326b6d8220876fbd7bc552fa5ec8b99e81161fab4a26f78187cedbc"
+  },
+  {
+    "language": "pt",
+    "package_version": "1.9",
+    "source": "https://data.argosopentech.com/argospm/v1/translate-en_pt-1_9.argosmodel",
+    "sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9"
+  },
+  {
+    "language": "sv",
+    "package_version": "1.5",
+    "source": "https://data.argosopentech.com/argospm/v1/translate-en_sv-1_5.argosmodel",
+    "sha256": "d697224b443d212a04d24eb2ea0b615cb663eb24d4d21b70979673507b4d1e49"
+  },
+  {
+    "language": "tr",
+    "package_version": "1.5",
+    "source": "https://data.argosopentech.com/argospm/v1/translate-en_tr-1_5.argosmodel",
+    "sha256": "2d553a00880a0c21dea5b1c375535659e6bf18c9bf2ce9847c2a2fd2ff50316a"
+  }
+]

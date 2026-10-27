@@ -1,0 +1,17 @@
+# Possessory privacy notice — draft for owner approval
+
+Operator: O. Bankole. Support contact: banksmi@mail.com. Public policy URL and final legal approval remain pending.
+
+Possessory stores household records, photos, receipts, warranty details, maintenance records and preferences on your device in private application storage. No account is required. This preview has no advertising or analytics SDK and does not silently upload inventory or synchronise records.
+
+Receipt text extraction runs locally using an English OCR model. Receipt imports retain their original file. Microphone permission is requested only when you choose voice input. The Android speech provider may transmit audio to its own service and may require internet. Possessory does not retain raw recordings; it displays the recognised transcript for you to review. The device’s text-to-speech provider handles spoken responses.
+
+Document and image pickers grant access to the files you select. Camera capture is delegated to the installed camera application. Document previews may open another application only when you choose to view an attachment. Those applications have their own privacy policies.
+
+Reports and backups are written to the location you select. That location might be a cloud provider if you select one in the system picker. Plain exports and ZIP backups are not encrypted by Possessory. Optional password-protected backups use AES-GCM and require a password of at least twelve characters. Passwords cannot be recovered. Database and attachment encryption beyond device-level protections is not claimed.
+
+You can delete a belonging and its associated files, or delete all local data in Settings. Previously exported files remain wherever you saved them. Uninstalling removes private app data. Keep a verified backup if you want to retain it.
+
+When Amazon billing is configured and you purchase or restore, the Amazon user ID and purchase receipt ID are sent to the configured Possessory verification service. That service checks Amazon’s Receipt Verification Service and issues a signed entitlement. Household inventory, receipts you photograph, item serial numbers and documents are not included. A cached signed entitlement can remain usable offline for up to 90 days; connecting refreshes its verification. Billing is disabled in unconfigured builds. Amazon separately processes purchases under its own policies.
+
+Before publication, the owner must supply the public policy URL, effective date and jurisdiction-specific disclosures and approve the policy and deployed billing service practices. This document is not an approved public policy.

@@ -1,0 +1,63 @@
+{
+  "version": "0.2.0",
+  "version_code": 2,
+  "build": "release, not debuggable",
+  "signing": "Dedicated Possessory RSA 4096-bit key; APK Signature Scheme v2 and v3 verification passed",
+  "signer_certificate_sha256": "e19756432bb702f5f454683d10330ef49bba7eee7848e34cf0eaae6540e111bd",
+  "key_storage": "Private external ~/.android/possessory-signing directory; keystore and credentials excluded from repository and downloads",
+  "validation": {
+    "assembleAmazonRelease": "passed",
+    "assembleStandaloneRelease": "passed",
+    "lintAmazonRelease": {
+      "errors": 0,
+      "warnings": 30
+    },
+    "lintStandaloneRelease": {
+      "errors": 0,
+      "warnings": 31
+    },
+    "zip_alignment_16k": "passed",
+    "physical_device_install_and_launch": "passed on KFTRWI / Android API 28",
+    "normal_backup_import": "passed; one demo household, three rooms, six items and one maintenance task",
+    "visual_screen_review": "Eight real device screen captures checked at 1920x1200; corrected malformed punctuation in inventory rows and date labels"
+  },
+  "release_ui_locales": [
+    "en-GB"
+  ],
+  "draft_preview_locales": 19,
+  "limitations": [
+    "Engineering preview, not a production release approval",
+    "Amazon purchases remain disabled pending configuration and real purchase testing",
+    "OCR, speech, camera, notifications, accessibility and broad device QA remain incomplete",
+    "Other locales remain draft packs in preview builds"
+  ],
+  "screenshot_manifest": "device-captures/en-GB/manifest.json",
+  "files": [
+    {
+      "file": "Possessory-amazon-release-signed.apk",
+      "bytes": 44221625,
+      "sha256": "373d7516e25e4c1672a45c6a6113a8974e62d86c148ccc004e94cba8f15d423f"
+    },
+    {
+      "file": "Possessory-android-release-signed.apk",
+      "bytes": 44057785,
+      "sha256": "a7917752e13e235a35125248d4a57a8e34ae64661e131732131956c9220852f5"
+    },
+    {
+      "file": "Possessory-Fire-screenshots.zip",
+      "bytes": 1130088,
+      "sha256": "b0bc9f01204d5c3e65b35f2d3907e233d20cbcaa865590b202627a9c643b0a1b"
+    },
+    {
+      "file": "Possessory-release-certificate.pem",
+      "bytes": 1814,
+      "sha256": "57520a78cd69fe48a4917e19658dddf9764fe9c262fd75de70a50d9eb24b5f66"
+    }
+  ],
+  "amazon_draft": {
+    "apk_uploaded": true,
+    "screenshots_uploaded": 8,
+    "compatible_tablets_selected": 12,
+    "submitted": false
+  }
+}

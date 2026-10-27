@@ -856,13 +856,13 @@ fun ItemRow(
       )
       if (item.warrantyEnd.isNotBlank())
         Text(
-          s(R.string.warranty_end) + " Â· " + date(item.warrantyEnd),
+          s(R.string.warranty_end) + " · " + date(item.warrantyEnd),
           fontSize = 11.sp,
           color = if (InventoryRules.warranty(item) == "soon") Color(0xFF986D2C) else Sage,
         )
     }
     Text(
-      item.priceMinor?.let { InventoryRules.money(it, item.currency) } ?: "â€”",
+      item.priceMinor?.let { InventoryRules.money(it, item.currency) } ?: "—",
       fontSize = 14.sp,
       fontWeight = FontWeight.Medium,
     )
@@ -1309,10 +1309,10 @@ fun ItemForm(
         )
         Field(s(R.string.purchase_price) + " (${item.currency})", price) { price = it }
         Text(s(R.string.decimal_hint), fontSize = 11.sp)
-        Field(s(R.string.purchase_date) + " Â· YYYY-MM-DD", item.purchaseDate) {
+        Field(s(R.string.purchase_date) + " · YYYY-MM-DD", item.purchaseDate) {
           item = item.copy(purchaseDate = it)
         }
-        Field(s(R.string.warranty_end) + " Â· YYYY-MM-DD", item.warrantyEnd) {
+        Field(s(R.string.warranty_end) + " · YYYY-MM-DD", item.warrantyEnd) {
           item = item.copy(warrantyEnd = it)
         }
         TextButton(onClick = { more = !more }) {
@@ -1326,7 +1326,7 @@ fun ItemForm(
           Field(s(R.string.retailer), item.retailer) { item = item.copy(retailer = it) }
           Field(s(R.string.estimated_value) + " (${item.currency})", estimate) { estimate = it }
           Text(s(R.string.estimate_disclaimer), fontSize = 11.sp)
-          Field(s(R.string.warranty_start) + " Â· YYYY-MM-DD", item.warrantyStart) {
+          Field(s(R.string.warranty_start) + " · YYYY-MM-DD", item.warrantyStart) {
             item = item.copy(warrantyStart = it)
           }
           Field(s(R.string.warranty_provider), item.warrantyProvider) {

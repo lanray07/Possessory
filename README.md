@@ -26,7 +26,7 @@ Translation is development-only and free locally: install tools/requirements-loc
 
 Inventory is empty on first launch. Deterministic demonstration data exists only in tests. Exports use Android’s document destination picker. Attachments live in private app storage, and deleting an item also deletes its attachment files. Uninstalling deletes local records; make a backup first.
 
-The Amazon release build can be produced with `.\gradlew.bat :app:assembleAmazonRelease`. It is intentionally unsigned until the owner supplies a release-signing configuration. Use a signing identity dedicated to this product and preserve it securely.
+Build release variants with `.\gradlew.bat :app:assembleAmazonRelease :app:assembleStandaloneRelease`. Sign the unsigned build output with `python tools/sign_release.py INPUT.apk OUTPUT.apk`. The signing tool uses a dedicated Possessory key in the access-restricted `~/.android/possessory-signing/` directory, outside this repository. Preserve both the keystore and its credentials securely; updates must use the same key. Never upload that directory to GitHub. The signed APK is a release build of the engineering preview, and does not itself constitute release approval.
 
 Original brand files and a 1024×500 promotional banner are in assets/brand. The screenshot composition tool requires capture metadata, matching locales and existing real-device screenshots; it does not invent UI or use development renders as device captures. See tools/screenshot_pack.py.
 

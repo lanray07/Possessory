@@ -20,3 +20,8 @@ tools/ktfmt-metadata.xml
 .env
 .env.*
 !.env.example
+
+artifacts/device-captures/*.xml
+artifacts/device-captures/*.zip
+artifacts/device-captures/current.png
+artifacts/*.idsig

@@ -18,12 +18,32 @@
     {
       "file": "Possessory-amazon-release-unsigned.apk",
       "bytes": 44195534,
-      "sha256": "606f1bb62eece707b30c9dde1a042ae08dcb740db9cf88c344d1e6251ff7a142"
+      "sha256": "7eff7af8c7995f965a1fea4298172f86bcd7af1f9fb8e2f465f98b71914dbad0"
     },
     {
       "file": "Possessory-source.zip",
-      "bytes": 2439319,
-      "sha256": "acc2729a0a5be76cedbc524c0199a8ab1c8b8e26f99f76ee59f1c49c42577a61"
+      "bytes": 2443799,
+      "sha256": "ee5937df4ca3df1831acf87a87c1c5232437b2bd270b7267fb84d77ac27256a9"
+    },
+    {
+      "file": "Possessory-amazon-release-signed.apk",
+      "bytes": 44221625,
+      "sha256": "373d7516e25e4c1672a45c6a6113a8974e62d86c148ccc004e94cba8f15d423f"
+    },
+    {
+      "file": "Possessory-android-release-signed.apk",
+      "bytes": 44057785,
+      "sha256": "a7917752e13e235a35125248d4a57a8e34ae64661e131732131956c9220852f5"
+    },
+    {
+      "file": "Possessory-Fire-screenshots.zip",
+      "bytes": 1130088,
+      "sha256": "b0bc9f01204d5c3e65b35f2d3907e233d20cbcaa865590b202627a9c643b0a1b"
+    },
+    {
+      "file": "Possessory-release-certificate.pem",
+      "bytes": 1814,
+      "sha256": "57520a78cd69fe48a4917e19658dddf9764fe9c262fd75de70a50d9eb24b5f66"
     }
   ],
   "ocr_model": {
@@ -36,5 +56,6 @@
     "runtime_translation": false,
     "review_status": "draft",
     "release_locale": "en-GB"
-  }
+  },
+  "signed_release_verification": "release-verification.json"
 }

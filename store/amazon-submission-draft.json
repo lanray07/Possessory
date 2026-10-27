@@ -1,5 +1,5 @@
 {
-  "status": "saved_in_amazon_console_incomplete_not_submitted",
+  "status": "signed_release_and_eight_real_device_screenshots_uploaded_not_submitted",
   "app": {
     "internal_title": "Possessory",
     "package_name": "app.possessory",
@@ -106,10 +106,14 @@
       "promotional banner"
     ],
     "remaining_required": [
-      "release-signed APK",
-      "supported device selection after binary upload",
-      "at least three accurate device screenshots",
-      "owner export-compliance declaration"
-    ]
+      "owner export-compliance declaration; final submission remains unperformed"
+    ],
+    "uploaded_apk": "Possessory-amazon-release-signed.apk",
+    "uploaded_screenshots": 8,
+    "target_devices": {
+      "Fire_tablets": 12,
+      "Fire_TV": 0,
+      "Automotive": 0
+    }
   }
 }

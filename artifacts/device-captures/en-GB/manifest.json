@@ -1,0 +1,62 @@
+{
+  "captured_at": "2026-10-27T16:47:30.056306+00:00",
+  "source": "adb screencap from physical Fire tablet",
+  "device_model": "KFTRWI",
+  "android_api": 28,
+  "locale": "en-GB",
+  "version": "0.2.0",
+  "version_code": 2,
+  "apk_sha256": "373d7516e25e4c1672a45c6a6113a8974e62d86c148ccc004e94cba8f15d423f",
+  "content": "Demonstration household, six fictional belongings and one maintenance schedule, imported through normal backup restore. No demo records are shipped in the APK.",
+  "post_processing": "None. Original device pixels, including system bars.",
+  "screenshots": [
+    {
+      "file": "01-overview.png",
+      "sha256": "4df5f986665fc1410e17537bec312303e4c9b056b3896a64460dd5ecfef60b16",
+      "width": 1920,
+      "height": 1200
+    },
+    {
+      "file": "02-inventory.png",
+      "sha256": "eecdd82d49b99137e6e5925e850e671af7b7d4814deba1687088ddac125f28a1",
+      "width": 1920,
+      "height": 1200
+    },
+    {
+      "file": "03-rooms.png",
+      "sha256": "5672747613148b2b29ad18a65a38d01d8ee454319223b80535645c1da5a874bb",
+      "width": 1920,
+      "height": 1200
+    },
+    {
+      "file": "04-warranties.png",
+      "sha256": "cfa179ef6dfd2dbbe61f14ff1e3f8a19e97dc693a5a85d4e1800271cbf4eacc9",
+      "width": 1920,
+      "height": 1200
+    },
+    {
+      "file": "05-maintenance.png",
+      "sha256": "8832b8fd17eb5a615ca5413a4f5efbc517327e955357012bac0c4bd90e4b8a7a",
+      "width": 1920,
+      "height": 1200
+    },
+    {
+      "file": "06-reports.png",
+      "sha256": "0c1d225761c52aa1255db15fd483be756cbfbede44c0ef58d099d03f24aa2e67",
+      "width": 1920,
+      "height": 1200
+    },
+    {
+      "file": "07-item-details.png",
+      "sha256": "630a7488118511bb6e3d1ba5ef81436f33cb2e09933840557e9a6b9d0a45b62f",
+      "width": 1920,
+      "height": 1200
+    },
+    {
+      "file": "08-dark-overview.png",
+      "sha256": "c5c08db4f044a02cc2dde7cdfc1b6de945641dd870e8dea5c769e0b1b46372ae",
+      "width": 1920,
+      "height": 1200
+    }
+  ]
+}

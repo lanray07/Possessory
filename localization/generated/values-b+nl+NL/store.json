@@ -17,5 +17,7 @@
   "offline_headline": "Offline Home Inventory App",
   "offline_caption": "Toegang tot uw inventaris zonder internet.",
   "reminders_headline": "Garantietermijnherinnering",
-  "reminders_caption": "Hou de aankomende garantiedata bij."
+  "reminders_caption": "Hou de aankomende garantiedata bij.",
+  "iap_title": "Possessory Premie",
+  "iap_description": "Eenmalige upgrade voor onbeperkte bezittingen en meerdere huishoudens, ontvangst OCR, geavanceerde garantie herinneringen, onderhoud, PDF/CSV/JSON rapporten, opgeslagen zoekopdrachten, uitgebreide spraakopdrachten en wachtwoord-beschermde back-ups. Geen abonnement. Aankoop verificatie vereist internet."
 }

@@ -17,5 +17,7 @@
   "offline_headline": "Application d'inventaire hors ligne",
   "offline_caption": "Accédez à votre inventaire sans internet.",
   "reminders_headline": "Rappels d'expiration de garantie",
-  "reminders_caption": "Gardez une trace des prochaines dates de garantie."
+  "reminders_caption": "Gardez une trace des prochaines dates de garantie.",
+  "iap_title": "Possessory Prime",
+  "iap_description": "Mise à niveau unique pour les biens illimités et les ménages multiples, réception OCR, rappels de garantie avancés, entretien, PDF/CSV/JSON rapports, recherches sauvegardées, commandes vocales élargies et sauvegardes protégées par mot de passe. Pas d'abonnement."
 }

@@ -17,5 +17,7 @@
   "offline_headline": "オフラインホーム在庫アプリ",
   "offline_caption": "インターネットなしで在庫にアクセスしてください。",
   "reminders_headline": "保証の有効期限の補強",
-  "reminders_caption": "今後の保証日を追跡してください。"
+  "reminders_caption": "今後の保証日を追跡してください。",
+  "iap_title": "Possessory プレミアム",
+  "iap_description": "無制限の持ち物と複数の世帯、領収書のためのワンタイムアップグレード OCR、高度の保証リマインダー、維持、 PDF/CSV/JSON レポート、保存された検索、音声コマンドの拡張、パスワードで保護されたバックアップ。サブスクリプションなし。購入確認にはインターネットが必要です。"
 }

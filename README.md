@@ -33,3 +33,10 @@ Original brand files and a 1024×500 promotional banner are in assets/brand. The
 Tests cover domain boundaries, encrypted backup authentication, backup validation, database integrity and rendered UI interactions. Device tests remain necessary for OCR native libraries, speech, camera, notifications and Fire OS behaviour.
 
 Amazon and standalone variants share the inventory implementation. Only the Amazon variant includes the Appstore SDK, billing receiver and internet permission. Core Robolectric tests use the standalone variant because the vendor receiver cannot be verified by the JVM. This does not verify Amazon purchase integration; real Fire-device tests remain required. Standalone builds do not offer purchases.
+
+
+## 0.3.0 reviewer handoff
+
+Build `:app:assembleAmazonReview` for the separate app.possessory.review evaluation APK. It bundles nineteen offline draft locale packs and clearly labelled evaluation access. It does not grant or simulate an Amazon entitlement and must never be submitted to a store. The production release variant retains the English base while human locale approvals are pending.
+
+Run `python tools/localization_quality.py`, `python tools/reviewer_evidence.py` (after physical captures), and `python tools/reviewer_handoff.py` to prepare the CSV/glossary/site/device handoff ZIP. Support and store changes invalidate the complete catalogue's review hash. See docs/RELEASE.md for evidence, remaining manual checks and production purchase/hosting gates. The approved Premium base price is £4.99 once; store pricing comes from Amazon.

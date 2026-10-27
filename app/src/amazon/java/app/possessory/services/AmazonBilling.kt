@@ -17,184 +17,225 @@ import kotlinx.coroutines.sync.withLock
 
 /** No entitlement is granted from an SDK callback alone. The server must verify RVS and sign it. */
 class AmazonBilling(private val app: PossessoryApp) : PurchasingListener {
-  val enabled =
-    BuildConfig.AMAZON_SKU.isNotBlank() &&
-      BuildConfig.VERIFIER_URL.startsWith("https://") &&
-      BuildConfig.LICENSE_PUBLIC_KEY.isNotBlank()
-  private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
-  val state = MutableStateFlow(BillingState())
-  private var currentUser: String? = null
-  private var tokenUser: String? = null
-  private var timeout: Job? = null
-  private var started = false
-  private val verificationMutex = Mutex()
-  private var expiry: Job? = null
+    val enabled =
+        BuildConfig.AMAZON_SKU.isNotBlank() &&
+            BuildConfig.VERIFIER_URL.startsWith("https://") &&
+            BuildConfig.LICENSE_PUBLIC_KEY.isNotBlank()
+    private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
+    val state = MutableStateFlow(BillingState())
+    private var currentUser: String? = null
+    private var tokenUser: String? = null
+    private var timeout: Job? = null
+    private var started = false
+    private val verificationMutex = Mutex()
+    private var expiry: Job? = null
+    private var clockAnchor = System.currentTimeMillis() / 1000
+    private val elapsedAnchor = android.os.SystemClock.elapsedRealtime()
 
-  private fun expireAt(time: Long) {
-    expiry?.cancel()
-    expiry =
-      scope.launch {
-        delay(((time - System.currentTimeMillis() / 1000).coerceAtLeast(0)) * 1000)
-        state.value = state.value.copy(premium = false, status = "retry")
-      }
-  }
+    private fun licenseTime(): Long =
+        maxOf(
+            System.currentTimeMillis() / 1000,
+            clockAnchor + (android.os.SystemClock.elapsedRealtime() - elapsedAnchor) / 1000,
+        )
 
-  fun start() {
-    if (!enabled || started) return
-    started = true
-    scope.launch {
-      val stored = app.settings.data.first()[stringPreferencesKey("signed_license")]
-      if (stored != null)
-        runCatching {
-            LicenseVerifier.verify(
-              Files.gson.fromJson(stored, SignedLicense::class.java),
-              BuildConfig.LICENSE_PUBLIC_KEY,
-              BuildConfig.AMAZON_SKU,
-            )
-          }
-          .onSuccess {
-            tokenUser = it.userId
-            state.value = state.value.copy(premium = it.active, status = "cached")
-            expireAt(it.validUntil)
-          }
-      runCatching {
-          PurchasingService.registerListener(app, this@AmazonBilling)
-          PurchasingService.getUserData()
-          PurchasingService.getProductData(setOf(BuildConfig.AMAZON_SKU))
-          PurchasingService.getPurchaseUpdates(true)
-        }
-        .onFailure { state.value = state.value.copy(status = "unavailable", busy = false) }
-    }
-  }
-
-  private fun pending() {
-    timeout?.cancel()
-    state.value = state.value.copy(busy = true, status = "pending")
-    timeout =
-      scope.launch {
-        delay(60000)
-        state.value = state.value.copy(busy = false, status = "retry")
-      }
-  }
-
-  fun purchase() {
-    if (!enabled || state.value.busy || state.value.price == null || state.value.premium) return
-    pending()
-    runCatching { PurchasingService.purchase(BuildConfig.AMAZON_SKU) }
-      .onFailure { state.value = state.value.copy(busy = false, status = "retry") }
-  }
-
-  fun restore() {
-    if (!enabled || state.value.busy) return
-    pending()
-    runCatching {
-        PurchasingService.getUserData()
-        PurchasingService.getPurchaseUpdates(true)
-      }
-      .onFailure { state.value = state.value.copy(busy = false, status = "retry") }
-  }
-
-  override fun onUserDataResponse(response: UserDataResponse) {
-    if (response.requestStatus == UserDataResponse.RequestStatus.SUCCESSFUL) {
-      currentUser = response.userData.userId
-      if (tokenUser != null && tokenUser != currentUser) {
-        state.value = state.value.copy(premium = false)
-        scope.launch { app.settings.edit { it.remove(stringPreferencesKey("signed_license")) } }
-      }
-    }
-  }
-
-  override fun onProductDataResponse(response: ProductDataResponse) {
-    val product =
-      if (response.requestStatus == ProductDataResponse.RequestStatus.SUCCESSFUL)
-        response.productData[BuildConfig.AMAZON_SKU]
-      else null
-    state.value =
-      state.value.copy(
-        price = product?.price,
-        status = if (product != null) "ready" else "unavailable",
-      )
-  }
-
-  override fun onPurchaseResponse(response: PurchaseResponse) {
-    timeout?.cancel()
-    when (response.requestStatus) {
-      PurchaseResponse.RequestStatus.SUCCESSFUL ->
-        validate(response.receipt, response.userData.userId)
-      PurchaseResponse.RequestStatus.ALREADY_PURCHASED -> {
-        state.value = state.value.copy(busy = false)
-        restore()
-      }
-      else -> state.value = state.value.copy(busy = false, status = "retry")
-    }
-  }
-
-  override fun onPurchaseUpdatesResponse(response: PurchaseUpdatesResponse) {
-    if (response.requestStatus != PurchaseUpdatesResponse.RequestStatus.SUCCESSFUL) {
-      state.value = state.value.copy(busy = false, status = "retry")
-      return
-    }
-    val receipts = response.receipts.filter { it.sku == BuildConfig.AMAZON_SKU }
-    // One-time entitlement should have a single current receipt; process cancellation last.
-    receipts.sortedBy { it.isCanceled }.forEach { validate(it, response.userData.userId) }
-    if (response.hasMore()) PurchasingService.getPurchaseUpdates(false)
-    else if (receipts.isEmpty()) state.value = state.value.copy(busy = false, status = "checked")
-  }
-
-  private fun validate(receipt: Receipt, userId: String) {
-    if (receipt.sku != BuildConfig.AMAZON_SKU) return
-    scope.launch {
-      verificationMutex.withLock {
-        state.value = state.value.copy(busy = true, status = "verifying")
-        try {
-          val signed =
-            withContext(Dispatchers.IO) {
-              val connection = URL(BuildConfig.VERIFIER_URL).openConnection() as HttpsURLConnection
-              connection.instanceFollowRedirects = false
-              connection.requestMethod = "POST"
-              connection.connectTimeout = 15000
-              connection.readTimeout = 15000
-              connection.doOutput = true
-              connection.setRequestProperty("Content-Type", "application/json")
-              try {
-                connection.outputStream.use {
-                  it.write(
-                    Files.gson
-                      .toJson(mapOf("userId" to userId, "receiptId" to receipt.receiptId))
-                      .toByteArray(Charsets.UTF_8)
-                  )
-                }
-                require(connection.responseCode == 200)
-                val bytes = connection.inputStream.use { Files.readBounded(it, 64 * 1024) }
-                Files.gson.fromJson(String(bytes, Charsets.UTF_8), SignedLicense::class.java)
-              } finally {
-                connection.disconnect()
-              }
+    private fun expireAt(time: Long) {
+        expiry?.cancel()
+        expiry =
+            scope.launch {
+                delay(((time - licenseTime()).coerceAtLeast(0)) * 1000)
+                state.value = state.value.copy(premium = false, status = "retry")
             }
-          val claims =
-            LicenseVerifier.verify(signed, BuildConfig.LICENSE_PUBLIC_KEY, BuildConfig.AMAZON_SKU)
-          require(
-            claims.userId == userId &&
-              claims.receiptId == receipt.receiptId &&
-              (currentUser == null || currentUser == userId)
-          )
-          app.settings.edit {
-            it[stringPreferencesKey("signed_license")] = Files.gson.toJson(signed)
-          }
-          tokenUser = userId
-          state.value =
-            state.value.copy(
-              premium = claims.active,
-              busy = false,
-              status = if (claims.active) "verified" else "revoked",
-            )
-          expireAt(claims.validUntil)
-          if (claims.active)
-            PurchasingService.notifyFulfillment(receipt.receiptId, FulfillmentResult.FULFILLED)
-        } catch (e: Exception) {
-          state.value = state.value.copy(busy = false, status = "retry")
-        }
-      }
     }
-  }
+
+    fun start() {
+        if (!enabled || started) return
+        started = true
+        scope.launch {
+            val clockKey = longPreferencesKey("license_last_seen")
+            clockAnchor = maxOf(clockAnchor, app.settings.data.first()[clockKey] ?: 0)
+            app.settings.edit { it[clockKey] = licenseTime() }
+            scope.launch {
+                while (isActive) {
+                    delay(60000)
+                    app.settings.edit { it[clockKey] = licenseTime() }
+                }
+            }
+            val stored = app.settings.data.first()[stringPreferencesKey("signed_license")]
+            if (stored != null)
+                runCatching {
+                        LicenseVerifier.verify(
+                            Files.gson.fromJson(stored, SignedLicense::class.java),
+                            BuildConfig.LICENSE_PUBLIC_KEY,
+                            BuildConfig.AMAZON_SKU,
+                            now = licenseTime(),
+                            expectedEnvironment = BuildConfig.BILLING_ENV,
+                        )
+                    }
+                    .onSuccess {
+                        tokenUser = it.userId
+                        state.value = state.value.copy(premium = it.active, status = "cached")
+                        expireAt(it.validUntil)
+                    }
+            runCatching {
+                    PurchasingService.registerListener(app, this@AmazonBilling)
+                    PurchasingService.getUserData()
+                    PurchasingService.getProductData(setOf(BuildConfig.AMAZON_SKU))
+                    PurchasingService.getPurchaseUpdates(true)
+                }
+                .onFailure { state.value = state.value.copy(status = "unavailable", busy = false) }
+        }
+    }
+
+    private fun pending() {
+        timeout?.cancel()
+        state.value = state.value.copy(busy = true, status = "pending")
+        timeout =
+            scope.launch {
+                delay(60000)
+                state.value = state.value.copy(busy = false, status = "retry")
+            }
+    }
+
+    fun purchase() {
+        if (!enabled || state.value.busy || state.value.price == null || state.value.premium) return
+        pending()
+        runCatching { PurchasingService.purchase(BuildConfig.AMAZON_SKU) }
+            .onFailure { state.value = state.value.copy(busy = false, status = "retry") }
+    }
+
+    fun restore() {
+        if (!enabled || state.value.busy) return
+        pending()
+        runCatching {
+                PurchasingService.getUserData()
+                PurchasingService.getPurchaseUpdates(true)
+            }
+            .onFailure { state.value = state.value.copy(busy = false, status = "retry") }
+    }
+
+    override fun onUserDataResponse(response: UserDataResponse) {
+        if (response.requestStatus == UserDataResponse.RequestStatus.SUCCESSFUL) {
+            currentUser = response.userData.userId
+            if (tokenUser != null && tokenUser != currentUser) {
+                state.value = state.value.copy(premium = false)
+                scope.launch {
+                    app.settings.edit { it.remove(stringPreferencesKey("signed_license")) }
+                }
+            }
+        }
+    }
+
+    override fun onProductDataResponse(response: ProductDataResponse) {
+        val product =
+            if (response.requestStatus == ProductDataResponse.RequestStatus.SUCCESSFUL)
+                response.productData[BuildConfig.AMAZON_SKU]
+            else null
+        state.value =
+            state.value.copy(
+                price = product?.price,
+                status = if (product != null) "ready" else "unavailable",
+            )
+    }
+
+    override fun onPurchaseResponse(response: PurchaseResponse) {
+        timeout?.cancel()
+        when (response.requestStatus) {
+            PurchaseResponse.RequestStatus.SUCCESSFUL ->
+                validate(response.receipt, response.userData.userId)
+            PurchaseResponse.RequestStatus.ALREADY_PURCHASED -> {
+                state.value = state.value.copy(busy = false)
+                restore()
+            }
+            else -> state.value = state.value.copy(busy = false, status = "retry")
+        }
+    }
+
+    override fun onPurchaseUpdatesResponse(response: PurchaseUpdatesResponse) {
+        if (response.requestStatus != PurchaseUpdatesResponse.RequestStatus.SUCCESSFUL) {
+            state.value = state.value.copy(busy = false, status = "retry")
+            return
+        }
+        val receipts = response.receipts.filter { it.sku == BuildConfig.AMAZON_SKU }
+        // One-time entitlement should have a single current receipt; process cancellation last.
+        receipts.sortedBy { it.isCanceled }.forEach { validate(it, response.userData.userId) }
+        if (response.hasMore()) PurchasingService.getPurchaseUpdates(false)
+        else if (receipts.isEmpty())
+            state.value = state.value.copy(busy = false, status = "checked")
+    }
+
+    private fun validate(receipt: Receipt, userId: String) {
+        if (receipt.sku != BuildConfig.AMAZON_SKU) return
+        scope.launch {
+            verificationMutex.withLock {
+                state.value = state.value.copy(busy = true, status = "verifying")
+                try {
+                    val signed =
+                        withContext(Dispatchers.IO) {
+                            val connection =
+                                URL(BuildConfig.VERIFIER_URL).openConnection() as HttpsURLConnection
+                            connection.instanceFollowRedirects = false
+                            connection.requestMethod = "POST"
+                            connection.connectTimeout = 15000
+                            connection.readTimeout = 15000
+                            connection.doOutput = true
+                            connection.setRequestProperty("Content-Type", "application/json")
+                            try {
+                                connection.outputStream.use {
+                                    it.write(
+                                        Files.gson
+                                            .toJson(
+                                                mapOf(
+                                                    "userId" to userId,
+                                                    "receiptId" to receipt.receiptId,
+                                                )
+                                            )
+                                            .toByteArray(Charsets.UTF_8)
+                                    )
+                                }
+                                require(connection.responseCode == 200)
+                                val bytes =
+                                    connection.inputStream.use { Files.readBounded(it, 64 * 1024) }
+                                Files.gson.fromJson(
+                                    String(bytes, Charsets.UTF_8),
+                                    SignedLicense::class.java,
+                                )
+                            } finally {
+                                connection.disconnect()
+                            }
+                        }
+                    val claims =
+                        LicenseVerifier.verify(
+                            signed,
+                            BuildConfig.LICENSE_PUBLIC_KEY,
+                            BuildConfig.AMAZON_SKU,
+                            now = licenseTime(),
+                            expectedEnvironment = BuildConfig.BILLING_ENV,
+                        )
+                    require(
+                        claims.userId == userId &&
+                            claims.receiptId == receipt.receiptId &&
+                            (currentUser == null || currentUser == userId)
+                    )
+                    app.settings.edit {
+                        it[stringPreferencesKey("signed_license")] = Files.gson.toJson(signed)
+                    }
+                    tokenUser = userId
+                    state.value =
+                        state.value.copy(
+                            premium = claims.active,
+                            busy = false,
+                            status = if (claims.active) "verified" else "revoked",
+                        )
+                    expireAt(claims.validUntil)
+                    if (claims.active)
+                        PurchasingService.notifyFulfillment(
+                            receipt.receiptId,
+                            FulfillmentResult.FULFILLED,
+                        )
+                } catch (e: Exception) {
+                    state.value = state.value.copy(busy = false, status = "retry")
+                }
+            }
+        }
+    }
 }

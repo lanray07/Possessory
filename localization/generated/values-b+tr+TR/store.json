@@ -17,5 +17,7 @@
   "offline_headline": "Offline Home Inventory App",
   "offline_caption": "Satınızı internet olmadan erişilebilir.",
   "reminders_headline": "Garanti Açıklamaları",
-  "reminders_caption": "Önümüzdeki garanti tarihlerini takip edin."
+  "reminders_caption": "Önümüzdeki garanti tarihlerini takip edin.",
+  "iap_title": "Possessory Premium Premium",
+  "iap_description": "Sınırsız eşya ve birden fazla hane için bir zaman yükseltme, makbul OCR, gelişmiş garanti hatırlatmaları, bakım, PDF/CSV/JSON Raporlar, kurtarılmış aramalar, genişletilmiş ses komutları ve şifre korumalı yedeklemeler. Hiçbir abonelik satın alma doğrulama internet gerektirir."
 }

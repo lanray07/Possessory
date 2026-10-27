@@ -1,44 +1,34 @@
 {
-  "version": "0.2.0",
-  "version_code": 2,
-  "status": "engineering_preview",
+  "version": "0.3.0",
+  "version_code": 3,
+  "status": "review_candidate_not_submission_approved",
   "operator": "O. Bankole",
   "support": "banksmi@mail.com",
   "files": [
     {
-      "file": "Possessory-amazon-preview.apk",
-      "bytes": 51072005,
-      "sha256": "ff7d32d53e3cefe1b39a690b85b952998a7811a1895f49417cb76093e0e4732a"
-    },
-    {
-      "file": "Possessory-android-preview.apk",
-      "bytes": 50907965,
-      "sha256": "49568fcfe335ff87583d0d23d87f528c916c88dd0efff93da9b3c362baa09c5b"
-    },
-    {
-      "file": "Possessory-amazon-release-unsigned.apk",
-      "bytes": 44195534,
-      "sha256": "7eff7af8c7995f965a1fea4298172f86bcd7af1f9fb8e2f465f98b71914dbad0"
-    },
-    {
-      "file": "Possessory-source.zip",
-      "bytes": 2443799,
-      "sha256": "ee5937df4ca3df1831acf87a87c1c5232437b2bd270b7267fb84d77ac27256a9"
-    },
-    {
       "file": "Possessory-amazon-release-signed.apk",
-      "bytes": 44221625,
-      "sha256": "373d7516e25e4c1672a45c6a6113a8974e62d86c148ccc004e94cba8f15d423f"
+      "bytes": 64818077,
+      "sha256": "1930652e3fdc96aec524c7d3d2392410842be15b1ba2df9c92b41df95b5cc145"
     },
     {
       "file": "Possessory-android-release-signed.apk",
-      "bytes": 44057785,
-      "sha256": "a7917752e13e235a35125248d4a57a8e34ae64661e131732131956c9220852f5"
+      "bytes": 64654237,
+      "sha256": "753ba7556a4304dac7d10252d293e035abfb230bd8e285dfda8bb837f138bcc0"
     },
     {
-      "file": "Possessory-Fire-screenshots.zip",
-      "bytes": 1130088,
-      "sha256": "b0bc9f01204d5c3e65b35f2d3907e233d20cbcaa865590b202627a9c643b0a1b"
+      "file": "Possessory-amazon-review-signed.apk",
+      "bytes": 65196255,
+      "sha256": "fb9369204731f066a27ba09fc1322687d686a062a00b88a48c9cc2bcd2dbb419"
+    },
+    {
+      "file": "Possessory-localization-review.zip",
+      "bytes": 25817533,
+      "sha256": "a11e8cb5388686dc7cd1220290d15deaa78d034b4f34a07e598963d07b6bdbc0"
+    },
+    {
+      "file": "Possessory-source.zip",
+      "bytes": 20848866,
+      "sha256": "31a52bf9d88ddc5c2209eaf7c043fe684ebcbc1862ec8f947206a6e24b2bf560"
     },
     {
       "file": "Possessory-release-certificate.pem",
@@ -46,16 +36,22 @@
       "sha256": "57520a78cd69fe48a4917e19658dddf9764fe9c262fd75de70a50d9eb24b5f66"
     }
   ],
-  "ocr_model": {
-    "source": "https://github.com/tesseract-ocr/tessdata_fast",
-    "language": "eng",
-    "sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2"
-  },
+  "ocr_models": "../localization/ocr-models.json",
   "localization": {
-    "preview_locale_targets": 19,
+    "draft_targets": 19,
+    "source_messages": 335,
+    "human_approved": 0,
+    "production_release_base": "en-GB",
+    "review_package": "app.possessory.review",
     "runtime_translation": false,
-    "review_status": "draft",
-    "release_locale": "en-GB"
+    "capture_count": 175,
+    "capture_manifest": "reviewer-captures/manifest.json",
+    "quality_report": "../localization/quality-report.json"
   },
-  "signed_release_verification": "release-verification.json"
+  "signed_release_verification": "release-verification.json",
+  "legacy_store_screenshots": {
+    "version": "0.2.0",
+    "zip": "Possessory-Fire-screenshots.zip",
+    "manifest": "device-captures/en-GB/manifest.json"
+  }
 }

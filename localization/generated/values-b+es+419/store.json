@@ -1,14 +1,14 @@
 {
-  "title": "Possessory – Home Inventory &amp; Garantía Tracker",
+  "title": "Possessory – Home Inventory & Garantía Tracker",
   "short_description": "Mantenga las pertenencias, los recibos y los detalles de garantía bellamente organizados en su dispositivo.",
   "description": "Dale todo lo que tienes. Possessory Ayuda a registrar las pertenencias de los hogares por habitación, adjuntar recibos y fotos, rastrear las fechas de garantía y organizar el mantenimiento. Las funciones básicas del inventario funcionan fuera de línea y no se requiere cuenta. Crear registros de inventarios mantenidos por el usuario y elegir qué incluir antes de exportar. El reconocimiento de voz depende del soporte de dispositivo y puede utilizar un servicio de red.",
   "hero_headline": "Home Inventory Tracker",
   "hero_caption": "Mantenga todo lo que tiene bellamente organizado.",
   "rooms_headline": "Organizar Pertenecientes por habitación",
   "rooms_caption": "Busque artículos de hogar de forma rápida y sencilla.",
-  "warranties_headline": "Receipt &quot; Garantía Tracker",
+  "warranties_headline": "Receipt \" Garantía Tracker",
   "warranties_caption": "Mantenga los recibos y los detalles de la garantía juntos.",
-  "ocr_headline": "Scan Receipts &quot; Save Records",
+  "ocr_headline": "Scan Receipts \" Save Records",
   "ocr_caption": "Revisar los detalles de compra con menos escritura.",
   "reports_headline": "Home Seguros Informes de inventario",
   "reports_caption": "Crear registros organizados de pertenencias domésticas.",
@@ -17,5 +17,7 @@
   "offline_headline": "Aplicación de inventarios caseros",
   "offline_caption": "Accede a tu inventario sin internet.",
   "reminders_headline": "Recuperadores de gastos de garantía",
-  "reminders_caption": "Realice un seguimiento de las próximas fechas de garantía."
+  "reminders_caption": "Realice un seguimiento de las próximas fechas de garantía.",
+  "iap_title": "Possessory Premium",
+  "iap_description": "Mejora de una sola vez para las pertenencias ilimitadas y múltiples hogares, recibo OCR, recordatorios avanzados de garantía, mantenimiento, PDF/CSV/JSON reportes, búsquedas guardadas, comandos de voz ampliados y respaldos protegidos por contraseña. Sin suscripción. La verificación de compra requiere internet."
 }

@@ -17,5 +17,7 @@
   "offline_headline": "Aplicativo de Inventário Offline",
   "offline_caption": "Acesse seu inventário sem internet.",
   "reminders_headline": "Avisos de expiração da garantia",
-  "reminders_caption": "Acompanhe as próximas datas de garantia."
+  "reminders_caption": "Acompanhe as próximas datas de garantia.",
+  "iap_title": "Possessory Premium",
+  "iap_description": "Uma vez atualização para bens ilimitados e várias famílias, recibo OCR, lembretes de garantia avançada, manutenção, PDF/CSV/JSON Relatórios, buscas salvas, comandos de voz expandidos e backups protegidos por senha."
 }

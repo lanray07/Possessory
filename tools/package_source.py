@@ -12,6 +12,8 @@ def main():
     files.extend((ROOT/'server').glob('*.py'));files.extend((ROOT/'server').glob('*.txt'));files.append(ROOT/'server/README.md')
     files.extend((ROOT/'localization').glob('*.json'))
     files.append(ROOT/'localization/README.md')
+    files.append(ROOT/'localization/glossary.csv')
+    files.extend(ROOT/'server'/name for name in ['.python-version','.vercelignore'])
     files.extend(p for p in (ROOT/'localization/generated').rglob('*') if p.is_file())
     for name in ['README.md','.gitignore','build.gradle.kts','settings.gradle.kts','gradle.properties','gradlew','gradlew.bat','app/build.gradle.kts','app/proguard-rules.pro']:
         files.append(ROOT/name)

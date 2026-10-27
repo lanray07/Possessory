@@ -85,6 +85,10 @@ def resources(locale, data):
     (path.parent/'store.json').write_text(json.dumps(store,ensure_ascii=False,indent=2),encoding='utf-8')
     support={k.removeprefix('support:'):v for k,v in data.items() if k.startswith('support:')}
     (path.parent/'support.json').write_text(json.dumps(support,ensure_ascii=False,indent=2),encoding='utf-8')
+    metadata=json.loads((path.parent/'metadata.json').read_text(encoding='utf-8'))
+    metadata['catalogue_sha256']=hashlib.sha256(json.dumps(extract(),sort_keys=True).encode()).hexdigest()
+    for kind in ('store','support'):metadata[kind+'_sha256']=hashlib.sha256((path.parent/(kind+'.json')).read_bytes()).hexdigest()
+    (path.parent/'metadata.json').write_text(json.dumps(metadata,indent=2),encoding='utf-8')
 
 def bundle_resources(preview=False):
     status=json.loads((ROOT/'localization/status.json').read_text(encoding='utf-8'))
@@ -92,12 +96,16 @@ def bundle_resources(preview=False):
     assert selected,'No translations meet the selected packaging policy'
     source=extract();app_source={k:v for k,v in source.items() if not k.startswith(('store:','support:'))}
     source_hash=hashlib.sha256((ROOT/'app/src/main/res/values/strings.xml').read_bytes()).hexdigest()
+    catalogue_hash=hashlib.sha256(json.dumps(source,sort_keys=True).encode()).hexdigest()
     checked=[]
     for locale in selected:
         folder='values-b+'+locale.replace('-','+')
         path=ROOT/'localization/generated'/folder/'strings.xml'
         metadata=json.loads((path.parent/'metadata.json').read_text(encoding='utf-8'))
         assert metadata['locale']==locale and metadata['source_sha256']==source_hash,'Translations must be regenerated for the current source'
+        assert metadata.get('catalogue_sha256')==catalogue_hash,'Store/support translations must match the current source'
+        for kind in ('store','support'):assert metadata.get(kind+'_sha256')==hashlib.sha256((path.parent/(kind+'.json')).read_bytes()).hexdigest(),'Translated store/support files changed since validation'
+        if not preview:assert status[locale].get('reviewed_source_sha256')==catalogue_hash,'Human review must match the complete current catalogue'
         assert metadata['strings_sha256']==hashlib.sha256(path.read_bytes()).hexdigest(),'Translation files changed since validation'
         tree=ET.parse(path);data={e.attrib['name']:e.text or '' for e in tree.findall('string')}
         for group in tree.findall('plurals'):
@@ -127,12 +135,19 @@ def bundle_resources(preview=False):
         elif obsolete!=destination and obsolete.exists():obsolete.unlink()
         lines.append(f'sha256.{locale}={digest}')
         lines.append(f'folder.{locale}={resource_folder(locale)}')
+        lines.append(f'support.sha256.{locale}='+hashlib.sha256((path.parent/'support.json').read_bytes()).hexdigest())
     manifest.write_text('\n'.join(lines)+'\n',encoding='utf-8')
     locale_config=ET.Element('locale-config',{'xmlns:android':'http://schemas.android.com/apk/res/android'})
     for locale in selected:ET.SubElement(locale_config,'locale',{'android:name':locale})
     xml=target/'res/xml/locales_config.xml';xml.parent.mkdir(parents=True,exist_ok=True);ET.ElementTree(locale_config).write(xml,encoding='utf-8',xml_declaration=True)
     asset=ROOT/'app/src'/('debug' if preview else 'main')/'assets/localization.json';asset.parent.mkdir(parents=True,exist_ok=True)
     asset.write_text(json.dumps({'runtime_translation':False,'machine_review_pending':preview,'source_sha256':source_hash,'locales':selected},indent=2)+'\n')
+    support_assets=asset.parent/'support';support_assets.mkdir(exist_ok=True)
+    for locale in selected:
+        source=ROOT/'localization/generated'/('values-b+'+locale.replace('-','+'))/'support.json'
+        shutil.copyfile(source,support_assets/(locale+'.json'))
+    base_support=ROOT/'app/src/main/assets/support';base_support.mkdir(parents=True,exist_ok=True)
+    shutil.copyfile(ROOT/'support/en-GB.json',base_support/'en-GB.json')
     print(f'Bundled {len(selected)} locales for '+('engineering preview' if preview else 'release'))
 
 def main():
@@ -155,7 +170,7 @@ def main():
             except Exception as exc:record['issues']=[type(exc).__name__+': '+str(exc)]
         elif record['state'] in ['not_started','extracted']:record['issues']=['Translation provider credentials and human review pending']
     if args.approve:
-        r=status[args.approve];assert r['state']=='human_reviewed' and r['human_reviewer'] and not r['issues'],'Record completed human review and clear all checks before approval'
+        r=status[args.approve];assert r['state']=='human_reviewed' and r['human_reviewer'] and not r['issues'] and r.get('reviewed_source_sha256')==hashlib.sha256(json.dumps(source,sort_keys=True).encode()).hexdigest(),'Record completed human review for the current catalogue and clear all checks before approval'
         r['state']='release_approved';r['release_approved']=True
     path.write_text(json.dumps(status,indent=2),encoding='utf-8')
     cachepath.parent.mkdir(exist_ok=True);cachepath.write_text(json.dumps(cache,ensure_ascii=False),encoding='utf-8')

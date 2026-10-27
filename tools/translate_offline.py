@@ -85,15 +85,24 @@ def main():
             for path,info in executor.map(acquire,targets):print('Downloaded',info['language'],flush=True)
         return
     source=extract();status_path=ROOT/'localization/status.json';status=json.loads(status_path.read_text(encoding='utf-8'))
+    previous_source=json.loads((ROOT/'localization/source.json').read_text(encoding='utf-8')) if (ROOT/'localization/source.json').exists() else {}
     provenance=[]
     for code in targets:
         cache=ROOT/f'localization/cache/catalogue-{code}.json'
         if cache.exists() and json.loads(cache.read_text(encoding='utf-8'))['source_sha256']==hashlib.sha256(json.dumps(source,sort_keys=True).encode()).hexdigest():
             saved=json.loads(cache.read_text(encoding='utf-8'));translated=saved['strings'];info=saved['model']
         else:
-            print('Translating',code,flush=True);translated,info=translate_catalogue(code,source)
-            cache.write_text(json.dumps(dict(source_sha256=hashlib.sha256(json.dumps(source,sort_keys=True).encode()).hexdigest(),strings=translated,model=info),ensure_ascii=False),encoding='utf-8')
+            saved=json.loads(cache.read_text(encoding='utf-8')) if cache.exists() else {}
+            old_source=saved.get('source',previous_source)
+            pending={key:value for key,value in source.items() if key not in saved.get('strings',{}) or old_source.get(key)!=value}
+            print('Translating',code,len(pending),'changed messages',flush=True)
+            if pending:changes,info=translate_catalogue(code,pending)
+            else:changes,info={},saved['model']
+            translated={key:changes[key] if key in changes else saved['strings'][key] for key in source}
+            cache.write_text(json.dumps(dict(source_sha256=hashlib.sha256(json.dumps(source,sort_keys=True).encode()).hexdigest(),source=source,strings=translated,model=info),ensure_ascii=False),encoding='utf-8')
         provenance.append(info)
+        from html import unescape
+        translated={key:unescape(value) for key,value in translated.items()}
         overrides=ROOT/'localization/overrides.json'
         if overrides.exists():translated.update(json.loads(overrides.read_text(encoding='utf-8')).get(code,{}))
         validate(source,translated)
@@ -110,4 +119,5 @@ def main():
         status[locale]=dict(state='validated',human_reviewer=None,release_approved=False,provider='English source with regional spelling',issues=['Regional and release review pending'],bundled_in_preview=True)
     status_path.write_text(json.dumps(status,indent=2)+'\n')
     (ROOT/'localization/model-provenance.json').write_text(json.dumps(provenance,indent=2)+'\n')
+    (ROOT/'localization/source.json').write_text(json.dumps(source,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 if __name__=='__main__':main()

@@ -17,5 +17,7 @@
   "offline_headline": "Offline Home Inventario App",
   "offline_caption": "Accedere al vostro inventario senza internet.",
   "reminders_headline": "Reminder di scadenza di garanzia",
-  "reminders_caption": "Tieni traccia delle prossime date di garanzia."
+  "reminders_caption": "Tieni traccia delle prossime date di garanzia.",
+  "iap_title": "Possessory Premium",
+  "iap_description": "Aggiornamento di una volta per beni illimitati e più famiglie, ricevuta OCR, promemoria di garanzia avanzata, manutenzione, PDF/CSV/JSON rapporti, ricerche salvate, comandi vocali espansi e backup protetti da password. Nessun abbonamento. La verifica di acquisto richiede internet."
 }

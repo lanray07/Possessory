@@ -6,9 +6,9 @@
   "hero_caption": "احتفظ بكل ما تملكه بشكل جميل",
   "rooms_headline": "نُظِّمُ مُلَكَةً في الغرفةِ",
   "rooms_caption": "ابحث عن أصناف منزلية بسرعة وبكل سهولة",
-  "warranties_headline": "Receipt &quot; Warranty Tracker &quot;",
+  "warranties_headline": "Receipt \" Warranty Tracker \"",
   "warranties_caption": "حافظوا على الإيصالات و تفاصيل الضمان معاً",
-  "ocr_headline": "Scan Receipts &quot; Save Records",
+  "ocr_headline": "Scan Receipts \" Save Records",
   "ocr_caption": "استعراض تفاصيل الشراء بأقل من الشكل",
   "reports_headline": "تقارير جرد التأمين المنزلي",
   "reports_caption": "إنشاء سجلات منظمة لممتلكات الأسر المعيشية.",
@@ -17,5 +17,7 @@
   "offline_headline": "الجرد المنزلي الخارجي",
   "offline_caption": "أدخلوا جردكم بدون الإنترنت",
   "reminders_headline": "نصب تذكاري",
-  "reminders_caption": "تابعوا تواريخ الضمان القادمة"
+  "reminders_caption": "تابعوا تواريخ الضمان القادمة",
+  "iap_title": "Possessory Premium",
+  "iap_description": "رفع مستوى الأمتعة غير المحدودة والأسر المعيشية المتعددة، والاستلام OCRرسائل تذكيرية متطورة PDF/CSV/JSON تقارير، عمليات تفتيش موفّرة، أوامر صوتية موسعة، دعم محمي بكلمة سرّية، لا يوجد اشتراكات، ويتطلب التحقق من الشراء الإنترنت."
 }

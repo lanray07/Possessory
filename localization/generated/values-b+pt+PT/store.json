@@ -17,5 +17,7 @@
   "offline_headline": "Aplicação de Inventário Offline Home",
   "offline_caption": "Acesse seu inventário sem internet.",
   "reminders_headline": "Avisos de expiração da Garantia",
-  "reminders_caption": "Acompanhe as próximas datas de garantia."
+  "reminders_caption": "Acompanhe as próximas datas de garantia.",
+  "iap_title": "Possessory Prémio",
+  "iap_description": "Atualização única para bens ilimitados e múltiplas famílias, recebimento OCR, lembretes de garantia avançada, manutenção, PDF/CSV/JSON relatórios, pesquisas salvas, comandos de voz expandidos e backups protegidos por senha. Nenhuma assinatura. A verificação da compra requer internet."
 }

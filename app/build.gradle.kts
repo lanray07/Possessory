@@ -20,20 +20,45 @@ android {
         applicationId = "app.possessory"
         minSdk = 26
         targetSdk = 36
-        versionCode = 2
-        versionName = "0.2.0"
+        versionCode = 3
+        versionName = "0.3.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("String", "AMAZON_SKU", "\"" + providers.environmentVariable("POSSESSORY_AMAZON_SKU").getOrElse("").replace("\"", "\\\"") + "\"")
+        buildConfigField("String", "AMAZON_SKU", "\"" + providers.environmentVariable("POSSESSORY_AMAZON_SKU").getOrElse("possessory.premium.lifetime").replace("\"", "\\\"") + "\"")
+        buildConfigField("String", "BILLING_ENV", "\"production\"")
+        buildConfigField("boolean", "DRAFT_TRANSLATIONS", "false")
+        buildConfigField("boolean", "REVIEW_MODE", "false")
         buildConfigField("String", "VERIFIER_URL", "\"" + providers.environmentVariable("POSSESSORY_VERIFIER_URL").getOrElse("").replace("\"", "\\\"") + "\"")
         buildConfigField("String", "LICENSE_PUBLIC_KEY", "\"" + providers.environmentVariable("POSSESSORY_LICENSE_PUBLIC_KEY").getOrElse("").replace("\"", "\\\"") + "\"")
     }
     buildFeatures { compose = true; buildConfig = true }
+    // Desktop OSGi metadata is duplicated by Bouncy Castle and JSpecify; Android does not use it.
+    packaging.resources.excludes += "META-INF/versions/9/OSGI-INF/MANIFEST.MF"
+    testBuildType = providers.gradleProperty("deviceTestBuildType").getOrElse("debug")
     sourceSets.getByName("debug").res.srcDir("src/preview/res")
     sourceSets.getByName("main").res.srcDir("src/localized/res")
     compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }
     kotlinOptions { jvmTarget = "17" }
     // Amazon SDK 3.0.9 emits stack-map warnings in R8; use D8 packaging until physical-device QA.
-    buildTypes { release { isMinifyEnabled = false; proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro") } }
+    buildTypes {
+        debug {
+            buildConfigField("boolean", "DRAFT_TRANSLATIONS", "true")
+            buildConfigField("String", "BILLING_ENV", "\"sandbox\"")
+            buildConfigField("String", "VERIFIER_URL", "\"" + providers.environmentVariable("POSSESSORY_SANDBOX_VERIFIER_URL").getOrElse("").replace("\"", "\\\"") + "\"")
+            buildConfigField("String", "LICENSE_PUBLIC_KEY", "\"" + providers.environmentVariable("POSSESSORY_SANDBOX_LICENSE_PUBLIC_KEY").getOrElse("").replace("\"", "\\\"") + "\"")
+        }
+        release { isMinifyEnabled = false; proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro") }
+        create("review") {
+            initWith(getByName("release"))
+            applicationIdSuffix = ".review"
+            matchingFallbacks += listOf("release")
+            buildConfigField("boolean", "DRAFT_TRANSLATIONS", "true")
+            buildConfigField("boolean", "REVIEW_MODE", "true")
+            buildConfigField("String", "VERIFIER_URL", "\"\"")
+            buildConfigField("String", "LICENSE_PUBLIC_KEY", "\"\"")
+        }
+    }
+    sourceSets.getByName("review").res.srcDir("src/preview/res")
+    sourceSets.getByName("review").assets.srcDir("src/debug/assets")
     testOptions { unitTests.isReturnDefaultValues = true; unitTests.isIncludeAndroidResources = true }
 }
 ksp { arg("room.schemaLocation", "$projectDir/schemas") }
@@ -52,6 +77,8 @@ val verifyBundledTranslations by tasks.registering {
                 check(folder.matches(Regex("values-[A-Za-z0-9+_-]+")))
                 val strings = file("src/$kind/res/$folder/strings.xml")
                 check(strings.exists() && digest(strings) == metadata.getProperty("sha256.$locale")) { "Bundled translation checksum mismatch: $locale" }
+                val support = file("src/${if (kind == "preview") "debug" else "main"}/assets/support/$locale.json")
+                check(support.exists() && digest(support) == metadata.getProperty("support.sha256.$locale")) { "Bundled support checksum mismatch: $locale" }
                 val alias = metadata.getProperty("alias.$locale")
                 if (alias != null) {
                     check(alias.matches(Regex("values-[A-Za-z0-9+_-]+")))
@@ -77,6 +104,7 @@ dependencies {
     implementation("androidx.core:core-ktx:1.16.0")
     implementation("io.coil-kt:coil-compose:2.7.0")
     implementation("com.google.code.gson:gson:2.13.1")
+    implementation("org.bouncycastle:bcprov-jdk18on:1.86")
     "amazonImplementation"("com.amazon.device:amazon-appstore-sdk:3.0.9")
     implementation("cz.adaptech.tesseract4android:tesseract4android:4.9.0")
     testImplementation("junit:junit:4.13.2")

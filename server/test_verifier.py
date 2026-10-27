@@ -8,6 +8,10 @@ class VerificationTests(unittest.TestCase):
     def test_matching_entitlement(self):
         c=claims_from_receipt(self.receipt(),'u','r','premium',False,1000)
         self.assertTrue(c['active']);self.assertEqual(c['validUntil'],1000+90*86400)
+        self.assertEqual(c['environment'],'production')
+    def test_sandbox_licenses_are_explicitly_separated(self):
+        receipt=self.receipt();receipt['testTransaction']=True
+        self.assertEqual(claims_from_receipt(receipt,'u','r','premium',True,1000)['environment'],'sandbox')
     def test_refunds_revoke_access(self):
         r=self.receipt();r['cancelDate']=999000
         self.assertFalse(claims_from_receipt(r,'u','r','premium',False,1000)['active'])

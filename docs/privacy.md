@@ -4,15 +4,15 @@ Effective date: 27 October 2026.
 
 Operator: O. Bankole. Contact: banksmi@mail.com.
 
-This notice describes Possessory version 0.2.0, an engineering preview. It will be updated before introducing materially different data practices.
+This notice describes Possessory version 0.3.0, an engineering preview. It will be updated before introducing materially different data practices.
 
 Possessory stores household records, photos, receipts, warranty details, maintenance records and preferences on your device in private application storage. No account is required. This preview has no advertising or analytics SDK and does not silently upload inventory or synchronise records.
 
-Receipt text extraction runs locally using an English OCR model. Receipt imports retain their original file. Microphone permission is requested only when you choose voice input. The Android speech provider may transmit audio to its own service and may require internet. Possessory does not retain raw recordings; it displays the recognised transcript for you to review. The device’s text-to-speech provider handles spoken responses.
+Receipt text extraction runs locally using one of fourteen bundled OCR language models. Receipt imports retain their original file. Microphone permission is requested only when you choose voice input. The Android speech provider may transmit audio to its own service and may require internet. Possessory does not retain raw recordings; it displays the recognised transcript for you to review. The device’s text-to-speech provider handles spoken responses.
 
 Document and image pickers grant access to the files you select. Camera capture is delegated to the installed camera application. Document previews may open another application only when you choose to view an attachment. Those applications have their own privacy policies.
 
-Reports and backups are written to the location you select. That location might be a cloud provider if you select one in the system picker. Plain exports and ZIP backups are not encrypted by Possessory. Optional password-protected backups use AES-GCM and require a password of at least twelve characters. Passwords cannot be recovered. Database and attachment encryption beyond device-level protections is not claimed.
+Reports and backups are written to the location you select. That location might be a cloud provider if you select one in the system picker. Plain exports and ZIP backups are not encrypted by Possessory. Optional password-protected backups use AES-GCM and require a password of at least twelve characters. Passwords cannot be recovered. Optional app lock uses the device PIN, pattern or password confirmation screen; the credential is not stored by Possessory. App lock hides recent-app previews and screenshots. Database and attachment encryption beyond device-level protections is not claimed.
 
 You can delete a belonging and its associated files, or delete all local data in Settings. Previously exported files remain wherever you saved them. Uninstalling removes private app data. Keep a verified backup if you want to retain it.
 

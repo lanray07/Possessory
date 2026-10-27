@@ -7,12 +7,14 @@ Serve behind HTTPS, rate limiting and a request-body limit. No developer secret 
 import base64, json, os, time, urllib.error, urllib.parse, urllib.request
 from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import padding, rsa
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, Field
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.responses import JSONResponse
+from pydantic import BaseModel, Field, ConfigDict
 
 app=FastAPI(docs_url=None,redoc_url=None,openapi_url=None)
 
 class ReceiptRequest(BaseModel):
+    model_config=ConfigDict(extra='forbid')
     userId: str=Field(min_length=1,max_length=512,pattern=r'^\S+$')
     receiptId: str=Field(min_length=1,max_length=1024,pattern=r'^\S+$')
 
@@ -25,7 +27,25 @@ def claims_from_receipt(receipt, user, receipt_id, expected_sku, sandbox, now):
     if cancel is not None and (not isinstance(cancel,(int,float)) or isinstance(cancel,bool)):
         raise ValueError('Invalid cancellation date')
     active=cancel is None or cancel>now*1000
-    return dict(sku=expected_sku,userId=user,receiptId=receipt_id,active=active,issuedAt=now,validUntil=now+90*86400)
+    return dict(sku=expected_sku,userId=user,receiptId=receipt_id,active=active,issuedAt=now,validUntil=now+90*86400,environment='sandbox' if sandbox else 'production')
+
+@app.middleware('http')
+async def bounded_requests(request:Request,call_next):
+    if request.method=='POST':
+        size=0;chunks=[]
+        async for chunk in request.stream():
+            size+=len(chunk)
+            if size>4096:return JSONResponse({'detail':'Request too large'},status_code=413,headers={'Cache-Control':'no-store'})
+            chunks.append(chunk)
+        request._body=b''.join(chunks)
+    response=await call_next(request)
+    response.headers['Cache-Control']='no-store'
+    response.headers['X-Content-Type-Options']='nosniff'
+    return response
+
+@app.get('/health')
+def health():
+    return {'service':'Possessory receipt verification','configured':all(os.environ.get(key) for key in ['AMAZON_SHARED_SECRET','AMAZON_PREMIUM_SKU','LICENSE_PRIVATE_KEY_PEM'])}
 
 def sign_claims(claims, pem):
     key=serialization.load_pem_private_key(pem,password=None)
@@ -56,7 +76,7 @@ def verify(request:ReceiptRequest):
         return sign_claims(claims,pem.encode())
     except urllib.error.HTTPError as exc:
         if exc.code==410:
-            claims=dict(sku=sku,userId=request.userId,receiptId=request.receiptId,active=False,issuedAt=int(time.time()),validUntil=int(time.time())+90*86400)
+            claims=dict(sku=sku,userId=request.userId,receiptId=request.receiptId,active=False,issuedAt=int(time.time()),validUntil=int(time.time())+90*86400,environment='sandbox' if sandbox else 'production')
             return sign_claims(claims,pem.encode())
         raise HTTPException(422 if exc.code in [400,497] else 503,'Receipt could not be verified') from None
     except (ValueError,TypeError,KeyError):raise HTTPException(422,'Receipt did not match the configured entitlement') from None

@@ -17,5 +17,7 @@
   "offline_headline": "Offline Home Inventory App",
   "offline_caption": "Få tillgång till ditt lager utan internet.",
   "reminders_headline": "Garantiförfall påminner",
-  "reminders_caption": "Håll koll på kommande garantidatum."
+  "reminders_caption": "Håll koll på kommande garantidatum.",
+  "iap_title": "Possessory Premium",
+  "iap_description": "Engångsuppgradering för obegränsade tillhörigheter och flera hushåll, kvitto OCRavancerade garantipåminnelser, underhåll, PDF/CSV/JSON Rapporter, sparade sökningar, utökade röstkommandon och lösenordsskyddade säkerhetskopior. Ingen prenumeration. Köpa verifiering kräver internet."
 }

@@ -17,5 +17,7 @@
   "offline_headline": "Offline Home Inventory App",
   "offline_caption": "Access your inventory without internet.",
   "reminders_headline": "Warranty Expiry Reminders",
-  "reminders_caption": "Keep track of upcoming warranty dates."
+  "reminders_caption": "Keep track of upcoming warranty dates.",
+  "iap_title": "Possessory Premium",
+  "iap_description": "One-time upgrade for unlimited belongings and multiple households, receipt OCR, advanced warranty reminders, maintenance, PDF/CSV/JSON reports, saved searches, expanded voice commands and password-protected backups. No subscription. Purchase verification requires internet."
 }

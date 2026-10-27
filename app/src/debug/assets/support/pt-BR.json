@@ -1,0 +1,17 @@
+{
+  "title": "Possessory apoio",
+  "getting_started": "Criar uma casa, escolher sua moeda e adicionar quartos, adicionar um pertence com seus detalhes de compra e garantia opcional data de expiração.",
+  "where_is_my_data": "Registros de inventário e anexos são armazenados no armazenamento privado do aplicativo neste dispositivo, nada é sincronizado silenciosamente, desinstalar remove dados locais, então salve e verifique um backup primeiro.",
+  "receipts": "Anexar uma imagem de recibo ou PDF, escolha uma página e linguagem de recibo, e use o controle de corte de revisão ou rotação antes de extração de texto no dispositivo.",
+  "backup": "Em configurações, salve um ZIP Opcionalmente, escolha a proteção de senha e use pelo menos 12 caracteres, mantenha a senha segura, não pode ser recuperada, o limite de tamanho da restauração é de 12 caracteres. 100 MiB As importações de anexos individuais são limitadas a 25 MiBOs metadados de backup são limitados a 8 MiB; anexos são encenados em cache privado durante a restauração para limitar o uso da memória.",
+  "restore": "Abra um backup em Configurações, digite sua senha se criptografada e inspecione a pré-visualização da importação. Possessory Verifica o esquema, os hashes de anexos e as referências de registros, as identidades de registros existentes são mantidas e só novos registros são mesclados, verifique seus pertences e anexos após a restauração.",
+  "reminders": "Ative lembretes opcionais em Configurações e permita notificações quando solicitado. Possessory O gerenciamento de energia de dispositivos pode atrasar as notificações, lembretes não substituem as inspeções de segurança profissional.",
+  "voice": "As ações apoiadas incluem navegação, encontrar pertences, contar de sala, criar um rascunho de item, ler lembretes de garantia e mover um item identificado após confirmação, ações ampliadas requerem Premium, digite um comando quando o reconhecimento de fala do dispositivo não estiver disponível, o provedor de fala pode usar um serviço de rede.",
+  "reports": "Escolha uma sala, categoria ou filtro de valor específico de moeda e um formato de saída. PDF Relatórios são registros de inventário mantidos pelo usuário e não são avaliações certificadas pela seguradora.",
+  "premium": "As compras da Amazon não estão disponíveis até que o produto e o serviço de verificação estejam configurados. 90 Seus registros existentes e ferramentas de eliminação permanecem acessíveis sem o Premium.",
+  "warranties": "As datas e termos de garantia são fornecidos por você, as garantias do fabricante e os direitos legais do consumidor são separados. Possessory não determina a elegibilidade ou fornece aconselhamento legal definitivo.",
+  "delete": "Para remover todos os registros e configurações locais, use Excluir todos os dados locais nas configurações e confirme.",
+  "contact_label": "Contato de suporte",
+  "draft_notice": "Validação específica de dispositivos e revisão de tradução estão pendentes.",
+  "app_lock": "Active a proteção do dispositivo em configurações após definir um PIN, padrão ou senha do dispositivo. Possessory Travando esconde pré-visualizações de aplicativos recentes e imagens."
+}

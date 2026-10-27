@@ -1,10 +1,23 @@
 {
   "release_approved": false,
   "runtime_translation": false,
+  "source_sha256": "36d4032020bc9441663068a1c89a24c446843d2fef25c47a4ef556fcfcb9ea97",
+  "source_messages": 335,
   "locales": {
     "en-GB": {
-      "string_count": 211,
+      "source_messages_covered": 335,
       "missing": [],
+      "placeholder_errors": [],
+      "plural_forms": {
+        "reminder_count": [
+          "one",
+          "other"
+        ],
+        "inventory_count": [
+          "one",
+          "other"
+        ]
+      },
       "unchanged_strings_requiring_context_review": [
         "app_language",
         "use_device_language",
@@ -36,6 +49,7 @@
         "upgrade",
         "purchase_retry",
         "add_household",
+        "app_name",
         "tagline",
         "your_home",
         "overview",
@@ -215,23 +229,151 @@
         "review_command",
         "voice_confirm",
         "operation_failed",
-        "operation_error"
+        "operation_error",
+        "advanced_search",
+        "all_conditions",
+        "minimum_price",
+        "maximum_price",
+        "purchased_after",
+        "purchased_before",
+        "range_currency_notice",
+        "apply_filters",
+        "clear_filters",
+        "save_search",
+        "saved_searches",
+        "manage_searches",
+        "edit_household",
+        "household_currency_notice",
+        "app_lock",
+        "unlock_notice",
+        "app_locked",
+        "unlock",
+        "app_lock_notice",
+        "device_lock_required",
+        "room_photo",
+        "rename",
+        "edit",
+        "add_document",
+        "delete_maintenance",
+        "delete_maintenance_body",
+        "edit_maintenance",
+        "maintenance_date",
+        "reminder_offsets",
+        "custom_reminder_dates",
+        "custom_reminder_hint",
+        "date_format",
+        "regional_date",
+        "short_date",
+        "crop_receipt",
+        "crop_left",
+        "crop_top",
+        "crop_right",
+        "crop_bottom",
+        "reset_crop",
+        "ocr_page",
+        "ocr_language",
+        "page_number",
+        "receipt_currency",
+        "receipt_description",
+        "receipt_reference",
+        "include_photos",
+        "include_receipt_references",
+        "high_value",
+        "value_threshold",
+        "preview_page",
+        "column_item",
+        "column_room",
+        "column_category",
+        "column_purchase_date",
+        "column_purchase_amount",
+        "column_currency",
+        "column_serial",
+        "column_retailer",
+        "column_warranty",
+        "no_receipt_reference",
+        "receipt_reference_note",
+        "voice_count_result",
+        "voice_move_title",
+        "voice_move_body",
+        "voice_room_missing",
+        "voice_item_missing",
+        "voice_add_prefix",
+        "voice_find_prefix",
+        "voice_room_prefix",
+        "voice_count_prefix",
+        "voice_move_prefix",
+        "voice_to_separator",
+        "voice_add_room_separator",
+        "voice_summary_command",
+        "voice_warranty_command",
+        "voice_receipt_command",
+        "voice_read_command",
+        "voice_add_command",
+        "review_mode_notice",
+        "warranty_manufacturer",
+        "warranty_extended",
+        "warranty_retailer",
+        "warranty_other",
+        "plural:reminder_count:one",
+        "plural:reminder_count:other",
+        "plural:inventory_count:one",
+        "plural:inventory_count:other",
+        "store:title",
+        "store:short_description",
+        "store:description",
+        "store:hero_headline",
+        "store:hero_caption",
+        "store:rooms_headline",
+        "store:rooms_caption",
+        "store:warranties_headline",
+        "store:warranties_caption",
+        "store:ocr_headline",
+        "store:ocr_caption",
+        "store:reports_headline",
+        "store:reports_caption",
+        "store:voice_headline",
+        "store:voice_caption",
+        "store:offline_headline",
+        "store:offline_caption",
+        "store:reminders_headline",
+        "store:reminders_caption",
+        "store:iap_title",
+        "store:iap_description",
+        "support:title",
+        "support:getting_started",
+        "support:where_is_my_data",
+        "support:receipts",
+        "support:backup",
+        "support:restore",
+        "support:reminders",
+        "support:voice",
+        "support:reports",
+        "support:premium",
+        "support:warranties",
+        "support:delete",
+        "support:contact_label",
+        "support:draft_notice",
+        "support:app_lock"
       ],
-      "plural_categories": {
-        "reminder_count": [
-          "one",
-          "other"
-        ],
-        "inventory_count": [
-          "one",
-          "other"
-        ]
-      },
-      "human_reviewed": false
+      "human_reviewer": null,
+      "human_review_complete": false,
+      "release_approved": false,
+      "possible_untranslated_fragments": {}
     },
     "en-US": {
-      "string_count": 211,
+      "source_messages_covered": 335,
       "missing": [],
+      "placeholder_errors": [],
+      "plural_forms": {
+        "reminder_count": [
+          "one",
+          "other"
+        ],
+        "inventory_count": [
+          "one",
+          "other"
+        ]
+      },
       "unchanged_strings_requiring_context_review": [
         "app_language",
         "use_device_language",
@@ -262,6 +404,7 @@
         "upgrade",
         "purchase_retry",
         "add_household",
+        "app_name",
         "your_home",
         "overview",
         "inventory",
@@ -438,9 +581,138 @@
         "review_command",
         "voice_confirm",
         "operation_failed",
-        "operation_error"
+        "operation_error",
+        "advanced_search",
+        "all_conditions",
+        "minimum_price",
+        "maximum_price",
+        "purchased_after",
+        "purchased_before",
+        "range_currency_notice",
+        "apply_filters",
+        "clear_filters",
+        "save_search",
+        "saved_searches",
+        "manage_searches",
+        "edit_household",
+        "household_currency_notice",
+        "app_lock",
+        "unlock_notice",
+        "app_locked",
+        "unlock",
+        "app_lock_notice",
+        "device_lock_required",
+        "room_photo",
+        "rename",
+        "edit",
+        "add_document",
+        "delete_maintenance",
+        "delete_maintenance_body",
+        "edit_maintenance",
+        "maintenance_date",
+        "reminder_offsets",
+        "custom_reminder_dates",
+        "custom_reminder_hint",
+        "date_format",
+        "regional_date",
+        "short_date",
+        "crop_receipt",
+        "crop_left",
+        "crop_top",
+        "crop_right",
+        "crop_bottom",
+        "reset_crop",
+        "ocr_page",
+        "ocr_language",
+        "page_number",
+        "receipt_currency",
+        "receipt_description",
+        "receipt_reference",
+        "include_photos",
+        "include_receipt_references",
+        "high_value",
+        "value_threshold",
+        "preview_page",
+        "column_item",
+        "column_room",
+        "column_category",
+        "column_purchase_date",
+        "column_purchase_amount",
+        "column_currency",
+        "column_serial",
+        "column_retailer",
+        "column_warranty",
+        "no_receipt_reference",
+        "receipt_reference_note",
+        "voice_count_result",
+        "voice_move_title",
+        "voice_move_body",
+        "voice_room_missing",
+        "voice_item_missing",
+        "voice_add_prefix",
+        "voice_find_prefix",
+        "voice_room_prefix",
+        "voice_count_prefix",
+        "voice_move_prefix",
+        "voice_to_separator",
+        "voice_add_room_separator",
+        "voice_summary_command",
+        "voice_warranty_command",
+        "voice_receipt_command",
+        "voice_read_command",
+        "voice_add_command",
+        "review_mode_notice",
+        "warranty_manufacturer",
+        "warranty_extended",
+        "warranty_retailer",
+        "warranty_other",
+        "plural:reminder_count:one",
+        "plural:reminder_count:other",
+        "plural:inventory_count:one",
+        "plural:inventory_count:other",
+        "store:title",
+        "store:hero_headline",
+        "store:rooms_headline",
+        "store:rooms_caption",
+        "store:warranties_headline",
+        "store:warranties_caption",
+        "store:ocr_headline",
+        "store:ocr_caption",
+        "store:reports_headline",
+        "store:voice_headline",
+        "store:voice_caption",
+        "store:offline_headline",
+        "store:offline_caption",
+        "store:reminders_headline",
+        "store:reminders_caption",
+        "store:iap_title",
+        "store:iap_description",
+        "support:title",
+        "support:getting_started",
+        "support:where_is_my_data",
+        "support:receipts",
+        "support:backup",
+        "support:restore",
+        "support:reminders",
+        "support:voice",
+        "support:reports",
+        "support:premium",
+        "support:warranties",
+        "support:delete",
+        "support:contact_label",
+        "support:draft_notice",
+        "support:app_lock"
       ],
-      "plural_categories": {
+      "human_reviewer": null,
+      "human_review_complete": false,
+      "release_approved": false,
+      "possible_untranslated_fragments": {}
+    },
+    "en-AU": {
+      "source_messages_covered": 335,
+      "missing": [],
+      "placeholder_errors": [],
+      "plural_forms": {
         "reminder_count": [
           "one",
           "other"
@@ -450,11 +722,6 @@
           "other"
         ]
       },
-      "human_reviewed": false
-    },
-    "en-AU": {
-      "string_count": 211,
-      "missing": [],
       "unchanged_strings_requiring_context_review": [
         "app_language",
         "use_device_language",
@@ -486,6 +753,7 @@
         "upgrade",
         "purchase_retry",
         "add_household",
+        "app_name",
         "tagline",
         "your_home",
         "overview",
@@ -665,27 +933,142 @@
         "review_command",
         "voice_confirm",
         "operation_failed",
-        "operation_error"
+        "operation_error",
+        "advanced_search",
+        "all_conditions",
+        "minimum_price",
+        "maximum_price",
+        "purchased_after",
+        "purchased_before",
+        "range_currency_notice",
+        "apply_filters",
+        "clear_filters",
+        "save_search",
+        "saved_searches",
+        "manage_searches",
+        "edit_household",
+        "household_currency_notice",
+        "app_lock",
+        "unlock_notice",
+        "app_locked",
+        "unlock",
+        "app_lock_notice",
+        "device_lock_required",
+        "room_photo",
+        "rename",
+        "edit",
+        "add_document",
+        "delete_maintenance",
+        "delete_maintenance_body",
+        "edit_maintenance",
+        "maintenance_date",
+        "reminder_offsets",
+        "custom_reminder_dates",
+        "custom_reminder_hint",
+        "date_format",
+        "regional_date",
+        "short_date",
+        "crop_receipt",
+        "crop_left",
+        "crop_top",
+        "crop_right",
+        "crop_bottom",
+        "reset_crop",
+        "ocr_page",
+        "ocr_language",
+        "page_number",
+        "receipt_currency",
+        "receipt_description",
+        "receipt_reference",
+        "include_photos",
+        "include_receipt_references",
+        "high_value",
+        "value_threshold",
+        "preview_page",
+        "column_item",
+        "column_room",
+        "column_category",
+        "column_purchase_date",
+        "column_purchase_amount",
+        "column_currency",
+        "column_serial",
+        "column_retailer",
+        "column_warranty",
+        "no_receipt_reference",
+        "receipt_reference_note",
+        "voice_count_result",
+        "voice_move_title",
+        "voice_move_body",
+        "voice_room_missing",
+        "voice_item_missing",
+        "voice_add_prefix",
+        "voice_find_prefix",
+        "voice_room_prefix",
+        "voice_count_prefix",
+        "voice_move_prefix",
+        "voice_to_separator",
+        "voice_add_room_separator",
+        "voice_summary_command",
+        "voice_warranty_command",
+        "voice_receipt_command",
+        "voice_read_command",
+        "voice_add_command",
+        "review_mode_notice",
+        "warranty_manufacturer",
+        "warranty_extended",
+        "warranty_retailer",
+        "warranty_other",
+        "plural:reminder_count:one",
+        "plural:reminder_count:other",
+        "plural:inventory_count:one",
+        "plural:inventory_count:other",
+        "store:title",
+        "store:short_description",
+        "store:description",
+        "store:hero_headline",
+        "store:hero_caption",
+        "store:rooms_headline",
+        "store:rooms_caption",
+        "store:warranties_headline",
+        "store:warranties_caption",
+        "store:ocr_headline",
+        "store:ocr_caption",
+        "store:reports_headline",
+        "store:reports_caption",
+        "store:voice_headline",
+        "store:voice_caption",
+        "store:offline_headline",
+        "store:offline_caption",
+        "store:reminders_headline",
+        "store:reminders_caption",
+        "store:iap_title",
+        "store:iap_description",
+        "support:title",
+        "support:getting_started",
+        "support:where_is_my_data",
+        "support:receipts",
+        "support:backup",
+        "support:restore",
+        "support:reminders",
+        "support:voice",
+        "support:reports",
+        "support:premium",
+        "support:warranties",
+        "support:delete",
+        "support:contact_label",
+        "support:draft_notice",
+        "support:app_lock"
       ],
-      "plural_categories": {
-        "reminder_count": [
-          "one",
-          "other"
-        ],
-        "inventory_count": [
-          "one",
-          "other"
-        ]
-      },
-      "human_reviewed": false
+      "human_reviewer": null,
+      "human_review_complete": false,
+      "release_approved": false,
+      "possible_untranslated_fragments": {}
     },
     "es-ES": {
-      "string_count": 211,
+      "source_messages_covered": 335,
       "missing": [],
-      "unchanged_strings_requiring_context_review": [
-        "premium"
-      ],
-      "plural_categories": {
+      "placeholder_errors": [],
+      "plural_forms": {
         "reminder_count": [
           "one",
           "other",
@@ -697,15 +1080,28 @@
           "many"
         ]
       },
-      "human_reviewed": false
+      "unchanged_strings_requiring_context_review": [
+        "app_name",
+        "premium",
+        "rename",
+        "receipt_description",
+        "column_retailer",
+        "voice_warranty_command",
+        "warranty_retailer",
+        "store:hero_headline",
+        "store:voice_headline",
+        "store:iap_title"
+      ],
+      "human_reviewer": null,
+      "human_review_complete": false,
+      "release_approved": false,
+      "possible_untranslated_fragments": {}
     },
     "es-419": {
-      "string_count": 211,
+      "source_messages_covered": 335,
       "missing": [],
-      "unchanged_strings_requiring_context_review": [
-        "premium"
-      ],
-      "plural_categories": {
+      "placeholder_errors": [],
+      "plural_forms": {
         "reminder_count": [
           "one",
           "other",
@@ -717,16 +1113,28 @@
           "many"
         ]
       },
-      "human_reviewed": false
+      "unchanged_strings_requiring_context_review": [
+        "app_name",
+        "premium",
+        "rename",
+        "receipt_description",
+        "column_retailer",
+        "voice_warranty_command",
+        "warranty_retailer",
+        "store:hero_headline",
+        "store:voice_headline",
+        "store:iap_title"
+      ],
+      "human_reviewer": null,
+      "human_review_complete": false,
+      "release_approved": false,
+      "possible_untranslated_fragments": {}
     },
     "fr-FR": {
-      "string_count": 211,
+      "source_messages_covered": 335,
       "missing": [],
-      "unchanged_strings_requiring_context_review": [
-        "garage",
-        "photo"
-      ],
-      "plural_categories": {
+      "placeholder_errors": [],
+      "plural_forms": {
         "reminder_count": [
           "one",
           "other",
@@ -738,16 +1146,22 @@
           "many"
         ]
       },
-      "human_reviewed": false
+      "unchanged_strings_requiring_context_review": [
+        "garage",
+        "app_name",
+        "photo",
+        "ocr_page"
+      ],
+      "human_reviewer": null,
+      "human_review_complete": false,
+      "release_approved": false,
+      "possible_untranslated_fragments": {}
     },
     "fr-CA": {
-      "string_count": 211,
+      "source_messages_covered": 335,
       "missing": [],
-      "unchanged_strings_requiring_context_review": [
-        "garage",
-        "photo"
-      ],
-      "plural_categories": {
+      "placeholder_errors": [],
+      "plural_forms": {
         "reminder_count": [
           "one",
           "other",
@@ -759,40 +1173,54 @@
           "many"
         ]
       },
-      "human_reviewed": false
-    },
-    "de-DE": {
-      "string_count": 211,
-      "missing": [],
       "unchanged_strings_requiring_context_review": [
         "garage",
+        "app_name",
+        "photo",
+        "ocr_page"
+      ],
+      "human_reviewer": null,
+      "human_review_complete": false,
+      "release_approved": false,
+      "possible_untranslated_fragments": {}
+    },
+    "de-DE": {
+      "source_messages_covered": 335,
+      "missing": [],
+      "placeholder_errors": [],
+      "plural_forms": {
+        "reminder_count": [
+          "one",
+          "other"
+        ],
+        "inventory_count": [
+          "one",
+          "other"
+        ]
+      },
+      "unchanged_strings_requiring_context_review": [
+        "garage",
+        "app_name",
         "filter",
         "name",
         "tags",
         "status",
         "format",
-        "premium"
+        "premium",
+        "edit",
+        "store:voice_headline",
+        "store:iap_title"
       ],
-      "plural_categories": {
-        "reminder_count": [
-          "one",
-          "other"
-        ],
-        "inventory_count": [
-          "one",
-          "other"
-        ]
-      },
-      "human_reviewed": false
+      "human_reviewer": null,
+      "human_review_complete": false,
+      "release_approved": false,
+      "possible_untranslated_fragments": {}
     },
     "it-IT": {
-      "string_count": 211,
+      "source_messages_covered": 335,
       "missing": [],
-      "unchanged_strings_requiring_context_review": [
-        "garage",
-        "premium"
-      ],
-      "plural_categories": {
+      "placeholder_errors": [],
+      "plural_forms": {
         "reminder_count": [
           "one",
           "other",
@@ -804,15 +1232,22 @@
           "many"
         ]
       },
-      "human_reviewed": false
+      "unchanged_strings_requiring_context_review": [
+        "garage",
+        "app_name",
+        "premium",
+        "store:iap_title"
+      ],
+      "human_reviewer": null,
+      "human_review_complete": false,
+      "release_approved": false,
+      "possible_untranslated_fragments": {}
     },
     "pt-BR": {
-      "string_count": 211,
+      "source_messages_covered": 335,
       "missing": [],
-      "unchanged_strings_requiring_context_review": [
-        "premium"
-      ],
-      "plural_categories": {
+      "placeholder_errors": [],
+      "plural_forms": {
         "reminder_count": [
           "one",
           "other",
@@ -824,13 +1259,23 @@
           "many"
         ]
       },
-      "human_reviewed": false
+      "unchanged_strings_requiring_context_review": [
+        "app_name",
+        "premium",
+        "column_item",
+        "plural:inventory_count:one",
+        "store:iap_title"
+      ],
+      "human_reviewer": null,
+      "human_review_complete": false,
+      "release_approved": false,
+      "possible_untranslated_fragments": {}
     },
     "pt-PT": {
-      "string_count": 211,
+      "source_messages_covered": 335,
       "missing": [],
-      "unchanged_strings_requiring_context_review": [],
-      "plural_categories": {
+      "placeholder_errors": [],
+      "plural_forms": {
         "reminder_count": [
           "one",
           "other",
@@ -842,37 +1287,50 @@
           "many"
         ]
       },
-      "human_reviewed": false
+      "unchanged_strings_requiring_context_review": [
+        "app_name",
+        "column_item"
+      ],
+      "human_reviewer": null,
+      "human_review_complete": false,
+      "release_approved": false,
+      "possible_untranslated_fragments": {}
     },
     "nl-NL": {
-      "string_count": 211,
+      "source_messages_covered": 335,
       "missing": [],
+      "placeholder_errors": [],
+      "plural_forms": {
+        "reminder_count": [
+          "one",
+          "other"
+        ],
+        "inventory_count": [
+          "one",
+          "other"
+        ]
+      },
       "unchanged_strings_requiring_context_review": [
         "garage",
+        "app_name",
         "filter",
         "model",
         "tags",
-        "status"
+        "status",
+        "store:hero_headline",
+        "store:voice_headline",
+        "store:offline_headline"
       ],
-      "plural_categories": {
-        "reminder_count": [
-          "one",
-          "other"
-        ],
-        "inventory_count": [
-          "one",
-          "other"
-        ]
-      },
-      "human_reviewed": false
+      "human_reviewer": null,
+      "human_review_complete": false,
+      "release_approved": false,
+      "possible_untranslated_fragments": {}
     },
     "pl-PL": {
-      "string_count": 211,
+      "source_messages_covered": 335,
       "missing": [],
-      "unchanged_strings_requiring_context_review": [
-        "format"
-      ],
-      "plural_categories": {
+      "placeholder_errors": [],
+      "plural_forms": {
         "reminder_count": [
           "one",
           "other",
@@ -886,35 +1344,58 @@
           "many"
         ]
       },
-      "human_reviewed": false
+      "unchanged_strings_requiring_context_review": [
+        "app_name",
+        "format",
+        "store:reports_headline"
+      ],
+      "human_reviewer": null,
+      "human_review_complete": false,
+      "release_approved": false,
+      "possible_untranslated_fragments": {}
     },
     "sv-SE": {
-      "string_count": 211,
+      "source_messages_covered": 335,
       "missing": [],
+      "placeholder_errors": [],
+      "plural_forms": {
+        "reminder_count": [
+          "one",
+          "other"
+        ],
+        "inventory_count": [
+          "one",
+          "other"
+        ]
+      },
       "unchanged_strings_requiring_context_review": [
         "garage",
+        "app_name",
         "filter",
         "status",
         "format",
-        "premium"
+        "premium",
+        "edit",
+        "date_format",
+        "preview_page",
+        "store:hero_headline",
+        "store:warranties_headline",
+        "store:ocr_headline",
+        "store:reports_headline",
+        "store:voice_headline",
+        "store:offline_headline",
+        "store:iap_title"
       ],
-      "plural_categories": {
-        "reminder_count": [
-          "one",
-          "other"
-        ],
-        "inventory_count": [
-          "one",
-          "other"
-        ]
-      },
-      "human_reviewed": false
+      "human_reviewer": null,
+      "human_review_complete": false,
+      "release_approved": false,
+      "possible_untranslated_fragments": {}
     },
     "ja-JP": {
-      "string_count": 211,
+      "source_messages_covered": 335,
       "missing": [],
-      "unchanged_strings_requiring_context_review": [],
-      "plural_categories": {
+      "placeholder_errors": [],
+      "plural_forms": {
         "reminder_count": [
           "one",
           "other"
@@ -924,13 +1405,32 @@
           "other"
         ]
       },
-      "human_reviewed": false
+      "unchanged_strings_requiring_context_review": [
+        "app_name"
+      ],
+      "human_reviewer": null,
+      "human_review_complete": false,
+      "release_approved": false,
+      "possible_untranslated_fragments": {
+        "form_error": [
+          "YYYY-MM-DD"
+        ],
+        "voice_examples": [
+          "Find my laptop",
+          "Show items in the kitchen",
+          "Add a new item",
+          "Show my inventory summary"
+        ],
+        "custom_reminder_hint": [
+          "YYYY-MM-DD"
+        ]
+      }
     },
     "hi-IN": {
-      "string_count": 211,
+      "source_messages_covered": 335,
       "missing": [],
-      "unchanged_strings_requiring_context_review": [],
-      "plural_categories": {
+      "placeholder_errors": [],
+      "plural_forms": {
         "reminder_count": [
           "one",
           "other"
@@ -940,15 +1440,34 @@
           "other"
         ]
       },
-      "human_reviewed": false
+      "unchanged_strings_requiring_context_review": [
+        "app_name",
+        "voice_to_separator",
+        "voice_add_room_separator"
+      ],
+      "human_reviewer": null,
+      "human_review_complete": false,
+      "release_approved": false,
+      "possible_untranslated_fragments": {
+        "form_error": [
+          "YYYY-MM-DD"
+        ],
+        "voice_examples": [
+          "Find my laptop",
+          "Show items in the kitchen",
+          "Add a new item",
+          "Show my inventory summary"
+        ],
+        "custom_reminder_hint": [
+          "YYYY-MM-DD"
+        ]
+      }
     },
     "ar": {
-      "string_count": 211,
+      "source_messages_covered": 335,
       "missing": [],
-      "unchanged_strings_requiring_context_review": [
-        "premium"
-      ],
-      "plural_categories": {
+      "placeholder_errors": [],
+      "plural_forms": {
         "reminder_count": [
           "one",
           "other",
@@ -966,13 +1485,56 @@
           "many"
         ]
       },
-      "human_reviewed": false
+      "unchanged_strings_requiring_context_review": [
+        "app_name",
+        "premium",
+        "edit",
+        "reset_crop",
+        "preview_page",
+        "store:voice_headline",
+        "store:iap_title"
+      ],
+      "human_reviewer": null,
+      "human_review_complete": false,
+      "release_approved": false,
+      "possible_untranslated_fragments": {
+        "form_error": [
+          "YYYY-MM-DD"
+        ],
+        "voice_examples": [
+          "Find my laptop",
+          "Show items in the kitchen",
+          "Add a new item",
+          "Show my inventory summary"
+        ],
+        "custom_reminder_hint": [
+          "YYYY-MM-DD"
+        ],
+        "reset_crop": [
+          "Reset review image"
+        ],
+        "page_number": [
+          "d of of"
+        ],
+        "store:warranties_headline": [
+          "Receipt \" Warranty Tracker"
+        ],
+        "store:ocr_headline": [
+          "Scan Receipts \" Save Records"
+        ],
+        "store:voice_headline": [
+          "Voice-Powered Inventory Manager"
+        ],
+        "support:reminders": [
+          "Enable optional reminders in Settings and allow notifications when prompted"
+        ]
+      }
     },
     "tr-TR": {
-      "string_count": 211,
+      "source_messages_covered": 335,
       "missing": [],
-      "unchanged_strings_requiring_context_review": [],
-      "plural_categories": {
+      "placeholder_errors": [],
+      "plural_forms": {
         "reminder_count": [
           "one",
           "other"
@@ -982,29 +1544,54 @@
           "other"
         ]
       },
-      "human_reviewed": false
+      "unchanged_strings_requiring_context_review": [
+        "app_name",
+        "unlock",
+        "rename",
+        "edit",
+        "date_format",
+        "preview_page",
+        "store:hero_headline",
+        "store:ocr_headline",
+        "store:reports_headline",
+        "store:voice_headline",
+        "store:offline_headline"
+      ],
+      "human_reviewer": null,
+      "human_review_complete": false,
+      "release_approved": false,
+      "possible_untranslated_fragments": {}
     },
     "id-ID": {
-      "string_count": 211,
+      "source_messages_covered": 335,
       "missing": [],
+      "placeholder_errors": [],
+      "plural_forms": {
+        "reminder_count": [
+          "one",
+          "other"
+        ],
+        "inventory_count": [
+          "one",
+          "other"
+        ]
+      },
       "unchanged_strings_requiring_context_review": [
+        "app_name",
         "filter",
         "model",
         "status",
         "format",
-        "premium"
+        "premium",
+        "column_retailer",
+        "warranty_retailer",
+        "store:reminders_headline",
+        "store:iap_title"
       ],
-      "plural_categories": {
-        "reminder_count": [
-          "one",
-          "other"
-        ],
-        "inventory_count": [
-          "one",
-          "other"
-        ]
-      },
-      "human_reviewed": false
+      "human_reviewer": null,
+      "human_review_complete": false,
+      "release_approved": false,
+      "possible_untranslated_fragments": {}
     }
   }
 }

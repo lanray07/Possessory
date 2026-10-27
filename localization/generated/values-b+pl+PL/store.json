@@ -17,5 +17,7 @@
   "offline_headline": "Aplikacja Offline Home Inventory",
   "offline_caption": "Dostęp do inwentarza bez internetu.",
   "reminders_headline": "Gwarancja Ostrzeżenia o wygaśnięciu",
-  "reminders_caption": "Śledź nadchodzące daty gwarancji."
+  "reminders_caption": "Śledź nadchodzące daty gwarancji.",
+  "iap_title": "Possessory Premia",
+  "iap_description": "Jednorazowa aktualizacja dla nieograniczonych rzeczy i wielu gospodarstw domowych, odbiór OCR, zaawansowane przypomnienia gwarancyjne, konserwacja, PDF/CSV/JSON raporty, zapisane wyszukiwanie, rozszerzone komendy głosowe i kopie zapasowe chronione hasłem. Brak subskrypcji."
 }

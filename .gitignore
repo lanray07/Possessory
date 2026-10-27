@@ -25,3 +25,8 @@ artifacts/device-captures/*.xml
 artifacts/device-captures/*.zip
 artifacts/device-captures/current.png
 artifacts/*.idsig
+
+.server-venv/
+.vercel/
+**/.vercel/
+artifacts/reviewer-captures/**/*.png

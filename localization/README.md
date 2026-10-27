@@ -1,8 +1,8 @@
 # Bundled APK localisation
 
-The 0.2.0 engineering preview contains static Android resource packs for all 19 requested locale targets. Local Argos/CTranslate2 models generate the drafts during development; only text resources and a small locale manifest enter the APK. Models, Python, API keys and a runtime translation service are not included. The initial model download requires internet on the developer's computer. Translating and using the packaged app strings does not.
+The 0.3.0 engineering preview contains static Android resource packs for all 19 requested locale targets. Local Argos/CTranslate2 models generate the drafts during development; only text resources and a small locale manifest enter the APK. Models, Python, API keys and a runtime translation service are not included. The initial model download requires internet on the developer's computer. Translating and using the packaged app strings does not.
 
-Choose the app language during onboarding or under Settings → App language. Device language remains the default. Dates and currencies follow the selected locale; recorded amounts and currency codes are not converted. User-entered item names, room names, notes, receipt contents and serial numbers are not translated.
+Choose the app language during onboarding or under Settings â†’ App language. Device language remains the default. Dates and currencies follow the selected locale; recorded amounts and currency codes are not converted. User-entered item names, room names, notes, receipt contents and serial numbers are not translated.
 
 ## Rebuild translations
 
@@ -19,8 +19,16 @@ The bundler validates every string key, placeholder and brand token against the 
 
 ## Preview versus release
 
-All generated packs are **drafts**. No language is marked human-reviewed or release-approved. Preview resources live in app/src/preview/res and are included only in debug builds. Release resources live in app/src/localized/res and are populated only by `tools/localize.py --bundle-approved` after the status record meets the existing review/approval checks. Current release builds retain the English base resources. Do not publish the debug APK as an approved worldwide release.
+All generated packs are **drafts**. No language is marked human-reviewed or release-approved. Preview resources live in app/src/preview/res and are included in debug and separate review builds. Release resources live in app/src/localized/res and are populated only by `tools/localize.py --bundle-approved` after the status record meets the existing review/approval checks. Current release builds retain the English base resources. Do not publish the debug APK as an approved worldwide release.
 
-Language quality, regional terminology, plural grammar, accessibility, truncation and device layout still require review, particularly Arabic and Hindi. English voice commands are intentionally preserved inside translated examples because the current voice parser supports English commands. The translator does not add voice-engine languages or change warranty/legal semantics by design; machine output still requires qualified review.
+Language quality, regional terminology, plural grammar, accessibility, truncation and device layout still require review, particularly Arabic and Hindi. Localized voice phrase dictionaries are bundled; English fallback remains available. Device recognition and TTS language support must be checked independently. The translator does not add voice-engine languages or change warranty/legal semantics by design; machine output still requires qualified review.
 
 Optional DeepL support remains available with `--translate --provider deepl` and a development environment key. It is not used by the bundled free workflow.
+
+## Human reviewer handoff
+
+Run `python tools/localization_quality.py` then `python tools/reviewer_handoff.py`. The ZIP contains one CSV and device sign-off checklist per locale, paired with a source hash. Review all 335 messages, including plural forms, store/IAP, support and privacy. Record corrections, the real reviewer name, decisions and device observations. No human approval is inferred from coverage or model output.
+
+Build the isolated evaluation app with `:app:assembleAmazonReview`. Sign it with the existing signing tool. Its package is app.possessory.review and its banner explicitly states that evaluation access grants no purchase entitlement. Do not submit that APK. Device screenshots are review evidence, not proof of linguistic correctness.
+
+Return completed reviewer files to the owner. Corrections must be applied to generated XML/JSON, validated and rebundled; source changes invalidate sign-off for changed messages. Promotion still requires the existing human-review and owner-approval checks in tools/localize.py. Draft site pages are generated with tools/support_site.py and are not published automatically.

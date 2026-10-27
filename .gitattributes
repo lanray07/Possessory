@@ -1,0 +1,4 @@
+# Locale manifests verify exact resource bytes across Windows and other hosts.
+*.xml text eol=lf
+*.json text eol=lf
+*.properties text eol=lf

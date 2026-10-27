@@ -50,7 +50,8 @@
     ],
     "signing_certificate_sha256": "e19756432bb702f5f454683d10330ef49bba7eee7848e34cf0eaae6540e111bd",
     "private_material_excluded_from_apks_and_source": true,
-    "release_production_trust_only": true
+    "release_production_trust_only": true,
+    "resource_line_endings_pinned_to_lf": true
   },
   "platform": {
     "model": "KFTRWI",
@@ -125,8 +126,8 @@
     },
     {
       "file": "Possessory-0.3.1-source.zip",
-      "bytes": 20912182,
-      "sha256": "522e4ec513d5110fea79dd1bbcc4d08bede62c7251f31f06ac645bbfca1b661f"
+      "bytes": 20912398,
+      "sha256": "5cec38c5b06c80d1348805f751dfe5f717c7d1fc39d310c4a40e1d95b1255cf0"
     }
   ],
   "prior_evidence": "artifacts/cloudflare-verification.json records the earlier verified App Tester purchase/restore path. Billing implementation and trust configuration are unchanged."

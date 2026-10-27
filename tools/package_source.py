@@ -22,7 +22,7 @@ def main():
     files.append(ROOT/'localization/glossary.csv')
     files.extend(ROOT/'server'/name for name in ['.python-version','.vercelignore'])
     files.extend(p for p in (ROOT/'localization/generated').rglob('*') if p.is_file())
-    for name in ['README.md','.gitignore','build.gradle.kts','settings.gradle.kts','gradle.properties','gradlew','gradlew.bat','app/build.gradle.kts','app/proguard-rules.pro']:
+    for name in ['README.md','.gitignore','.gitattributes','build.gradle.kts','settings.gradle.kts','gradle.properties','gradlew','gradlew.bat','app/build.gradle.kts','app/proguard-rules.pro']:
         files.append(ROOT/name)
     output=args.output.resolve();output.parent.mkdir(exist_ok=True)
     with ZipFile(output,'w',ZIP_DEFLATED,compresslevel=9) as archive:

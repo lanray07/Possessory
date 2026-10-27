@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-10-27T18:56:16.548529+00:00",
+  "environments": {
+    "production": {
+      "endpoint": "https://possessory-receipts-production.lanraybanks.workers.dev/verify",
+      "checks": [
+        {
+          "check": "health",
+          "status": 200,
+          "passed": true
+        },
+        {
+          "check": "invalid_receipt",
+          "status": 422,
+          "passed": true
+        },
+        {
+          "check": "inventory_rejected",
+          "status": 422,
+          "passed": true
+        }
+      ]
+    },
+    "sandbox": {
+      "endpoint": "https://possessory-receipts-sandbox.lanraybanks.workers.dev/verify",
+      "checks": [
+        {
+          "check": "health",
+          "status": 200,
+          "passed": true
+        },
+        {
+          "check": "invalid_receipt",
+          "status": 422,
+          "passed": true
+        },
+        {
+          "check": "inventory_rejected",
+          "status": 422,
+          "passed": true
+        }
+      ]
+    }
+  }
+}

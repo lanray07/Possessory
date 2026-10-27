@@ -56,9 +56,18 @@ android {
             buildConfigField("String", "VERIFIER_URL", "\"\"")
             buildConfigField("String", "LICENSE_PUBLIC_KEY", "\"\"")
         }
+        create("iapqa") {
+            initWith(getByName("debug"))
+            applicationIdSuffix = ".iapqa"
+            matchingFallbacks += listOf("debug")
+            buildConfigField("boolean", "REVIEW_MODE", "false")
+            buildConfigField("String", "BILLING_ENV", "\"sandbox\"")
+        }
     }
     sourceSets.getByName("review").res.srcDir("src/preview/res")
     sourceSets.getByName("review").assets.srcDir("src/debug/assets")
+    sourceSets.getByName("iapqa").res.srcDir("src/preview/res")
+    sourceSets.getByName("iapqa").assets.srcDir("src/debug/assets")
     testOptions { unitTests.isReturnDefaultValues = true; unitTests.isIncludeAndroidResources = true }
 }
 ksp { arg("room.schemaLocation", "$projectDir/schemas") }

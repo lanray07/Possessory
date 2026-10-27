@@ -4,7 +4,7 @@ Configure AMAZON_SHARED_SECRET, AMAZON_PREMIUM_SKU, LICENSE_PRIVATE_KEY_PEM.
 AMAZON_RVS_SANDBOX=true is for App Tester only; never use its licenses for release.
 Serve behind HTTPS, rate limiting and a request-body limit. No developer secret goes in APK.
 """
-import base64, json, os, time, urllib.error, urllib.parse, urllib.request
+import base64, json, math, os, time, urllib.error, urllib.parse, urllib.request
 from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import padding, rsa
 from fastapi import FastAPI, HTTPException, Request
@@ -24,10 +24,11 @@ def claims_from_receipt(receipt, user, receipt_id, expected_sku, sandbox, now):
     if receipt.get('testTransaction') is not False and not sandbox:
         raise ValueError('Test or unidentified receipt cannot grant production access')
     cancel=receipt.get('cancelDate')
-    if cancel is not None and (not isinstance(cancel,(int,float)) or isinstance(cancel,bool)):
+    if cancel is not None and (not isinstance(cancel,(int,float)) or isinstance(cancel,bool) or not math.isfinite(cancel)):
         raise ValueError('Invalid cancellation date')
     active=cancel is None or cancel>now*1000
-    return dict(sku=expected_sku,userId=user,receiptId=receipt_id,active=active,issuedAt=now,validUntil=now+90*86400,environment='sandbox' if sandbox else 'production')
+    until=min(now+90*86400,math.ceil(cancel/1000)) if active and cancel is not None else now+90*86400
+    return dict(sku=expected_sku,userId=user,receiptId=receipt_id,active=active,issuedAt=now,validUntil=until,environment='sandbox' if sandbox else 'production')
 
 @app.middleware('http')
 async def bounded_requests(request:Request,call_next):

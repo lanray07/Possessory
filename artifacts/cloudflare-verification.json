@@ -1,0 +1,97 @@
+{
+  "recorded_at": "2026-10-27T19:03:59.884946+00:00",
+  "version": "0.3.0",
+  "version_code": 3,
+  "status": "engineering_candidate_not_submission_approved",
+  "source_base_commit": "b6bf5a3",
+  "environments": {
+    "production": {
+      "endpoint": "https://possessory-receipts-production.lanraybanks.workers.dev/verify",
+      "public_spki_sha256": "a68a5c43abb4d1f96c46aef011935fd867d5cfb939afa897dbdfa842dad6d5a5",
+      "deployed_version_id": "9611d314-739b-4989-a7b0-369e185c3970"
+    },
+    "sandbox": {
+      "endpoint": "https://possessory-receipts-sandbox.lanraybanks.workers.dev/verify",
+      "public_spki_sha256": "c0265c7968971bfaea66cf366d06fda3c4c9eba9e4bbea51367a383f84631a54",
+      "deployed_version_id": "354e6e5e-5154-4a32-bcc0-5f46c1b18b45"
+    }
+  },
+  "checks": {
+    "worker_contract_tests_passed": 17,
+    "python_tests_passed": 9,
+    "live_endpoint_probes_passed": 6,
+    "release_lint": {
+      "errors": 0,
+      "warnings": 40,
+      "hints": 9
+    },
+    "apk_signatures": [
+      "v2",
+      "v3"
+    ],
+    "apk_certificate_sha256": "e19756432bb702f5f454683d10330ef49bba7eee7848e34cf0eaae6540e111bd",
+    "release_embeds_production_trust_only": true,
+    "release_private_secret_exclusion_check_passed": true,
+    "release_debuggable": false
+  },
+  "device": {
+    "model": "KFTRWI",
+    "android_api": 28,
+    "app_tester_purchase_and_restore_passed": true,
+    "app_tester_test_seconds": 39.106,
+    "sdk_mode_asserted_before_purchase": "SANDBOX",
+    "rsa_license_verified_on_android": true,
+    "real_payment_made": false,
+    "sandbox_display_price": "US$4.99 (App Tester default marketplace)",
+    "approved_amazon_uk_draft_price": "GBP 4.99 once",
+    "production_update_retention_test_passed": true,
+    "retained_existing_demo": "Willow House; at least 3 rooms, 6 items and maintenance",
+    "original_test_catalogue_restored_byte_for_byte": true,
+    "original_sandbox_property_restored": true,
+    "original_keep_awake_setting_restored": true,
+    "temporary_qa_packages_removed": true
+  },
+  "files": [
+    {
+      "file": "Possessory-amazon-cloudflare-release-signed.apk",
+      "bytes": 64818077,
+      "sha256": "f2e406a4f263692e0b0de12a53a2a032317cd1908ef033e4ca8827c7648009a3"
+    },
+    {
+      "file": "Possessory-amazon-iapqa-TEST-ONLY.apk",
+      "bytes": 72174646,
+      "sha256": "31f7dfcd4e09b43e97e9f074114a4c9bbe99df9bd29accf9f19ddfe2f668d8fd"
+    },
+    {
+      "file": "Possessory-amazon-iapqa-tests-TEST-ONLY.apk",
+      "bytes": 1077837,
+      "sha256": "315061baa618e55047348b2605b8958221e72675fa87eef55979bba1cc392515"
+    },
+    {
+      "file": "Possessory-cloudflare-source.zip",
+      "bytes": 20875312,
+      "sha256": "41362be245cd3482424dac5bab3d80cac31423e88958c528150deb858eb4b537"
+    },
+    {
+      "file": "device-captures/iapqa-sandbox-purchase.png",
+      "bytes": 207656,
+      "sha256": "9132920a7fadbc2dad17d307a9a6a00c82af36b5fa70363748788934c817e06f"
+    }
+  ],
+  "localization": {
+    "human_approved_locale_targets": 0,
+    "draft_locale_targets": 19,
+    "production_own_strings": "English base; unapproved drafts excluded",
+    "earlier_reviewer_pack_preserved": true,
+    "translated_privacy_requires_cloudflare_disclosure_update": true
+  },
+  "remaining_gates": [
+    "Independent human language review and revised privacy/support approval",
+    "Production Amazon transaction, restore, cancellation, account-change and offline-expiry device checks",
+    "Remaining camera/document/speech/notification/accessibility/device sign-off",
+    "Owner legal/export/release declarations and Amazon binary/listing update"
+  ],
+  "submitted_to_amazon": false,
+  "paid_plan_upgrade_requested": false,
+  "screenshots_use": "iapqa-sandbox-purchase.png is engineering evidence only; never a store listing screenshot"
+}

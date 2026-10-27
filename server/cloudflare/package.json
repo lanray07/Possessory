@@ -1,0 +1,12 @@
+{
+  "name": "possessory-receipt-verifier",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "check": "wrangler deploy --dry-run --env production",
+    "deploy:production": "wrangler deploy --env production",
+    "deploy:sandbox": "wrangler deploy --env sandbox"
+  },
+  "devDependencies": { "wrangler": "4.154.0" }
+}

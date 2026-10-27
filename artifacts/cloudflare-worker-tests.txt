@@ -1,0 +1,29 @@
+
+> test
+> node --test test/*.test.mjs
+
+✔ health exposes no secret values and never enables caching (54.0394ms)
+✔ routes and methods are constrained (0.9176ms)
+✔ oversized bodies are rejected before upstream calls (2.3207ms)
+✔ inventory fields, malformed JSON and invalid identifiers are rejected (3.9223ms)
+✔ unconfigured secrets, invalid environment and absent rate bindings fail closed (2.5988ms)
+✔ IP throttling rejects before receipt verification (0.4204ms)
+✔ receipt limiter uses a hash rather than customer or receipt identifiers (11.513ms)
+✔ valid production receipts generate Android-compatible RSA-SHA256 claims (9.8715ms)
+✔ SKU, product type and receipt mismatches cannot grant access (4.2142ms)
+✔ test or unidentified transactions are rejected in production (2.9664ms)
+✔ sandbox uses Amazon sandbox URL and can only issue sandbox claims (3.3963ms)
+✔ cancellation and Amazon HTTP 410 produce signed revocations (6.1498ms)
+✔ future cancellation bounds offline validity to its effective time (0.212ms)
+✔ Amazon errors are sanitized without echoing the secret or identifiers (4.4776ms)
+✔ oversized or malformed Amazon responses fail closed (2.4349ms)
+✔ redirect responses are rejected without following their destination (0.9314ms)
+✔ network failures and malformed signing keys reveal no implementation details (2.0191ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 303.3011

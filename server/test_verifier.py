@@ -15,8 +15,12 @@ class VerificationTests(unittest.TestCase):
     def test_refunds_revoke_access(self):
         r=self.receipt();r['cancelDate']=999000
         self.assertFalse(claims_from_receipt(r,'u','r','premium',False,1000)['active'])
+    def test_future_cancellation_caps_offline_license(self):
+        r=self.receipt();r['cancelDate']=1001500
+        c=claims_from_receipt(r,'u','r','premium',False,1000)
+        self.assertTrue(c['active']);self.assertEqual(c['validUntil'],1002)
     def test_mismatch_and_sandbox_are_rejected(self):
-        for change in [dict(productId='other'),dict(productType='CONSUMABLE'),dict(receiptId='another'),dict(testTransaction=True),dict(cancelDate='invalid')]:
+        for change in [dict(productId='other'),dict(productType='CONSUMABLE'),dict(receiptId='another'),dict(testTransaction=True),dict(cancelDate='invalid'),dict(cancelDate=float('nan')),dict(cancelDate=float('inf'))]:
             r=self.receipt();r.update(change)
             with self.assertRaises(ValueError):claims_from_receipt(r,'u','r','premium',False,1000)
     def test_rsa_signature_is_verifiable(self):

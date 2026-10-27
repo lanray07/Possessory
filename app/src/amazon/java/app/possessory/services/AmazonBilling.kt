@@ -4,6 +4,7 @@ import androidx.datastore.preferences.core.*
 import app.possessory.BuildConfig
 import app.possessory.PossessoryApp
 import app.possessory.settings
+import com.amazon.device.drm.LicensingService
 import com.amazon.device.iap.PurchasingListener
 import com.amazon.device.iap.PurchasingService
 import com.amazon.device.iap.model.*
@@ -27,6 +28,7 @@ class AmazonBilling(private val app: PossessoryApp) : PurchasingListener {
     private var tokenUser: String? = null
     private var timeout: Job? = null
     private var started = false
+    private var sdkEnvironmentMatches = false
     private val verificationMutex = Mutex()
     private var expiry: Job? = null
     private var clockAnchor = System.currentTimeMillis() / 1000
@@ -77,7 +79,14 @@ class AmazonBilling(private val app: PossessoryApp) : PurchasingListener {
                         expireAt(it.validUntil)
                     }
             runCatching {
+                    // SDK 3 initializes its environment through the licensing entry point.
+                    // This free app does not use the DRM result to grant Premium.
+                    LicensingService.verifyLicense(app) { }
                     PurchasingService.registerListener(app, this@AmazonBilling)
+                    sdkEnvironmentMatches =
+                        LicensingService.getAppstoreSDKMode() ==
+                            (if (BuildConfig.BILLING_ENV == "sandbox") "SANDBOX" else "PRODUCTION")
+                    check(sdkEnvironmentMatches) { "Unexpected store environment" }
                     PurchasingService.getUserData()
                     PurchasingService.getProductData(setOf(BuildConfig.AMAZON_SKU))
                     PurchasingService.getPurchaseUpdates(true)
@@ -97,14 +106,21 @@ class AmazonBilling(private val app: PossessoryApp) : PurchasingListener {
     }
 
     fun purchase() {
-        if (!enabled || state.value.busy || state.value.price == null || state.value.premium) return
+        if (
+            !enabled ||
+                !sdkEnvironmentMatches ||
+                state.value.busy ||
+                state.value.price == null ||
+                state.value.premium
+        )
+            return
         pending()
         runCatching { PurchasingService.purchase(BuildConfig.AMAZON_SKU) }
             .onFailure { state.value = state.value.copy(busy = false, status = "retry") }
     }
 
     fun restore() {
-        if (!enabled || state.value.busy) return
+        if (!enabled || !sdkEnvironmentMatches || state.value.busy) return
         pending()
         runCatching {
                 PurchasingService.getUserData()

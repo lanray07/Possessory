@@ -1,0 +1,99 @@
+{
+  "status": "console_draft_created_forms_in_progress",
+  "app": {
+    "internal_title": "Possessory",
+    "package_name": "app.possessory",
+    "version_name": "0.2.0",
+    "version_code": 2,
+    "type": "Android / Fire OS",
+    "category_preference": "Productivity",
+    "operator": "O. Bankole",
+    "support_email": "banksmi@mail.com",
+    "support_url": null,
+    "privacy_policy_url": null
+  },
+  "listing": {
+    "locale": "en-GB",
+    "display_title": "Possessory – Home Inventory & Warranty Tracker",
+    "short_description": "Keep belongings, receipts and warranty details beautifully organised on your device.",
+    "long_description": "Possessory helps you keep household belongings, receipts and warranty details organised on your device.\n\nCreate rooms and record your belongings with photos, purchase details, serial numbers and warranty dates. Attach receipt images or PDFs and review suggestions from on-device English text extraction. Schedule maintenance tasks and opt in to warranty reminders.\n\nSearch and filter your inventory, then export PDF, CSV or JSON records. Save ZIP backups, with optional password protection, and restore records after reviewing the import.\n\nCore inventory functions work offline and no account is required. Speech input depends on your device provider and may use an internet service. Reports are user-maintained records and are not insurer-certified valuations.\n\nThis engineering preview allows one household and up to 30 belongings. Premium purchasing is unavailable until release configuration and purchase verification are completed.",
+    "feature_bullets": [
+      "Organise household belongings by room with photos and purchase details.",
+      "Keep receipts, warranty dates and maintenance tasks together.",
+      "Review on-device English receipt text extraction before applying suggestions.",
+      "Export PDF, CSV and JSON records, or save optional password-protected backups.",
+      "Use core inventory functions offline without creating an account."
+    ],
+    "keywords": [
+      "home inventory",
+      "receipt organiser",
+      "warranty tracker",
+      "household belongings",
+      "maintenance reminders",
+      "inventory reports"
+    ]
+  },
+  "pricing": {
+    "app_download": "Free",
+    "iap_status": "not_configured",
+    "iap_draft_name": "Possessory Premium",
+    "iap_draft_type": "Entitlement / one-time purchase",
+    "iap_proposed_base_price": {
+      "currency": "GBP",
+      "amount": "4.99"
+    },
+    "iap_sku": null,
+    "note": "Proposed test price from owner brief; do not advertise or activate until configuration and validation are complete."
+  },
+  "targeting_draft": {
+    "primary_devices": "Compatible Fire tablets; minimum Android API 26",
+    "fire_tv": false,
+    "automotive": false,
+    "audience": "Household owners and renters; not designed for children",
+    "countries": "Worldwide intent from original brief, subject to console availability and release review"
+  },
+  "content_facts": {
+    "account_required": false,
+    "advertisements": false,
+    "gambling": false,
+    "location_detection": false,
+    "user_to_user_communication": false,
+    "public_user_content": false,
+    "private_user_authored_records": true,
+    "bundled_violence": false,
+    "bundled_sexual_content": false,
+    "bundled_drug_content": false,
+    "bundled_profanity": false,
+    "note": "Map these facts to the exact console question definitions. Amazon determines the resulting rating."
+  },
+  "privacy_review": {
+    "final_answers_pending": true,
+    "inventory": "Stored locally; no inventory upload or silent sync.",
+    "ocr": "English receipt text extraction runs on device.",
+    "speech": "Device speech provider may transmit microphone audio; optional permission.",
+    "exports": "User-selected destination may be a cloud document provider.",
+    "billing": "When configured, Amazon user ID and purchase receipt ID are sent to the verification service; currently disabled.",
+    "localization": "Static text resources; no runtime translation provider.",
+    "note": "Assess Amazon SDK and speech-provider behaviour against the questionnaire definitions before saving final privacy declarations."
+  },
+  "reviewer_notes": "No app account or login is required. On first launch create a household and rooms, then add belongings. Optional microphone and notification permissions may be declined. Billing is disabled in this engineering preview. This build is not ready for production submission.",
+  "owner_inputs_pending": [
+    "Developer-console sign-in and actual app entry",
+    "Public support and approved privacy-policy URLs",
+    "Final package identity and release signing configuration",
+    "Amazon app/product identifiers and deployed verification service",
+    "Device screenshots and real Fire-device validation",
+    "Approved listing translations and release language selection",
+    "Any legal declarations, identity, banking or tax details requested by the account"
+  ],
+  "sources": [
+    "https://developer.amazon.com/docs/app-submission/appstore-details.html",
+    "https://developer.amazon.com/docs/app-submission/target-app.html",
+    "https://developer.amazon.com/docs/app-submission/appstore-privacy-labels.html"
+  ],
+  "console": {
+    "app_id": "amzn1.devportal.mobileapp.f034ddb4f3e14a5297befed9c46e03e8",
+    "release_id": "amzn1.devportal.apprelease.2ad9ee167e1e48019eca90bc7c489cb1",
+    "submitted": false
+  }
+}

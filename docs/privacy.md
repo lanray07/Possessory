@@ -1,6 +1,10 @@
-# Possessory privacy notice — draft for owner approval
+# Possessory privacy notice
 
-Operator: O. Bankole. Support contact: banksmi@mail.com. Public policy URL and final legal approval remain pending.
+Effective date: 27 October 2026.
+
+Operator: O. Bankole. Contact: banksmi@mail.com.
+
+This notice describes Possessory version 0.2.0, an engineering preview. It will be updated before introducing materially different data practices.
 
 Possessory stores household records, photos, receipts, warranty details, maintenance records and preferences on your device in private application storage. No account is required. This preview has no advertising or analytics SDK and does not silently upload inventory or synchronise records.
 
@@ -14,4 +18,8 @@ You can delete a belonging and its associated files, or delete all local data in
 
 When Amazon billing is configured and you purchase or restore, the Amazon user ID and purchase receipt ID are sent to the configured Possessory verification service. That service checks Amazon’s Receipt Verification Service and issues a signed entitlement. Household inventory, receipts you photograph, item serial numbers and documents are not included. A cached signed entitlement can remain usable offline for up to 90 days; connecting refreshes its verification. Billing is disabled in unconfigured builds. Amazon separately processes purchases under its own policies.
 
-Before publication, the owner must supply the public policy URL, effective date and jurisdiction-specific disclosures and approve the policy and deployed billing service practices. This document is not an approved public policy.
+Possessory has no app account or account-registration feature. Local data can be deleted in Settings without creating or deleting an account. If you email support, your email address and the information you choose to include are processed to respond to your request. Please contact banksmi@mail.com with privacy questions or requests concerning support correspondence.
+
+The app is intended for household owners and renters and is not designed for children.
+
+This notice is published in the project repository. Changes will be recorded here with an updated effective date. Billing-service practices and disclosures must be updated before enabling purchases in a future build.

@@ -4,15 +4,23 @@ import hashlib
 import io
 import json
 import zipfile
+import argparse
 from pathlib import Path
 from localize import ROOT, extract
 
 
 def main():
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--output',type=Path,default=ROOT/'artifacts/Possessory-localization-review.zip')
+    parser.add_argument('--captures',type=Path,default=ROOT/'artifacts/reviewer-captures')
+    parser.add_argument('--version',default='0.3.0')
+    parser.add_argument('--reference-captures',type=Path,help='Older screenshots, labelled as historical references only')
+    parser.add_argument('--review-apk',type=Path,help='Current signed review APK to identify by digest; distributed separately')
+    args=parser.parse_args()
     source=extract()
     status=json.loads((ROOT/'localization/status.json').read_text(encoding='utf-8'))
     quality=json.loads((ROOT/'localization/quality-report.json').read_text(encoding='utf-8'))
-    output=ROOT/'artifacts/Possessory-localization-review.zip'
+    output=args.output
     source_hash=hashlib.sha256(json.dumps(source,sort_keys=True).encode()).hexdigest()
     instructions=(
         'POSSESSORY HUMAN LOCALIZATION REVIEW\n\n'
@@ -29,14 +37,30 @@ def main():
         'Return completed CSVs and device review notes. Release approval is a separate owner decision.\n'
         'A changed source hash invalidates a previous sign-off for changed messages.\n'
     )
+    if not (args.captures/'manifest.json').exists():
+        instructions+='\nCURRENT DEVICE SCREENSHOTS ARE PENDING. Inspect the current review APK. Any previous-version screenshots are historical layout references, not evidence that the updated text was checked on-device.\n'
     with zipfile.ZipFile(output,'w',zipfile.ZIP_DEFLATED) as archive:
         archive.writestr('READ-ME.txt',instructions)
         archive.write(ROOT/'localization/glossary.csv','glossary.csv')
         archive.write(ROOT/'localization/quality-report.json','automated-coverage.json')
-        evidence=ROOT/'artifacts/reviewer-captures/manifest.json'
-        if evidence.exists():archive.write(evidence,'device-capture-evidence.json')
+        evidence=args.captures/'manifest.json'
+        if evidence.exists():
+            recorded=json.loads(evidence.read_text(encoding='utf-8'))
+            assert recorded['source_catalogue_sha256']==source_hash,'Device evidence must match the current catalogue'
+            assert recorded['version']==args.version,'Device evidence must match the selected version'
+            archive.write(evidence,'device-capture-evidence.json')
+        archive.write(ROOT/'docs/privacy.md','operator-privacy-review.md')
+        if args.reference_captures:
+            historical=json.loads((args.reference_captures/'manifest.json').read_text(encoding='utf-8'))
+            archive.writestr('historical-device-capture-evidence.json',json.dumps(historical,indent=2))
+            for capture in historical['captures']:
+                path=(args.reference_captures/capture['path']).resolve()
+                assert path.is_relative_to(args.reference_captures.resolve())
+                assert hashlib.sha256(path.read_bytes()).hexdigest()==capture['sha256']
+                archive.write(path,'historical-layout-reference/'+capture['path'])
         for page in sorted((ROOT/'docs/site').glob('*.html')):archive.write(page,'website/'+page.name)
-        archive.writestr('source-manifest.json',json.dumps({'source_sha256':source_hash,'messages':len(source),'human_review_complete':False,'locales':list(status)},indent=2))
+        application={'file':args.review_apk.name,'sha256':hashlib.sha256(args.review_apk.read_bytes()).hexdigest()} if args.review_apk else None
+        archive.writestr('source-manifest.json',json.dumps({'version':args.version,'review_application':application,'source_sha256':source_hash,'messages':len(source),'human_review_complete':False,'current_device_capture_evidence_present':evidence.exists(),'historical_references_included':bool(args.reference_captures),'locales':list(status)},indent=2))
         for locale in status:
             folder='values-b+'+locale.replace('-','+')
             generated=ROOT/'localization/generated'/folder
@@ -57,7 +81,7 @@ def main():
             site=ROOT/'docs/site'/(locale+'.html')
             if site.exists():archive.writestr(locale+'/website-review.txt',f'Open ../website/{locale}.html for the draft marketing, support and privacy page. All wording requires human review.\n')
             for capture_set in ('standard','large-font','portrait'):
-                captures=ROOT/'artifacts/reviewer-captures'/capture_set/locale
+                captures=args.captures/capture_set/locale
                 if captures.exists():
                     for capture in sorted(captures.glob('*.png')):archive.write(capture,locale+'/device-screens/'+capture_set+'/'+capture.name)
     print(output)

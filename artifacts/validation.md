@@ -13,3 +13,7 @@ Independent human language/region/plural review, accessibility and external came
 Owner: O. Bankole; support: banksmi@mail.com. Premium base price approved at GBP 4.99 once, no subscription. Amazon entitlement SKU possessory.premium.lifetime remains an unsubmitted draft. No export declaration or store submission has been made.
 
 Final Amazon and standalone release builds passed. Lint reports contain zero errors, respectively 40 and 41 warnings. Warnings are classified in release-verification.json; they include dependency-version suggestions, style/API cleanup, unused resources and backup/locale configuration review. They are not represented as zero-warning results or as completed manual approval.
+
+## 0.3.1 follow-up
+
+The current candidate passed 30 app JVM/rendered tests, 17 Worker tests, nine Python server tests, five localization-pipeline tests, six live endpoint probes, three native platform checks and the production upgrade/data-retention check. Release lint has zero errors, 40 warnings and nine hints. See submission-checks-0.3.1.json and docs/SUBMISSION-CHECKLIST.md. Interactive Fire checks were blocked by secure keyguard and were not counted as passes. Human language, privacy/export and production/LAT gates remain open. Earlier archives and evidence are preserved.

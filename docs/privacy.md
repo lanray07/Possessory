@@ -4,7 +4,7 @@ Effective date: 27 October 2026.
 
 Operator: O. Bankole. Contact: banksmi@mail.com.
 
-This notice describes Possessory version 0.3.0, an engineering preview. It will be updated before introducing materially different data practices.
+This notice describes Possessory version 0.3.1, a release candidate. It will be updated before introducing materially different data practices.
 
 Possessory stores household records, photos, receipts, warranty details, maintenance records and preferences on your device in private application storage. No account is required. This preview has no advertising or analytics SDK and does not silently upload inventory or synchronise records.
 
@@ -22,4 +22,4 @@ Possessory has no app account or account-registration feature. Local data can be
 
 The app is intended for household owners and renters and is not designed for children.
 
-This notice is published in the project repository. Changes will be recorded here with an updated effective date. The Cloudflare billing disclosure is a release candidate requiring operator review before public purchases. Translated privacy notices in the reviewer pack predate this hosting addition and require an updated review before publication.
+This notice is published in the project repository. Changes will be recorded here with an updated effective date. The Cloudflare billing disclosure is a release candidate requiring operator review before public purchases. Translated privacy notices in the 0.3.1 reviewer pack include the hosting disclosure as machine drafts and require independent human review before publication.

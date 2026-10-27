@@ -1,7 +1,7 @@
 {
   "release_approved": false,
   "runtime_translation": false,
-  "source_sha256": "36d4032020bc9441663068a1c89a24c446843d2fef25c47a4ef556fcfcb9ea97",
+  "source_sha256": "7164c009afa46ade2a607d6d14bae9cec549dabb1d92143efc304821acf66b0f",
   "source_messages": 335,
   "locales": {
     "en-GB": {
@@ -671,6 +671,7 @@
         "plural:inventory_count:one",
         "plural:inventory_count:other",
         "store:title",
+        "store:description",
         "store:hero_headline",
         "store:rooms_headline",
         "store:rooms_caption",
@@ -1414,6 +1415,9 @@
       "possible_untranslated_fragments": {
         "form_error": [
           "YYYY-MM-DD"
+        ],
+        "privacy_body": [
+          "Possessory Cloudflare Workers"
         ],
         "voice_examples": [
           "Find my laptop",

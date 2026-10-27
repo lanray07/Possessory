@@ -2,7 +2,7 @@
 
 Native, local-first home inventory app for compatible Fire tablets and Android devices. Kotlin, Jetpack Compose, Material 3, Room, DataStore, WorkManager and on-device Tesseract. No mandatory Google Play Services, account, analytics or cloud sync.
 
-This is an engineering preview. Read [the release tracker](docs/RELEASE.md) for the complete implementation status and release blockers. Premium purchases are disabled until an Amazon product and the included verification service are configured; 19 locale packs are bundled as offline drafts in preview APKs and await language/layout review. Operator: O. Bankole. Support: banksmi@mail.com.
+Version 0.3.1 is a review candidate. Read [the release tracker](docs/RELEASE.md) and [submission handoff](docs/SUBMISSION-CHECKLIST.md) for evidence and release blockers. Cloudflare verification is configured and App Tester purchase/restore passed; the Amazon entitlement remains an unsubmitted draft. Nineteen offline locale packs await independent language approval and stay out of the production APK. Operator: O. Bankole. Support: banksmi@mail.com.
 
 ## Build
 
@@ -39,6 +39,6 @@ Amazon and standalone variants share the inventory implementation. Only the Amaz
 
 Build `:app:assembleAmazonReview` for the separate app.possessory.review evaluation APK. It bundles nineteen offline draft locale packs and clearly labelled evaluation access. It does not grant or simulate an Amazon entitlement and must never be submitted to a store. The production release variant retains the English base while human locale approvals are pending.
 
-Run `python tools/localization_quality.py`, `python tools/reviewer_evidence.py` (after physical captures), and `python tools/reviewer_handoff.py` to prepare the CSV/glossary/site/device handoff ZIP. Support and store changes invalidate the complete catalogue's review hash. See docs/RELEASE.md for evidence, remaining manual checks and production purchase/hosting gates. The approved Premium base price is £4.99 once; store pricing comes from Amazon.
+Run `python tools/localization_quality.py` to validate the current catalogue. Reviewer tools accept explicit `--version`, `--captures`, `--apk` (evidence) or `--review-apk` (handoff), and `--output` (handoff) arguments. Use a new directory/archive for 0.3.1; their defaults retain historical 0.3.0 filenames and stale evidence is rejected. `--reference-captures` adds clearly labelled historical layouts when current captures are pending. Support/store changes invalidate the review hash. See docs/RELEASE.md and docs/SUBMISSION-CHECKLIST.md for remaining gates. The approved Premium UK base price is £4.99 once; Amazon supplies regional prices.
 
 The receipt verifier is deployed on Cloudflare Workers with separate production/sandbox trust keys. See [deployment and testing](server/cloudflare/README.md). Build the configured release with `tools/build_cloudflare_candidate.ps1 -Verify`; add `-IncludeIapQa` only for isolated App Tester checks. The distinct Cloudflare APK and evidence do not replace the earlier localization-review archive or imply store-submission approval.

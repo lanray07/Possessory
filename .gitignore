@@ -30,6 +30,7 @@ artifacts/*.idsig
 .vercel/
 **/.vercel/
 artifacts/reviewer-captures/**/*.png
+artifacts/reviewer-captures-*/**/*.png
 **/node_modules/
 **/.wrangler/
 **/.dev.vars*

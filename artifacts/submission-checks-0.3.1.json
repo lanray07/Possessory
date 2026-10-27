@@ -1,0 +1,133 @@
+{
+  "recorded_at": "2026-10-27T19:27:55.016854+00:00",
+  "version": "0.3.1",
+  "version_code": 4,
+  "source_base_commit": "814891d",
+  "ready_to_submit": false,
+  "submitted_to_amazon": false,
+  "candidate_uploaded_to_amazon": false,
+  "last_observed_console_binary_version_code": 2,
+  "checks": {
+    "android_jvm_rendered_tests": {
+      "passed": 30,
+      "failures": 0
+    },
+    "worker_contract_tests": {
+      "passed": 17
+    },
+    "python_server_tests": {
+      "passed": 9
+    },
+    "localization_pipeline_tests": {
+      "passed": 5
+    },
+    "live_endpoint_checks": {
+      "passed": 6
+    },
+    "release_lint": {
+      "errors": 0,
+      "warnings": 40,
+      "hints": 9
+    },
+    "native_platform_tests": {
+      "passed": 3,
+      "detail": [
+        "Content-provider PNG/PDF byte preservation and rendering",
+        "WorkManager due notification and opt-out cancellation",
+        "Platform handler, credential, speech and TTS capability queries"
+      ]
+    },
+    "native_production_upgrade_retention": {
+      "passed": true,
+      "household": "Willow House",
+      "minimum_rooms": 3,
+      "minimum_items": 6,
+      "maintenance_retained": true
+    },
+    "signed_release_schemes": [
+      "v2",
+      "v3"
+    ],
+    "signing_certificate_sha256": "e19756432bb702f5f454683d10330ef49bba7eee7848e34cf0eaae6540e111bd",
+    "private_material_excluded_from_apks_and_source": true,
+    "release_production_trust_only": true
+  },
+  "platform": {
+    "model": "KFTRWI",
+    "android_api": 28,
+    "device_credential_configured": true,
+    "speech_recognition_available": false,
+    "camera_handler_available": true,
+    "document_picker_available": true,
+    "document_export_available": true,
+    "notifications_enabled": true,
+    "tts_initialized": true,
+    "human_accessibility_or_audio_signoff": false,
+    "tts_language_availability": {
+      "en-GB": 1,
+      "de-DE": -2,
+      "ar": -2,
+      "ja-JP": -2,
+      "hi-IN": -2
+    }
+  },
+  "localization": {
+    "targets": 19,
+    "messages_per_target": 335,
+    "catalogue_sha256": "7164c009afa46ade2a607d6d14bae9cec549dabb1d92143efc304821acf66b0f",
+    "human_approved_targets": 0,
+    "production_contains_approved_translations_only": true,
+    "production_language": "English base",
+    "current_device_screenshot_evidence": false,
+    "historical_layout_references": 175,
+    "reviewer_pack_has_current_apk_digest": true
+  },
+  "blocked_checks": {
+    "interactive_device_checks": "Fire secure keyguard was showing. Camera/picker cancellation and typed fallback run was aborted; it is not recorded as a product pass. Owner unlock required.",
+    "app_lock": "Owner must complete native device-credential prompts; no credential was entered or bypassed.",
+    "language_scope": "Awaiting human sign-offs or an explicit English-first scope change; original 19-locale requirement retained.",
+    "billing_production": "Entitlement remains unsubmitted. Complete approved Amazon LAT/production scenarios; no real purchase made.",
+    "legal": "Operator privacy/export/release declarations remain unapproved."
+  },
+  "device_cleanup": {
+    "temporary_keep_awake_restored_to_0": true,
+    "sandbox_mode_unchanged_empty": true,
+    "native_fixture_item_room_household_removed": true,
+    "native_notification_cancelled": true,
+    "original_reminder_preferences_restored": true,
+    "production_records_preserved": true
+  },
+  "files": [
+    {
+      "file": "Possessory-amazon-0.3.1-release-signed.apk",
+      "bytes": 64818077,
+      "sha256": "46e3bf51716375695be5286692818c864bab78bd71c98bdccc4de6a813524f37"
+    },
+    {
+      "file": "Possessory-amazon-0.3.1-review-signed.apk",
+      "bytes": 65208543,
+      "sha256": "906d5df9b268e6d1a52edb77e4c4736034fa715be8cf0f92dd2c42ed7121f6b4"
+    },
+    {
+      "file": "Possessory-0.3.1-review-tests-signed.apk",
+      "bytes": 908227,
+      "sha256": "23cb3217f9ee986a2027bf3321613d01512f07454599a17716721de0ec4570f3"
+    },
+    {
+      "file": "Possessory-0.3.1-release-tests-signed.apk",
+      "bytes": 908227,
+      "sha256": "d545b46e77cceb88c59dceb1a94bd4b1ee0c4bd7022ea5fc33550d65e1f7e2d6"
+    },
+    {
+      "file": "Possessory-0.3.1-localization-review.zip",
+      "bytes": 25842924,
+      "sha256": "6d406d044bff1e27aeca34837ee253312ded0b8e9bb28b90bea1b3a2964ab649"
+    },
+    {
+      "file": "Possessory-0.3.1-source.zip",
+      "bytes": 20912182,
+      "sha256": "522e4ec513d5110fea79dd1bbcc4d08bede62c7251f31f06ac645bbfca1b661f"
+    }
+  ],
+  "prior_evidence": "artifacts/cloudflare-verification.json records the earlier verified App Tester purchase/restore path. Billing implementation and trust configuration are unchanged."
+}

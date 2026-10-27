@@ -1,10 +1,10 @@
 {
-  "status": "signed_release_and_eight_real_device_screenshots_uploaded_not_submitted",
+  "status": "0.3.1_candidate_prepared_not_uploaded_or_submitted",
   "app": {
     "internal_title": "Possessory",
     "package_name": "app.possessory",
-    "version_name": "0.2.0",
-    "version_code": 2,
+    "version_name": "0.3.1",
+    "version_code": 4,
     "type": "Android / Fire OS",
     "category_preference": "Productivity",
     "operator": "O. Bankole",
@@ -13,16 +13,16 @@
     "privacy_policy_url": "https://github.com/lanray07/Possessory/blob/main/docs/privacy.md"
   },
   "listing": {
-    "locale": "en-GB",
+    "locale": "en-US",
     "display_title": "Possessory – Home Inventory & Warranty Tracker",
-    "short_description": "Keep belongings, receipts and warranty details beautifully organised on your device.",
-    "long_description": "Possessory helps you keep household belongings, receipts and warranty details organised on your device.\n\nCreate rooms and record your belongings with photos, purchase details, serial numbers and warranty dates. Attach receipt images or PDFs and review suggestions from on-device English text extraction. Schedule maintenance tasks and opt in to warranty reminders.\n\nSearch and filter your inventory, then export PDF, CSV or JSON records. Save ZIP backups, with optional password protection, and restore records after reviewing the import.\n\nCore inventory functions work offline and no account is required. Speech input depends on your device provider and may use an internet service. Reports are user-maintained records and are not insurer-certified valuations.\n\nThis engineering preview allows one household and up to 30 belongings. Premium purchasing is unavailable until release configuration and purchase verification are completed.",
+    "short_description": "Keep belongings, receipts and warranty details beautifully organized on your device.",
+    "long_description": "Give everything you own a place. Organize household belongings by room with photos, receipts, purchase details and warranty dates. Search your records, track warranties and save ZIP backups on your device. Core inventory works offline and no account is required. Free includes one household, up to 30 belongings and three attachments per belonging. An optional one-time Premium purchase adds unlimited belongings and households, receipt OCR, advanced reminders, maintenance, PDF/CSV/JSON exports, saved searches, expanded voice commands and password-protected backups. Premium has no subscription; Amazon displays your local price. Purchase verification requires internet, with signed offline access for up to 90 days before refresh. Speech recognition depends on your device provider and may use a network service. Review receipt suggestions before applying them. Inventory reports are user-maintained records, not insurer-certified valuations.",
     "feature_bullets": [
-      "Organise household belongings by room with photos and purchase details.",
-      "Keep receipts, warranty dates and maintenance tasks together.",
-      "Review on-device English receipt text extraction before applying suggestions.",
-      "Export PDF, CSV and JSON records, or save optional password-protected backups.",
-      "Use core inventory functions offline without creating an account."
+      "Organize belongings by room; free includes one household and up to 30 belongings.",
+      "Keep photos, receipts and warranty dates together with on-device storage.",
+      "Premium adds receipt OCR, maintenance, advanced reminders and expanded voice commands.",
+      "Premium exports PDF/CSV/JSON reports and password-protected backups.",
+      "Core inventory works offline without an app account; Premium is a one-time Amazon purchase."
     ],
     "keywords": [
       "home inventory",
@@ -35,15 +35,15 @@
   },
   "pricing": {
     "app_download": "Free",
-    "iap_status": "not_configured",
+    "iap_status": "configured_draft_ready_to_submit_not_live",
     "iap_draft_name": "Possessory Premium",
     "iap_draft_type": "Entitlement / one-time purchase",
     "iap_proposed_base_price": {
       "currency": "GBP",
       "amount": "4.99"
     },
-    "iap_sku": null,
-    "note": "Proposed test price from owner brief; do not advertise or activate until configuration and validation are complete."
+    "iap_sku": "possessory.premium.lifetime",
+    "note": "Owner-approved GBP 4.99 one-time UK base price. Amazon supplies regional prices. Cloudflare production/sandbox verifier configured; production transactions remain gated by IAP submission/testing."
   },
   "targeting_draft": {
     "primary_devices": "Compatible Fire tablets; minimum Android API 26",
@@ -69,19 +69,19 @@
   "privacy_review": {
     "final_answers_pending": true,
     "inventory": "Stored locally; no inventory upload or silent sync.",
-    "ocr": "English receipt text extraction runs on device.",
+    "ocr": "Fourteen bundled OCR models; all extraction runs locally. Model initialization/synthetic smoke passed; real multilingual receipt accuracy needs review.",
     "speech": "Device speech provider may transmit microphone audio; optional permission.",
     "exports": "User-selected destination may be a cloud document provider.",
-    "billing": "When configured, Amazon user ID and purchase receipt ID are sent to the verification service; currently disabled.",
+    "billing": "Amazon user ID and purchase receipt ID go over HTTPS to the Cloudflare-hosted verifier and Amazon RVS. IP addresses and purchase-ID hashes are used for short-lived rate limits. No customer database; application request logging disabled. Cloudflare processes operational/security network metadata.",
     "localization": "Static text resources; no runtime translation provider.",
-    "note": "Voice/sound recording collection for app functionality saved for review. Transfer marked No under Amazon user-initiated/service-provider exceptions. Reassess when production billing and device speech providers are configured."
+    "note": "Reconcile Amazon questionnaire definitions for identifiers/purchase history, optional device-provider speech, service-provider processing and user-initiated exports. Operator must review final disclosures; no legal certification is inferred."
   },
-  "reviewer_notes": "No app account or login is required. On first launch create a household and rooms, then add belongings. Optional microphone and notification permissions may be declined. Billing is disabled in this engineering preview. This build is not ready for production submission.",
+  "reviewer_notes": "Possessory 0.3.1 (version code 4), package app.possessory. Fire tablets, Android API 26+. No app sign-in or account is needed.\n\n1. Create a household, select its currency, add a room and save an item. Free allows one household, 30 items and three attachments per item. Search, edit and delete remain available without Premium. User-entered names are preserved.\n2. Attach a receipt image/PDF using the system picker, or open the camera on a supported device. Check that cancel returns without adding an attachment. Text extraction requires Premium: select a receipt language/page, crop or rotate and review suggestions before applying them. Originals are retained.\n3. In Settings, enable reminders. Device notification permission and power settings can affect delivery. Warranty and maintenance dates are user supplied. Reminders run approximately daily rather than at an exact time.\n4. Test the one-time Amazon entitlement possessory.premium.lifetime, display title Possessory Premium. The approved UK base price is GBP 4.99; Amazon supplies regional prices. Purchase and restore require internet. Only an Amazon-verified, signed entitlement unlocks Premium. No subscription. Previously verified access can work offline for up to 90 days or an earlier effective cancellation. Test invalid receipts, cancellation, restore and account changes with Amazon's approved testing tools; do not make a real paid purchase unless authorized by the account owner.\n5. Premium adds OCR, advanced reminders, maintenance, PDF/CSV/JSON exports, saved searches, expanded voice actions and password-protected backups. Preview exported content, save a backup, inspect restore preview and confirm existing records remain. Encrypted backups require at least 12 characters; passwords cannot be recovered. Plain ZIP backups and exports are unencrypted.\n6. Voice input is optional. When recognition is unavailable, type a supported phrase in Voice assistant and review it. TTS and recognition languages depend on the installed providers. No raw recordings are stored by Possessory.\n7. Optional app lock uses an existing system PIN/pattern/password; Possessory does not store it. Test unlock, background/reopen, credential cancellation and protected recent-app previews with the device owner. It is separate from database encryption.\n\nHousehold inventory and photographed documents stay on the device. Purchase user/receipt IDs are checked over HTTPS by the Cloudflare-hosted verifier and Amazon. See the privacy policy for network metadata and rate limiting. Support: banksmi@mail.com.\n\nNever upload the separate .review or .iapqa packages as the store binary. Localized packs remain drafts until independent human approval. These are candidate review instructions, not a certification that every manual release check is complete.\n",
   "owner_inputs_pending": [
-    "Release signing configuration and production readiness",
-    "Real device screenshots and validation",
-    "Export-compliance declaration based on owner review",
-    "Amazon product configuration before enabling paid upgrades"
+    "Independent language sign-offs or an explicit English-first scope decision",
+    "Unlock Fire for interactive camera/picker/credential checks",
+    "Operator privacy/export/release approval",
+    "Submitted IAP and approved Amazon production/LAT purchase scenarios"
   ],
   "sources": [
     "https://developer.amazon.com/docs/app-submission/appstore-details.html",
@@ -106,7 +106,11 @@
       "promotional banner"
     ],
     "remaining_required": [
-      "owner export-compliance declaration; final submission remains unperformed"
+      "Independent language approval and remaining manual device checks",
+      "Updated candidate binary, screenshots, final listing and testing instructions after review",
+      "Updated purchase-data privacy questionnaire/operator review",
+      "Owner export-compliance declaration",
+      "Premium IAP submission and production/LAT validation"
     ],
     "uploaded_apk": "Possessory-amazon-release-signed.apk",
     "uploaded_screenshots": 8,
@@ -114,6 +118,10 @@
       "Fire_tablets": 12,
       "Fire_TV": 0,
       "Automotive": 0
-    }
+    },
+    "last_observed_version_name": "0.2.0",
+    "last_observed_version_code": 2,
+    "candidate_apk": "Possessory-amazon-0.3.1-release-signed.apk",
+    "candidate_uploaded": false
   }
 }

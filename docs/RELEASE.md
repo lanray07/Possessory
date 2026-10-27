@@ -1,6 +1,6 @@
 # Possessory release tracker
 
-Version 0.3.0 is a release candidate for review, not submission approval. No Amazon submission has been performed. The master brief requires independent human language review; the owner requested reviewer handoff packs rather than waiving that requirement.
+Version 0.3.1 (code 4) is a release candidate for review, not submission approval. No Amazon submission has been performed. The master brief requires independent human language review; the owner requested reviewer handoff packs rather than waiving that requirement. See [the current submission handoff](SUBMISSION-CHECKLIST.md) for evidence and owner actions. Earlier 0.3.0 archives and hashes are preserved.
 
 ## Implemented in the candidate
 

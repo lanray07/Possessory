@@ -2,14 +2,25 @@
 import hashlib
 import json
 import struct
+import argparse
+from pathlib import Path
 from localize import ROOT
 
 def main():
-    root=ROOT/'artifacts/reviewer-captures'
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--captures',type=Path,default=ROOT/'artifacts/reviewer-captures')
+    parser.add_argument('--apk',type=Path,default=ROOT/'artifacts/Possessory-amazon-review-signed.apk')
+    parser.add_argument('--version',default='0.3.0')
+    args=parser.parse_args()
+    root=args.captures
     locales=list(json.loads((ROOT/'localization/status.json').read_text(encoding='utf-8')))
     quality=json.loads((ROOT/'localization/quality-report.json').read_text(encoding='utf-8'))
-    apk=ROOT/'artifacts/Possessory-amazon-review-signed.apk'
-    report={'version':'0.3.0','package':'app.possessory.review','apk_sha256':hashlib.sha256(apk.read_bytes()).hexdigest(),'source_catalogue_sha256':quality['source_sha256'],'device':{'model':'KFTRWI','android_api':28},'pixels':'Unmodified UIAutomation screenshots from the physical Fire tablet','capture_sync':'Expected localized heading, Compose idle, UI idle and display commit delay','human_language_approval':False,'suitable_for_store_submission':False,'pages':{'1':'overview','2':'inventory','3':'rooms','4':'warranties','5':'maintenance','6':'reports','7':'settings'},'sets':{},'captures':[]}
+    previous=root/'manifest.json'
+    if previous.exists():
+        recorded=json.loads(previous.read_text(encoding='utf-8'))
+        assert recorded['source_catalogue_sha256']==quality['source_sha256'],'The catalogue changed. Capture the current APK into a new versioned directory; preserve the historical evidence.'
+    apk=args.apk
+    report={'version':args.version,'package':'app.possessory.review','apk_sha256':hashlib.sha256(apk.read_bytes()).hexdigest(),'source_catalogue_sha256':quality['source_sha256'],'device':{'model':'KFTRWI','android_api':28},'pixels':'Unmodified UIAutomation screenshots from the physical Fire tablet','capture_sync':'Expected localized heading, Compose idle, UI idle and display commit delay','human_language_approval':False,'suitable_for_store_submission':False,'pages':{'1':'overview','2':'inventory','3':'rooms','4':'warranties','5':'maintenance','6':'reports','7':'settings'},'sets':{},'captures':[]}
     for name,expected,font,dimensions in [('standard',locales,1.0,(1920,1200)),('large-font',['en-GB','de-DE','ar'],2.0,(1920,1200)),('portrait',['en-GB','de-DE','ar'],1.0,(1200,1920))]:
         assert {p.name for p in (root/name).iterdir() if p.is_dir()}==set(expected)
         for locale in expected:

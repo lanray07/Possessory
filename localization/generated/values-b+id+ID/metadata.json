@@ -1,8 +1,8 @@
 {
   "locale": "id-ID",
-  "source_sha256": "8ff28894e5a89af650d68132cd1f2afbd92baac29ba25922dd011be7b5e52f9f",
-  "strings_sha256": "aacbcbb4677bf0cebfe941bccde771296aa79979b42104823276f3cd75b0b5be",
+  "source_sha256": "b12817cce93d13b9c672112b7b0a4be6f6c3a47a46bdb98b36d2be0b7ecebe5d",
+  "strings_sha256": "30f01e7c826038c21e7cb9ea9c66dcc2812754500916202f693246a0e973224a",
   "catalogue_sha256": "7164c009afa46ade2a607d6d14bae9cec549dabb1d92143efc304821acf66b0f",
-  "store_sha256": "f738c2775357c066d2083680b3bb427dd68e5d4e7b9e1bf6f9ced2f7cf749d1c",
-  "support_sha256": "76de5327de1d420c6d2fedeeba4202863c2bb7b86bb6c5ae181869d5c17d3ba4"
+  "store_sha256": "87161aac4ec5483e9ae3fc7d755110e941c2eb5cd0a7e84d6d86993028b03cdc",
+  "support_sha256": "3f2b9f4401a04fde405adc4e309e0ca12fc15c31158a08efa96894aafa323d57"
 }

@@ -1,5 +1,5 @@
 import unittest
-import tempfile, json
+import tempfile, json, hashlib
 from pathlib import Path
 from unittest.mock import patch
 import localize
@@ -36,8 +36,16 @@ class LocalisationChecks(unittest.TestCase):
             status=root/'localization/status.json';status.parent.mkdir()
             status.write_text(json.dumps({'es-ES':{'state':'machine_translated','release_approved':False,'bundled_in_preview':True,'issues':['Human review pending']}}))
             with patch.object(localize,'ROOT',root),patch.object(localize,'CONFIG',{'locales':{'es-ES':'ES'}}):
-                localize.resources('es-ES',{'save':'Guardar'})
+                localize.resources('es-ES',{'save':'Guardar','store:description':'Inventario privado','support:premium':'Verificación de compra'})
                 localize.bundle_resources(preview=True)
+                generated=root/'localization/generated/values-b+es+ES'
+                metadata=json.loads((generated/'metadata.json').read_text(encoding='utf-8'))
+                # Git's LF checkout must preserve every byte used by the packaged checksum contract.
+                for name,field in [('strings.xml','strings_sha256'),('store.json','store_sha256'),('support.json','support_sha256')]:
+                    raw=(generated/name).read_bytes()
+                    self.assertNotIn(b'\r\n',raw)
+                    self.assertEqual(hashlib.sha256(raw.replace(b'\r\n',b'\n')).hexdigest(),metadata[field])
+                self.assertNotIn(b'\r\n',(root/'app/src/preview/locales.properties').read_bytes())
                 self.assertIn('Guardar',(root/'app/src/preview/res/values-b+es+ES/strings.xml').read_text(encoding='utf-8'))
                 self.assertFalse(json.loads((root/'app/src/debug/assets/localization.json').read_text())['runtime_translation'])
                 with self.assertRaises(AssertionError):localize.bundle_resources(preview=False)

@@ -15,6 +15,9 @@ CONFIG=json.loads((ROOT/'localization/config.json').read_text(encoding='utf-8'))
 TOKENS=re.compile(r'%(?:\d+\$)?[dsf]|Possessory|\\n')
 
 def placeholders(text): return sorted(TOKENS.findall(text))
+def write_xml(root, path):
+    # Binary output prevents Windows newline conversion from invalidating Git checkout hashes.
+    with path.open('wb') as output: ET.ElementTree(root).write(output,encoding='utf-8',xml_declaration=True)
 def resource_folder(locale):
     # Android resource folders retain the historical Indonesian language code.
     return 'values-in-rID' if locale=='id-ID' else 'values-b+'+locale.replace('-','+')
@@ -78,13 +81,13 @@ def resources(locale, data):
                     assert placeholders(value)==placeholders(next(e.text for e in plurals[name] if e.attrib['quantity']=='other'))
                     element.text=value.replace("'", "\\'")
     path=ROOT/'localization/generated'/folder/'strings.xml';path.parent.mkdir(parents=True,exist_ok=True)
-    ET.indent(root);ET.ElementTree(root).write(path,encoding='utf-8',xml_declaration=True)
+    ET.indent(root);write_xml(root,path)
     (path.parent/'metadata.json').write_text(json.dumps({'locale':locale,'source_sha256':hashlib.sha256((ROOT/'app/src/main/res/values/strings.xml').read_bytes()).hexdigest(),'strings_sha256':hashlib.sha256(path.read_bytes()).hexdigest()},indent=2),encoding='utf-8')
     # Generated files are staged here; only approved resources may be copied into app/src/main/res.
     store={k.removeprefix('store:'):v for k,v in data.items() if k.startswith('store:')}
-    (path.parent/'store.json').write_text(json.dumps(store,ensure_ascii=False,indent=2),encoding='utf-8')
+    (path.parent/'store.json').write_text(json.dumps(store,ensure_ascii=False,indent=2),encoding='utf-8',newline='\n')
     support={k.removeprefix('support:'):v for k,v in data.items() if k.startswith('support:')}
-    (path.parent/'support.json').write_text(json.dumps(support,ensure_ascii=False,indent=2),encoding='utf-8')
+    (path.parent/'support.json').write_text(json.dumps(support,ensure_ascii=False,indent=2),encoding='utf-8',newline='\n')
     metadata=json.loads((path.parent/'metadata.json').read_text(encoding='utf-8'))
     metadata['catalogue_sha256']=hashlib.sha256(json.dumps(extract(),sort_keys=True).encode()).hexdigest()
     for kind in ('store','support'):metadata[kind+'_sha256']=hashlib.sha256((path.parent/(kind+'.json')).read_bytes()).hexdigest()
@@ -136,12 +139,12 @@ def bundle_resources(preview=False):
         lines.append(f'sha256.{locale}={digest}')
         lines.append(f'folder.{locale}={resource_folder(locale)}')
         lines.append(f'support.sha256.{locale}='+hashlib.sha256((path.parent/'support.json').read_bytes()).hexdigest())
-    manifest.write_text('\n'.join(lines)+'\n',encoding='utf-8')
+    manifest.write_text('\n'.join(lines)+'\n',encoding='utf-8',newline='\n')
     locale_config=ET.Element('locale-config',{'xmlns:android':'http://schemas.android.com/apk/res/android'})
     for locale in selected:ET.SubElement(locale_config,'locale',{'android:name':locale})
-    xml=target/'res/xml/locales_config.xml';xml.parent.mkdir(parents=True,exist_ok=True);ET.ElementTree(locale_config).write(xml,encoding='utf-8',xml_declaration=True)
+    xml=target/'res/xml/locales_config.xml';xml.parent.mkdir(parents=True,exist_ok=True);write_xml(locale_config,xml)
     asset=ROOT/'app/src'/('debug' if preview else 'main')/'assets/localization.json';asset.parent.mkdir(parents=True,exist_ok=True)
-    asset.write_text(json.dumps({'runtime_translation':False,'machine_review_pending':preview,'source_sha256':source_hash,'locales':selected},indent=2)+'\n')
+    asset.write_text(json.dumps({'runtime_translation':False,'machine_review_pending':preview,'source_sha256':source_hash,'locales':selected},indent=2)+'\n',encoding='utf-8',newline='\n')
     support_assets=asset.parent/'support';support_assets.mkdir(exist_ok=True)
     for locale in selected:
         source=ROOT/'localization/generated'/('values-b+'+locale.replace('-','+'))/'support.json'

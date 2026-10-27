@@ -43,7 +43,7 @@ INSTRUMENTATION_STATUS: test=dueReminderRunsThroughWorkManagerAndOptOutCancels
 INSTRUMENTATION_STATUS_CODE: 0
 INSTRUMENTATION_RESULT: stream=
 
-Time: 1.923
+Time: 1.919
 
 OK (3 tests)
 

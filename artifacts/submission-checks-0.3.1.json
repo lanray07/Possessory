@@ -1,5 +1,5 @@
 {
-  "recorded_at": "2026-10-27T19:27:55.016854+00:00",
+  "recorded_at": "2026-10-27T19:38:23.326372+00:00",
   "version": "0.3.1",
   "version_code": 4,
   "source_base_commit": "814891d",
@@ -51,7 +51,8 @@
     "signing_certificate_sha256": "e19756432bb702f5f454683d10330ef49bba7eee7848e34cf0eaae6540e111bd",
     "private_material_excluded_from_apks_and_source": true,
     "release_production_trust_only": true,
-    "resource_line_endings_pinned_to_lf": true
+    "resource_line_endings_pinned_to_lf": true,
+    "checkout_resource_digest_comparisons_passed": 40
   },
   "platform": {
     "model": "KFTRWI",
@@ -102,12 +103,12 @@
     {
       "file": "Possessory-amazon-0.3.1-release-signed.apk",
       "bytes": 64818077,
-      "sha256": "46e3bf51716375695be5286692818c864bab78bd71c98bdccc4de6a813524f37"
+      "sha256": "2877b7c941cd51c99655f5fc11132d975f2bbac131bbfd4bfe6e7029bead5e18"
     },
     {
       "file": "Possessory-amazon-0.3.1-review-signed.apk",
       "bytes": 65208543,
-      "sha256": "906d5df9b268e6d1a52edb77e4c4736034fa715be8cf0f92dd2c42ed7121f6b4"
+      "sha256": "f880ee118084b0740bb0f274e7418132b8904947476ebda91b5944c1917ee1b1"
     },
     {
       "file": "Possessory-0.3.1-review-tests-signed.apk",
@@ -122,12 +123,12 @@
     {
       "file": "Possessory-0.3.1-localization-review.zip",
       "bytes": 25842924,
-      "sha256": "6d406d044bff1e27aeca34837ee253312ded0b8e9bb28b90bea1b3a2964ab649"
+      "sha256": "655ec52c224ff6769a62dc3c956e503e7df77d58f78c0b588b2ada37767b51d9"
     },
     {
       "file": "Possessory-0.3.1-source.zip",
-      "bytes": 20912398,
-      "sha256": "5cec38c5b06c80d1348805f751dfe5f717c7d1fc39d310c4a40e1d95b1255cf0"
+      "bytes": 20912117,
+      "sha256": "b2fbfe8843f66ad02b6c9187bebcbf145e64dd2d94bce9d9dfe410c9f3e11c88"
     }
   ],
   "prior_evidence": "artifacts/cloudflare-verification.json records the earlier verified App Tester purchase/restore path. Billing implementation and trust configuration are unchanged."

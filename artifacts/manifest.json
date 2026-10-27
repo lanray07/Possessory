@@ -1,34 +1,40 @@
 {
-  "version": "0.1.0",
-  "version_code": 1,
+  "version": "0.2.0",
+  "version_code": 2,
   "status": "engineering_preview",
   "operator": "O. Bankole",
   "support": "banksmi@mail.com",
   "files": [
     {
       "file": "Possessory-amazon-preview.apk",
-      "bytes": 50360448,
-      "sha256": "d78d07039dfbe5b86a50255b3d5004950a1b2ce8c068fd02867e3032665b7752"
+      "bytes": 51072005,
+      "sha256": "ff7d32d53e3cefe1b39a690b85b952998a7811a1895f49417cb76093e0e4732a"
     },
     {
       "file": "Possessory-android-preview.apk",
-      "bytes": 50196414,
-      "sha256": "8e7a48a3ed3055c2385f5e9e3ebc7cfe06b835a462d3e46b44e4fce28c357179"
+      "bytes": 50907965,
+      "sha256": "49568fcfe335ff87583d0d23d87f528c916c88dd0efff93da9b3c362baa09c5b"
     },
     {
       "file": "Possessory-amazon-release-unsigned.apk",
-      "bytes": 44185090,
-      "sha256": "c4b10474d699d5335caad9f043b49cf504f0a2e11e8747492df3ad7822920048"
+      "bytes": 44195534,
+      "sha256": "606f1bb62eece707b30c9dde1a042ae08dcb740db9cf88c344d1e6251ff7a142"
     },
     {
       "file": "Possessory-source.zip",
-      "bytes": 2150348,
-      "sha256": "3b45aacb0c00da81d91e5944c624aecf9cf857b3330526179627b561f355e6ea"
+      "bytes": 2439319,
+      "sha256": "acc2729a0a5be76cedbc524c0199a8ab1c8b8e26f99f76ee59f1c49c42577a61"
     }
   ],
   "ocr_model": {
     "source": "https://github.com/tesseract-ocr/tessdata_fast",
     "language": "eng",
     "sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2"
+  },
+  "localization": {
+    "preview_locale_targets": 19,
+    "runtime_translation": false,
+    "review_status": "draft",
+    "release_locale": "en-GB"
   }
 }

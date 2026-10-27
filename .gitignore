@@ -20,4 +20,3 @@ tools/ktfmt-metadata.xml
 .env
 .env.*
 !.env.example
-

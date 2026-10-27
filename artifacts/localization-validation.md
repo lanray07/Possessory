@@ -4,6 +4,9 @@ Possessory engineering preview 0.2.0 (version code 2) contains 19 locale targets
 
 ## Verified
 
+- Final Gradle verification completed successfully: lintAmazonDebug, lintStandaloneDebug and assembleAmazonRelease. Amazon lint: zero errors, 85 warnings; standalone lint: zero errors, 86 warnings. Warnings include dependency updates, resource/typography cleanup, locale compatibility aliases and language/plural review. No lint baseline or blanket suppression was added.
+- Both installable preview APKs identify as version 0.2.0 (code 2); the Amazon preview APK signature verifies using APK Signature Scheme v2. Current artifact sizes and SHA-256 hashes are recorded in manifest.json.
+
 - Five Python localisation-tool checks pass: source extraction, protected placeholders/brand, English voice-command literals, missing/empty values, static-resource bundling, stale-source rejection and release approval enforcement.
 - Twenty-two Android JVM/Robolectric tests pass, including all previous domain/storage/backup checks, lookup of all 19 locale targets, saved language choice, Arabic RTL configuration and Indonesian resource lookup on Android API 28 and 35.
 - Spanish and Arabic native-graphics screen renders passed and were visually inspected. User-entered room names remain unchanged.

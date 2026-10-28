@@ -2,3 +2,4 @@
 *.xml text eol=lf
 *.json text eol=lf
 *.properties text eol=lf
+artifacts/billing-marketing-checks-0.3.2/*.txt -text

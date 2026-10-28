@@ -358,7 +358,9 @@
       "human_reviewer": null,
       "human_review_complete": false,
       "release_approved": false,
-      "possible_untranslated_fragments": {}
+      "possible_untranslated_fragments": {},
+      "repeated_word_errors": [],
+      "untranslated_marketing_errors": []
     },
     "en-US": {
       "source_messages_covered": 335,
@@ -707,7 +709,9 @@
       "human_reviewer": null,
       "human_review_complete": false,
       "release_approved": false,
-      "possible_untranslated_fragments": {}
+      "possible_untranslated_fragments": {},
+      "repeated_word_errors": [],
+      "untranslated_marketing_errors": []
     },
     "en-AU": {
       "source_messages_covered": 335,
@@ -1063,7 +1067,9 @@
       "human_reviewer": null,
       "human_review_complete": false,
       "release_approved": false,
-      "possible_untranslated_fragments": {}
+      "possible_untranslated_fragments": {},
+      "repeated_word_errors": [],
+      "untranslated_marketing_errors": []
     },
     "es-ES": {
       "source_messages_covered": 335,
@@ -1084,19 +1090,14 @@
       "unchanged_strings_requiring_context_review": [
         "app_name",
         "premium",
-        "rename",
-        "receipt_description",
-        "column_retailer",
-        "voice_warranty_command",
-        "warranty_retailer",
-        "store:hero_headline",
-        "store:voice_headline",
         "store:iap_title"
       ],
       "human_reviewer": null,
       "human_review_complete": false,
       "release_approved": false,
-      "possible_untranslated_fragments": {}
+      "possible_untranslated_fragments": {},
+      "repeated_word_errors": [],
+      "untranslated_marketing_errors": []
     },
     "es-419": {
       "source_messages_covered": 335,
@@ -1117,19 +1118,14 @@
       "unchanged_strings_requiring_context_review": [
         "app_name",
         "premium",
-        "rename",
-        "receipt_description",
-        "column_retailer",
-        "voice_warranty_command",
-        "warranty_retailer",
-        "store:hero_headline",
-        "store:voice_headline",
         "store:iap_title"
       ],
       "human_reviewer": null,
       "human_review_complete": false,
       "release_approved": false,
-      "possible_untranslated_fragments": {}
+      "possible_untranslated_fragments": {},
+      "repeated_word_errors": [],
+      "untranslated_marketing_errors": []
     },
     "fr-FR": {
       "source_messages_covered": 335,
@@ -1156,7 +1152,9 @@
       "human_reviewer": null,
       "human_review_complete": false,
       "release_approved": false,
-      "possible_untranslated_fragments": {}
+      "possible_untranslated_fragments": {},
+      "repeated_word_errors": [],
+      "untranslated_marketing_errors": []
     },
     "fr-CA": {
       "source_messages_covered": 335,
@@ -1183,7 +1181,9 @@
       "human_reviewer": null,
       "human_review_complete": false,
       "release_approved": false,
-      "possible_untranslated_fragments": {}
+      "possible_untranslated_fragments": {},
+      "repeated_word_errors": [],
+      "untranslated_marketing_errors": []
     },
     "de-DE": {
       "source_messages_covered": 335,
@@ -1208,14 +1208,14 @@
         "status",
         "format",
         "premium",
-        "edit",
-        "store:voice_headline",
         "store:iap_title"
       ],
       "human_reviewer": null,
       "human_review_complete": false,
       "release_approved": false,
-      "possible_untranslated_fragments": {}
+      "possible_untranslated_fragments": {},
+      "repeated_word_errors": [],
+      "untranslated_marketing_errors": []
     },
     "it-IT": {
       "source_messages_covered": 335,
@@ -1242,7 +1242,9 @@
       "human_reviewer": null,
       "human_review_complete": false,
       "release_approved": false,
-      "possible_untranslated_fragments": {}
+      "possible_untranslated_fragments": {},
+      "repeated_word_errors": [],
+      "untranslated_marketing_errors": []
     },
     "pt-BR": {
       "source_messages_covered": 335,
@@ -1270,7 +1272,9 @@
       "human_reviewer": null,
       "human_review_complete": false,
       "release_approved": false,
-      "possible_untranslated_fragments": {}
+      "possible_untranslated_fragments": {},
+      "repeated_word_errors": [],
+      "untranslated_marketing_errors": []
     },
     "pt-PT": {
       "source_messages_covered": 335,
@@ -1295,7 +1299,9 @@
       "human_reviewer": null,
       "human_review_complete": false,
       "release_approved": false,
-      "possible_untranslated_fragments": {}
+      "possible_untranslated_fragments": {},
+      "repeated_word_errors": [],
+      "untranslated_marketing_errors": []
     },
     "nl-NL": {
       "source_messages_covered": 335,
@@ -1317,15 +1323,14 @@
         "filter",
         "model",
         "tags",
-        "status",
-        "store:hero_headline",
-        "store:voice_headline",
-        "store:offline_headline"
+        "status"
       ],
       "human_reviewer": null,
       "human_review_complete": false,
       "release_approved": false,
-      "possible_untranslated_fragments": {}
+      "possible_untranslated_fragments": {},
+      "repeated_word_errors": [],
+      "untranslated_marketing_errors": []
     },
     "pl-PL": {
       "source_messages_covered": 335,
@@ -1347,13 +1352,14 @@
       },
       "unchanged_strings_requiring_context_review": [
         "app_name",
-        "format",
-        "store:reports_headline"
+        "format"
       ],
       "human_reviewer": null,
       "human_review_complete": false,
       "release_approved": false,
-      "possible_untranslated_fragments": {}
+      "possible_untranslated_fragments": {},
+      "repeated_word_errors": [],
+      "untranslated_marketing_errors": []
     },
     "sv-SE": {
       "source_messages_covered": 335,
@@ -1376,21 +1382,14 @@
         "status",
         "format",
         "premium",
-        "edit",
-        "date_format",
-        "preview_page",
-        "store:hero_headline",
-        "store:warranties_headline",
-        "store:ocr_headline",
-        "store:reports_headline",
-        "store:voice_headline",
-        "store:offline_headline",
         "store:iap_title"
       ],
       "human_reviewer": null,
       "human_review_complete": false,
       "release_approved": false,
-      "possible_untranslated_fragments": {}
+      "possible_untranslated_fragments": {},
+      "repeated_word_errors": [],
+      "untranslated_marketing_errors": []
     },
     "ja-JP": {
       "source_messages_covered": 335,
@@ -1419,16 +1418,12 @@
         "privacy_body": [
           "Possessory Cloudflare Workers"
         ],
-        "voice_examples": [
-          "Find my laptop",
-          "Show items in the kitchen",
-          "Add a new item",
-          "Show my inventory summary"
-        ],
         "custom_reminder_hint": [
           "YYYY-MM-DD"
         ]
-      }
+      },
+      "repeated_word_errors": [],
+      "untranslated_marketing_errors": []
     },
     "hi-IN": {
       "source_messages_covered": 335,
@@ -1445,9 +1440,7 @@
         ]
       },
       "unchanged_strings_requiring_context_review": [
-        "app_name",
-        "voice_to_separator",
-        "voice_add_room_separator"
+        "app_name"
       ],
       "human_reviewer": null,
       "human_review_complete": false,
@@ -1456,16 +1449,12 @@
         "form_error": [
           "YYYY-MM-DD"
         ],
-        "voice_examples": [
-          "Find my laptop",
-          "Show items in the kitchen",
-          "Add a new item",
-          "Show my inventory summary"
-        ],
         "custom_reminder_hint": [
           "YYYY-MM-DD"
         ]
-      }
+      },
+      "repeated_word_errors": [],
+      "untranslated_marketing_errors": []
     },
     "ar": {
       "source_messages_covered": 335,
@@ -1492,10 +1481,6 @@
       "unchanged_strings_requiring_context_review": [
         "app_name",
         "premium",
-        "edit",
-        "reset_crop",
-        "preview_page",
-        "store:voice_headline",
         "store:iap_title"
       ],
       "human_reviewer": null,
@@ -1505,34 +1490,12 @@
         "form_error": [
           "YYYY-MM-DD"
         ],
-        "voice_examples": [
-          "Find my laptop",
-          "Show items in the kitchen",
-          "Add a new item",
-          "Show my inventory summary"
-        ],
         "custom_reminder_hint": [
           "YYYY-MM-DD"
-        ],
-        "reset_crop": [
-          "Reset review image"
-        ],
-        "page_number": [
-          "d of of"
-        ],
-        "store:warranties_headline": [
-          "Receipt \" Warranty Tracker"
-        ],
-        "store:ocr_headline": [
-          "Scan Receipts \" Save Records"
-        ],
-        "store:voice_headline": [
-          "Voice-Powered Inventory Manager"
-        ],
-        "support:reminders": [
-          "Enable optional reminders in Settings and allow notifications when prompted"
         ]
-      }
+      },
+      "repeated_word_errors": [],
+      "untranslated_marketing_errors": []
     },
     "tr-TR": {
       "source_messages_covered": 335,
@@ -1550,21 +1513,14 @@
       },
       "unchanged_strings_requiring_context_review": [
         "app_name",
-        "unlock",
-        "rename",
-        "edit",
-        "date_format",
-        "preview_page",
-        "store:hero_headline",
-        "store:ocr_headline",
-        "store:reports_headline",
-        "store:voice_headline",
-        "store:offline_headline"
+        "model"
       ],
       "human_reviewer": null,
       "human_review_complete": false,
       "release_approved": false,
-      "possible_untranslated_fragments": {}
+      "possible_untranslated_fragments": {},
+      "repeated_word_errors": [],
+      "untranslated_marketing_errors": []
     },
     "id-ID": {
       "source_messages_covered": 335,
@@ -1587,15 +1543,14 @@
         "status",
         "format",
         "premium",
-        "column_retailer",
-        "warranty_retailer",
-        "store:reminders_headline",
         "store:iap_title"
       ],
       "human_reviewer": null,
       "human_review_complete": false,
       "release_approved": false,
-      "possible_untranslated_fragments": {}
+      "possible_untranslated_fragments": {},
+      "repeated_word_errors": [],
+      "untranslated_marketing_errors": []
     }
   }
 }

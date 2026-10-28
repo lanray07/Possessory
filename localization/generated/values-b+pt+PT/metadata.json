@@ -1,8 +1,8 @@
 {
   "locale": "pt-PT",
   "source_sha256": "b12817cce93d13b9c672112b7b0a4be6f6c3a47a46bdb98b36d2be0b7ecebe5d",
-  "strings_sha256": "950c7863778a544da4527d5f605109b19db7d5d7993831df206d385435fadc56",
+  "strings_sha256": "8fe158ca65ed46f12d1b92a9bf1b924ec72e53aa0e11a99b694b97e4a558e44b",
   "catalogue_sha256": "7164c009afa46ade2a607d6d14bae9cec549dabb1d92143efc304821acf66b0f",
-  "store_sha256": "4bb7baa54e66ef81ae7ed425670dd03e89e42e5153e0a3ff61a1ef787a4b4aa6",
+  "store_sha256": "8cf2b0013ba7221797bbf05147571355370c941df1ef5b2c727aaebcb26f772f",
   "support_sha256": "3c20b48c6e13a3cc39b443b192afbd83e0f53f8dce4b3291d8c7bfe8d9f71b0e"
 }

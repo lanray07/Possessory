@@ -1,5 +1,7 @@
 # Possessory 0.3.2 submission handoff
 
+**Current preparation:** see [0.3.3 readiness](READINESS-0.3.3.md) for the latest corrections, local checks and exact remaining blockers. This document preserves the last sealed 0.3.2 device evidence.
+
 Candidate: version code 5, package `app.possessory`. This is a review candidate. The Amazon draft was last observed with version code 2 and eight earlier screenshots. This task has not submitted the app or IAP. Current console state could not be rechecked.
 
 | Check | Evidence or next action |

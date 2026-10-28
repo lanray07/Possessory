@@ -1,6 +1,6 @@
 # Possessory release tracker
 
-Version 0.3.2 (code 5) is a release candidate for review, not submission approval. No Amazon submission has been performed. The master brief requires independent human language review; the owner requested reviewer handoff packs rather than waiving that requirement. See [the current submission handoff](SUBMISSION-CHECKLIST.md) for evidence and owner actions. Earlier 0.3.0 and 0.3.1 archives and hashes are preserved.
+Version 0.3.3 (code 6) is in preparation; 0.3.2 (code 5) remains the last sealed candidate. No Amazon submission has been performed. The owner explicitly waived independent human language review on 28 October 2026. Technical localization and release checks still apply, and no human review is claimed. See [the current submission handoff](SUBMISSION-CHECKLIST.md) for evidence and owner actions. Earlier archives and hashes are preserved.
 
 ## Implemented in the candidate
 

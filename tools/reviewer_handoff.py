@@ -22,6 +22,7 @@ def main():
     quality=json.loads((ROOT/'localization/quality-report.json').read_text(encoding='utf-8'))
     output=args.output
     source_hash=hashlib.sha256(json.dumps(source,sort_keys=True).encode()).hexdigest()
+    policy=json.loads((ROOT/'localization/release-policy.json').read_text(encoding='utf-8'))
     instructions=(
         'POSSESSORY HUMAN LOCALIZATION REVIEW\n\n'
         'Every locale is a draft. No reviewer or approval has been fabricated.\n'
@@ -37,12 +38,15 @@ def main():
         'Return completed CSVs and device review notes. Release approval is a separate owner decision.\n'
         'A changed source hash invalidates a previous sign-off for changed messages.\n'
     )
+    if policy.get('independent_human_review_required') is False:
+        instructions+='\nOWNER POLICY: Independent human review has been waived. These optional reviewer fields preserve provenance; they are not a remaining release gate. Technical coverage, wording corrections, device layout and packaging checks still apply. AI review must never be recorded as human review.\n'
     if not (args.captures/'manifest.json').exists():
         instructions+='\nCURRENT DEVICE SCREENSHOTS ARE PENDING. Inspect the current review APK. Any previous-version screenshots are historical layout references, not evidence that the updated text was checked on-device.\n'
     with zipfile.ZipFile(output,'w',zipfile.ZIP_DEFLATED) as archive:
         archive.writestr('READ-ME.txt',instructions)
         archive.write(ROOT/'localization/glossary.csv','glossary.csv')
         archive.write(ROOT/'localization/quality-report.json','automated-coverage.json')
+        archive.write(ROOT/'localization/release-policy.json','release-policy.json')
         editorial=ROOT/'localization/ai-editorial-review.json'
         if editorial.exists():archive.write(editorial,'ai-editorial-review.json')
         evidence=args.captures/'manifest.json'
@@ -81,7 +85,7 @@ def main():
             archive.writestr(locale+'/review.csv','\ufeff'+stream.getvalue())
             archive.writestr(locale+'/device-review.json',json.dumps({'locale':locale,'source_sha256':source_hash,'reviewer':None,'devices':[],'rtl_checked':False,'font_scaling_checked':False,'voice_commands_checked':False,'release_approved':False},indent=2))
             site=ROOT/'docs/site'/(locale+'.html')
-            if site.exists():archive.writestr(locale+'/website-review.txt',f'Open ../website/{locale}.html for the draft marketing, support and privacy page. All wording requires human review.\n')
+            if site.exists():archive.writestr(locale+'/website-review.txt',f'Open ../website/{locale}.html for the historical draft marketing, support and privacy page. Current corrected wording is in review.csv. Apply the release policy in ../release-policy.json; website drafts may not include later editorial corrections.\n')
             for capture_set in ('standard','large-font','portrait'):
                 captures=args.captures/capture_set/locale
                 if captures.exists():

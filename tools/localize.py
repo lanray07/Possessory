@@ -120,7 +120,7 @@ def bundle_resources(preview=False):
         assert metadata['locale']==locale and metadata['source_sha256']==source_hash,'Translations must be regenerated for the current source'
         assert metadata.get('catalogue_sha256')==catalogue_hash,'Store/support translations must match the current source'
         for kind in ('store','support'):assert metadata.get(kind+'_sha256')==hashlib.sha256((path.parent/(kind+'.json')).read_bytes()).hexdigest(),'Translated store/support files changed since validation'
-        if not preview:assert status[locale].get('reviewed_source_sha256')==catalogue_hash,'Human review must match the complete current catalogue'
+        if not preview:assert status[locale].get('reviewed_source_sha256')==catalogue_hash,'Release review must match the complete current catalogue'
         assert metadata['strings_sha256']==hashlib.sha256(path.read_bytes()).hexdigest(),'Translation files changed since validation'
         tree=ET.parse(path);data={e.attrib['name']:e.text or '' for e in tree.findall('string')}
         for group in tree.findall('plurals'):

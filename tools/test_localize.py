@@ -7,6 +7,12 @@ from localize import validate, extract
 from translate_offline import pieces
 
 class LocalisationChecks(unittest.TestCase):
+    def test_translation_loop_detection(self):
+        from localization_quality import repeated_words
+        self.assertTrue(repeated_words('Ad Ad Ad'))
+        self.assertTrue(repeated_words('isim, isim, isim'))
+        self.assertFalse(repeated_words('The item is in the room'))
+        self.assertFalse(repeated_words('very very useful'))
     def test_owner_waiver_removes_only_human_review_gate(self):
         source={'save':'Save'}
         record={'state':'validated','human_reviewer':None,'issues':[],

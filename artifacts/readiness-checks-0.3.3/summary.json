@@ -1,0 +1,53 @@
+{
+  "version": "0.3.3",
+  "version_code": 6,
+  "checked_at": "2026-10-28T09:34:35.541521+00:00",
+  "submission_ready": false,
+  "human_review_required": false,
+  "review_installed_on_fire": true,
+  "updated_device_checks_run": false,
+  "device_blocker": "USB authorized, system keyguard still showing",
+  "browser_blocker": "Kernel-assets initialization fails before console access",
+  "android_tests": 31,
+  "localization_pipeline_tests": 7,
+  "cloudflare_fixture_tests": 17,
+  "endpoint_checks": 6,
+  "lint": {
+    "Warning": 41,
+    "Hint": 9
+  },
+  "source_catalogue_sha256": "7164c009afa46ade2a607d6d14bae9cec549dabb1d92143efc304821acf66b0f",
+  "editorial_overrides": 762,
+  "files": [
+    {
+      "file": "Possessory-amazon-0.3.3-review-signed.apk",
+      "bytes": 65192159,
+      "sha256": "91867e55dfde5f5f3cc887b81c1dfc796ca2cbf47654d6334d723e07c842343a"
+    },
+    {
+      "file": "Possessory-amazon-0.3.3-review-tests-signed.apk",
+      "bytes": 982055,
+      "sha256": "c530974d122fd3e3614b79b96bc61d59f7c896d76958bfa67a6add8cf27b5969"
+    },
+    {
+      "file": "Possessory-0.3.3-iapqa-TEST-ONLY.apk",
+      "bytes": 72171542,
+      "sha256": "e0c9390dde3e84c99ae2b60ec45a2d2af06d313afee29f4e0de57139dec15020"
+    },
+    {
+      "file": "Possessory-0.3.3-iapqa-tests-TEST-ONLY.apk",
+      "bytes": 2002053,
+      "sha256": "a4698d04807b829d72eb78cc099cf4819a91c18b93860e5a2752d80b3921b226"
+    },
+    {
+      "file": "Possessory-0.3.3-localization-review.zip",
+      "bytes": 379725,
+      "sha256": "78dc0260cefa20eb76814a7daaec9a1ca5c3c5d39b4b3634406acf9d7ecb9aa3"
+    }
+  ],
+  "build_log_sha256": {
+    "readiness-033-final-review-build-log.txt": "cdcbc3df909a902144f6ff1b433bd1aae1685e3bc81ed3ce6814baa14aff3496",
+    "readiness-033-iapqa-build-log.txt": "ffe897565a1e403574314417332b1437718d155bccf69ef9f95b5d993404cc0a"
+  },
+  "remaining_checks": "../../docs/READINESS-0.3.3.md"
+}

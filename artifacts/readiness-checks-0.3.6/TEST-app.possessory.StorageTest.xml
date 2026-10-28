@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.possessory.StorageTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-28T13:51:17.221Z" hostname="DESKTOP-MAKK9CA" time="0.325">
+  <properties/>
+  <testcase name="databasePersistsAndCascadesRelatedRecords" classname="app.possessory.StorageTest" time="0.164"/>
+  <testcase name="receiptSuggestionsNeverInventDatesOrAmbiguousCurrency" classname="app.possessory.StorageTest" time="0.061"/>
+  <testcase name="backupRejectsTraversalAndUnsupportedSchemas" classname="app.possessory.StorageTest" time="0.051"/>
+  <testcase name="backupRetainsAttachmentsAndDetectsModification" classname="app.possessory.StorageTest" time="0.048"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

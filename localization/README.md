@@ -1,6 +1,6 @@
 # Bundled APK localisation
 
-The 0.3.2 engineering preview contains static Android resource packs for all 19 requested locale targets. Local Argos/CTranslate2 models generate the drafts during development; only text resources and a small locale manifest enter the APK. Models, Python, API keys and a runtime translation service are not included. The initial model download requires internet on the developer's computer. Translating and using the packaged app strings does not.
+The engineering preview contains static Android resource packs for all 19 requested locale targets. Local Argos/CTranslate2 models generate the drafts during development; only text resources and a small locale manifest enter the APK. Models, Python, API keys and a runtime translation service are not included. The initial model download requires internet on the developer's computer. Translating and using the packaged app strings does not.
 
 Choose the app language during onboarding or under Settings â†’ App language. Device language remains the default. Dates and currencies follow the selected locale; recorded amounts and currency codes are not converted. User-entered item names, room names, notes, receipt contents and serial numbers are not translated.
 
@@ -31,10 +31,10 @@ Run `python tools/localization_quality.py` then `python tools/reviewer_handoff.p
 
 Build the isolated evaluation app with `:app:assembleAmazonReview`. Sign it with the existing signing tool. Its package is app.possessory.review and its banner explicitly states that evaluation access grants no purchase entitlement. Do not submit that APK. Device screenshots are review evidence, not proof of linguistic correctness.
 
-Return completed reviewer files to the owner. Corrections must be applied to generated XML/JSON, validated and rebundled; source changes invalidate sign-off for changed messages. Promotion still requires the existing human-review and owner-approval checks in tools/localize.py. Draft site pages are generated with tools/support_site.py and are not published automatically.
+Independent human review was explicitly waived by the owner on 28 October 2026; see release-policy.json. Handoff packs remain available for optional review. Corrections must be applied to generated XML/JSON, validated and rebundled. The waiver does not automatically approve all locales or turn AI review into human review. Promotion still requires technical checks and an accurate release-status record. Draft site pages are generated with tools/support_site.py and are not published automatically.
 
 ## AI editorial corrections
 
-The owner requested an editorial review by the assistant. localization/ai-editorial-review.json records the actual limited scope: ten critical operational messages across sixteen non-English targets, with 160 draft entries corrected. This does not mean all 335 messages per locale have been reviewed. English source variants were not rewritten in this pass. Independent human review, regional validation and owner release approval remain pending. No approval status is changed.
+The owner requested an editorial review by the assistant. ai-editorial-review.json records corrected keys across sixteen non-English targets, including purchase/privacy disclosures, backup semantics, support text, crop controls, condition labels and marketing copy. Corrections are reproducible through tools/editorial_release_pass.py, tools/editorial_common_labels.py and tools/editorial_privacy_pass.py, followed by apply_editorial.py. This does not mean all 335 messages per locale have been fully reviewed. No human sign-off or automatic release approval is claimed.
 
 Run `python -X utf8 tools/apply_editorial.py`, `python -X utf8 tools/localize.py --bundle-preview` and `python -X utf8 tools/localization_quality.py` to apply and validate these recorded corrections without downloading a model. Future generation also applies editorial-overrides.json in the resource writer. The reviewer ZIP includes the AI editorial report separately from human sign-off forms.

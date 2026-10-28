@@ -1,0 +1,27 @@
+✔ health exposes no secret values and never enables caching (65.2139ms)
+✔ routes and methods are constrained (1.0331ms)
+✔ oversized bodies are rejected before upstream calls (2.9304ms)
+✔ inventory fields, malformed JSON and invalid identifiers are rejected (8.0898ms)
+✔ unconfigured secrets, invalid environment and absent rate bindings fail closed (3.2765ms)
+✔ IP throttling rejects before receipt verification (0.4748ms)
+✔ receipt limiter uses a hash rather than customer or receipt identifiers (13.3511ms)
+✔ valid production receipts generate Android-compatible RSA-SHA256 claims (14.3489ms)
+✔ SKU, product type and receipt mismatches cannot grant access (5.6189ms)
+✔ unidentified transactions are rejected in production (4.5099ms)
+✔ Amazon-verified LAT and publishing-test transactions work through production RVS (12.7812ms)
+✔ client flags cannot manufacture a LAT entitlement and cancelled LAT receipts revoke (9.3197ms)
+✔ sandbox uses Amazon sandbox URL and can only issue sandbox claims (6.3123ms)
+✔ cancellation and Amazon HTTP 410 produce signed revocations (8.3095ms)
+✔ future cancellation bounds offline validity to its effective time (0.232ms)
+✔ Amazon errors are sanitized without echoing the secret or identifiers (4.4756ms)
+✔ oversized or malformed Amazon responses fail closed (2.4255ms)
+✔ redirect responses are rejected without following their destination (1.3108ms)
+✔ network failures and malformed signing keys reveal no implementation details (3.2084ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 923.3031

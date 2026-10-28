@@ -360,7 +360,8 @@
       "release_approved": false,
       "possible_untranslated_fragments": {},
       "repeated_word_errors": [],
-      "untranslated_marketing_errors": []
+      "untranslated_marketing_errors": [],
+      "missing_disclosure_terms": {}
     },
     "en-US": {
       "source_messages_covered": 335,
@@ -711,7 +712,8 @@
       "release_approved": false,
       "possible_untranslated_fragments": {},
       "repeated_word_errors": [],
-      "untranslated_marketing_errors": []
+      "untranslated_marketing_errors": [],
+      "missing_disclosure_terms": {}
     },
     "en-AU": {
       "source_messages_covered": 335,
@@ -1069,7 +1071,8 @@
       "release_approved": false,
       "possible_untranslated_fragments": {},
       "repeated_word_errors": [],
-      "untranslated_marketing_errors": []
+      "untranslated_marketing_errors": [],
+      "missing_disclosure_terms": {}
     },
     "es-ES": {
       "source_messages_covered": 335,
@@ -1097,7 +1100,8 @@
       "release_approved": false,
       "possible_untranslated_fragments": {},
       "repeated_word_errors": [],
-      "untranslated_marketing_errors": []
+      "untranslated_marketing_errors": [],
+      "missing_disclosure_terms": {}
     },
     "es-419": {
       "source_messages_covered": 335,
@@ -1125,7 +1129,8 @@
       "release_approved": false,
       "possible_untranslated_fragments": {},
       "repeated_word_errors": [],
-      "untranslated_marketing_errors": []
+      "untranslated_marketing_errors": [],
+      "missing_disclosure_terms": {}
     },
     "fr-FR": {
       "source_messages_covered": 335,
@@ -1154,7 +1159,8 @@
       "release_approved": false,
       "possible_untranslated_fragments": {},
       "repeated_word_errors": [],
-      "untranslated_marketing_errors": []
+      "untranslated_marketing_errors": [],
+      "missing_disclosure_terms": {}
     },
     "fr-CA": {
       "source_messages_covered": 335,
@@ -1183,7 +1189,8 @@
       "release_approved": false,
       "possible_untranslated_fragments": {},
       "repeated_word_errors": [],
-      "untranslated_marketing_errors": []
+      "untranslated_marketing_errors": [],
+      "missing_disclosure_terms": {}
     },
     "de-DE": {
       "source_messages_covered": 335,
@@ -1215,7 +1222,8 @@
       "release_approved": false,
       "possible_untranslated_fragments": {},
       "repeated_word_errors": [],
-      "untranslated_marketing_errors": []
+      "untranslated_marketing_errors": [],
+      "missing_disclosure_terms": {}
     },
     "it-IT": {
       "source_messages_covered": 335,
@@ -1244,7 +1252,8 @@
       "release_approved": false,
       "possible_untranslated_fragments": {},
       "repeated_word_errors": [],
-      "untranslated_marketing_errors": []
+      "untranslated_marketing_errors": [],
+      "missing_disclosure_terms": {}
     },
     "pt-BR": {
       "source_messages_covered": 335,
@@ -1274,7 +1283,8 @@
       "release_approved": false,
       "possible_untranslated_fragments": {},
       "repeated_word_errors": [],
-      "untranslated_marketing_errors": []
+      "untranslated_marketing_errors": [],
+      "missing_disclosure_terms": {}
     },
     "pt-PT": {
       "source_messages_covered": 335,
@@ -1301,7 +1311,8 @@
       "release_approved": false,
       "possible_untranslated_fragments": {},
       "repeated_word_errors": [],
-      "untranslated_marketing_errors": []
+      "untranslated_marketing_errors": [],
+      "missing_disclosure_terms": {}
     },
     "nl-NL": {
       "source_messages_covered": 335,
@@ -1330,7 +1341,8 @@
       "release_approved": false,
       "possible_untranslated_fragments": {},
       "repeated_word_errors": [],
-      "untranslated_marketing_errors": []
+      "untranslated_marketing_errors": [],
+      "missing_disclosure_terms": {}
     },
     "pl-PL": {
       "source_messages_covered": 335,
@@ -1352,6 +1364,7 @@
       },
       "unchanged_strings_requiring_context_review": [
         "app_name",
+        "model",
         "format"
       ],
       "human_reviewer": null,
@@ -1359,7 +1372,8 @@
       "release_approved": false,
       "possible_untranslated_fragments": {},
       "repeated_word_errors": [],
-      "untranslated_marketing_errors": []
+      "untranslated_marketing_errors": [],
+      "missing_disclosure_terms": {}
     },
     "sv-SE": {
       "source_messages_covered": 335,
@@ -1389,7 +1403,8 @@
       "release_approved": false,
       "possible_untranslated_fragments": {},
       "repeated_word_errors": [],
-      "untranslated_marketing_errors": []
+      "untranslated_marketing_errors": [],
+      "missing_disclosure_terms": {}
     },
     "ja-JP": {
       "source_messages_covered": 335,
@@ -1415,15 +1430,13 @@
         "form_error": [
           "YYYY-MM-DD"
         ],
-        "privacy_body": [
-          "Possessory Cloudflare Workers"
-        ],
         "custom_reminder_hint": [
           "YYYY-MM-DD"
         ]
       },
       "repeated_word_errors": [],
-      "untranslated_marketing_errors": []
+      "untranslated_marketing_errors": [],
+      "missing_disclosure_terms": {}
     },
     "hi-IN": {
       "source_messages_covered": 335,
@@ -1454,7 +1467,8 @@
         ]
       },
       "repeated_word_errors": [],
-      "untranslated_marketing_errors": []
+      "untranslated_marketing_errors": [],
+      "missing_disclosure_terms": {}
     },
     "ar": {
       "source_messages_covered": 335,
@@ -1495,7 +1509,8 @@
         ]
       },
       "repeated_word_errors": [],
-      "untranslated_marketing_errors": []
+      "untranslated_marketing_errors": [],
+      "missing_disclosure_terms": {}
     },
     "tr-TR": {
       "source_messages_covered": 335,
@@ -1513,14 +1528,16 @@
       },
       "unchanged_strings_requiring_context_review": [
         "app_name",
-        "model"
+        "model",
+        "premium"
       ],
       "human_reviewer": null,
       "human_review_complete": false,
       "release_approved": false,
       "possible_untranslated_fragments": {},
       "repeated_word_errors": [],
-      "untranslated_marketing_errors": []
+      "untranslated_marketing_errors": [],
+      "missing_disclosure_terms": {}
     },
     "id-ID": {
       "source_messages_covered": 335,
@@ -1550,7 +1567,8 @@
       "release_approved": false,
       "possible_untranslated_fragments": {},
       "repeated_word_errors": [],
-      "untranslated_marketing_errors": []
+      "untranslated_marketing_errors": [],
+      "missing_disclosure_terms": {}
     }
   }
 }

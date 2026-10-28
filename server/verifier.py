@@ -21,8 +21,10 @@ class ReceiptRequest(BaseModel):
 def claims_from_receipt(receipt, user, receipt_id, expected_sku, sandbox, now):
     if receipt.get('productId')!=expected_sku or receipt.get('productType')!='ENTITLED' or receipt.get('receiptId')!=receipt_id:
         raise ValueError('Receipt does not match the configured entitlement')
-    if receipt.get('testTransaction') is not False and not sandbox:
-        raise ValueError('Test or unidentified receipt cannot grant production access')
+    # Production RVS verifies both paid and Amazon LAT/publishing-test purchases.
+    # This flag is from Amazon, never the client; App Tester uses sandbox RVS.
+    if type(receipt.get('testTransaction')) is not bool and not sandbox:
+        raise ValueError('Unidentified receipt cannot grant production access')
     cancel=receipt.get('cancelDate')
     if cancel is not None and (not isinstance(cancel,(int,float)) or isinstance(cancel,bool) or not math.isfinite(cancel)):
         raise ValueError('Invalid cancellation date')

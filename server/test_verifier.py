@@ -19,8 +19,13 @@ class VerificationTests(unittest.TestCase):
         r=self.receipt();r['cancelDate']=1001500
         c=claims_from_receipt(r,'u','r','premium',False,1000)
         self.assertTrue(c['active']);self.assertEqual(c['validUntil'],1002)
-    def test_mismatch_and_sandbox_are_rejected(self):
-        for change in [dict(productId='other'),dict(productType='CONSUMABLE'),dict(receiptId='another'),dict(testTransaction=True),dict(cancelDate='invalid'),dict(cancelDate=float('nan')),dict(cancelDate=float('inf'))]:
+    def test_verified_amazon_publishing_and_lat_receipts_are_accepted(self):
+        for beta in [False,True]:
+            receipt=self.receipt();receipt.update(testTransaction=True,betaProduct=beta)
+            claims=claims_from_receipt(receipt,'u','r','premium',False,1000)
+            self.assertTrue(claims['active']);self.assertEqual(claims['environment'],'production')
+    def test_mismatch_and_unidentified_transactions_are_rejected(self):
+        for change in [dict(productId='other'),dict(productType='CONSUMABLE'),dict(receiptId='another'),dict(testTransaction=None),dict(testTransaction='true'),dict(testTransaction=1),dict(cancelDate='invalid'),dict(cancelDate=float('nan')),dict(cancelDate=float('inf'))]:
             r=self.receipt();r.update(change)
             with self.assertRaises(ValueError):claims_from_receipt(r,'u','r','premium',False,1000)
     def test_rsa_signature_is_verifiable(self):

@@ -1,0 +1,205 @@
+> Task :app:verifyBundledTranslations
+> Task :app:preBuild
+> Task :app:preAmazonReleaseBuild
+> Task :app:mergeAmazonReleaseJniLibFolders UP-TO-DATE
+> Task :app:mergeAmazonReleaseNativeLibs UP-TO-DATE
+> Task :app:stripAmazonReleaseDebugSymbols UP-TO-DATE
+> Task :app:extractAmazonReleaseNativeSymbolTables UP-TO-DATE
+> Task :app:mergeAmazonReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:mergeAmazonReleaseArtProfile UP-TO-DATE
+> Task :app:desugarAmazonReleaseFileDependencies UP-TO-DATE
+> Task :app:buildKotlinToolingMetadata UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:generateAmazonReleaseBuildConfig
+> Task :app:checkAmazonReleaseAarMetadata UP-TO-DATE
+> Task :app:generateAmazonReleaseResValues UP-TO-DATE
+> Task :app:mapAmazonReleaseSourceSetPaths UP-TO-DATE
+> Task :app:generateAmazonReleaseResources UP-TO-DATE
+> Task :app:mergeAmazonReleaseResources UP-TO-DATE
+> Task :app:packageAmazonReleaseResources UP-TO-DATE
+> Task :app:parseAmazonReleaseLocalResources UP-TO-DATE
+> Task :app:createAmazonReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksAmazonRelease UP-TO-DATE
+> Task :app:processAmazonReleaseMainManifest
+> Task :app:processAmazonReleaseManifest
+> Task :app:javaPreCompileAmazonRelease UP-TO-DATE
+> Task :app:checkAmazonReleaseDuplicateClasses UP-TO-DATE
+> Task :app:mergeAmazonReleaseStartupProfile UP-TO-DATE
+> Task :app:mergeExtDexAmazonRelease UP-TO-DATE
+> Task :app:mergeAmazonReleaseShaders UP-TO-DATE
+> Task :app:compileAmazonReleaseShaders NO-SOURCE
+> Task :app:generateAmazonReleaseAssets UP-TO-DATE
+> Task :app:mergeAmazonReleaseAssets UP-TO-DATE
+> Task :app:compressAmazonReleaseAssets UP-TO-DATE
+> Task :app:extractAmazonReleaseVersionControlInfo UP-TO-DATE
+> Task :app:extractProguardFiles UP-TO-DATE
+> Task :app:collectAmazonReleaseDependencies UP-TO-DATE
+> Task :app:sdkAmazonReleaseDependencyData UP-TO-DATE
+> Task :app:writeAmazonReleaseAppMetadata UP-TO-DATE
+> Task :app:writeAmazonReleaseSigningConfigVersions UP-TO-DATE
+> Task :app:preAmazonReviewBuild
+> Task :app:mergeAmazonReviewJniLibFolders UP-TO-DATE
+> Task :app:mergeAmazonReviewNativeLibs UP-TO-DATE
+> Task :app:stripAmazonReviewDebugSymbols UP-TO-DATE
+> Task :app:extractAmazonReviewNativeSymbolTables UP-TO-DATE
+> Task :app:mergeAmazonReviewNativeDebugMetadata NO-SOURCE
+> Task :app:processAmazonReleaseManifestForPackage
+> Task :app:mergeAmazonReviewArtProfile UP-TO-DATE
+> Task :app:desugarAmazonReviewFileDependencies UP-TO-DATE
+> Task :app:generateAmazonReviewBuildConfig
+> Task :app:checkAmazonReviewAarMetadata UP-TO-DATE
+> Task :app:generateAmazonReviewResValues UP-TO-DATE
+> Task :app:mapAmazonReviewSourceSetPaths UP-TO-DATE
+> Task :app:generateAmazonReviewResources UP-TO-DATE
+> Task :app:mergeAmazonReviewResources UP-TO-DATE
+> Task :app:packageAmazonReviewResources UP-TO-DATE
+> Task :app:parseAmazonReviewLocalResources UP-TO-DATE
+> Task :app:createAmazonReviewCompatibleScreenManifests
+> Task :app:extractDeepLinksAmazonReview UP-TO-DATE
+> Task :app:processAmazonReviewMainManifest
+> Task :app:processAmazonReviewManifest
+> Task :app:processAmazonReviewManifestForPackage
+> Task :app:processAmazonReleaseResources
+> Task :app:processAmazonReviewResources
+> Task :app:optimizeAmazonReleaseResources
+> Task :app:kspAmazonReleaseKotlin
+> Task :app:kspAmazonReviewKotlin
+> Task :app:compileAmazonReleaseKotlin
+> Task :app:compileAmazonReviewKotlin
+w: file:///D:/App%20Projects/Possessory/app/src/main/java/app/possessory/MainActivity.kt:142:42 'fun createConfirmDeviceCredentialIntent(p0: CharSequence!, p1: CharSequence!): Intent!' is deprecated. Deprecated in Java.
+w: file:///D:/App%20Projects/Possessory/app/src/main/java/app/possessory/MainActivity.kt:935:40 'val Icons.Outlined.ReceiptLong: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.ReceiptLong.
+
+> Task :app:compileAmazonReleaseKotlin
+w: file:///D:/App%20Projects/Possessory/app/src/main/java/app/possessory/MainActivity.kt:142:42 'fun createConfirmDeviceCredentialIntent(p0: CharSequence!, p1: CharSequence!): Intent!' is deprecated. Deprecated in Java.
+w: file:///D:/App%20Projects/Possessory/app/src/main/java/app/possessory/MainActivity.kt:935:40 'val Icons.Outlined.ReceiptLong: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.ReceiptLong.
+
+> Task :app:compileAmazonReleaseJavaWithJavac
+> Task :app:dexBuilderAmazonRelease
+> Task :app:mergeAmazonReleaseGlobalSynthetics UP-TO-DATE
+> Task :app:generateAmazonReleaseLintVitalReportModel
+> Task :app:mergeDexAmazonRelease
+> Task :app:compileAmazonReleaseArtProfile
+> Task :app:processAmazonReleaseJavaRes UP-TO-DATE
+> Task :app:mergeAmazonReleaseJavaResource UP-TO-DATE
+> Task :app:javaPreCompileAmazonReview UP-TO-DATE
+> Task :app:compileAmazonReviewJavaWithJavac
+> Task :app:dexBuilderAmazonReview
+> Task :app:mergeAmazonReviewGlobalSynthetics UP-TO-DATE
+> Task :app:checkAmazonReviewDuplicateClasses UP-TO-DATE
+> Task :app:mergeAmazonReviewStartupProfile UP-TO-DATE
+> Task :app:mergeExtDexAmazonReview UP-TO-DATE
+> Task :app:lintVitalAnalyzeAmazonRelease
+> Task :app:lintVitalReportAmazonRelease SKIPPED
+> Task :app:lintVitalAmazonRelease SKIPPED
+> Task :app:mergeDexAmazonReview
+> Task :app:compileAmazonReviewArtProfile
+> Task :app:mergeAmazonReviewShaders UP-TO-DATE
+> Task :app:compileAmazonReviewShaders NO-SOURCE
+> Task :app:generateAmazonReviewAssets UP-TO-DATE
+> Task :app:mergeAmazonReviewAssets UP-TO-DATE
+> Task :app:compressAmazonReviewAssets UP-TO-DATE
+> Task :app:extractAmazonReviewVersionControlInfo UP-TO-DATE
+> Task :app:generateAmazonReviewLintVitalReportModel
+> Task :app:packageAmazonRelease
+> Task :app:createAmazonReleaseApkListingFileRedirect
+> Task :app:assembleAmazonRelease
+> Task :app:processAmazonReviewJavaRes UP-TO-DATE
+> Task :app:mergeAmazonReviewJavaResource UP-TO-DATE
+> Task :app:optimizeAmazonReviewResources
+> Task :app:collectAmazonReviewDependencies UP-TO-DATE
+> Task :app:sdkAmazonReviewDependencyData UP-TO-DATE
+> Task :app:writeAmazonReviewAppMetadata UP-TO-DATE
+> Task :app:writeAmazonReviewSigningConfigVersions UP-TO-DATE
+> Task :app:bundleAmazonReviewClassesToCompileJar
+> Task :app:preAmazonReviewAndroidTestBuild SKIPPED
+> Task :app:processAmazonReviewAndroidTestManifest UP-TO-DATE
+> Task :app:generateAmazonReviewAndroidTestBuildConfig UP-TO-DATE
+> Task :app:checkAmazonReviewAndroidTestAarMetadata UP-TO-DATE
+> Task :app:generateAmazonReviewAndroidTestResValues UP-TO-DATE
+> Task :app:mapAmazonReviewAndroidTestSourceSetPaths UP-TO-DATE
+> Task :app:generateAmazonReviewAndroidTestResources UP-TO-DATE
+> Task :app:mergeAmazonReviewAndroidTestResources UP-TO-DATE
+> Task :app:processAmazonReviewAndroidTestResources UP-TO-DATE
+> Task :app:lintVitalAnalyzeAmazonReview
+> Task :app:lintVitalReportAmazonReview
+> Task :app:lintVitalAmazonReview
+> Task :app:kspAmazonReviewAndroidTestKotlin
+> Task :app:compileAmazonReviewAndroidTestKotlin
+> Task :app:javaPreCompileAmazonReviewAndroidTest UP-TO-DATE
+> Task :app:compileAmazonReviewAndroidTestJavaWithJavac
+> Task :app:mergeAmazonReviewAndroidTestShaders UP-TO-DATE
+> Task :app:packageAmazonReview
+> Task :app:createAmazonReviewApkListingFileRedirect
+> Task :app:assembleAmazonReview
+> Task :app:compileAmazonReviewAndroidTestShaders NO-SOURCE
+> Task :app:generateAmazonReviewAndroidTestAssets UP-TO-DATE
+> Task :app:mergeAmazonReviewAndroidTestAssets UP-TO-DATE
+> Task :app:compressAmazonReviewAndroidTestAssets UP-TO-DATE
+> Task :app:desugarAmazonReviewAndroidTestFileDependencies UP-TO-DATE
+> Task :app:dexBuilderAmazonReviewAndroidTest
+> Task :app:mergeAmazonReviewAndroidTestGlobalSynthetics UP-TO-DATE
+> Task :app:processAmazonReviewAndroidTestJavaRes UP-TO-DATE
+> Task :app:mergeAmazonReviewAndroidTestJavaResource UP-TO-DATE
+> Task :app:checkAmazonReviewAndroidTestDuplicateClasses UP-TO-DATE
+> Task :app:mergeExtDexAmazonReviewAndroidTest UP-TO-DATE
+> Task :app:mergeAmazonReviewAndroidTestJniLibFolders UP-TO-DATE
+> Task :app:mergeAmazonReviewAndroidTestNativeLibs NO-SOURCE
+> Task :app:stripAmazonReviewAndroidTestDebugSymbols NO-SOURCE
+> Task :app:writeAmazonReviewAndroidTestSigningConfigVersions UP-TO-DATE
+> Task :app:generateAmazonReleaseLintReportModel
+> Task :app:mergeDexAmazonReviewAndroidTest
+> Task :app:packageAmazonReviewAndroidTest
+> Task :app:createAmazonReviewAndroidTestApkListingFileRedirect UP-TO-DATE
+> Task :app:assembleAmazonReviewAndroidTest
+> Task :app:preAmazonReleaseUnitTestBuild
+> Task :app:bundleAmazonReleaseClassesToCompileJar
+> Task :app:generateAmazonReleaseUnitTestLintModel
+> Task :app:lintAnalyzeAmazonRelease
+> Task :app:lintAnalyzeAmazonReleaseUnitTest
+> Task :app:preStandaloneDebugBuild
+> Task :app:generateStandaloneDebugBuildConfig
+> Task :app:checkStandaloneDebugAarMetadata UP-TO-DATE
+> Task :app:generateStandaloneDebugResValues UP-TO-DATE
+> Task :app:mapStandaloneDebugSourceSetPaths UP-TO-DATE
+> Task :app:generateStandaloneDebugResources UP-TO-DATE
+> Task :app:mergeStandaloneDebugResources UP-TO-DATE
+> Task :app:packageStandaloneDebugResources UP-TO-DATE
+> Task :app:parseStandaloneDebugLocalResources UP-TO-DATE
+> Task :app:createStandaloneDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksStandaloneDebug UP-TO-DATE
+> Task :app:processStandaloneDebugMainManifest
+> Task :app:processStandaloneDebugManifest
+> Task :app:processStandaloneDebugManifestForPackage
+> Task :app:processStandaloneDebugResources
+> Task :app:kspStandaloneDebugKotlin
+
+> Task :app:compileStandaloneDebugKotlin
+w: file:///D:/App%20Projects/Possessory/app/src/main/java/app/possessory/MainActivity.kt:142:42 'fun createConfirmDeviceCredentialIntent(p0: CharSequence!, p1: CharSequence!): Intent!' is deprecated. Deprecated in Java.
+w: file:///D:/App%20Projects/Possessory/app/src/main/java/app/possessory/MainActivity.kt:935:40 'val Icons.Outlined.ReceiptLong: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.ReceiptLong.
+
+> Task :app:javaPreCompileStandaloneDebug UP-TO-DATE
+> Task :app:compileStandaloneDebugJavaWithJavac
+> Task :app:bundleStandaloneDebugClassesToRuntimeJar
+> Task :app:bundleStandaloneDebugClassesToCompileJar
+> Task :app:kspStandaloneDebugUnitTestKotlin
+> Task :app:compileStandaloneDebugUnitTestKotlin
+> Task :app:preStandaloneDebugUnitTestBuild
+> Task :app:javaPreCompileStandaloneDebugUnitTest UP-TO-DATE
+> Task :app:compileStandaloneDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:mergeStandaloneDebugShaders UP-TO-DATE
+> Task :app:compileStandaloneDebugShaders NO-SOURCE
+> Task :app:generateStandaloneDebugAssets UP-TO-DATE
+> Task :app:mergeStandaloneDebugAssets UP-TO-DATE
+> Task :app:packageStandaloneDebugUnitTestForUnitTest
+> Task :app:generateStandaloneDebugUnitTestConfig
+> Task :app:processStandaloneDebugJavaRes UP-TO-DATE
+> Task :app:processStandaloneDebugUnitTestJavaRes UP-TO-DATE
+> Task :app:testStandaloneDebugUnitTest
+
+> Task :app:lintReportAmazonRelease
+Wrote HTML report to file:///D:/App%20Projects/Possessory/app/build/reports/lint-results-amazonRelease.html
+
+> Task :app:lintAmazonRelease
+
+BUILD SUCCESSFUL in 7m 51s
+162 actionable tasks: 67 executed, 95 up-to-date

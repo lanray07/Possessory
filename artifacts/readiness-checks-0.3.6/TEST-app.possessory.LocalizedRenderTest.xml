@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.possessory.LocalizedRenderTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-28T13:50:53.591Z" hostname="DESKTOP-MAKK9CA" time="14.896">
+  <properties/>
+  <testcase name="arabicRoomScreenRendersOffline" classname="app.possessory.LocalizedRenderTest" time="14.576"/>
+  <testcase name="spanishRoomScreenUsesBundledResourcesAndRetainsUserNames" classname="app.possessory.LocalizedRenderTest" time="0.32"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

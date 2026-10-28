@@ -1,8 +1,8 @@
 {
   "locale": "ar",
   "source_sha256": "b12817cce93d13b9c672112b7b0a4be6f6c3a47a46bdb98b36d2be0b7ecebe5d",
-  "strings_sha256": "e5b477e9b56f336e0dd9769c77ec61ca58ec3587e651a0cf3d94dccbb998c8ec",
+  "strings_sha256": "930c8a2e7aece96d7a9077af0d7811d5140d3ead524b8c930df6379de990a754",
   "catalogue_sha256": "7164c009afa46ade2a607d6d14bae9cec549dabb1d92143efc304821acf66b0f",
-  "store_sha256": "91adbbe1f67891445dfe72edad1e8c7601fce7b1ff3f62b0562a0aaacbf9467d",
-  "support_sha256": "237d94e28dbb936723645b715d9528b3a3fbc47c72e62496a2a73ecefab0ba91"
+  "store_sha256": "7b2e40bc0948a56a7a21f709e081e38e04b5cf89048281676e1110cd5e69095c",
+  "support_sha256": "92f3d3a0151264ddfe224602428e3ab51b92677b8d7acffbbc35ac72dfecc5d5"
 }

@@ -1,0 +1,134 @@
+{
+  "version": "0.3.6",
+  "version_code": 9,
+  "submission_ready": false,
+  "uploaded_to_amazon": false,
+  "production_languages": [
+    "en"
+  ],
+  "review_locale_targets": 19,
+  "independent_human_review_required": false,
+  "human_review_claimed": false,
+  "android_tests": {
+    "tests": 32,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "release_lint": {
+    "errors": 0,
+    "warnings": 41,
+    "hints": 9
+  },
+  "cloudflare_tests": 19,
+  "python_verifier_tests": 10,
+  "localization_tests": 8,
+  "editorial_override_count": 1535,
+  "production_worker_version": "20ac6ca1-6c57-44ed-96ba-595a998b33ab",
+  "artifacts": [
+    {
+      "path": "artifacts/Possessory-amazon-0.3.6-release-signed.apk",
+      "sha256": "04e7c768fc40f2c26be531c49b21e5373941fab6fc4fbb90afb6a18f6c7647c4",
+      "bytes": 64818077
+    },
+    {
+      "path": "artifacts/Possessory-amazon-0.3.6-review-signed.apk",
+      "sha256": "986a8c30ee0b3a885173257500006f7b56785f6d9b8d671ee55f657ef41cf15a",
+      "bytes": 65196255
+    },
+    {
+      "path": "artifacts/Possessory-0.3.6-review-tests.apk",
+      "sha256": "ab7e167b0cf8204dd3e03cc7c76eb2dd0c5f3c76f718c1f7b67b00297b42dc0a",
+      "bytes": 986151
+    },
+    {
+      "path": "artifacts/Possessory-0.3.6-localization-with-device-evidence.zip",
+      "sha256": "bd3c0fa0776d67e4bb8a2cba73bf79b99323325ac6264beece84f23dfed571af",
+      "bytes": 26014170
+    }
+  ],
+  "evidence": [
+    {
+      "file": "fire-036-captures-log.txt",
+      "sha256": "1db04025cfa882e8843d461c47d467f18a92df4fb41b04666b05cc706fb59f2e"
+    },
+    {
+      "file": "lint-results-amazonRelease.xml",
+      "sha256": "0c50b6d52824d15e2ab37881b614dffc734595754488ebb956c3ab37abc67c98"
+    },
+    {
+      "file": "readiness-036-final-build-log.txt",
+      "sha256": "1c036a84644b6a8434feff92fd94421a853106169ad70224986d68cf17c668ec"
+    },
+    {
+      "file": "readiness-036-label-build-log.txt",
+      "sha256": "43b2d8d796f424445906fe1507880e7d786b4c391d3373d14c4ab2dd8e239f1c"
+    },
+    {
+      "file": "sign-036-release-log.txt",
+      "sha256": "0c8e763c565d18f4a91150e2a0bcf52a84d46c40814f45e82b5dc94400186d41"
+    },
+    {
+      "file": "sign-036-review-log.txt",
+      "sha256": "73d33450e48b3e52380b11de0615082b0b6d5f30745df84e730f8de15752212e"
+    },
+    {
+      "file": "sign-036-tests-log.txt",
+      "sha256": "14ec95a9a8e0b4c3a36f62584ea38da809e6cd81a30873229937c07595fff0cc"
+    },
+    {
+      "file": "TEST-app.possessory.BundledLocaleTest.xml",
+      "sha256": "2b67d8388b12b858a4c8ba26aae100e95f35141a3ae925416992657274669a5f"
+    },
+    {
+      "file": "TEST-app.possessory.InventoryRulesTest.xml",
+      "sha256": "80f8402b127a4050d00e125cdad58c4b499cedb6d71d93ccad7310174b2c6967"
+    },
+    {
+      "file": "TEST-app.possessory.LicenseTest.xml",
+      "sha256": "a252486345fc0994f499d98bc5ab64839a385593c001651eba586aeafa04b1c6"
+    },
+    {
+      "file": "TEST-app.possessory.LocalizedRenderTest.xml",
+      "sha256": "ca30a2f6fd36d9059ea2ab7238970bc3c0f4082c15b413a4bf8b82e7c858f568"
+    },
+    {
+      "file": "TEST-app.possessory.LocalizedVoiceTest.xml",
+      "sha256": "735af24da8b5f74890209285ed3b70d3389b7ab8d0a2cb500a907aaf843914ab"
+    },
+    {
+      "file": "TEST-app.possessory.ReadinessTest.xml",
+      "sha256": "5cb9818d7a8f133688bd84ef1a9d103fae1a142a5a66b3a27c00e56f7ba924bf"
+    },
+    {
+      "file": "TEST-app.possessory.RenderedUiTest.xml",
+      "sha256": "a3e1f9f6870f593f13c28f0d31e471d42cc23383dd381c978e2daeda17ab65df"
+    },
+    {
+      "file": "TEST-app.possessory.RestoreTest.xml",
+      "sha256": "168aedff8e9171d9fb0b2072a38c2e8eae1a566b4b1289207b605261473aa196"
+    },
+    {
+      "file": "TEST-app.possessory.StorageTest.xml",
+      "sha256": "7e1a362d744b14e4673efb3ef7bfd8498a7ec1c72d7ff36a5fb4a0bfc30c12d1"
+    },
+    {
+      "file": "verifier-036-node-log.txt",
+      "sha256": "dec03f48309638faf84ee23379074cad0695648057fbddf5b7f64685e76c3871"
+    },
+    {
+      "file": "verifier-036-python-log.txt",
+      "sha256": "e71c0fe2e39ca8e7640029b08767dd55b1bbc8811a6f0d8085a7372b57bc48e2"
+    }
+  ],
+  "remaining_gates_document": "docs/READINESS-0.3.6.md",
+  "device_capture_manifest": "artifacts/reviewer-captures-0.3.6/manifest.json",
+  "device_capture_manifest_sha256": "05bce42d87001a706e7a7fe76508c324dea9b6d220138893d76baf4cda33c123",
+  "device_navigation_capture_count": 175,
+  "device_settings_restored": {
+    "stay_on_while_plugged_in": 0,
+    "font_scale": 1.0,
+    "accelerometer_rotation": 1,
+    "user_rotation": 0
+  }
+}

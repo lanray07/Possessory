@@ -10,6 +10,35 @@ import org.junit.Test
 
 class InventoryRulesTest {
     @Test
+    fun formattedMoneyKeepsCurrencyPrecisionWhenLanguageChanges() {
+        val locales =
+            "en-GB en-US en-AU es-ES es-419 fr-FR fr-CA de-DE it-IT pt-BR pt-PT nl-NL pl-PL sv-SE ja-JP hi-IN ar tr-TR id-ID"
+        for (tag in locales.split(" ")) {
+            val locale = Locale.forLanguageTag(tag)
+            for (code in listOf("GBP", "JPY", "KWD")) {
+                val currency = java.util.Currency.getInstance(code)
+                val expected = java.math.BigDecimal.valueOf(49999, currency.defaultFractionDigits)
+                val displayed = InventoryRules.money(49999L, code, locale)
+                val parser =
+                    java.text.NumberFormat.getCurrencyInstance(locale) as java.text.DecimalFormat
+                parser.currency = currency
+                parser.isParseBigDecimal = true
+                val parsed = parser.parse(displayed) as java.math.BigDecimal
+                assertEquals(
+                    "$tag/$code changed the recorded amount: $displayed",
+                    0,
+                    expected.compareTo(parsed),
+                )
+                assertEquals(
+                    "$tag/$code used the language's currency precision",
+                    currency.defaultFractionDigits,
+                    parsed.scale(),
+                )
+            }
+        }
+    }
+
+    @Test
     fun totalsCanExceedOneRecordsIntegerLimitWithoutOverflow() {
         val total =
             java.math.BigInteger.valueOf(Long.MAX_VALUE).multiply(java.math.BigInteger.valueOf(2))

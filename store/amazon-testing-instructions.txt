@@ -1,4 +1,4 @@
-Possessory 0.3.4 (version code 7) preparation instructions, package app.possessory. Confirm the uploaded binary matches before submitting these instructions. Fire tablets, Android API 26+. No app sign-in or account is needed.
+Possessory 0.3.6 (version code 9) preparation instructions, package app.possessory. Confirm the uploaded binary matches before submitting these instructions. Fire tablets, Android API 26+. No app sign-in or account is needed.
 
 1. Create a household, select its currency, add a room and save an item. Free allows one household, 30 items and three attachments per item. Search, edit and delete remain available without Premium. User-entered names are preserved.
 2. Attach a receipt image/PDF using the system picker, or open the camera on a supported device. Check that cancel returns without adding an attachment. Text extraction requires Premium: select a receipt language/page, crop or rotate and review suggestions before applying them. Originals are retained.

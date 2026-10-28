@@ -7,6 +7,13 @@ from localize import validate, extract
 from translate_offline import pieces
 
 class LocalisationChecks(unittest.TestCase):
+    def test_privacy_technical_names_cannot_disappear_in_translation(self):
+        from localization_quality import missing_disclosure_terms
+        source={'privacy_body':'Cloudflare over HTTPS; backups use AES-GCM'}
+        self.assertEqual({'privacy_body':['Cloudflare','HTTPS']},
+            missing_disclosure_terms(source,{'privacy_body':'Backups use AES-GCM'}))
+        self.assertEqual({},missing_disclosure_terms(source,source))
+
     def test_translation_loop_detection(self):
         from localization_quality import repeated_words
         self.assertTrue(repeated_words('Ad Ad Ad'))

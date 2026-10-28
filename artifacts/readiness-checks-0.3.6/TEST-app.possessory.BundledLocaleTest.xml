@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.possessory.BundledLocaleTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-28T13:50:39.809Z" hostname="DESKTOP-MAKK9CA" time="13.126">
+  <properties/>
+  <testcase name="indonesianWorksWithModernLocaleCodes" classname="app.possessory.BundledLocaleTest" time="8.46"/>
+  <testcase name="languagePreferencePersistsAndArabicUsesRightToLeft" classname="app.possessory.BundledLocaleTest" time="4.071"/>
+  <testcase name="everyPreviewLocaleHasBundledTextAndPreservedPlaceholders" classname="app.possessory.BundledLocaleTest" time="0.595"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

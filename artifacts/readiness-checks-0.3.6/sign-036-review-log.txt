@@ -1,0 +1,19 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=O. Bankole, OU=Possessory
+Signer #1 certificate SHA-256 digest: e19756432bb702f5f454683d10330ef49bba7eee7848e34cf0eaae6540e111bd
+Signer #1 certificate SHA-1 digest: f5d7a93c2a8c801e72e7f4357783321d139f67f7
+Signer #1 certificate MD5 digest: bc74ddea6b38e3f834dcb33594a08d09
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 4096
+Signer #1 public key SHA-256 digest: 299065d9d88ef90f0a993529975eeb5305c3ec280a2b7ccac547bf759d9792f7
+Signer #1 public key SHA-1 digest: 9f0a608f9923265f3a23f1d854511b4c5a40797c
+Signer #1 public key MD5 digest: 549cb6607630f9ee1c77c6bee4c003cd
+APK SHA-256: 986a8c30ee0b3a885173257500006f7b56785f6d9b8d671ee55f657ef41cf15a
+Dedicated signing material: C:\Users\User\.android\possessory-signing

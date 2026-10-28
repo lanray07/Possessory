@@ -1,0 +1,8 @@
+
+app.possessory.ReleaseDeviceTest:.
+
+Time: ٢١٫٣٨١
+
+OK (1 test)
+
+

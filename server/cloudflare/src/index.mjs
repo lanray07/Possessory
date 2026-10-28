@@ -46,8 +46,11 @@ function parseRequest(bytes) {
 export function claimsFromReceipt(receipt, userId, receiptId, sku, environment, now) {
   if (!receipt || receipt.productId !== sku || receipt.productType !== 'ENTITLED' || receipt.receiptId !== receiptId)
     throw new HttpError(422, 'Receipt did not match the configured entitlement');
-  if (environment === 'production' && receipt.testTransaction !== false)
-    throw new HttpError(422, 'Test or unidentified receipt cannot grant production access');
+  // Amazon's production RVS also verifies LAT and publishing-test receipts.
+  // Trust comes from that authenticated server response, not from a paid/test flag.
+  // Client-supplied flags are rejected by parseRequest; sandbox never uses this URL.
+  if (environment === 'production' && typeof receipt.testTransaction !== 'boolean')
+    throw new HttpError(422, 'Unidentified receipt cannot grant production access');
   const cancel = receipt.cancelDate ?? null;
   if (cancel !== null && (typeof cancel !== 'number' || !Number.isFinite(cancel)))
     throw new HttpError(422, 'Invalid cancellation date');

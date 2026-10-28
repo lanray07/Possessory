@@ -10,6 +10,12 @@ def repeated_words(value):
     words=re.findall(r'[^\W\d_]+',value.casefold(),re.UNICODE)
     return any(words[i:i+3] == [words[i]]*3 for i in range(len(words)-2))
 
+def missing_disclosure_terms(source, translated):
+    # Product/protocol names must survive translation; presence does not prove meaning.
+    return {key:missing for key,value in source.items()
+            if (missing := [term for term in ('Cloudflare','HTTPS','AES-GCM')
+                            if term in value and term not in translated.get(key,'')])}
+
 def main():
     source=extract()
     status=json.loads((ROOT/'localization/status.json').read_text(encoding='utf-8'))
@@ -29,10 +35,13 @@ def main():
         untranslated_marketing=[key for key,value in source.items() if key.startswith('store:') and key.endswith(('_headline','_caption')) and values.get(key)==value] if not locale.startswith('en-') else []
         assert not repetitions,(locale,'repeated translation words',repetitions)
         assert not untranslated_marketing,(locale,'untranslated marketing copy',untranslated_marketing)
+        disclosure_terms=missing_disclosure_terms(source,values)
+        assert not disclosure_terms,(locale,'missing privacy/support technical terms',disclosure_terms)
         report['locales'][locale]={'source_messages_covered':len(source),'missing':missing,'placeholder_errors':mismatches,'plural_forms':{group.attrib['name']:[e.attrib['quantity'] for e in group] for group in tree.findall('plurals')},'unchanged_strings_requiring_context_review':[key for key,value in source.items() if values.get(key)==value],'human_reviewer':record.get('human_reviewer'),'human_review_complete':bool(record.get('human_reviewer')) and record.get('state') in ('human_reviewed','release_approved'),'release_approved':record.get('release_approved',False)}
         report['locales'][locale]['possible_untranslated_fragments']={key:re.findall(r'[A-Za-z]+(?:[\s&"-]+[A-Za-z]+){2,}',value) for key,value in values.items() if locale.split('-')[0] in ('ar','ja','hi') and re.search(r'[A-Za-z]+(?:[\s&"-]+[A-Za-z]+){2,}',value)}
         report['locales'][locale]['repeated_word_errors']=repetitions
         report['locales'][locale]['untranslated_marketing_errors']=untranslated_marketing
+        report['locales'][locale]['missing_disclosure_terms']=disclosure_terms
     report['release_approved']=all(item['release_approved'] for item in report['locales'].values())
     (ROOT/'localization/quality-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(f'{len(status)} locales: {len(source)} messages each; no missing keys or placeholder errors. Human review is reported separately from release approval.')

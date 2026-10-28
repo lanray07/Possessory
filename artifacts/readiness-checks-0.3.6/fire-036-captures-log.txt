@@ -1,0 +1,4 @@
+Captured standard successfully.
+Captured large-font successfully.
+Captured portrait successfully.
+Restored the settings recorded before this run.

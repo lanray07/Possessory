@@ -10,7 +10,7 @@ def main():
     status_path=ROOT/'localization/status.json'
     status_bytes=status_path.read_bytes()
     report={'review_type':'AI editorial review, not independent human review',
-            'scope':'AI corrections to critical purchase/privacy messages, marketing headings/captions, command templates, pagination, untranslated labels and runaway repetitions; not an independent human review',
+            'scope':'AI corrections to purchase/privacy disclosures, marketing text, operational labels, item states, receipt crop controls, backup/restore semantics, voice notices and command templates. Corrected keys are enumerated; this is not a full-catalogue approval or independent human review.',
             'source_catalogue_sha256':hashlib.sha256(json.dumps(source,sort_keys=True).encode()).hexdigest(),
             'human_review_complete':False,'release_approved':False,'locales':{}}
     for locale, corrections in patches.items():

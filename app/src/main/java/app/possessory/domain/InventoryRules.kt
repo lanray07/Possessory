@@ -48,9 +48,14 @@ object InventoryRules {
 
     fun money(value: BigInteger, code: String, locale: Locale = Locale.getDefault()): String {
         val currency = Currency.getInstance(code)
+        val digits = currency.defaultFractionDigits.coerceAtLeast(0)
         return NumberFormat.getCurrencyInstance(locale)
-            .apply { this.currency = currency }
-            .format(BigDecimal(value, currency.defaultFractionDigits.coerceAtLeast(0)))
+            .apply {
+                this.currency = currency
+                minimumFractionDigits = digits
+                maximumFractionDigits = digits
+            }
+            .format(BigDecimal(value, digits))
     }
 
     fun validDate(value: String): Boolean =

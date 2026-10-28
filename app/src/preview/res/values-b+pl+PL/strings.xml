@@ -20,11 +20,11 @@
   <string name="condition_new">Nowy</string>
   <string name="condition_good">Dobrze.</string>
   <string name="condition_fair">Dostateczny</string>
-  <string name="condition_repair">Naprawa</string>
+  <string name="condition_repair">Wymaga naprawy</string>
   <string name="status_sold">Sprzedane</string>
   <string name="status_donated">Oddana</string>
   <string name="status_lost">Zagubiony</string>
-  <string name="status_disposed">Rozpuszczone</string>
+  <string name="status_disposed">Wyrzucony</string>
   <string name="premium_active">Dostęp Premium zweryfikowany.</string>
   <string name="purchase_verification_notice">Zakupy są weryfikowane przez usługę weryfikacji dowodów zakupu Possessory. Zapisany podpisany dostęp działa offline przez maksymalnie 90 dni; połącz się ponownie, aby go odnowić. Istniejące dane pozostają dostępne.</string>
   <string name="upgrade">Odblokuj premię</string>
@@ -50,9 +50,9 @@
   <string name="everything_in_place">Wszystko na swoim miejscu.</string>
   <string name="dashboard_subtitle">Trochę jasności na wszystko, co nazywasz domem.</string>
   <string name="a_little_order">Trochę porządku, dużo spokoju.</string>
-  <string name="hero_title">Dom dla\nWszystko co posiadasz.</string>
-  <string name="hero_body">Twoje rzeczy, rachunki i gwarancje.\n- Tak.</string>
-  <string name="total_items">Zapisane taśmy</string>
+  <string name="hero_title">Miejsce dla\nwszystkiego, co posiadasz.</string>
+  <string name="hero_body">Twoje rzeczy, paragony i gwarancje.\nStarannie przechowywane razem.</string>
+  <string name="total_items">Zapisane przedmioty</string>
   <string name="recorded_value">Zapisane wartości zakupu</string>
   <string name="missing_receipts">Brak wpływów</string>
   <string name="recently_added">Ostatnio dodane</string>
@@ -74,7 +74,7 @@
   <string name="active">Aktywne</string>
   <string name="archived">Archiwizacja</string>
   <string name="expiring_soon">Wkrótce wygaśnie</string>
-  <string name="maintenance_due">Utrzymanie</string>
+  <string name="maintenance_due">Konserwacja do wykonania</string>
   <string name="newest">Ostatnio dodane</string>
   <string name="name">Nazwa</string>
   <string name="room">Pokój</string>
@@ -87,7 +87,7 @@
   <string name="warranty_title">Trochę spokoju.</string>
   <string name="warranty_subtitle">Szczegóły gwarancji trzymaj pod ręką.</string>
   <string name="covered">W ramach zapisanych dat gwarancji</string>
-  <string name="expired">Wygasłe</string>
+  <string name="expired">Wygasła</string>
   <string name="nothing_here">Brak zapisów w tej sekcji.</string>
   <string name="warranty_disclaimer">Zapisane daty gwarancji są przez Ciebie dostarczane. Gwarancje producenta i ustawowe prawa konsumenta są oddzielne; kwalifikowalność zależy od odpowiednich warunków.</string>
   <string name="save">Zapisz</string>
@@ -107,7 +107,7 @@
   <string name="warranty_start">Uruchomienie gwarancji</string>
   <string name="description">Opis</string>
   <string name="brand">Marka</string>
-  <string name="model">Wzór</string>
+  <string name="model">Model</string>
   <string name="serial">Numer seryjny</string>
   <string name="retailer">Detaliści</string>
   <string name="estimated_value">Szacowana wartość aktualna</string>
@@ -135,7 +135,7 @@
   <string name="scan_receipt">Odbiorca przeglądu i wyciągu</string>
   <string name="remove_attachment">Usuń załącznik</string>
   <string name="duplicate">Duplikaty</string>
-  <string name="archive">Archiwum</string>
+  <string name="archive">Archiwizuj</string>
   <string name="unarchive">Aktywuj</string>
   <string name="delete">Usuń</string>
   <string name="delete_item">Skasować to przynależność?</string>
@@ -154,7 +154,7 @@
   <string name="add_maintenance">Dodaj konserwację</string>
   <string name="no_maintenance">Nowy początek utrzymania</string>
   <string name="maintenance_empty">Dodaj usługę, zmianę filtra lub inne zadanie utrzymania.</string>
-  <string name="maintenance_disclaimer">Wspomnienia pomagają zorganizować utrzymanie i nie zastępują profesjonalnych kontroli bezpieczeństwa.</string>
+  <string name="maintenance_disclaimer">Przypomnienia pomagają planować konserwację i nie zastępują profesjonalnych kontroli bezpieczeństwa.</string>
   <string name="maintenance_type">Rodzaj konserwacji</string>
   <string name="next_due">Następny planowany termin</string>
   <string name="repeat_days">Powtarzać interwał w dniach (0 = raz)</string>
@@ -165,7 +165,7 @@
   <string name="reports_subtitle">Czysty inwentarz, gotowy, kiedy będzie trzeba.</string>
   <string name="build_report">Przygotuj raport.</string>
   <string name="all_items">Wszystkie rzeczy aktywne</string>
-  <string name="with_receipts">Z kwitami</string>
+  <string name="with_receipts">Z paragonami</string>
   <string name="include_serials">Dołącz numery seryjne</string>
   <string name="include_prices">Zawarte wartości</string>
   <string name="format">Format</string>
@@ -182,7 +182,7 @@
   <string name="reminder_timing">Codzienne przypomnienia są przybliżone i zależą od ograniczeń działania w tle oraz ustawień powiadomień urządzenia.</string>
   <string name="language_system">Tłumaczenia podglądu są połączone i działają bez internetu. Są to projekty generowane maszynowo oczekujące na przegląd języka i układu. Twoje własne nazwy pozycji i notatki nie są tłumaczone.</string>
   <string name="backup_restore">Kopia zapasowa i przywracanie</string>
-  <string name="backup_body">Zapisz kompletny ZIP z rekordami i załącznikami. Przywraca poprawność sum kontrolnych i łączy się przez ID rekordu; istniejące rekordy wygrywają. Zachowaj kopię zapasową przed wyłączeniem.</string>
+  <string name="backup_body">Zapisz pełny plik ZIP z danymi i załącznikami. Przywracanie sprawdza sumy kontrolne i łączy dane według identyfikatora; istniejące dane mają pierwszeństwo. Zachowaj kopię przed odinstalowaniem aplikacji.</string>
   <string name="encrypted_backup">Backup chroniony hasłem</string>
   <string name="backup_password">Hasło (co najmniej 12 znaki)</string>
   <string name="create_backup">Zapisz kopię zapasową</string>
@@ -196,7 +196,7 @@
   <string name="premium_unavailable">Zakupy nie są włączone w tym podglądzie inżynieryjnym. Wymagane jest ustawienie i weryfikacja odbioru. Obecny limit to jedno gospodarstwo domowe i 30 przedmioty; istniejące zapisy pozostają dostępne.</string>
   <string name="restore_purchases">Przywróć zakupy</string>
   <string name="privacy">Twoja prywatność</string>
-  <string name="privacy_body">Inwentaryzacja, rejestry gospodarstw domowych, zdjęcia pokojowe, paragony, dokumenty utrzymania i preferencje są przechowywane w prywatnym magazynie aplikacji. Nie wymaga konta, reklamy ani analizy. Nic nie jest po cichu zsynchronizowane. OCR działa lokalnie w wybranym języku.\n\nWejście mowy jest opcjonalne i może korzystać z usługi sieciowej dostawcy mowy urządzenia. Possessory nie zachowuje surowych nagrań. Zdjęcia, paragony, notatki i numery seryjne nie są wysyłane do usługi weryfikacji zakupu.\n\nPo skonfigurowaniu zakupów identyfikatory użytkownika Amazon i paragonu zakupu są wysyłane przez HTTPS do Possessory Weryfikator jest gospodarzem Cloudbreak Workers w celu sprawdzenia zakupów i przywrócenia dostępu. Weryfikator wykorzystuje adres IP połączenia i hasz identyfikatorów zakupów dla ograniczenia krótkiej stopy. Nie ma bazy danych klientów, a wniosek o zalogowanie aplikacji jest wyłączony. Cloudflaar przetwarza metadane sieci do obsługi i zabezpieczania jego usługi. Amazon oddzielnie obsługuje płatności. Zweryfikowany dostęp offline może pozostać ważny do 90 dni, lub do czasu, gdy wcześniejsze zweryfikowane anulowanie staje się skuteczne, zanim wymagane jest odświeżanie online.\n\nEksport i kopie zapasowe są zapisywane tylko do wybranego miejsca docelowego; może to być dostawca dokumentów w chmurze. ZIP Kopie zapasowe są nieszyfrowane. AES-GCM; haseł nie można odzyskać. Ochrona Device- odblokować jest opcjonalna i nie szyfruje oddzielnie bazy danych lub załączników.\n\nUsuwanie indywidualnych rekordów lub wszystkich lokalnych danych w Ustawieniach. Odinstaluj usuwa prywatne rekordy; eksportowane kopie pozostają tam, gdzie je zapisałeś. Przed ich odinstalowaniem zachowaj sprawdzone kopie zapasowe. Skontaktuj się ze wsparciem dotyczącym prywatności lub usuwania korespondencji wsparcia.</string>
+  <string name="privacy_body">Inwentaryzacja, rejestry gospodarstw domowych, zdjęcia pokojowe, paragony, dokumenty utrzymania i preferencje są przechowywane w prywatnym magazynie aplikacji. Nie wymaga konta, reklamy ani analizy. Nic nie jest po cichu zsynchronizowane. OCR działa lokalnie w wybranym języku.\n\nWejście mowy jest opcjonalne i może korzystać z usługi sieciowej dostawcy mowy urządzenia. Possessory nie zachowuje surowych nagrań. Zdjęcia, paragony, notatki i numery seryjne nie są wysyłane do usługi weryfikacji zakupu.\n\nGdy zakupy są skonfigurowane, identyfikatory użytkownika Amazon i paragonu zakupu są przesyłane przez HTTPS do usługi weryfikacyjnej Possessory na Cloudflare Workers, aby sprawdzić zakup i przywrócić dostęp. Usługa używa adresu IP połączenia i skrótu identyfikatorów zakupu do krótkotrwałego ograniczania liczby żądań. Nie ma bazy klientów, a rejestrowanie żądań aplikacji jest wyłączone. Cloudflare przetwarza metadane sieciowe w celu działania i ochrony usługi. Amazon oddzielnie obsługuje płatności. Zweryfikowany dostęp offline może być ważny do 90 dni lub do wejścia w życie wcześniej zweryfikowanego anulowania; potem wymaga odświeżenia online.\n\nEksporty i kopie zapasowe są zapisywane tylko w wybranym miejscu, także w usłudze dokumentów w chmurze, jeśli ją wybierzesz. Zwykłe eksporty i kopie ZIP nie są szyfrowane. Kopie chronione hasłem używają AES-GCM; haseł nie można odzyskać. Ochrona przez odblokowanie urządzenia jest opcjonalna i nie szyfruje osobno bazy danych ani załączników.\n\nUsuwanie indywidualnych rekordów lub wszystkich lokalnych danych w Ustawieniach. Odinstaluj usuwa prywatne rekordy; eksportowane kopie pozostają tam, gdzie je zapisałeś. Przed ich odinstalowaniem zachowaj sprawdzone kopie zapasowe. Skontaktuj się ze wsparciem dotyczącym prywatności lub usuwania korespondencji wsparcia.</string>
   <string name="delete_all">Usuń wszystkie dane lokalne</string>
   <string name="delete_all_body">Na stałe usunąć wszystkie domki domowe, przedmioty, mocowanie i ustawienie na tym urządzeniu? Kopie zapasowe, które eksportujesz nie są usuwane.</string>
   <string name="preview_build">Possessory 0.3.0 · Zatwierdzanie języka, weryfikacja zakupu i ostateczne kontrole wydania są śledzone oddzielnie.</string>
@@ -225,7 +225,7 @@
   <string name="manage_searches">Zarządzanie zapisanymi wyszukiwaniami</string>
   <string name="edit_household">Edycja gospodarstwa domowego</string>
   <string name="household_currency_notice">Waluta gospodarstwa domowego jest używana do nowych zapisów. Istniejące waluty pozycji i wartości są zachowane.</string>
-  <string name="app_lock">Wymagane urządzenie odblokować</string>
+  <string name="app_lock">Wymagaj odblokowania urządzenia</string>
   <string name="unlock_notice">Użyj urządzenia screen- Lock creditical do otwarcia Possessory.</string>
   <string name="app_locked">Possessory jest zablokowany</string>
   <string name="unlock">Odblokuj</string>
@@ -245,18 +245,18 @@
   <string name="date_format">Format daty</string>
   <string name="regional_date">Data regionalna</string>
   <string name="short_date">Krótka data regionalna</string>
-  <string name="crop_receipt">Pobór zboża</string>
-  <string name="crop_left">Uprawy z lewej strony (%)</string>
-  <string name="crop_top">Uprawy z góry (%)</string>
-  <string name="crop_right">Uprawy z prawej (%)</string>
-  <string name="crop_bottom">Uprawy z dołu (%)</string>
+  <string name="crop_receipt">Przytnij paragon</string>
+  <string name="crop_left">Przytnij z lewej (%)</string>
+  <string name="crop_top">Przytnij od góry (%)</string>
+  <string name="crop_right">Przytnij z prawej (%)</string>
+  <string name="crop_bottom">Przytnij od dołu (%)</string>
   <string name="reset_crop">Resetuj obraz przeglądania</string>
   <string name="ocr_page">PDF strona</string>
   <string name="ocr_language">Język odbioru</string>
   <string name="page_number">Strona %1$d z %2$d</string>
-  <string name="receipt_currency">Waluta odbioru</string>
+  <string name="receipt_currency">Waluta paragonu</string>
   <string name="receipt_description">Opis produktu na paragonie</string>
-  <string name="receipt_reference">Odniesienie do odbioru</string>
+  <string name="receipt_reference">Numer paragonu</string>
   <string name="include_photos">Włączyć zdjęcia elementów</string>
   <string name="include_receipt_references">Dołącz odniesienia do załącznika</string>
   <string name="high_value">Pozycje o wysokiej wartości</string>

@@ -3,7 +3,7 @@
 Requires a captures/manifest.json mapping every screen to {file, locale, device}.
 Never invents application UI. Locale approval is mandatory unless --draft is supplied.
 """
-import argparse, json, hashlib
+import argparse, json, hashlib, subprocess, tempfile
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
@@ -33,8 +33,22 @@ def main():
         assert path.is_file(),f'Missing capture {screen}'
     output=a.output or ROOT/'artifacts/screenshots'/a.locale;output.mkdir(parents=True,exist_ok=True)
     title=ImageFont.truetype('C:/Windows/Fonts/georgia.ttf',54);body=ImageFont.truetype('C:/Windows/Fonts/segoeui.ttf',26)
-    # Arabic and Indic compositions need a shaped font/rendering path and are intentionally blocked.
-    assert a.locale not in ['ar','hi-IN'],'Shaping, RTL and font QA required before screenshot composition'
+    if a.locale in ['ar','hi-IN','ja-JP']:
+        entries=[dict(capture=str((a.captures/manifest[screen]['file']).resolve()),
+            headline=store[screen+'_headline'],caption=store[screen+'_caption'],
+            output=str((output/f'{number:02}-{screen}.png').resolve()))
+            for number,screen in enumerate(SCREENS,1)]
+        with tempfile.TemporaryDirectory(prefix='possessory-marketing-') as directory:
+            payload=Path(directory)/'input.json'
+            payload.write_text(json.dumps(dict(locale=a.locale,draft=a.draft,entries=entries),ensure_ascii=False),encoding='utf-8')
+            subprocess.run(['node',str(ROOT/'tools/render_marketing.cjs'),str(payload)],check=True)
+        for entry in entries:
+            with Image.open(entry['output']) as rendered:
+                assert rendered.size==(1920,1200)
+                rgb=rendered.convert('RGB')
+            rgb.save(entry['output'])
+        print(output)
+        return
     for number,screen in enumerate(SCREENS,1):
         image=Image.new('RGB',(1920,1200),'#F8F6F1');d=ImageDraw.Draw(image)
         headline=store[screen+'_headline'];caption=store[screen+'_caption']

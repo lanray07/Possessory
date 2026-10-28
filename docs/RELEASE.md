@@ -1,6 +1,6 @@
 # Possessory release tracker
 
-Version 0.3.4 (code 7) is a signed engineering candidate with a verified SDK-cancellation correction. It is not submission-approved: the production APK still uses English while the nineteen preview locales need final wording corrections and production bundling. See [the latest billing/device report](BILLING-0.3.4.md). No Amazon submission has been performed. The owner explicitly waived independent human language review on 28 October 2026. Technical localization and release checks still apply; no human review is claimed. Earlier archives and hashes are preserved.
+Version 0.3.6 (code 9) is a signed engineering candidate with currency precision and Amazon LAT receipt fixes. See [the current readiness report](READINESS-0.3.6.md) for evidence and remaining gates. Production is still English-only; all nineteen locales remain in the review app. No Amazon upload or submission was performed in this pass. Independent human language review is waived, and no human approval is claimed. Earlier archives and hashes are retained.
 
 ## Implemented in the candidate
 

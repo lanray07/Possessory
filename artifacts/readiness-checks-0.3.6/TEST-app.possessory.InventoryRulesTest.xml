@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.possessory.InventoryRulesTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-28T13:50:27.295Z" hostname="DESKTOP-MAKK9CA" time="11.963">
+  <properties/>
+  <testcase name="datesAndWarrantyBoundaries" classname="app.possessory.InventoryRulesTest" time="0.036"/>
+  <testcase name="encryptedBackupRoundTripAndTamperDetection" classname="app.possessory.InventoryRulesTest" time="5.447"/>
+  <testcase name="exportsEscapeQuotesAndSpreadsheetFormulas" classname="app.possessory.InventoryRulesTest" time="0.016"/>
+  <testcase name="totalsCanExceedOneRecordsIntegerLimitWithoutOverflow" classname="app.possessory.InventoryRulesTest" time="0.023"/>
+  <testcase name="streamedBackupsRemainCompatibleAndRejectTamperingAndOversize" classname="app.possessory.InventoryRulesTest" time="6.24"/>
+  <testcase name="amountsUseCurrencyPrecisionWithoutFloatingPoint" classname="app.possessory.InventoryRulesTest" time="0.001"/>
+  <testcase name="searchIncludesHiddenRecordFields" classname="app.possessory.InventoryRulesTest" time="0.004"/>
+  <testcase name="voiceUsesConstrainedIntentsAndNeverDeletes" classname="app.possessory.InventoryRulesTest" time="0.04"/>
+  <testcase name="formattedMoneyKeepsCurrencyPrecisionWhenLanguageChanges" classname="app.possessory.InventoryRulesTest" time="0.154"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

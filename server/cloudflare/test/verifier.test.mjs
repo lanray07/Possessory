@@ -62,9 +62,29 @@ test('SKU, product type and receipt mismatches cannot grant access', async () =>
   for (const change of [{ productId: 'other' }, { productType: 'CONSUMABLE' }, { receiptId: 'different' }, { cancelDate: true }])
     assert.equal((await service(receipt(change)).fetch(request(), environment())).status, 422);
 });
-test('test or unidentified transactions are rejected in production', async () => {
-  for (const value of [true, undefined, null, 'false'])
+test('unidentified transactions are rejected in production', async () => {
+  for (const value of [undefined, null, 'false', 'true', 0, 1])
     assert.equal((await service(receipt({ testTransaction: value })).fetch(request(), environment())).status, 422);
+});
+test('Amazon-verified LAT and publishing-test transactions work through production RVS', async () => {
+  for (const betaProduct of [true, false]) {
+    const claims = await decoded(await service(receipt({ testTransaction: true, betaProduct }), url => {
+      assert.equal(new URL(url).hostname, 'appstore-sdk.amazon.com');
+      assert(!new URL(url).pathname.includes('/sandbox/'));
+    }).fetch(request(), environment()));
+    assert.equal(claims.active, true);
+    assert.equal(claims.environment, 'production');
+  }
+});
+test('client flags cannot manufacture a LAT entitlement and cancelled LAT receipts revoke', async () => {
+  for (const extra of [{ betaProduct: true }, { testTransaction: true }]) {
+    const result = await service(null, () => assert.fail('unverified flags reached Amazon'))
+      .fetch(request({ userId: 'user', receiptId: 'receipt', ...extra }), environment());
+    assert.equal(result.status, 422);
+  }
+  const claims = await decoded(await service(receipt({ testTransaction: true, betaProduct: true, cancelDate: now * 1000 - 1 }))
+    .fetch(request(), environment()));
+  assert.equal(claims.active, false);
 });
 test('sandbox uses Amazon sandbox URL and can only issue sandbox claims', async () => {
   const claims = await decoded(await service(receipt({ testTransaction: true }), url => assert(new URL(url).pathname.startsWith('/sandbox/'))).fetch(request(), environment({ DEPLOYMENT_ENV: 'sandbox' })));

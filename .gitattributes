@@ -4,3 +4,6 @@
 *.properties text eol=lf
 artifacts/billing-marketing-checks-0.3.2/*.txt -text
 artifacts/billing-checks-0.3.4/*.txt -text
+artifacts/readiness-checks-0.3.6/* -text -whitespace
+artifacts/reviewer-captures-0.3.6/*.txt -text -whitespace
+artifacts/reviewer-captures-0.3.6/manifest.json -text

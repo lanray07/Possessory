@@ -1,0 +1,74 @@
+Starting a Gradle Daemon (subsequent builds will be faster)
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+> Task :app:verifyBundledTranslations
+> Task :app:preBuild
+> Task :app:preAmazonReleaseBuild
+> Task :app:mergeAmazonReleaseJniLibFolders UP-TO-DATE
+> Task :app:mergeAmazonReleaseNativeLibs UP-TO-DATE
+> Task :app:stripAmazonReleaseDebugSymbols UP-TO-DATE
+> Task :app:extractAmazonReleaseNativeSymbolTables UP-TO-DATE
+> Task :app:mergeAmazonReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:mergeAmazonReleaseArtProfile UP-TO-DATE
+> Task :app:desugarAmazonReleaseFileDependencies UP-TO-DATE
+> Task :app:buildKotlinToolingMetadata UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:generateAmazonReleaseBuildConfig UP-TO-DATE
+> Task :app:checkAmazonReleaseAarMetadata UP-TO-DATE
+> Task :app:generateAmazonReleaseResValues UP-TO-DATE
+> Task :app:mapAmazonReleaseSourceSetPaths UP-TO-DATE
+> Task :app:generateAmazonReleaseResources UP-TO-DATE
+> Task :app:mergeAmazonReleaseResources UP-TO-DATE
+> Task :app:packageAmazonReleaseResources UP-TO-DATE
+> Task :app:parseAmazonReleaseLocalResources UP-TO-DATE
+> Task :app:createAmazonReleaseCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksAmazonRelease UP-TO-DATE
+> Task :app:processAmazonReleaseMainManifest UP-TO-DATE
+> Task :app:processAmazonReleaseManifest UP-TO-DATE
+> Task :app:processAmazonReleaseManifestForPackage UP-TO-DATE
+> Task :app:processAmazonReleaseResources UP-TO-DATE
+> Task :app:kspAmazonReleaseKotlin UP-TO-DATE
+> Task :app:compileAmazonReleaseKotlin UP-TO-DATE
+> Task :app:javaPreCompileAmazonRelease UP-TO-DATE
+> Task :app:compileAmazonReleaseJavaWithJavac UP-TO-DATE
+> Task :app:dexBuilderAmazonRelease UP-TO-DATE
+> Task :app:mergeAmazonReleaseGlobalSynthetics UP-TO-DATE
+> Task :app:checkAmazonReleaseDuplicateClasses UP-TO-DATE
+> Task :app:mergeAmazonReleaseStartupProfile UP-TO-DATE
+> Task :app:mergeExtDexAmazonRelease UP-TO-DATE
+> Task :app:mergeDexAmazonRelease UP-TO-DATE
+> Task :app:compileAmazonReleaseArtProfile UP-TO-DATE
+> Task :app:mergeAmazonReleaseShaders UP-TO-DATE
+> Task :app:compileAmazonReleaseShaders NO-SOURCE
+> Task :app:generateAmazonReleaseAssets UP-TO-DATE
+> Task :app:mergeAmazonReleaseAssets UP-TO-DATE
+> Task :app:compressAmazonReleaseAssets UP-TO-DATE
+> Task :app:extractAmazonReleaseVersionControlInfo UP-TO-DATE
+> Task :app:extractProguardFiles UP-TO-DATE
+> Task :app:generateAmazonReleaseLintVitalReportModel UP-TO-DATE
+> Task :app:lintVitalAnalyzeAmazonRelease UP-TO-DATE
+> Task :app:lintVitalReportAmazonRelease SKIPPED
+> Task :app:lintVitalAmazonRelease SKIPPED
+> Task :app:processAmazonReleaseJavaRes UP-TO-DATE
+> Task :app:mergeAmazonReleaseJavaResource UP-TO-DATE
+> Task :app:optimizeAmazonReleaseResources UP-TO-DATE
+> Task :app:collectAmazonReleaseDependencies UP-TO-DATE
+> Task :app:sdkAmazonReleaseDependencyData UP-TO-DATE
+> Task :app:writeAmazonReleaseAppMetadata UP-TO-DATE
+> Task :app:writeAmazonReleaseSigningConfigVersions UP-TO-DATE
+> Task :app:packageAmazonRelease UP-TO-DATE
+> Task :app:createAmazonReleaseApkListingFileRedirect UP-TO-DATE
+> Task :app:assembleAmazonRelease UP-TO-DATE
+> Task :app:generateAmazonReleaseLintReportModel
+> Task :app:bundleAmazonReleaseClassesToCompileJar UP-TO-DATE
+> Task :app:preAmazonReleaseUnitTestBuild
+> Task :app:generateAmazonReleaseUnitTestLintModel
+> Task :app:lintAnalyzeAmazonRelease
+> Task :app:lintAnalyzeAmazonReleaseUnitTest
+
+> Task :app:lintReportAmazonRelease
+Wrote HTML report to file:///D:/App%20Projects/Possessory/app/build/reports/lint-results-amazonRelease.html
+
+> Task :app:lintAmazonRelease
+
+BUILD SUCCESSFUL in 6m 27s
+56 actionable tasks: 7 executed, 49 up-to-date

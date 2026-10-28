@@ -1,6 +1,5 @@
 package app.possessory
 
-import android.view.KeyEvent
 import androidx.activity.compose.setContent
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.*
@@ -8,6 +7,9 @@ import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
+import androidx.test.runner.lifecycle.ActivityLifecycleMonitorRegistry
+import androidx.test.runner.lifecycle.Stage
+import androidx.test.uiautomator.UiDevice
 import app.possessory.data.*
 import app.possessory.domain.VoiceIntent
 import java.util.concurrent.atomic.AtomicReference
@@ -30,7 +32,10 @@ class ExternalFlowReadinessTest {
     fun isolatedReviewOnly() {
         org.junit.Assume.assumeTrue(BuildConfig.REVIEW_MODE)
         assertEquals("app.possessory.review", app.packageName)
-        assertFalse("Unlock the tablet before interactive device checks", app.getSystemService(android.app.KeyguardManager::class.java).isKeyguardLocked)
+        assertFalse(
+            "Unlock the tablet before interactive device checks",
+            app.getSystemService(android.app.KeyguardManager::class.java).isKeyguardLocked,
+        )
     }
 
     @Test
@@ -62,11 +67,7 @@ class ExternalFlowReadinessTest {
         ui.waitForIdle()
         ui.onNodeWithText(app.getString(R.string.add_receipt)).performScrollTo().performClick()
         waitForExternalPackage()
-        pressBack()
-        ui.waitUntil(10000) {
-            instrumentation.uiAutomation.rootInActiveWindow?.packageName?.toString() ==
-                app.packageName
-        }
+        cancelExternal()
         ui.waitForIdle()
         assertEquals(initial, vm.dao.attachments().first().size)
         if (
@@ -78,31 +79,46 @@ class ExternalFlowReadinessTest {
                 .performScrollTo()
                 .performClick()
             waitForExternalPackage()
-            pressBack()
-            ui.waitUntil(10000) {
-                instrumentation.uiAutomation.rootInActiveWindow?.packageName?.toString() ==
-                    app.packageName
-            }
+            cancelExternal()
             ui.waitForIdle()
             assertEquals(initial, vm.dao.attachments().first().size)
         }
     }
 
     private fun waitForExternalPackage() {
-        ui.waitUntil(10000) {
-            val name = instrumentation.uiAutomation.rootInActiveWindow?.packageName?.toString()
-            name != null && name != app.packageName
+        ui.waitUntil(10000) { !targetResumed() }
+        // onPause precedes the external window gaining focus. Do not send Back to the old window.
+        instrumentation.waitForIdleSync()
+        android.os.SystemClock.sleep(750)
+    }
+
+    private fun targetResumed(): Boolean {
+        var resumed = false
+        instrumentation.runOnMainSync {
+            resumed =
+                ActivityLifecycleMonitorRegistry.getInstance()
+                    .getActivitiesInStage(Stage.RESUMED)
+                    .any { it is MainActivity }
         }
+        return resumed
+    }
+
+    private fun cancelExternal() {
+        // SAF may initially expose a roots drawer; Back first closes that nested UI.
+        repeat(3) {
+            if (!targetResumed()) {
+                pressBack()
+                val until = android.os.SystemClock.elapsedRealtime() + 1200
+                while (!targetResumed() && android.os.SystemClock.elapsedRealtime() < until) android
+                    .os
+                    .SystemClock
+                    .sleep(50)
+            }
+        }
+        ui.waitUntil(10000) { targetResumed() }
     }
 
     private fun pressBack() {
-        instrumentation.uiAutomation.injectInputEvent(
-            KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_BACK),
-            true,
-        )
-        instrumentation.uiAutomation.injectInputEvent(
-            KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_BACK),
-            true,
-        )
+        assertTrue("External Back event was rejected", UiDevice.getInstance(instrumentation).pressBack())
     }
 }

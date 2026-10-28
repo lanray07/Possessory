@@ -1,0 +1,61 @@
+{
+  "version": "0.3.1",
+  "version_code": 4,
+  "package": "app.possessory",
+  "apk_sha256": "2877b7c941cd51c99655f5fc11132d975f2bbac131bbfd4bfe6e7029bead5e18",
+  "device": "KFTRWI API 28",
+  "locale": "English base",
+  "capture_type": "Unmodified physical-device production UI screenshots",
+  "existing_fictional_demo_records_unchanged": true,
+  "files": [
+    {
+      "file": "1.png",
+      "screen": "overview",
+      "width": 1920,
+      "height": 1200,
+      "sha256": "27a8ef31c32b0d39569c968a666cbc430b5b6d7b8b2b5c2c0152a2c555ae1614"
+    },
+    {
+      "file": "2.png",
+      "screen": "inventory",
+      "width": 1920,
+      "height": 1200,
+      "sha256": "3a9257262b39f1fdcea8a77d4bb183d154fc5a96076518ab295cd0e52040f0a6"
+    },
+    {
+      "file": "3.png",
+      "screen": "rooms",
+      "width": 1920,
+      "height": 1200,
+      "sha256": "5caa59ca2834b4d1cfcb4b5401251992afd436f7ffdfd363bc9940e91dde2d7a"
+    },
+    {
+      "file": "4.png",
+      "screen": "warranties",
+      "width": 1920,
+      "height": 1200,
+      "sha256": "cb6ca390d9fa8d1b9b773131cc5d3f8c64ee9135daaf1e587f8eb2ebe134a859"
+    },
+    {
+      "file": "5.png",
+      "screen": "maintenance",
+      "width": 1920,
+      "height": 1200,
+      "sha256": "6e04bdf14d302970913fffe8925fb160b0367bdfdef8431a174895c8628a11da"
+    },
+    {
+      "file": "6.png",
+      "screen": "reports",
+      "width": 1920,
+      "height": 1200,
+      "sha256": "512d14260f0fed6f4faeef00370d19baf4fb5d993ae9a194ffa81202eacb664f"
+    },
+    {
+      "file": "7.png",
+      "screen": "settings",
+      "width": 1920,
+      "height": 1200,
+      "sha256": "4e2d8e7c06ae465b35e073802a07bcc4e88b068388472d9bb14b2ecd471e9c9e"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "recorded_at": "2026-10-27T19:38:23.326372+00:00",
+  "recorded_at": "2026-10-28T07:00:40.984357+00:00",
   "version": "0.3.1",
   "version_code": 4,
   "source_base_commit": "814891d",
@@ -26,8 +26,24 @@
     },
     "release_lint": {
       "errors": 0,
-      "warnings": 40,
-      "hints": 9
+      "warnings": 41,
+      "hints": 9,
+      "verified_at": "2026-10-28",
+      "build": "BUILD SUCCESSFUL",
+      "warning_categories": {
+        "ApplySharedPref": 2,
+        "UnusedAttribute": 1,
+        "AppBundleLocaleChanges": 1,
+        "AndroidGradlePluginVersion": 1,
+        "GradleDependency": 16,
+        "NewerVersionAvailable": 2,
+        "PluralsCandidate": 3,
+        "DataExtractionRules": 1,
+        "ObsoleteSdkInt": 1,
+        "UnusedResources": 5,
+        "UseKtx": 8
+      },
+      "log": "device-checks-0.3.1/release-lint.txt"
     },
     "native_platform_tests": {
       "passed": 3,
@@ -52,7 +68,80 @@
     "private_material_excluded_from_apks_and_source": true,
     "release_production_trust_only": true,
     "resource_line_endings_pinned_to_lf": true,
-    "checkout_resource_digest_comparisons_passed": 40
+    "checkout_resource_digest_comparisons_passed": 40,
+    "native_external_flow_tests": {
+      "passed": 2,
+      "detail": [
+        "Typed voice fallback without microphone permission",
+        "System document-picker and camera cancellation preserve attachment counts"
+      ],
+      "log": "unlocked-external-tests-log.txt"
+    },
+    "native_store_capture_test": {
+      "passed": 1,
+      "screenshots": 7,
+      "manifest": "store-captures-0.3.1/manifest.json",
+      "production_demo_records_preserved": true
+    },
+    "spoken_feedback": {
+      "passed": 1,
+      "engine_completed": true,
+      "owner_heard_clearly": true,
+      "owner_confirmation_date": "2026-10-28",
+      "phrase": "Possessory voice test complete.",
+      "language": "en-GB",
+      "speaker_volume": 11,
+      "speaker_max_volume": 25,
+      "muted": false,
+      "log": "unlocked-spoken-feedback-log.txt"
+    },
+    "native_app_lock": {
+      "passed": 1,
+      "credential_enable_unlock": true,
+      "credential_cancellation_preserves_lock": true,
+      "background_and_recreation_relock": true,
+      "secure_window_screenshot_protection": true,
+      "review_setting_restored_off": true,
+      "log": "device-checks-0.3.1/app-lock.txt"
+    },
+    "native_system_picker": {
+      "passed": 1,
+      "synthetic_png_byte_hash_preserved": true,
+      "fixture_records_removed": true,
+      "log": "device-checks-0.3.1/positive-picker.txt"
+    },
+    "native_camera": {
+      "passed": 1,
+      "jpeg_dimensions": [
+        2592,
+        1944
+      ],
+      "bytes": 1387503,
+      "owner_captured_and_accepted": true,
+      "disposable_import_removed": true,
+      "log": "device-checks-0.3.1/positive-camera.txt"
+    },
+    "interrupted_qa_fixture_cleanup": {
+      "passed": 1,
+      "scope": "Only UUID-named qa-attachment fixtures in app.possessory.review",
+      "log": "device-checks-0.3.1/interrupted-fixture-cleanup.txt"
+    },
+    "native_localized_navigation": {
+      "passed": 3,
+      "standard_locales": 19,
+      "large_font_locales": [
+        "en-GB",
+        "de-DE",
+        "ar"
+      ],
+      "portrait_locales": [
+        "en-GB",
+        "de-DE",
+        "ar"
+      ],
+      "screenshots": 175,
+      "human_language_approval": false
+    }
   },
   "platform": {
     "model": "KFTRWI",
@@ -71,7 +160,8 @@
       "ar": -2,
       "ja-JP": -2,
       "hi-IN": -2
-    }
+    },
+    "human_audible_feedback_confirmation": true
   },
   "localization": {
     "targets": 19,
@@ -80,13 +170,13 @@
     "human_approved_targets": 0,
     "production_contains_approved_translations_only": true,
     "production_language": "English base",
-    "current_device_screenshot_evidence": false,
+    "current_device_screenshot_evidence": true,
     "historical_layout_references": 175,
-    "reviewer_pack_has_current_apk_digest": true
+    "reviewer_pack_has_current_apk_digest": true,
+    "current_device_screenshots": 175,
+    "current_capture_manifest": "reviewer-captures-0.3.1/manifest.json"
   },
   "blocked_checks": {
-    "interactive_device_checks": "Fire secure keyguard was showing. Camera/picker cancellation and typed fallback run was aborted; it is not recorded as a product pass. Owner unlock required.",
-    "app_lock": "Owner must complete native device-credential prompts; no credential was entered or bypassed.",
     "language_scope": "Awaiting human sign-offs or an explicit English-first scope change; original 19-locale requirement retained.",
     "billing_production": "Entitlement remains unsubmitted. Complete approved Amazon LAT/production scenarios; no real purchase made.",
     "legal": "Operator privacy/export/release declarations remain unapproved."
@@ -97,7 +187,14 @@
     "native_fixture_item_room_household_removed": true,
     "native_notification_cancelled": true,
     "original_reminder_preferences_restored": true,
-    "production_records_preserved": true
+    "production_records_preserved": true,
+    "owned_download_fixture_removed": "possessory-qa-31-6ea04626.png",
+    "font_and_rotation_restored": {
+      "font_scale": 1.0,
+      "accelerometer_rotation": 1,
+      "user_rotation": 0
+    },
+    "owner_media_volume_unchanged": true
   },
   "files": [
     {
@@ -112,8 +209,8 @@
     },
     {
       "file": "Possessory-0.3.1-review-tests-signed.apk",
-      "bytes": 908227,
-      "sha256": "23cb3217f9ee986a2027bf3321613d01512f07454599a17716721de0ec4570f3"
+      "bytes": 969767,
+      "sha256": "e3a04b78b58cc237da66288b5adea98fd540726035e2dc2e0c33aa5be6767005"
     },
     {
       "file": "Possessory-0.3.1-release-tests-signed.apk",
@@ -122,13 +219,18 @@
     },
     {
       "file": "Possessory-0.3.1-localization-review.zip",
-      "bytes": 25842924,
-      "sha256": "655ec52c224ff6769a62dc3c956e503e7df77d58f78c0b588b2ada37767b51d9"
+      "bytes": 25908946,
+      "sha256": "b071372f4ce4d5eecaff8f9bf30dd4b9b6f9ee17f3c1ed400c61be313880237e"
     },
     {
       "file": "Possessory-0.3.1-source.zip",
-      "bytes": 20912117,
-      "sha256": "b2fbfe8843f66ad02b6c9187bebcbf145e64dd2d94bce9d9dfe410c9f3e11c88"
+      "bytes": 20919397,
+      "sha256": "de11ad4a09531cdf7dc04549b349cd7419e844ffd37b70c8b2566ae05c5b9ed1"
+    },
+    {
+      "file": "Possessory-0.3.1-store-screenshots.zip",
+      "bytes": 965290,
+      "sha256": "c808cd60c7c30f7518852603c56bb30641b5963fa68c054fa5c5b852b14718c7"
     }
   ],
   "prior_evidence": "artifacts/cloudflare-verification.json records the earlier verified App Tester purchase/restore path. Billing implementation and trust configuration are unchanged."

@@ -1,0 +1,17 @@
+{
+  "original_catalogue_sha256": "c78d4e7b9f4cd991d68b9a22d97f3b5e334af4014ad6262d880b13b86cb1a539",
+  "catalogue_restored_byte_for_byte": true,
+  "sandbox_property": "",
+  "settings": {
+    "stay_on_while_plugged_in": "0",
+    "wifi_on": "1",
+    "font_scale": "1.0",
+    "accelerometer_rotation": "1",
+    "user_rotation": "0"
+  },
+  "app_tester_user_restored": "Amazon User 1, US marketplace; API response settings unchanged",
+  "qa_packages_removed": true,
+  "production_inventory_modified": false,
+  "volume_modified": false,
+  "other_products_transactions_modified": false
+}

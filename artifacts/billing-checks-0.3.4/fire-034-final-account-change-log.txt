@@ -1,0 +1,41 @@
+
+app.possessory.BillingStateProbeTest:
+Error in checkConfiguredSandboxState(app.possessory.BillingStateProbeTest):
+java.lang.AssertionError: Start with the previous test user's cached entitlement
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertNotNull(Assert.java:713)
+	at app.possessory.BillingStateProbeTest$checkConfiguredSandboxState$1.invokeSuspend(BillingStateProbeTest.kt:26)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:277)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:95)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:69)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at app.possessory.BillingStateProbeTest.checkConfiguredSandboxState(BillingStateProbeTest.kt:17)
+
+
+Time: 0.155
+There was 1 failure:
+1) checkConfiguredSandboxState(app.possessory.BillingStateProbeTest)
+java.lang.AssertionError: Start with the previous test user's cached entitlement
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertNotNull(Assert.java:713)
+	at app.possessory.BillingStateProbeTest$checkConfiguredSandboxState$1.invokeSuspend(BillingStateProbeTest.kt:26)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:277)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:95)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:69)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at app.possessory.BillingStateProbeTest.checkConfiguredSandboxState(BillingStateProbeTest.kt:17)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+

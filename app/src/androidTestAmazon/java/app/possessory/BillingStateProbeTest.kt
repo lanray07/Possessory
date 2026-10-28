@@ -22,6 +22,10 @@ class BillingStateProbeTest {
         val app = InstrumentationRegistry.getInstrumentation().targetContext.applicationContext as PossessoryApp
         val clock = longPreferencesKey("license_last_seen")
         val originalClock = app.settings.data.first()[clock]
+        if (mode == "account-without-purchase") {
+            assertNotNull("Start with the previous test user's cached entitlement",
+                app.settings.data.first()[stringPreferencesKey("signed_license")])
+        }
         if (mode == "expired-offline") {
             val saved = app.settings.data.first()[stringPreferencesKey("signed_license")]
             assertNotNull(saved)
@@ -33,9 +37,21 @@ class BillingStateProbeTest {
         try {
             ActivityScenario.launch(MainActivity::class.java).use {
                 when (mode) {
+                    "account-without-purchase" -> {
+                        withTimeout(60000) { app.billing.state.first { it.status == "checked" && !it.busy } }
+                        assertFalse(app.billing.state.value.premium)
+                        withTimeout(10000) { app.settings.data.first { it[stringPreferencesKey("signed_license")] == null } }
+                    }
+                    "restored" -> {
+                        withTimeout(60000) { app.billing.state.first { it.premium && !it.busy } }
+                        InstrumentationRegistry.getInstrumentation().runOnMainSync { app.billing.restore() }
+                        withTimeout(60000) { app.billing.state.first { it.status == "verified" && !it.busy } }
+                        assertTrue(app.billing.state.value.premium)
+                    }
                     "revoked" -> {
                         withTimeout(60000) { app.billing.state.first { it.status == "revoked" && !it.busy } }
                         assertFalse(app.billing.state.value.premium)
+                        withTimeout(10000) { app.settings.data.first { it[stringPreferencesKey("signed_license")] == null } }
                     }
                     "cached-offline" -> {
                         withTimeout(10000) { app.billing.state.first { it.premium } }

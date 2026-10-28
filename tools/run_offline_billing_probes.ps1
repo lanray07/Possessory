@@ -1,3 +1,4 @@
+param([ValidatePattern('^[A-Za-z0-9._-]+$')][string]$LogPrefix='billing')
 $ErrorActionPreference='Stop'
 $taskAdb='C:\Users\User\AppData\Local\Android\Sdk\platform-tools\adb.exe'
 $taskWifi = (& $taskAdb shell settings get global wifi_on).Trim()
@@ -11,8 +12,8 @@ try {
     if (-not $taskDisconnected) { throw 'Offline state not established' }
     foreach ($taskProbe in @('cached-offline','expired-offline')) {
         & $taskAdb shell am force-stop app.possessory.iapqa
-        & $taskAdb shell am instrument -w -e class app.possessory.BillingStateProbeTest -e billingProbe $taskProbe app.possessory.iapqa.test/androidx.test.runner.AndroidJUnitRunner *> "billing-$taskProbe-log.txt"
-        if (-not (Select-String -Path "billing-$taskProbe-log.txt" -Pattern 'OK (1 test)' -SimpleMatch -Quiet)) { throw "Failed billing probe: $taskProbe" }
+        & $taskAdb shell am instrument -w -e class app.possessory.BillingStateProbeTest -e billingProbe $taskProbe app.possessory.iapqa.test/androidx.test.runner.AndroidJUnitRunner *> "$LogPrefix-$taskProbe-log.txt"
+        if (-not (Select-String -Path "$LogPrefix-$taskProbe-log.txt" -Pattern 'OK (1 test)' -SimpleMatch -Quiet)) { throw "Failed billing probe: $taskProbe" }
     }
 } finally {
     & $taskAdb shell am force-stop app.possessory.iapqa

@@ -1,5 +1,7 @@
 # Possessory 0.3.3 preparation — 28 October 2026
 
+**Later device session:** the owner unlocked the Fire, all 175 layout captures passed, and all eight fresh English marketing images were created. Actual App Tester account switching, verified restore and offline checks passed. Cancellation testing found a defect being corrected in 0.3.4; see [the billing report](BILLING-0.3.4.md). The locked-device entries below describe the earlier preparation checkpoint, not a current blocker.
+
 Version code 6 is prepared for continued device checks. It is not an approved Amazon submission. The last sealed production candidate remains 0.3.2; no new console upload or submission has been made.
 
 ## Completed locally

@@ -26,6 +26,8 @@ class AmazonBilling(private val app: PossessoryApp) : PurchasingListener {
     val state = MutableStateFlow(BillingState())
     private var currentUser: String? = null
     private var tokenUser: String? = null
+    private var tokenReceipt: String? = null
+    private val cancelledReceipts = mutableSetOf<Pair<String, String>>()
     private var timeout: Job? = null
     private var started = false
     private var sdkEnvironmentMatches = false
@@ -75,6 +77,7 @@ class AmazonBilling(private val app: PossessoryApp) : PurchasingListener {
                     }
                     .onSuccess {
                         tokenUser = it.userId
+                        tokenReceipt = it.receiptId
                         state.value = state.value.copy(premium = it.active, status = "cached")
                         expireAt(it.validUntil)
                     }
@@ -149,7 +152,8 @@ class AmazonBilling(private val app: PossessoryApp) : PurchasingListener {
         state.value =
             state.value.copy(
                 price = product?.price,
-                status = if (product != null) "ready" else "unavailable",
+                  status = if (state.value.status == "revoked") "revoked"
+                      else if (product != null) "ready" else "unavailable",
             )
     }
 
@@ -181,6 +185,29 @@ class AmazonBilling(private val app: PossessoryApp) : PurchasingListener {
 
     private fun validate(receipt: Receipt, userId: String) {
         if (receipt.sku != BuildConfig.AMAZON_SKU) return
+        val receiptKey = userId to receipt.receiptId
+        if (receipt.isCanceled) cancelledReceipts.add(receiptKey)
+        if (receiptKey in cancelledReceipts) {
+            fun isCurrentEntitlement() =
+                (tokenUser == null || tokenUser == userId) &&
+                    (tokenReceipt == null || tokenReceipt == receipt.receiptId)
+            // An SDK cancellation can arrive before RVS reflects it. Denial never needs
+            // an active server claim, and an in-flight verification must not undo it.
+            if (isCurrentEntitlement()) {
+                expiry?.cancel()
+                timeout?.cancel()
+                state.value = state.value.copy(premium = false, busy = false, status = "revoked")
+            }
+            scope.launch {
+                verificationMutex.withLock {
+                    if (isCurrentEntitlement()) {
+                        app.settings.edit { it.remove(stringPreferencesKey("signed_license")) }
+                        state.value = state.value.copy(premium = false, busy = false, status = "revoked")
+                    }
+                }
+            }
+            return
+        }
         scope.launch {
             verificationMutex.withLock {
                 state.value = state.value.copy(busy = true, status = "verifying")
@@ -230,12 +257,17 @@ class AmazonBilling(private val app: PossessoryApp) : PurchasingListener {
                     require(
                         claims.userId == userId &&
                             claims.receiptId == receipt.receiptId &&
-                            (currentUser == null || currentUser == userId)
+                            (currentUser == null || currentUser == userId) &&
+                            receiptKey !in cancelledReceipts
                     )
                     app.settings.edit {
                         it[stringPreferencesKey("signed_license")] = Files.gson.toJson(signed)
                     }
+                    // DataStore suspends; cancellation or account change may arrive while saving.
+                    require(receiptKey !in cancelledReceipts &&
+                        (currentUser == null || currentUser == userId))
                     tokenUser = userId
+                    tokenReceipt = receipt.receiptId
                     state.value =
                         state.value.copy(
                             premium = claims.active,

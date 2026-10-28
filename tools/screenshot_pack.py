@@ -3,20 +3,28 @@
 Requires a captures/manifest.json mapping every screen to {file, locale, device}.
 Never invents application UI. Locale approval is mandatory unless --draft is supplied.
 """
-import argparse, json
+import argparse, json, hashlib
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT=Path(__file__).resolve().parents[1]
 SCREENS=['hero','rooms','warranties','ocr','reports','voice','offline','reminders']
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--locale',required=True);p.add_argument('--captures',type=Path,required=True);p.add_argument('--output',type=Path);p.add_argument('--draft',action='store_true');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--locale',required=True);p.add_argument('--captures',type=Path,required=True);p.add_argument('--output',type=Path);p.add_argument('--draft',action='store_true');p.add_argument('--asset-review',type=Path);a=p.parse_args()
     status=json.loads((ROOT/'localization/status.json').read_text(encoding='utf-8'))
-    if not a.draft:assert status[a.locale]['release_approved'],'Locale is not release-approved'
     metadata=ROOT/'store'/f'{a.locale}.json'
     if not metadata.exists():metadata=ROOT/'localization/generated'/('values-b+'+a.locale.replace('-','+'))/'store.json'
     store=json.loads(metadata.read_text(encoding='utf-8'))
     manifest=json.loads((a.captures/'manifest.json').read_text(encoding='utf-8'))
+    if not a.draft and not status[a.locale]['release_approved']:
+        assert a.asset_review,'Locale or scoped asset approval is required'
+        review=json.loads(a.asset_review.read_text(encoding='utf-8'))
+        policy=json.loads((ROOT/'localization/release-policy.json').read_text(encoding='utf-8'))
+        assert policy['independent_human_review_required'] is False
+        assert review['approved'] and review['scope']=='marketing_only' and review['locale']==a.locale=='en-GB'
+        assert review['store_copy_sha256']==hashlib.sha256(metadata.read_bytes()).hexdigest()
+        for screen in SCREENS:
+            assert review['captures_sha256'][screen]==hashlib.sha256((a.captures/manifest[screen]['file']).read_bytes()).hexdigest()
     for screen in SCREENS:
         record=manifest[screen]
         assert record['locale']==a.locale,'Capture locale must match marketing text'

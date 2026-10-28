@@ -1,0 +1,182 @@
+{
+  "recorded_at": "2026-10-28T12:47:58.356889+00:00",
+  "version": "0.3.3",
+  "package": "app.possessory.iapqa",
+  "device": "Amazon KFTRWI",
+  "locale": "en-GB",
+  "apk_sha256": "e0c9390dde3e84c99ae2b60ec45a2d2af06d313afee29f4e0de57139dec15020",
+  "test_apk_sha256": "a6043489d2e1b9823abc5037dfdba727d76b1b5cfb3d9fab4f291fe71e6813e6",
+  "test_source_sha256": "14030f0afd54e01ea0ba4b5894fb91d3281ab75f93d44b3161f4ae92efdc0c54",
+  "approved": true,
+  "approval_scope": "English marketing assets only",
+  "application_release_approved": false,
+  "uploaded": false,
+  "captures": {
+    "hero": {
+      "file": "hero.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "82fbdfb61db1a67f1ed5e750e566cfebdb72815d2ca0a834ec54e8eac4dc60f9"
+    },
+    "rooms": {
+      "file": "rooms.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "63da44a960825c69a9649ac69b9bd186e4a1f956ab188cf1d3b7c93d086a04c9"
+    },
+    "warranties": {
+      "file": "warranties.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "a834bdb6a61b2ac2727b99c1767692271cd2e2b6c904b7daa3a83592cfe8cb5d"
+    },
+    "ocr": {
+      "file": "ocr.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "1a6549fe7e7c475868ceb8068c137e9089b8178bf2f1d521ab9dd84e0d0ee7f2"
+    },
+    "reports": {
+      "file": "reports.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "e428199102a530b7c59a05d7e0ddd66e192d8b75d5f78d1a7110efd597465c33"
+    },
+    "voice": {
+      "file": "voice.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "20e2fdc68a2e8017d8161d32c3714baa9e4b33dae80e1aed0932b0b4c1b0d954"
+    },
+    "offline": {
+      "file": "offline.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "4bf72941922154e24638aa1ca19ae929198452398d057d107115d0a1e0683107"
+    },
+    "reminders": {
+      "file": "reminders.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "85dcf08dfa210293579870d2309ee61f7a488fd32c018f5be11a627feebefbde"
+    }
+  },
+  "exports": [
+    {
+      "file": "01-hero.png",
+      "sha256": "e8131e06cac167e6d57633984ee01af6f41c0c4abf33c5b8f2497a3255809bab",
+      "size": [
+        1920,
+        1200
+      ]
+    },
+    {
+      "file": "02-rooms.png",
+      "sha256": "795f2c8687947b622a387ac128279acfa1f0e594f43be733c0a2e62579e6cad7",
+      "size": [
+        1920,
+        1200
+      ]
+    },
+    {
+      "file": "03-warranties.png",
+      "sha256": "83bb06af748f9307abf35d88a38031687110565bebb26eae164a8a1304abdfcc",
+      "size": [
+        1920,
+        1200
+      ]
+    },
+    {
+      "file": "04-ocr.png",
+      "sha256": "4a3d52fc612a676b58a3920613f28581f16b03501753a4a305499e7290298bfa",
+      "size": [
+        1920,
+        1200
+      ]
+    },
+    {
+      "file": "05-reports.png",
+      "sha256": "0bfb6c26ae90f37822cc837cd9f0c6321e73605cf693e75010d4cf92099049fe",
+      "size": [
+        1920,
+        1200
+      ]
+    },
+    {
+      "file": "06-voice.png",
+      "sha256": "0a0917cb55eb02658c720eba1485ff28d96e5c56a369274286a8aefc8dbb05ee",
+      "size": [
+        1920,
+        1200
+      ]
+    },
+    {
+      "file": "07-offline.png",
+      "sha256": "bf7e6d6fcf79e0a2c3e44cf31fa7c6b67d89607f203a3151afa054220d378d32",
+      "size": [
+        1920,
+        1200
+      ]
+    },
+    {
+      "file": "08-reminders.png",
+      "sha256": "a0410bef2f96360481117e56913346c6c1f4492a0ffec4cc49522c2581d6dffc",
+      "size": [
+        1920,
+        1200
+      ]
+    }
+  ],
+  "evidence": {
+    "screens": 8,
+    "sandboxPremium": true,
+    "offlineActiveNetworkNull": true,
+    "receiptImageVisible": true,
+    "syntheticReceiptTextObserved": [
+      "WILLOW SHOP - DEMO RECEIPT",
+      "Reading lamp",
+      "TOTAL GBP 49.99"
+    ],
+    "reportPreviewRendered": true,
+    "voiceRecognitionAvailableOnDevice": false,
+    "voiceFallbackShown": true,
+    "source": "Six MarketingCaptureTest navigation captures plus native receipt extraction and disconnected inventory captures on KFTRWI, 28 October 2026.",
+    "noProductionBillingClaim": true
+  },
+  "limitations": [
+    "Real app navigation in sandbox build, not production/LAT certification.",
+    "Fictional demo records; receipt review shown, not OCR accuracy certification.",
+    "Fire has no speech recognizer; screenshot shows actual typed fallback.",
+    "English assets only; application release approval and other locale/device variants remain separate. Independent human review is waived."
+  ],
+  "asset_review": {
+    "approved": true,
+    "scope": "marketing_only",
+    "locale": "en-GB",
+    "review_type": "AI technical and visual review; independent human review waived by owner",
+    "human_review_claimed": false,
+    "application_release_approved": false,
+    "source_version": "0.3.3",
+    "reviewed_for_candidate": "0.3.4; billing-only change does not change depicted UI",
+    "store_copy_sha256": "7f178735f98ce65bfe1bc902c86731b6cd6c21af2236f0ac80a817c4758aa447",
+    "captures_sha256": {
+      "hero": "82fbdfb61db1a67f1ed5e750e566cfebdb72815d2ca0a834ec54e8eac4dc60f9",
+      "rooms": "63da44a960825c69a9649ac69b9bd186e4a1f956ab188cf1d3b7c93d086a04c9",
+      "warranties": "a834bdb6a61b2ac2727b99c1767692271cd2e2b6c904b7daa3a83592cfe8cb5d",
+      "ocr": "1a6549fe7e7c475868ceb8068c137e9089b8178bf2f1d521ab9dd84e0d0ee7f2",
+      "reports": "e428199102a530b7c59a05d7e0ddd66e192d8b75d5f78d1a7110efd597465c33",
+      "voice": "20e2fdc68a2e8017d8161d32c3714baa9e4b33dae80e1aed0932b0b4c1b0d954",
+      "offline": "4bf72941922154e24638aa1ca19ae929198452398d057d107115d0a1e0683107",
+      "reminders": "85dcf08dfa210293579870d2309ee61f7a488fd32c018f5be11a627feebefbde"
+    },
+    "checks": [
+      "Eight actual Fire captures inspected in contact sheet; receipt extraction additionally inspected full size",
+      "Headlines/captions fit and describe implemented functions",
+      "Voice caption qualifies compatible-device support; actual typed fallback shown",
+      "Offline inventory captured with no active network",
+      "PDF preview and receipt extraction are actual app output",
+      "Fictional data only; no fabricated app UI",
+      "1920x1200 RGB PNG output; no app release approval implied"
+    ]
+  }
+}

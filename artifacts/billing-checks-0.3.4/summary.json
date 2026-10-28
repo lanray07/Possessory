@@ -1,0 +1,100 @@
+{
+  "version": "0.3.4",
+  "version_code": 7,
+  "checked_at": "2026-10-28T12:46:49.674270+00:00",
+  "submission_ready": false,
+  "human_review_required": false,
+  "device": "Amazon KFTRWI, API 28",
+  "billing_environment": "App Tester sandbox + deployed Cloudflare sandbox verifier",
+  "real_charge": false,
+  "final_device_checks": {
+    "sdk_cancellation_removes_cached_entitlement": {
+      "passed": true,
+      "log": "fire-034-final-revoked-log.txt",
+      "sha256": "b68fe354c8d8196697f2e4bccb6ddc004107dfa155215c1483577c95e2f6fa28"
+    },
+    "fresh_purchase_signed_restore_and_callback_guards": {
+      "passed": true,
+      "log": "fire-034-final-purchase-log.txt",
+      "sha256": "ac3c540fa842bb54a80eab9f83ebeb46cc9a835f2f7489f1e44d8ec15b6fd64e"
+    },
+    "cached_offline_restart": {
+      "passed": true,
+      "log": "fire-034-final-cached-offline-log.txt",
+      "sha256": "4229fe960d3268deeb187e14933053cae89c5be4b662f2cddd75e78a0d3b9a60"
+    },
+    "expired_offline_restart": {
+      "passed": true,
+      "log": "fire-034-final-expired-offline-log.txt",
+      "sha256": "1e4e6318b5465be7d691521c3e43320764090d930276f8d14a23d7aebb271b07"
+    },
+    "actual_account_switch_removes_cached_entitlement": {
+      "passed": true,
+      "log": "fire-034-final-account-change-retry-log.txt",
+      "sha256": "ebb8137b4484ab1496169aa0c24a536875e9f0b4a34a7f17e1778e9ec945f7b1"
+    },
+    "actual_account_return_signed_restore": {
+      "passed": true,
+      "log": "fire-034-final-account-return-log.txt",
+      "sha256": "b67a3cbcfdcdf3d7f2f1a63db91060edabd732c195d09c57b015f3004fd88507"
+    }
+  },
+  "unit_tests": 31,
+  "unit_scope": "Standalone variant before final Amazon-only post-save timing guard; final Amazon behavior tested on device.",
+  "localization_pipeline_tests": 7,
+  "lint": {
+    "Warning": 41,
+    "Hint": 9
+  },
+  "release_verifier_trust": "Production URL/key present; sandbox URL/key absent from DEX.",
+  "production_localization": "English only; nineteen preview locales still need final wording corrections and production bundling",
+  "review_capture_manifest": "../reviewer-captures-0.3.3/manifest.json",
+  "marketing_manifest": "../marketing-0.3.3-en-GB-reviewed/manifest.json",
+  "device_restoration": "device-restoration.json",
+  "files": [
+    {
+      "file": "Possessory-amazon-0.3.4-release-signed.apk",
+      "sha256": "26edccbbd9399ca854306ef30952e2f7e4ce988f1b3e7fdee92a757fe09a662e",
+      "bytes": 64818077
+    },
+    {
+      "file": "Possessory-0.3.4-iapqa-TEST-ONLY.apk",
+      "sha256": "ab94ad736f8696ccdb485792b552521695fac83f0319e54439a0ff0b77a08ea1",
+      "bytes": 72241654
+    },
+    {
+      "file": "Possessory-0.3.4-iapqa-tests-TEST-ONLY.apk",
+      "sha256": "e4a426265c97bf3e8cde1f9fa66f37df8c03aadb375ae851925455b520d35365",
+      "bytes": 2002053
+    },
+    {
+      "file": "Possessory-0.3.3-eight-marketing-screenshots-DRAFT.zip",
+      "sha256": "70d7fff369110f34092f58d24f5fd6d139fd59f68e85dcffe4fb4aefcaed2d7a",
+      "bytes": 3026495
+    },
+    {
+      "file": "Possessory-0.3.3-localization-with-device-evidence.zip",
+      "sha256": "151849415deef3d30d8983c97bed5b5213c3726f65ecdb8cace1e6b138af5f40",
+      "bytes": 25802048
+    },
+    {
+      "file": "Possessory-0.3.3-eight-marketing-screenshots-ENGLISH.zip",
+      "sha256": "11be872a669733b3cd8ceed7906e9a3a9d4adb02d29dac491767cd6e83b7abfe",
+      "bytes": 2975683
+    }
+  ],
+  "source_sha256": {
+    "app/src/amazon/java/app/possessory/services/AmazonBilling.kt": "6306f958647c068c2cc1559d59c952bffa24dfcd0278f6f8a69cf431c8fd472e",
+    "app/src/androidTestAmazon/java/app/possessory/BillingStateProbeTest.kt": "542275c3fa74d672ae33e0db38771799ce4b3156a311b23b44235245ed3f146c",
+    "app/src/androidTestAmazon/java/app/possessory/IapQaDeviceTest.kt": "4d6dff0b398e174650f3944ecd10477ae8c2a0f635efb684bbb49cabd7127ed9",
+    "app/build.gradle.kts": "ae8b687929c8003c6c52f8a169c59c2ae02dcdf917260185d3280472de807e03"
+  },
+  "historical_failures": "0.3.3 cancellation defect reproduced; setup timeout, overlapping runs and missing-cache precondition are retained separately. Successful final checks are explicitly mapped above.",
+  "remaining": [
+    "Localized wording corrections and production bundling",
+    "Final localized marketing assets",
+    "Production/LAT receipt flows",
+    "In-app browser helper repair and console upload",
+    "Operator privacy/export declarations"
+  ]
+}

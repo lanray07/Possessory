@@ -1,0 +1,16 @@
+{
+  "screens": 8,
+  "sandboxPremium": true,
+  "offlineActiveNetworkNull": true,
+  "receiptImageVisible": true,
+  "syntheticReceiptTextObserved": [
+    "WILLOW SHOP - DEMO RECEIPT",
+    "Reading lamp",
+    "TOTAL GBP 49.99"
+  ],
+  "reportPreviewRendered": true,
+  "voiceRecognitionAvailableOnDevice": false,
+  "voiceFallbackShown": true,
+  "source": "Six MarketingCaptureTest navigation captures plus native receipt extraction and disconnected inventory captures on KFTRWI, 28 October 2026.",
+  "noProductionBillingClaim": true
+}

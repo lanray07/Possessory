@@ -1,0 +1,35 @@
+{
+  "version": "0.3.3",
+  "physical_fire": "KFTRWI API 28",
+  "navigation_captures": 175,
+  "capture_manifest": "../reviewer-captures-0.3.3/manifest.json",
+  "standard_locales": 19,
+  "large_font_locales": [
+    "en-GB",
+    "de-DE",
+    "ar"
+  ],
+  "portrait_locales": [
+    "en-GB",
+    "de-DE",
+    "ar"
+  ],
+  "passed": [
+    "verified sandbox restore",
+    "cached entitlement offline restart",
+    "expired entitlement offline restart",
+    "actual App Tester user 1 to user 2 clears entitlement",
+    "actual App Tester user 2 to user 1 restores entitlement",
+    "six core marketing captures",
+    "native receipt text extraction and offline inventory capture"
+  ],
+  "failed": [
+    "SDK cancellation was ignored while sandbox receipt verification still returned active; fix being verified in 0.3.4"
+  ],
+  "test_setup_notes": [
+    "Initial store-data timeout resolved by restarting App Tester to reload temporary catalogue.",
+    "One account-return run and one marketing run were interrupted by overlapping instrumentation; discarded and rerun sequentially."
+  ],
+  "human_review_required": false,
+  "submission_ready": false
+}

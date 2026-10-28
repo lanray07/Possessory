@@ -1,0 +1,150 @@
+{
+  "recorded_at": "2026-10-28T12:25:41.847159+00:00",
+  "version": "0.3.3",
+  "package": "app.possessory.iapqa",
+  "device": "Amazon KFTRWI",
+  "locale": "en-GB",
+  "apk_sha256": "e0c9390dde3e84c99ae2b60ec45a2d2af06d313afee29f4e0de57139dec15020",
+  "test_apk_sha256": "a6043489d2e1b9823abc5037dfdba727d76b1b5cfb3d9fab4f291fe71e6813e6",
+  "test_source_sha256": "14030f0afd54e01ea0ba4b5894fb91d3281ab75f93d44b3161f4ae92efdc0c54",
+  "approved": false,
+  "uploaded": false,
+  "captures": {
+    "hero": {
+      "file": "hero.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "82fbdfb61db1a67f1ed5e750e566cfebdb72815d2ca0a834ec54e8eac4dc60f9"
+    },
+    "rooms": {
+      "file": "rooms.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "63da44a960825c69a9649ac69b9bd186e4a1f956ab188cf1d3b7c93d086a04c9"
+    },
+    "warranties": {
+      "file": "warranties.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "a834bdb6a61b2ac2727b99c1767692271cd2e2b6c904b7daa3a83592cfe8cb5d"
+    },
+    "ocr": {
+      "file": "ocr.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "1a6549fe7e7c475868ceb8068c137e9089b8178bf2f1d521ab9dd84e0d0ee7f2"
+    },
+    "reports": {
+      "file": "reports.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "e428199102a530b7c59a05d7e0ddd66e192d8b75d5f78d1a7110efd597465c33"
+    },
+    "voice": {
+      "file": "voice.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "20e2fdc68a2e8017d8161d32c3714baa9e4b33dae80e1aed0932b0b4c1b0d954"
+    },
+    "offline": {
+      "file": "offline.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "4bf72941922154e24638aa1ca19ae929198452398d057d107115d0a1e0683107"
+    },
+    "reminders": {
+      "file": "reminders.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "85dcf08dfa210293579870d2309ee61f7a488fd32c018f5be11a627feebefbde"
+    }
+  },
+  "exports": [
+    {
+      "file": "01-hero.png",
+      "sha256": "09091f4869fce2a66f6532178af7e704cc7a0540802f74384fc97fb782ae8d4f",
+      "size": [
+        1920,
+        1200
+      ]
+    },
+    {
+      "file": "02-rooms.png",
+      "sha256": "9abc6cf9953aed429e07673e7f1a22390c8cc160df8a589c0de70db70e3d9cb7",
+      "size": [
+        1920,
+        1200
+      ]
+    },
+    {
+      "file": "03-warranties.png",
+      "sha256": "08d3ab1e5fe5da69f682cb9005290f9d06d451e95fc8206be6cf2145e397ff76",
+      "size": [
+        1920,
+        1200
+      ]
+    },
+    {
+      "file": "04-ocr.png",
+      "sha256": "21bbf69961d99e6fce06c9046fc748ede687f3b465cc81fce56d2cc5f90fd378",
+      "size": [
+        1920,
+        1200
+      ]
+    },
+    {
+      "file": "05-reports.png",
+      "sha256": "8f210e933a920420369195ce0026f60833dc5f1afa652c5508499e5f9860e834",
+      "size": [
+        1920,
+        1200
+      ]
+    },
+    {
+      "file": "06-voice.png",
+      "sha256": "73961909ebf04b64c5fe96759ae9d4d4c827792b910100e20b301446cf6849b5",
+      "size": [
+        1920,
+        1200
+      ]
+    },
+    {
+      "file": "07-offline.png",
+      "sha256": "cca950cf856d26f4234a96d5d98b5f7b689fc7e2781269b5a8ef53f4edc72334",
+      "size": [
+        1920,
+        1200
+      ]
+    },
+    {
+      "file": "08-reminders.png",
+      "sha256": "31f9c25d7c89c56ae0babb68c1b954a1b009285477a79066fabd32f2a0f89b5e",
+      "size": [
+        1920,
+        1200
+      ]
+    }
+  ],
+  "evidence": {
+    "screens": 8,
+    "sandboxPremium": true,
+    "offlineActiveNetworkNull": true,
+    "receiptImageVisible": true,
+    "syntheticReceiptTextObserved": [
+      "WILLOW SHOP - DEMO RECEIPT",
+      "Reading lamp",
+      "TOTAL GBP 49.99"
+    ],
+    "reportPreviewRendered": true,
+    "voiceRecognitionAvailableOnDevice": false,
+    "voiceFallbackShown": true,
+    "source": "Six MarketingCaptureTest navigation captures plus native receipt extraction and disconnected inventory captures on KFTRWI, 28 October 2026.",
+    "noProductionBillingClaim": true
+  },
+  "limitations": [
+    "Real app navigation in sandbox build, not production/LAT certification.",
+    "Fictional demo records; receipt review shown, not OCR accuracy certification.",
+    "Fire has no speech recognizer; screenshot shows actual typed fallback.",
+    "English draft only; final release alignment and other locale/device variants pending. Independent human review is waived."
+  ]
+}

@@ -1,5 +1,6 @@
-"""Package actual Fire captures as a provenance-bound, explicitly unapproved English draft."""
+"""Package actual Fire captures with provenance and optional scoped English asset approval."""
 import hashlib
+import argparse
 import json
 import subprocess
 import sys
@@ -15,8 +16,14 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 def main():
-    captures = ROOT / 'artifacts/marketing-captures-0.3.2'
-    output = ROOT / 'artifacts/marketing-0.3.2-en-GB-draft'
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--version',default='0.3.2')
+    parser.add_argument('--test-apk',type=Path)
+    parser.add_argument('--asset-review',type=Path)
+    args=parser.parse_args()
+    assert all(c.isdigit() or c=='.' for c in args.version)
+    captures = ROOT / f'artifacts/marketing-captures-{args.version}'
+    output = ROOT / f'artifacts/marketing-{args.version}-en-GB-{"reviewed" if args.asset_review else "draft"}'
     proof = json.loads((captures / 'evidence.json').read_text(encoding='utf-8'))
     assert proof['screens'] == 8 and proof['sandboxPremium'] and proof['offlineActiveNetworkNull']
     manifest = {}
@@ -26,8 +33,9 @@ def main():
             assert image.size == (1920, 1200)
         manifest[name] = dict(file=path.name, locale='en-GB', device='fire-tablet', sha256=digest(path))
     (captures / 'manifest.json').write_text(json.dumps(manifest, indent=2)+'\n', encoding='utf-8', newline='\n')
+    approval_args=['--asset-review',str(args.asset_review)] if args.asset_review else ['--draft']
     subprocess.run([sys.executable, str(ROOT/'tools/screenshot_pack.py'), '--locale', 'en-GB',
-                    '--captures', str(captures), '--output', str(output), '--draft'], check=True)
+                    '--captures', str(captures), '--output', str(output), *approval_args], check=True)
     exports = []
     contact = Image.new('RGB', (1280, 1600), '#F8F6F1')
     for i, name in enumerate(SCREENS):
@@ -38,18 +46,20 @@ def main():
             contact.paste(preview, ((i%2)*640, (i//2)*400))
         exports.append(dict(file=path.name, sha256=digest(path), size=[1920,1200]))
     contact.save(output/'contact-sheet.jpg', quality=92)
-    provenance = dict(recorded_at=datetime.now(timezone.utc).isoformat(), version='0.3.2',
+    provenance = dict(recorded_at=datetime.now(timezone.utc).isoformat(), version=args.version,
         package='app.possessory.iapqa', device='Amazon KFTRWI', locale='en-GB',
-        apk_sha256=digest(ROOT/'artifacts/Possessory-0.3.2-iapqa-TEST-ONLY.apk'),
-        test_apk_sha256=digest(ROOT/'artifacts/Possessory-0.3.2-iapqa-tests-TEST-ONLY.apk'),
+        apk_sha256=digest(ROOT/f'artifacts/Possessory-{args.version}-iapqa-TEST-ONLY.apk'),
+        test_apk_sha256=digest(args.test_apk or ROOT/f'artifacts/Possessory-{args.version}-iapqa-tests-TEST-ONLY.apk'),
         test_source_sha256=digest(ROOT/'app/src/androidTestAmazon/java/app/possessory/MarketingCaptureTest.kt'),
-        approved=False, uploaded=False, captures=manifest, exports=exports, evidence=proof,
+        approved=bool(args.asset_review), approval_scope='English marketing assets only', application_release_approved=False,
+        uploaded=False, captures=manifest, exports=exports, evidence=proof,
         limitations=['Real app navigation in sandbox build, not production/LAT certification.',
                      'Fictional demo records; receipt review shown, not OCR accuracy certification.',
                      'Fire has no speech recognizer; screenshot shows actual typed fallback.',
-                     'English draft only; human language approvals and other device variants pending.'])
+                     'English assets only; application release approval and other locale/device variants remain separate. Independent human review is waived.'])
+    if args.asset_review: provenance['asset_review']=json.loads(args.asset_review.read_text(encoding='utf-8'))
     (output/'manifest.json').write_text(json.dumps(provenance,indent=2)+'\n',encoding='utf-8',newline='\n')
-    archive = ROOT/'artifacts/Possessory-0.3.2-eight-marketing-screenshots-DRAFT.zip'
+    archive = ROOT/f'artifacts/Possessory-{args.version}-eight-marketing-screenshots-{"ENGLISH" if args.asset_review else "DRAFT"}.zip'
     with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
         for path in sorted(output.iterdir()): z.write(path,'marketing/'+path.name)
         for path in sorted(captures.iterdir()): z.write(path,'raw-captures/'+path.name)

@@ -20,7 +20,7 @@ class UpgradeDeviceTest {
         )
         assertEquals("app.possessory", context.packageName)
         assertFalse(BuildConfig.REVIEW_MODE)
-        assertEquals(4, BuildConfig.VERSION_CODE)
+        assertEquals(5, BuildConfig.VERSION_CODE)
         val app = context.applicationContext as PossessoryApp
         val dao = app.db.inventory()
         assertTrue(dao.households().first().any { it.name == "Willow House" })

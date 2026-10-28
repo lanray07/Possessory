@@ -1,6 +1,6 @@
 # Possessory release tracker
 
-Version 0.3.1 (code 4) is a release candidate for review, not submission approval. No Amazon submission has been performed. The master brief requires independent human language review; the owner requested reviewer handoff packs rather than waiving that requirement. See [the current submission handoff](SUBMISSION-CHECKLIST.md) for evidence and owner actions. Earlier 0.3.0 archives and hashes are preserved.
+Version 0.3.2 (code 5) is a release candidate for review, not submission approval. No Amazon submission has been performed. The master brief requires independent human language review; the owner requested reviewer handoff packs rather than waiving that requirement. See [the current submission handoff](SUBMISSION-CHECKLIST.md) for evidence and owner actions. Earlier 0.3.0 and 0.3.1 archives and hashes are preserved.
 
 ## Implemented in the candidate
 
@@ -71,3 +71,11 @@ The reviewer handoff contains 175 unmodified physical-device captures: 133 stand
 Current 0.3.1 Fire follow-up: system picker/camera cancellation and typed voice fallback passed. English spoken feedback completed and the owner confirmed clear audio. Seven unmodified current production listing screenshots are available in artifacts/Possessory-0.3.1-store-screenshots.zip; demo inventory was retained. Owner-assisted app-lock and positive attachment checks are tracked separately in artifacts/submission-checks-0.3.1.json.
 
 Owner-assisted app lock now passed cancellation, background/recreation relocking, unlock and screenshot protection. Positive system-picker PNG import preserved exact bytes; accepted camera capture produced a valid JPEG. Interrupted disposable QA fixtures were removed only from the isolated review package. Release lint rerun: zero errors, 41 warnings, nine hints.
+
+## 0.3.2 editorial and accessibility follow-up
+
+The compact icon-only Add item action now exposes the existing localized accessible label. A focused AI editorial pass corrected ten reminder, purchase verification/restore, backup, export and privacy-label messages for sixteen non-English locale targets (160 draft entries). These corrections are reproducible through tools/apply_editorial.py and localization/editorial-overrides.json. The remaining catalogue, regional language and screen-reader review remain pending; this is not independent human review. No human reviewer or release approval has been added.
+
+The in-app browser automation failed to initialize, including after a reset. No Amazon console change or upload is inferred from local preparation. A proposed privacy questionnaire is in store/privacy-questionnaire-draft.json for operator and SDK review.
+
+The final 0.3.2 release build and lint passed (zero errors, 41 warnings, nine hints). Thirty JVM/rendered preflight tests passed; five focused locale/RTL tests were rerun successfully after editorial rebundling. Two native accessibility tests and two production update/capture tests passed. The existing production demo data was preserved. The refreshed handoff contains 175 current review captures and seven separate production store screenshots. Tablet font, rotation and keep-awake settings were restored and read back. Current evidence is artifacts/submission-checks-0.3.2.json.

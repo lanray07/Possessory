@@ -400,7 +400,7 @@ fun Possessory(vm: InventoryViewModel = viewModel()) {
                                         else adding = true
                                     }
                                 ) {
-                                    Icon(Icons.Outlined.Add, null)
+                                    Icon(Icons.Outlined.Add, if (wide) null else s(R.string.add_item))
                                     if (wide)
                                         Text(s(R.string.add_item), Modifier.padding(start = 6.dp))
                                 }

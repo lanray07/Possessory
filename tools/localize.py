@@ -54,6 +54,18 @@ def translate(text, target, key, cache):
     cache[cachekey]=value;return value
 
 def resources(locale, data):
+    # AI editorial corrections remain drafts; they never change human-review/approval status.
+    editorial=ROOT/'localization/editorial-overrides.json'
+    if editorial.exists():
+        corrections=json.loads(editorial.read_text(encoding='utf-8')).get(locale,{})
+        status_path=ROOT/'localization/status.json'
+        record=json.loads(status_path.read_text(encoding='utf-8')).get(locale,{}) if status_path.exists() else {}
+        if corrections:
+            assert not record.get('release_approved') and record.get('state') not in ('human_reviewed','release_approved'),'Human-reviewed translations must be explicitly returned to draft before AI regeneration'
+        assert set(corrections)<=set(data),'Unknown editorial key'
+        for key,value in corrections.items():
+            assert placeholders(value)==placeholders(data[key]),f'Editorial placeholder mismatch: {key}'
+        data={**data,**corrections}
     folder='values-b+'+locale.replace('-','+')
     root=ET.Element('resources');plurals={}
     for key,value in data.items():

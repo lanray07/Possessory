@@ -43,6 +43,8 @@ def main():
         archive.writestr('READ-ME.txt',instructions)
         archive.write(ROOT/'localization/glossary.csv','glossary.csv')
         archive.write(ROOT/'localization/quality-report.json','automated-coverage.json')
+        editorial=ROOT/'localization/ai-editorial-review.json'
+        if editorial.exists():archive.write(editorial,'ai-editorial-review.json')
         evidence=args.captures/'manifest.json'
         if evidence.exists():
             recorded=json.loads(evidence.read_text(encoding='utf-8'))

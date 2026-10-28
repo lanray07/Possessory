@@ -1,0 +1,22 @@
+{
+  "status": "engineering_draft_requires_operator_and_sdk_review_not_saved_in_console",
+  "prepared_on": "2026-10-28",
+  "reference": "https://developer.amazon.com/docs/app-submission/appstore-privacy-labels.html",
+  "proposed_collects_user_data": true,
+  "data": [
+    {"amazon_type": "User IDs", "collection": "yes", "purpose": "App functionality", "evidence": "Amazon user ID sent to Cloudflare verifier and Amazon RVS for entitlement validation."},
+    {"amazon_type": "Purchase history", "collection": "yes", "purpose": "App functionality", "evidence": "Purchase receipt ID and verified entitlement status; no photographed inventory receipt is transmitted."},
+    {"amazon_type": "Device or other IDs", "collection": "yes", "purpose": "Fraud prevention, security, and compliance", "evidence": "Connection IP used by Cloudflare rate limiting. Application request logging disabled; Cloudflare operates the service."},
+    {"amazon_type": "Voice or sound recordings", "collection": "conditional_owner_sdk_provider_review", "purpose": "App functionality", "evidence": "Optional device speech provider may use a network service. Possessory stores no raw audio. Confirm installed providers and questionnaire treatment."},
+    {"amazon_type": "User payment info", "collection": "not_accessible_to_Possessory", "evidence": "Amazon handles payment outside Possessory; no card or bank details are sent to the receipt verifier."},
+    {"amazon_type": "Photos; Files and docs; Other user-generated content", "collection": "local_inventory_only_no_developer_upload", "evidence": "Inventory and photographed documents remain in private device storage. User-selected external exports and document providers require separate questionnaire assessment."}
+  ],
+  "transfer_classification": "Operator must apply Amazon service-provider and user-initiated-transfer definitions to Amazon, Cloudflare and optional speech/document providers. Do not automatically equate every network request with a reportable third-party transfer.",
+  "remaining_review": [
+    "Verify Amazon SDK 3.0.9 data practices against its current disclosures; do not infer an SDK exemption.",
+    "Reconcile this draft with exact console questions before saving.",
+    "Obtain operator confirmation that deployed infrastructure and optional providers match disclosures."
+  ],
+  "operator_approved": false,
+  "submitted": false
+}

@@ -1,0 +1,265 @@
+{
+  "review_type": "AI editorial review, not independent human review",
+  "scope": "Ten reminder, purchase, backup, export and privacy-label messages; remaining catalogue and regional review pending",
+  "source_catalogue_sha256": "7164c009afa46ade2a607d6d14bae9cec549dabb1d92143efc304821acf66b0f",
+  "human_review_complete": false,
+  "release_approved": false,
+  "locales": {
+    "es-ES": {
+      "reviewed_keys": [
+        "backup_restore",
+        "export_privacy",
+        "local_promise",
+        "premium_active",
+        "private_by_design",
+        "purchase_retry",
+        "purchase_verification_notice",
+        "reminder_timing",
+        "reminders",
+        "restore_purchases"
+      ],
+      "corrected_draft_keys": 10,
+      "human_review_complete": false
+    },
+    "fr-FR": {
+      "reviewed_keys": [
+        "backup_restore",
+        "export_privacy",
+        "local_promise",
+        "premium_active",
+        "private_by_design",
+        "purchase_retry",
+        "purchase_verification_notice",
+        "reminder_timing",
+        "reminders",
+        "restore_purchases"
+      ],
+      "corrected_draft_keys": 10,
+      "human_review_complete": false
+    },
+    "de-DE": {
+      "reviewed_keys": [
+        "backup_restore",
+        "export_privacy",
+        "local_promise",
+        "premium_active",
+        "private_by_design",
+        "purchase_retry",
+        "purchase_verification_notice",
+        "reminder_timing",
+        "reminders",
+        "restore_purchases"
+      ],
+      "corrected_draft_keys": 10,
+      "human_review_complete": false
+    },
+    "it-IT": {
+      "reviewed_keys": [
+        "backup_restore",
+        "export_privacy",
+        "local_promise",
+        "premium_active",
+        "private_by_design",
+        "purchase_retry",
+        "purchase_verification_notice",
+        "reminder_timing",
+        "reminders",
+        "restore_purchases"
+      ],
+      "corrected_draft_keys": 10,
+      "human_review_complete": false
+    },
+    "pt-BR": {
+      "reviewed_keys": [
+        "backup_restore",
+        "export_privacy",
+        "local_promise",
+        "premium_active",
+        "private_by_design",
+        "purchase_retry",
+        "purchase_verification_notice",
+        "reminder_timing",
+        "reminders",
+        "restore_purchases"
+      ],
+      "corrected_draft_keys": 10,
+      "human_review_complete": false
+    },
+    "pt-PT": {
+      "reviewed_keys": [
+        "backup_restore",
+        "export_privacy",
+        "local_promise",
+        "premium_active",
+        "private_by_design",
+        "purchase_retry",
+        "purchase_verification_notice",
+        "reminder_timing",
+        "reminders",
+        "restore_purchases"
+      ],
+      "corrected_draft_keys": 10,
+      "human_review_complete": false
+    },
+    "nl-NL": {
+      "reviewed_keys": [
+        "backup_restore",
+        "export_privacy",
+        "local_promise",
+        "premium_active",
+        "private_by_design",
+        "purchase_retry",
+        "purchase_verification_notice",
+        "reminder_timing",
+        "reminders",
+        "restore_purchases"
+      ],
+      "corrected_draft_keys": 10,
+      "human_review_complete": false
+    },
+    "pl-PL": {
+      "reviewed_keys": [
+        "backup_restore",
+        "export_privacy",
+        "local_promise",
+        "premium_active",
+        "private_by_design",
+        "purchase_retry",
+        "purchase_verification_notice",
+        "reminder_timing",
+        "reminders",
+        "restore_purchases"
+      ],
+      "corrected_draft_keys": 10,
+      "human_review_complete": false
+    },
+    "sv-SE": {
+      "reviewed_keys": [
+        "backup_restore",
+        "export_privacy",
+        "local_promise",
+        "premium_active",
+        "private_by_design",
+        "purchase_retry",
+        "purchase_verification_notice",
+        "reminder_timing",
+        "reminders",
+        "restore_purchases"
+      ],
+      "corrected_draft_keys": 10,
+      "human_review_complete": false
+    },
+    "ja-JP": {
+      "reviewed_keys": [
+        "backup_restore",
+        "export_privacy",
+        "local_promise",
+        "premium_active",
+        "private_by_design",
+        "purchase_retry",
+        "purchase_verification_notice",
+        "reminder_timing",
+        "reminders",
+        "restore_purchases"
+      ],
+      "corrected_draft_keys": 10,
+      "human_review_complete": false
+    },
+    "hi-IN": {
+      "reviewed_keys": [
+        "backup_restore",
+        "export_privacy",
+        "local_promise",
+        "premium_active",
+        "private_by_design",
+        "purchase_retry",
+        "purchase_verification_notice",
+        "reminder_timing",
+        "reminders",
+        "restore_purchases"
+      ],
+      "corrected_draft_keys": 10,
+      "human_review_complete": false
+    },
+    "ar": {
+      "reviewed_keys": [
+        "backup_restore",
+        "export_privacy",
+        "local_promise",
+        "premium_active",
+        "private_by_design",
+        "purchase_retry",
+        "purchase_verification_notice",
+        "reminder_timing",
+        "reminders",
+        "restore_purchases"
+      ],
+      "corrected_draft_keys": 10,
+      "human_review_complete": false
+    },
+    "tr-TR": {
+      "reviewed_keys": [
+        "backup_restore",
+        "export_privacy",
+        "local_promise",
+        "premium_active",
+        "private_by_design",
+        "purchase_retry",
+        "purchase_verification_notice",
+        "reminder_timing",
+        "reminders",
+        "restore_purchases"
+      ],
+      "corrected_draft_keys": 10,
+      "human_review_complete": false
+    },
+    "id-ID": {
+      "reviewed_keys": [
+        "backup_restore",
+        "export_privacy",
+        "local_promise",
+        "premium_active",
+        "private_by_design",
+        "purchase_retry",
+        "purchase_verification_notice",
+        "reminder_timing",
+        "reminders",
+        "restore_purchases"
+      ],
+      "corrected_draft_keys": 10,
+      "human_review_complete": false
+    },
+    "es-419": {
+      "reviewed_keys": [
+        "backup_restore",
+        "export_privacy",
+        "local_promise",
+        "premium_active",
+        "private_by_design",
+        "purchase_retry",
+        "purchase_verification_notice",
+        "reminder_timing",
+        "reminders",
+        "restore_purchases"
+      ],
+      "corrected_draft_keys": 10,
+      "human_review_complete": false
+    },
+    "fr-CA": {
+      "reviewed_keys": [
+        "backup_restore",
+        "export_privacy",
+        "local_promise",
+        "premium_active",
+        "private_by_design",
+        "purchase_retry",
+        "purchase_verification_notice",
+        "reminder_timing",
+        "reminders",
+        "restore_purchases"
+      ],
+      "corrected_draft_keys": 10,
+      "human_review_complete": false
+    }
+  }
+}

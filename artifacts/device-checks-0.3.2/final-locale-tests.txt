@@ -1,0 +1,44 @@
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:verifyBundledTranslations
+> Task :app:preBuild
+> Task :app:preStandaloneDebugBuild
+> Task :app:generateStandaloneDebugBuildConfig
+> Task :app:checkStandaloneDebugAarMetadata UP-TO-DATE
+> Task :app:generateStandaloneDebugResValues UP-TO-DATE
+> Task :app:mapStandaloneDebugSourceSetPaths
+> Task :app:generateStandaloneDebugResources
+> Task :app:mergeStandaloneDebugResources
+> Task :app:packageStandaloneDebugResources
+> Task :app:createStandaloneDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksStandaloneDebug UP-TO-DATE
+> Task :app:processStandaloneDebugMainManifest UP-TO-DATE
+> Task :app:parseStandaloneDebugLocalResources
+> Task :app:processStandaloneDebugManifest UP-TO-DATE
+> Task :app:processStandaloneDebugManifestForPackage UP-TO-DATE
+> Task :app:javaPreCompileStandaloneDebug UP-TO-DATE
+> Task :app:preStandaloneDebugUnitTestBuild
+> Task :app:javaPreCompileStandaloneDebugUnitTest UP-TO-DATE
+> Task :app:mergeStandaloneDebugShaders UP-TO-DATE
+> Task :app:compileStandaloneDebugShaders NO-SOURCE
+> Task :app:generateStandaloneDebugAssets UP-TO-DATE
+> Task :app:mergeStandaloneDebugAssets UP-TO-DATE
+> Task :app:processStandaloneDebugResources
+> Task :app:packageStandaloneDebugUnitTestForUnitTest
+> Task :app:generateStandaloneDebugUnitTestConfig
+> Task :app:kspStandaloneDebugKotlin
+> Task :app:compileStandaloneDebugKotlin
+w: file:///D:/App%20Projects/Possessory/app/src/main/java/app/possessory/MainActivity.kt:142:42 'fun createConfirmDeviceCredentialIntent(p0: CharSequence!, p1: CharSequence!): Intent!' is deprecated. Deprecated in Java.
+w: file:///D:/App%20Projects/Possessory/app/src/main/java/app/possessory/MainActivity.kt:935:40 'val Icons.Outlined.ReceiptLong: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.ReceiptLong.
+
+> Task :app:compileStandaloneDebugJavaWithJavac
+> Task :app:bundleStandaloneDebugClassesToRuntimeJar
+> Task :app:bundleStandaloneDebugClassesToCompileJar
+> Task :app:processStandaloneDebugJavaRes UP-TO-DATE
+> Task :app:kspStandaloneDebugUnitTestKotlin
+> Task :app:compileStandaloneDebugUnitTestKotlin
+> Task :app:compileStandaloneDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:processStandaloneDebugUnitTestJavaRes UP-TO-DATE
+> Task :app:testStandaloneDebugUnitTest
+
+BUILD SUCCESSFUL in 2m 43s
+31 actionable tasks: 18 executed, 13 up-to-date

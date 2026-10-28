@@ -1,10 +1,10 @@
 {
-  "status": "0.3.1_candidate_prepared_not_uploaded_or_submitted",
+  "status": "0.3.2_candidate_prepared_not_uploaded_or_submitted",
   "app": {
     "internal_title": "Possessory",
     "package_name": "app.possessory",
-    "version_name": "0.3.1",
-    "version_code": 4,
+    "version_name": "0.3.2",
+    "version_code": 5,
     "type": "Android / Fire OS",
     "category_preference": "Productivity",
     "operator": "O. Bankole",
@@ -76,7 +76,7 @@
     "localization": "Static text resources; no runtime translation provider.",
     "note": "Reconcile Amazon questionnaire definitions for identifiers/purchase history, optional device-provider speech, service-provider processing and user-initiated exports. Operator must review final disclosures; no legal certification is inferred."
   },
-  "reviewer_notes": "Possessory 0.3.1 (version code 4), package app.possessory. Fire tablets, Android API 26+. No app sign-in or account is needed.\n\n1. Create a household, select its currency, add a room and save an item. Free allows one household, 30 items and three attachments per item. Search, edit and delete remain available without Premium. User-entered names are preserved.\n2. Attach a receipt image/PDF using the system picker, or open the camera on a supported device. Check that cancel returns without adding an attachment. Text extraction requires Premium: select a receipt language/page, crop or rotate and review suggestions before applying them. Originals are retained.\n3. In Settings, enable reminders. Device notification permission and power settings can affect delivery. Warranty and maintenance dates are user supplied. Reminders run approximately daily rather than at an exact time.\n4. Test the one-time Amazon entitlement possessory.premium.lifetime, display title Possessory Premium. The approved UK base price is GBP 4.99; Amazon supplies regional prices. Purchase and restore require internet. Only an Amazon-verified, signed entitlement unlocks Premium. No subscription. Previously verified access can work offline for up to 90 days or an earlier effective cancellation. Test invalid receipts, cancellation, restore and account changes with Amazon's approved testing tools; do not make a real paid purchase unless authorized by the account owner.\n5. Premium adds OCR, advanced reminders, maintenance, PDF/CSV/JSON exports, saved searches, expanded voice actions and password-protected backups. Preview exported content, save a backup, inspect restore preview and confirm existing records remain. Encrypted backups require at least 12 characters; passwords cannot be recovered. Plain ZIP backups and exports are unencrypted.\n6. Voice input is optional. When recognition is unavailable, type a supported phrase in Voice assistant and review it. TTS and recognition languages depend on the installed providers. No raw recordings are stored by Possessory.\n7. Optional app lock uses an existing system PIN/pattern/password; Possessory does not store it. Test unlock, background/reopen, credential cancellation and protected recent-app previews with the device owner. It is separate from database encryption.\n\nHousehold inventory and photographed documents stay on the device. Purchase user/receipt IDs are checked over HTTPS by the Cloudflare-hosted verifier and Amazon. See the privacy policy for network metadata and rate limiting. Support: banksmi@mail.com.\n\nNever upload the separate .review or .iapqa packages as the store binary. Localized packs remain drafts until independent human approval. These are candidate review instructions, not a certification that every manual release check is complete.\n",
+  "reviewer_notes": "Possessory 0.3.2 (version code 5), package app.possessory. Fire tablets, Android API 26+. No app sign-in or account is needed.\n\n1. Create a household, select its currency, add a room and save an item. Free allows one household, 30 items and three attachments per item. Search, edit and delete remain available without Premium. User-entered names are preserved.\n2. Attach a receipt image/PDF using the system picker, or open the camera on a supported device. Check that cancel returns without adding an attachment. Text extraction requires Premium: select a receipt language/page, crop or rotate and review suggestions before applying them. Originals are retained.\n3. In Settings, enable reminders. Device notification permission and power settings can affect delivery. Warranty and maintenance dates are user supplied. Reminders run approximately daily rather than at an exact time.\n4. Test the one-time Amazon entitlement possessory.premium.lifetime, display title Possessory Premium. The approved UK base price is GBP 4.99; Amazon supplies regional prices. Purchase and restore require internet. Only an Amazon-verified, signed entitlement unlocks Premium. No subscription. Previously verified access can work offline for up to 90 days or an earlier effective cancellation. Test invalid receipts, cancellation, restore and account changes with Amazon's approved testing tools; do not make a real paid purchase unless authorized by the account owner.\n5. Premium adds OCR, advanced reminders, maintenance, PDF/CSV/JSON exports, saved searches, expanded voice actions and password-protected backups. Preview exported content, save a backup, inspect restore preview and confirm existing records remain. Encrypted backups require at least 12 characters; passwords cannot be recovered. Plain ZIP backups and exports are unencrypted.\n6. Voice input is optional. When recognition is unavailable, type a supported phrase in Voice assistant and review it. TTS and recognition languages depend on the installed providers. No raw recordings are stored by Possessory.\n7. Optional app lock uses an existing system PIN/pattern/password; Possessory does not store it. Test unlock, background/reopen, credential cancellation and protected recent-app previews with the device owner. It is separate from database encryption.\n\nHousehold inventory and photographed documents stay on the device. Purchase user/receipt IDs are checked over HTTPS by the Cloudflare-hosted verifier and Amazon. See the privacy policy for network metadata and rate limiting. Support: banksmi@mail.com.\n\nNever upload the separate .review or .iapqa packages as the store binary. Localized packs remain drafts until independent human approval. These are candidate review instructions, not a certification that every manual release check is complete.\n",
   "owner_inputs_pending": [
     "Independent language sign-offs or an explicit English-first scope decision",
     "Operator privacy/export/release approval",
@@ -120,9 +120,11 @@
     },
     "last_observed_version_name": "0.2.0",
     "last_observed_version_code": 2,
-    "candidate_apk": "Possessory-amazon-0.3.1-release-signed.apk",
+    "candidate_apk": "Possessory-amazon-0.3.2-release-signed.apk",
     "candidate_uploaded": false,
-    "candidate_screenshots": "artifacts/Possessory-0.3.1-store-screenshots.zip",
-    "candidate_screenshot_count": 7
-  }
+    "candidate_screenshots": "artifacts/Possessory-0.3.2-store-screenshots.zip",
+    "candidate_screenshot_count": 7,
+    "connection_blocker": "In-app browser automation initialization failed; no current console changes performed."
+  },
+  "privacy_questionnaire_draft": "store/privacy-questionnaire-draft.json"
 }

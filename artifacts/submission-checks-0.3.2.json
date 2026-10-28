@@ -1,0 +1,156 @@
+{
+  "recorded_at": "2026-10-28T07:42:55.690102+00:00",
+  "version": "0.3.2",
+  "version_code": 5,
+  "source_base_commit": "06033e6",
+  "status": "signed_review_candidate_not_ready_to_submit",
+  "ready_to_submit": false,
+  "candidate_uploaded_to_amazon": false,
+  "submitted_to_amazon": false,
+  "last_observed_console_binary_version_code": 2,
+  "checks": {
+    "jvm_rendered_preflight": {
+      "passed": 30,
+      "evidence": "device-checks-0.3.2/unit-preflight.json"
+    },
+    "final_bundled_locale_and_rtl_render_tests": {
+      "passed": 5,
+      "subset_of_preflight_suite": true
+    },
+    "localization_pipeline_tests": {
+      "passed": 5
+    },
+    "live_endpoint_probes": {
+      "passed": 6,
+      "evidence": "cloudflare-endpoint-checks.json"
+    },
+    "release_build": "BUILD SUCCESSFUL",
+    "release_lint": {
+      "errors": 0,
+      "warnings": 41,
+      "hints": 9
+    },
+    "native_accessibility": {
+      "passed": 2,
+      "scope": [
+        "Physical Fire Tab/Enter navigation to Inventory and Settings",
+        "Labelled compact Add item action opens editor and cancels without saving"
+      ],
+      "human_screen_reader_review": false
+    },
+    "native_production": {
+      "passed": 2,
+      "version_code": 5,
+      "household": "Willow House",
+      "minimum_rooms": 3,
+      "items": 6,
+      "maintenance_retained": true,
+      "store_screenshots": 7
+    },
+    "native_locale_navigation": {
+      "passed": 3,
+      "standard_targets": 19,
+      "large_font_targets": [
+        "en-GB",
+        "de-DE",
+        "ar"
+      ],
+      "portrait_targets": [
+        "en-GB",
+        "de-DE",
+        "ar"
+      ],
+      "captures": 175
+    },
+    "release_production_verifier_trust_only": true,
+    "release_no_sandbox_verifier_trust": true,
+    "signed_release_schemes": [
+      "v2",
+      "v3"
+    ],
+    "signing_certificate_sha256": "e19756432bb702f5f454683d10330ef49bba7eee7848e34cf0eaae6540e111bd",
+    "git_index_resource_digest_checks_passed": 76,
+    "editorial_regeneration_refuses_human_reviewed_locales": true,
+    "source_archive_whitelist_and_integrity_passed": true
+  },
+  "prior_unchanged_feature_evidence": {
+    "report": "submission-checks-0.3.1.json",
+    "checks": [
+      "Owner-assisted credential lock lifecycle and screenshot protection",
+      "System picker and camera cancellation",
+      "Exact-byte system picker PNG import",
+      "Owner-captured JPEG import",
+      "English TTS completion and owner audible confirmation",
+      "Content-provider PNG/PDF imports",
+      "WorkManager notification and opt-out",
+      "Typed voice fallback without microphone permission"
+    ],
+    "explanation": "0.3.2 changes one compact Add item accessible label and draft text; these implementations are unchanged. They were not all rerun on 0.3.2."
+  },
+  "localization": {
+    "targets": 19,
+    "messages_per_target": 335,
+    "ai_editorial_scope": "Ten critical operational messages across sixteen non-English targets; 160 draft entries corrected",
+    "ai_editorial_report": "../localization/ai-editorial-review.json",
+    "full_catalogue_review_complete": false,
+    "human_approved_targets": 0,
+    "production_language": "English base",
+    "unapproved_translations_excluded_from_production": true,
+    "current_device_captures": 175,
+    "capture_manifest": "reviewer-captures-0.3.2/manifest.json"
+  },
+  "blocked_checks": {
+    "language": "Independent human catalogue/region/plural/privacy review still required; AI editorial review is not human approval. Original all-locale scope retained.",
+    "billing": "Last observed Premium IAP draft was unsubmitted; current console status could not be rechecked. Approved LAT/production cancellation/account-change/offline-expiry device scenarios remain unverified. No paid purchase made by this task.",
+    "manual_device_coverage": "Human screen-reader usability, additional physical devices, real multilingual receipt accuracy and long-duration power-management reminders remain pending.",
+    "owner_declarations": "Operator privacy/SDK questionnaire and export/release declarations remain unapproved.",
+    "marketing": "Master brief requests eight approved marketing compositions and device variants; current seven raw store screenshots do not complete that requirement.",
+    "console": "Both in-app browser and Windows fallback fail at helper initialization: failed to write kernel assets (path not found). No console mutations performed."
+  },
+  "device_cleanup": {
+    "font_scale": 1.0,
+    "accelerometer_rotation": 1,
+    "user_rotation": 0,
+    "keep_awake": 0,
+    "read_back_confirmed": true,
+    "owner_media_volume_left_unchanged": true,
+    "production_records_preserved": true
+  },
+  "files": [
+    {
+      "file": "Possessory-amazon-0.3.2-release-signed.apk",
+      "bytes": 64818077,
+      "sha256": "366bafa6541a8bd9ed0a7e54d77673cfa9f436ef12fbbee7cc3aa0b0ec7f48d9"
+    },
+    {
+      "file": "Possessory-amazon-0.3.2-review-signed.apk",
+      "bytes": 65212639,
+      "sha256": "f80a1c757f3671c998a7f8e8d2ca9b58069f9add447ccfe08e0ca8144f06fa2d"
+    },
+    {
+      "file": "Possessory-0.3.2-review-tests-signed.apk",
+      "bytes": 973863,
+      "sha256": "8e5a9f3b1ec3de04dc84219393a2aa886fe768a769a7c03c767ec093d0318a1a"
+    },
+    {
+      "file": "Possessory-0.3.2-release-tests-signed.apk",
+      "bytes": 973863,
+      "sha256": "fb4f4c1f5c4ab1a571f04cb05c852f67299fd2213307d091cc2fb503fffaa27f"
+    },
+    {
+      "file": "Possessory-0.3.2-localization-review.zip",
+      "bytes": 26064157,
+      "sha256": "c6fe33f0f514ce6152cac1b9f55e3045c861dd3a7de1c0378925c2f76e1ae036"
+    },
+    {
+      "file": "Possessory-0.3.2-store-screenshots.zip",
+      "bytes": 975380,
+      "sha256": "932451b6851d31ed7e3d492e42acffe10f1f8c3c35c7ce3e3dd463adedfefa8c"
+    },
+    {
+      "file": "Possessory-0.3.2-source.zip",
+      "bytes": 20934685,
+      "sha256": "2f02beedd71f9337d5329ba0ada444c386e51314f54ef04c984e134532c0c53a"
+    }
+  ]
+}

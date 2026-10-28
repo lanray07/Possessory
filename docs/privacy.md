@@ -22,4 +22,4 @@ Possessory has no app account or account-registration feature. Local data can be
 
 The app is intended for household owners and renters and is not designed for children.
 
-This notice is published in the project repository. Changes will be recorded here with an updated effective date. The Cloudflare billing disclosure is a release candidate requiring operator review before public purchases. Translated privacy notices in the 0.3.1 reviewer pack include the hosting disclosure as machine drafts and require independent human review before publication.
+This notice is published in the project repository. Changes will be recorded here with an updated effective date. The Cloudflare billing disclosure is a release candidate requiring operator review before public purchases. Translated privacy notices in the 0.3.2 reviewer pack include the hosting disclosure as machine drafts and require independent human review before publication.

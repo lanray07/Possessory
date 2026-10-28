@@ -1,0 +1,64 @@
+{
+  "version": "0.3.2",
+  "phase": "After compact-label fix, before corrected draft resources were rebundled",
+  "passed": 30,
+  "failures": 0,
+  "suites": [
+    {
+      "suite": "app.possessory.RenderedUiTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "xml_sha256": "1c70826c52d7f0db91cf28670e311809f8b02523ac8d73101f523c5c34d1918a"
+    },
+    {
+      "suite": "app.possessory.StorageTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "xml_sha256": "64f96997ac242b89b74e63a091ea0ebd99789c2498a52745a056d523f6503052"
+    },
+    {
+      "suite": "app.possessory.RestoreTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "xml_sha256": "0d27b242ec06d77d5c2516d3a9d0f54921bdaefc1eb65ab88aa43a993952c915"
+    },
+    {
+      "suite": "app.possessory.InventoryRulesTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "xml_sha256": "3a965f6d1c420057707765f0553477617c7ebdfa12ad9656cfb1f88637731840"
+    },
+    {
+      "suite": "app.possessory.LicenseTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "xml_sha256": "792f19ab958c63c87c44967c03515b9b02dd4b3aea7a54e95e4f468681b37828"
+    },
+    {
+      "suite": "app.possessory.ReadinessTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "xml_sha256": "92d65d8a19f0c35826f5a07f35e34afaaf6ffff040016ccf77bdb6d7411a8944"
+    },
+    {
+      "suite": "app.possessory.LocalizedRenderTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "xml_sha256": "3824d2289a4c0c2694cd7caa3eb74fb667304f4ecc8da46552b7d2b32da27d44"
+    },
+    {
+      "suite": "app.possessory.BundledLocaleTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "xml_sha256": "60b1983fd394439357031cfb50e2d21c3e2529148db206fb8c422b9fa7ea0389"
+    }
+  ]
+}

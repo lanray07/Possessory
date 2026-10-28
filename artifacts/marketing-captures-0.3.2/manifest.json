@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "file": "hero.png",
+    "locale": "en-GB",
+    "device": "fire-tablet",
+    "sha256": "aa1189b5f0933d6bbe7c7df58760594b2f21301a4909eb4817e0d2824594f9f5"
+  },
+  "rooms": {
+    "file": "rooms.png",
+    "locale": "en-GB",
+    "device": "fire-tablet",
+    "sha256": "abe658250cae591615a36be0c18767c47f340845851812d9043bcc0746d81cf9"
+  },
+  "warranties": {
+    "file": "warranties.png",
+    "locale": "en-GB",
+    "device": "fire-tablet",
+    "sha256": "90689dd52e8482d2513154a54b87d8ff1e8a3a9b337260aba93a88b967af166a"
+  },
+  "ocr": {
+    "file": "ocr.png",
+    "locale": "en-GB",
+    "device": "fire-tablet",
+    "sha256": "129f25727d14aa010df8a41c70578ba40b9d2c0519e41b42ef460bbf4fbc87d3"
+  },
+  "reports": {
+    "file": "reports.png",
+    "locale": "en-GB",
+    "device": "fire-tablet",
+    "sha256": "3b9f6c9b0a8dd9df9f03146a3b0856dec658b14dcc07bbfcaa4ae9b4835b32ce"
+  },
+  "voice": {
+    "file": "voice.png",
+    "locale": "en-GB",
+    "device": "fire-tablet",
+    "sha256": "4776d77b1497965e81c823b61ea4e111ae05f554cc6d9fc57dd299a965ba4441"
+  },
+  "offline": {
+    "file": "offline.png",
+    "locale": "en-GB",
+    "device": "fire-tablet",
+    "sha256": "677bc8cc0445db3e3e27fdfc0a73f9b7a36f333a3ac7dd4360f2f10765521aaa"
+  },
+  "reminders": {
+    "file": "reminders.png",
+    "locale": "en-GB",
+    "device": "fire-tablet",
+    "sha256": "cd128d0899caacc3f62232fccddc4f3956f154293b04a0475105b5c5bbada920"
+  }
+}

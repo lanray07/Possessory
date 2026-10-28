@@ -1,0 +1,8 @@
+
+app.possessory.IapQaDeviceTest:.
+
+Time: 6.162
+
+OK (1 test)
+
+

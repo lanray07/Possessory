@@ -1,0 +1,152 @@
+{
+  "recorded_at": "2026-10-28T08:16:00.348991+00:00",
+  "version": "0.3.2",
+  "package": "app.possessory.iapqa",
+  "device": "Amazon KFTRWI",
+  "locale": "en-GB",
+  "apk_sha256": "2478480cfb1f8b029601441d5505200aa3bfd23fac5c6689d6f28574a6e2b1ed",
+  "test_apk_sha256": "a6953493821322dd56b9018445a47799222d78612c3aed7f3f103e384df8a22f",
+  "test_source_sha256": "14030f0afd54e01ea0ba4b5894fb91d3281ab75f93d44b3161f4ae92efdc0c54",
+  "approved": false,
+  "uploaded": false,
+  "captures": {
+    "hero": {
+      "file": "hero.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "aa1189b5f0933d6bbe7c7df58760594b2f21301a4909eb4817e0d2824594f9f5"
+    },
+    "rooms": {
+      "file": "rooms.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "abe658250cae591615a36be0c18767c47f340845851812d9043bcc0746d81cf9"
+    },
+    "warranties": {
+      "file": "warranties.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "90689dd52e8482d2513154a54b87d8ff1e8a3a9b337260aba93a88b967af166a"
+    },
+    "ocr": {
+      "file": "ocr.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "129f25727d14aa010df8a41c70578ba40b9d2c0519e41b42ef460bbf4fbc87d3"
+    },
+    "reports": {
+      "file": "reports.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "3b9f6c9b0a8dd9df9f03146a3b0856dec658b14dcc07bbfcaa4ae9b4835b32ce"
+    },
+    "voice": {
+      "file": "voice.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "4776d77b1497965e81c823b61ea4e111ae05f554cc6d9fc57dd299a965ba4441"
+    },
+    "offline": {
+      "file": "offline.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "677bc8cc0445db3e3e27fdfc0a73f9b7a36f333a3ac7dd4360f2f10765521aaa"
+    },
+    "reminders": {
+      "file": "reminders.png",
+      "locale": "en-GB",
+      "device": "fire-tablet",
+      "sha256": "cd128d0899caacc3f62232fccddc4f3956f154293b04a0475105b5c5bbada920"
+    }
+  },
+  "exports": [
+    {
+      "file": "01-hero.png",
+      "sha256": "95706b0e2c4160fc5401fa8d54f5b633ef272d762976c52e75bd6dc799a3c90d",
+      "size": [
+        1920,
+        1200
+      ]
+    },
+    {
+      "file": "02-rooms.png",
+      "sha256": "a01d0e1b8e6b034f13362db979065560b4e826264d6265e24824baf39fc21699",
+      "size": [
+        1920,
+        1200
+      ]
+    },
+    {
+      "file": "03-warranties.png",
+      "sha256": "6f6de79ac200d3fe033be009fcde58bd20b6ecd8df3da002638fbd929e18edc9",
+      "size": [
+        1920,
+        1200
+      ]
+    },
+    {
+      "file": "04-ocr.png",
+      "sha256": "9623cfc726ed7ecb5c8841b91b5d144c31809ac955eb9b799b2afa1d9a05713e",
+      "size": [
+        1920,
+        1200
+      ]
+    },
+    {
+      "file": "05-reports.png",
+      "sha256": "4352f7cbef560bed9150686e8610a25e687505b111f04699a86afe3f83029529",
+      "size": [
+        1920,
+        1200
+      ]
+    },
+    {
+      "file": "06-voice.png",
+      "sha256": "f66182b2a9100381c0b2f139ebcb1dc0260d7a553098fe510b2559ee61a74d80",
+      "size": [
+        1920,
+        1200
+      ]
+    },
+    {
+      "file": "07-offline.png",
+      "sha256": "0993fbfb15cfa4cce946efaf33e56b47a2b3ba1dacecec14d2569d16d17e52dc",
+      "size": [
+        1920,
+        1200
+      ]
+    },
+    {
+      "file": "08-reminders.png",
+      "sha256": "df51e0f26bd907391bbe875c3aee9c319dacde5ae06a1d97b40e34d5fdc6e9b7",
+      "size": [
+        1920,
+        1200
+      ]
+    }
+  ],
+  "evidence": {
+    "screens": 8,
+    "sandboxPremium": true,
+    "offlineActiveNetworkNull": true,
+    "fixture": "fictional Willow House",
+    "voice": "typed fallback; no recognizer on Fire",
+    "capture_method": {
+      "hero": "Compose navigation",
+      "rooms": "Compose navigation",
+      "warranties": "Compose navigation",
+      "reports": "Compose navigation; rendered PDF",
+      "voice": "Compose navigation",
+      "reminders": "Compose navigation; warranty details",
+      "ocr": "native UI navigation and ADB screencap; image visually checked",
+      "offline": "native UI navigation and ADB screencap; dumpsys connectivity verified no active network"
+    },
+    "ocr_automation_limitation": "Receipt loader did not settle in Compose capture harness; native app preview independently verified and captured."
+  },
+  "limitations": [
+    "Real app navigation in sandbox build, not production/LAT certification.",
+    "Fictional demo records; receipt review shown, not OCR accuracy certification.",
+    "Fire has no speech recognizer; screenshot shows actual typed fallback.",
+    "English draft only; human language approvals and other device variants pending."
+  ]
+}

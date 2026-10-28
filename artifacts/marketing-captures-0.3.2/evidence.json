@@ -1,0 +1,18 @@
+{
+  "screens": 8,
+  "sandboxPremium": true,
+  "offlineActiveNetworkNull": true,
+  "fixture": "fictional Willow House",
+  "voice": "typed fallback; no recognizer on Fire",
+  "capture_method": {
+    "hero": "Compose navigation",
+    "rooms": "Compose navigation",
+    "warranties": "Compose navigation",
+    "reports": "Compose navigation; rendered PDF",
+    "voice": "Compose navigation",
+    "reminders": "Compose navigation; warranty details",
+    "ocr": "native UI navigation and ADB screencap; image visually checked",
+    "offline": "native UI navigation and ADB screencap; dumpsys connectivity verified no active network"
+  },
+  "ocr_automation_limitation": "Receipt loader did not settle in Compose capture harness; native app preview independently verified and captured."
+}

@@ -35,7 +35,10 @@ class IapQaDeviceTest {
             withTimeout(180000) {
                 app.billing.state.first { state -> state.premium && !state.busy }
             }
-            assertEquals("verified", app.billing.state.value.status)
+            // A late product-data callback can set status=ready after a cached restore.
+            // Require a fresh explicit server-verified restore before inspecting the licence.
+            instrumentation.runOnMainSync { app.billing.restore() }
+            withTimeout(45000) { app.billing.state.first { it.status == "verified" && !it.busy } }
             val saved = app.settings.data.first()[stringPreferencesKey("signed_license")]
             assertNotNull(saved)
             val claims =
@@ -51,6 +54,44 @@ class IapQaDeviceTest {
                 app.billing.state.first { state -> state.status == "verified" && !state.busy }
             }
             assertTrue(app.billing.state.value.premium)
+            // Exercise the real signed receipt at its boundary without changing the device clock.
+            val signed = Files.gson.fromJson(saved, SignedLicense::class.java)
+            assertTrue(runCatching {
+                LicenseVerifier.verify(signed, BuildConfig.LICENSE_PUBLIC_KEY,
+                    BuildConfig.AMAZON_SKU, now = claims.validUntil,
+                    expectedEnvironment = "sandbox")
+            }.isFailure)
+            assertTrue(runCatching {
+                LicenseVerifier.verify(signed, BuildConfig.LICENSE_PUBLIC_KEY,
+                    BuildConfig.AMAZON_SKU, expectedEnvironment = "production")
+            }.isFailure)
+            // Callback fixtures are deliberately distinct from end-to-end account switching.
+            instrumentation.runOnMainSync {
+                app.billing.onUserDataResponse(
+                    com.amazon.device.iap.internal.model.UserDataResponseBuilder()
+                        .setRequestId(com.amazon.device.iap.model.RequestId())
+                        .setRequestStatus(com.amazon.device.iap.model.UserDataResponse.RequestStatus.SUCCESSFUL)
+                        .setUserData(com.amazon.device.iap.internal.model.UserDataBuilder()
+                            .setUserId("possessory-isolated-other-test-user").setMarketplace("GB").build())
+                        .build())
+            }
+            assertFalse(app.billing.state.value.premium)
+            withTimeout(5000) { app.settings.data.first { it[stringPreferencesKey("signed_license")] == null } }
+            for (status in listOf(com.amazon.device.iap.model.PurchaseResponse.RequestStatus.FAILED,
+                com.amazon.device.iap.model.PurchaseResponse.RequestStatus.INVALID_SKU)) {
+                instrumentation.runOnMainSync {
+                    app.billing.onPurchaseResponse(
+                        com.amazon.device.iap.internal.model.PurchaseResponseBuilder()
+                            .setRequestId(com.amazon.device.iap.model.RequestId())
+                            .setRequestStatus(status).build())
+                }
+                assertFalse(app.billing.state.value.premium)
+                assertFalse(app.billing.state.value.busy)
+                assertEquals("retry", app.billing.state.value.status)
+            }
+            instrumentation.runOnMainSync { app.billing.restore() }
+            withTimeout(45000) { app.billing.state.first { it.premium && !it.busy } }
+            Unit
         }
     }
 }

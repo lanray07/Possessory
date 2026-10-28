@@ -1,0 +1,75 @@
+{
+  "recorded_at": "2026-10-28T08:16:47.878859+00:00",
+  "production_code_changed": false,
+  "ready_to_submit": false,
+  "submitted": false,
+  "checks": {
+    "signed_restore_and_callback_guards": {
+      "passed": true,
+      "log": "billing-032-device-log.txt",
+      "sha256": "dd05c42036b336106ac519a18c3e8a2b262e398e47e080c789e07cb40da20ea3"
+    },
+    "valid_cached_offline_restart": {
+      "passed": true,
+      "log": "billing-cached-offline-log.txt",
+      "sha256": "841628aed9c7da9f68ef6c512809ffaf736fac95cea6ef0e9819c2b0c75b7ee0"
+    },
+    "expired_cached_offline_restart": {
+      "passed": true,
+      "log": "billing-expired-offline-log.txt",
+      "sha256": "2da33ce588df535084cfa8e964c5421cc3b2ed96f8bc0c2e9b12107d1700fce3"
+    },
+    "six_core_capture_navigation": {
+      "passed": true,
+      "log": "marketing-032-device-log.txt",
+      "sha256": "6d6d55bcf1fd69e50ae5fe0333d7d8be365ee5f215a1daf73230260a038f1447"
+    }
+  },
+  "marketing": {
+    "compositions": 8,
+    "dimensions": [
+      1920,
+      1200
+    ],
+    "locale": "en-GB",
+    "approved": false,
+    "manifest": "../marketing-0.3.2-en-GB-draft/manifest.json"
+  },
+  "cleanup": {
+    "original_catalogue_sha256": "c78d4e7b9f4cd991d68b9a22d97f3b5e334af4014ad6262d880b13b86cb1a539",
+    "catalogue_restored_exactly": true,
+    "sandbox_property_restored_empty": true,
+    "stay_awake_restored": 0,
+    "wifi_restored": 1,
+    "isolated_qa_packages_removed": true,
+    "production_records_untouched": true
+  },
+  "limitations": [
+    "App Tester existing purchase recovery, not a new production purchase",
+    "Account-change and failure cases are callback fixtures",
+    "No end-to-end refund/cancellation or full App Tester user switch in this run",
+    "Offline expiry uses disposable app persisted time floor; device clock unchanged",
+    "OCR and offline screenshots manually captured through native UI",
+    "Human approvals 0/19; English draft marketing only",
+    "Console helper startup failure prevents uploads and LAT",
+    "Another app appeared during final App Tester navigation; further UI mutations stopped"
+  ],
+  "files": {
+    "Possessory-amazon-0.3.2-release-signed.apk": {
+      "bytes": 64818077,
+      "sha256": "366bafa6541a8bd9ed0a7e54d77673cfa9f436ef12fbbee7cc3aa0b0ec7f48d9"
+    },
+    "Possessory-0.3.2-iapqa-TEST-ONLY.apk": {
+      "bytes": 72214149,
+      "sha256": "2478480cfb1f8b029601441d5505200aa3bfd23fac5c6689d6f28574a6e2b1ed"
+    },
+    "Possessory-0.3.2-iapqa-tests-TEST-ONLY.apk": {
+      "bytes": 2018517,
+      "sha256": "a6953493821322dd56b9018445a47799222d78612c3aed7f3f103e384df8a22f"
+    },
+    "Possessory-0.3.2-eight-marketing-screenshots-DRAFT.zip": {
+      "bytes": 2999064,
+      "sha256": "fe1970ce94d7b71cda1553af6abe989945875035e5075f0b80c0650086b30ea2"
+    }
+  }
+}

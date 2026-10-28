@@ -7,7 +7,9 @@
     "issues": [
       "Regional and release review pending"
     ],
-    "bundled_in_preview": true
+    "bundled_in_preview": true,
+    "human_review_required": false,
+    "review_policy": "release-policy.json"
   },
   "en-US": {
     "state": "validated",
@@ -17,7 +19,9 @@
     "issues": [
       "Regional and release review pending"
     ],
-    "bundled_in_preview": true
+    "bundled_in_preview": true,
+    "human_review_required": false,
+    "review_policy": "release-policy.json"
   },
   "en-AU": {
     "state": "validated",
@@ -27,7 +31,9 @@
     "issues": [
       "Regional and release review pending"
     ],
-    "bundled_in_preview": true
+    "bundled_in_preview": true,
+    "human_review_required": false,
+    "review_policy": "release-policy.json"
   },
   "es-ES": {
     "state": "machine_translated",
@@ -35,9 +41,11 @@
     "release_approved": false,
     "provider": "Argos/CTranslate2 (development only)",
     "issues": [
-      "Human translation, regional terminology, plurals, RTL and layout review pending"
+      "Regional terminology, plurals, RTL and layout technical review pending"
     ],
-    "bundled_in_preview": true
+    "bundled_in_preview": true,
+    "human_review_required": false,
+    "review_policy": "release-policy.json"
   },
   "es-419": {
     "state": "machine_translated",
@@ -45,9 +53,11 @@
     "release_approved": false,
     "provider": "Argos/CTranslate2 (development only)",
     "issues": [
-      "Human translation, regional terminology, plurals, RTL and layout review pending"
+      "Regional terminology, plurals, RTL and layout technical review pending"
     ],
-    "bundled_in_preview": true
+    "bundled_in_preview": true,
+    "human_review_required": false,
+    "review_policy": "release-policy.json"
   },
   "fr-FR": {
     "state": "machine_translated",
@@ -55,9 +65,11 @@
     "release_approved": false,
     "provider": "Argos/CTranslate2 (development only)",
     "issues": [
-      "Human translation, regional terminology, plurals, RTL and layout review pending"
+      "Regional terminology, plurals, RTL and layout technical review pending"
     ],
-    "bundled_in_preview": true
+    "bundled_in_preview": true,
+    "human_review_required": false,
+    "review_policy": "release-policy.json"
   },
   "fr-CA": {
     "state": "machine_translated",
@@ -65,9 +77,11 @@
     "release_approved": false,
     "provider": "Argos/CTranslate2 (development only)",
     "issues": [
-      "Human translation, regional terminology, plurals, RTL and layout review pending"
+      "Regional terminology, plurals, RTL and layout technical review pending"
     ],
-    "bundled_in_preview": true
+    "bundled_in_preview": true,
+    "human_review_required": false,
+    "review_policy": "release-policy.json"
   },
   "de-DE": {
     "state": "machine_translated",
@@ -75,9 +89,11 @@
     "release_approved": false,
     "provider": "Argos/CTranslate2 (development only)",
     "issues": [
-      "Human translation, regional terminology, plurals, RTL and layout review pending"
+      "Regional terminology, plurals, RTL and layout technical review pending"
     ],
-    "bundled_in_preview": true
+    "bundled_in_preview": true,
+    "human_review_required": false,
+    "review_policy": "release-policy.json"
   },
   "it-IT": {
     "state": "machine_translated",
@@ -85,9 +101,11 @@
     "release_approved": false,
     "provider": "Argos/CTranslate2 (development only)",
     "issues": [
-      "Human translation, regional terminology, plurals, RTL and layout review pending"
+      "Regional terminology, plurals, RTL and layout technical review pending"
     ],
-    "bundled_in_preview": true
+    "bundled_in_preview": true,
+    "human_review_required": false,
+    "review_policy": "release-policy.json"
   },
   "pt-BR": {
     "state": "machine_translated",
@@ -95,9 +113,11 @@
     "release_approved": false,
     "provider": "Argos/CTranslate2 (development only)",
     "issues": [
-      "Human translation, regional terminology, plurals, RTL and layout review pending"
+      "Regional terminology, plurals, RTL and layout technical review pending"
     ],
-    "bundled_in_preview": true
+    "bundled_in_preview": true,
+    "human_review_required": false,
+    "review_policy": "release-policy.json"
   },
   "pt-PT": {
     "state": "machine_translated",
@@ -105,9 +125,11 @@
     "release_approved": false,
     "provider": "Argos/CTranslate2 (development only)",
     "issues": [
-      "Human translation, regional terminology, plurals, RTL and layout review pending"
+      "Regional terminology, plurals, RTL and layout technical review pending"
     ],
-    "bundled_in_preview": true
+    "bundled_in_preview": true,
+    "human_review_required": false,
+    "review_policy": "release-policy.json"
   },
   "nl-NL": {
     "state": "machine_translated",
@@ -115,9 +137,11 @@
     "release_approved": false,
     "provider": "Argos/CTranslate2 (development only)",
     "issues": [
-      "Human translation, regional terminology, plurals, RTL and layout review pending"
+      "Regional terminology, plurals, RTL and layout technical review pending"
     ],
-    "bundled_in_preview": true
+    "bundled_in_preview": true,
+    "human_review_required": false,
+    "review_policy": "release-policy.json"
   },
   "pl-PL": {
     "state": "machine_translated",
@@ -125,9 +149,11 @@
     "release_approved": false,
     "provider": "Argos/CTranslate2 (development only)",
     "issues": [
-      "Human translation, regional terminology, plurals, RTL and layout review pending"
+      "Regional terminology, plurals, RTL and layout technical review pending"
     ],
-    "bundled_in_preview": true
+    "bundled_in_preview": true,
+    "human_review_required": false,
+    "review_policy": "release-policy.json"
   },
   "sv-SE": {
     "state": "machine_translated",
@@ -135,9 +161,11 @@
     "release_approved": false,
     "provider": "Argos/CTranslate2 (development only)",
     "issues": [
-      "Human translation, regional terminology, plurals, RTL and layout review pending"
+      "Regional terminology, plurals, RTL and layout technical review pending"
     ],
-    "bundled_in_preview": true
+    "bundled_in_preview": true,
+    "human_review_required": false,
+    "review_policy": "release-policy.json"
   },
   "ja-JP": {
     "state": "machine_translated",
@@ -145,9 +173,11 @@
     "release_approved": false,
     "provider": "Argos/CTranslate2 (development only)",
     "issues": [
-      "Human translation, regional terminology, plurals, RTL and layout review pending"
+      "Regional terminology, plurals, RTL and layout technical review pending"
     ],
-    "bundled_in_preview": true
+    "bundled_in_preview": true,
+    "human_review_required": false,
+    "review_policy": "release-policy.json"
   },
   "hi-IN": {
     "state": "machine_translated",
@@ -155,9 +185,11 @@
     "release_approved": false,
     "provider": "Argos/CTranslate2 (development only)",
     "issues": [
-      "Human translation, regional terminology, plurals, RTL and layout review pending"
+      "Regional terminology, plurals, RTL and layout technical review pending"
     ],
-    "bundled_in_preview": true
+    "bundled_in_preview": true,
+    "human_review_required": false,
+    "review_policy": "release-policy.json"
   },
   "ar": {
     "state": "machine_translated",
@@ -165,9 +197,11 @@
     "release_approved": false,
     "provider": "Argos/CTranslate2 (development only)",
     "issues": [
-      "Human translation, regional terminology, plurals, RTL and layout review pending"
+      "Regional terminology, plurals, RTL and layout technical review pending"
     ],
-    "bundled_in_preview": true
+    "bundled_in_preview": true,
+    "human_review_required": false,
+    "review_policy": "release-policy.json"
   },
   "tr-TR": {
     "state": "machine_translated",
@@ -175,9 +209,11 @@
     "release_approved": false,
     "provider": "Argos/CTranslate2 (development only)",
     "issues": [
-      "Human translation, regional terminology, plurals, RTL and layout review pending"
+      "Regional terminology, plurals, RTL and layout technical review pending"
     ],
-    "bundled_in_preview": true
+    "bundled_in_preview": true,
+    "human_review_required": false,
+    "review_policy": "release-policy.json"
   },
   "id-ID": {
     "state": "machine_translated",
@@ -185,8 +221,10 @@
     "release_approved": false,
     "provider": "Argos/CTranslate2 (development only)",
     "issues": [
-      "Human translation, regional terminology, plurals, RTL and layout review pending"
+      "Regional terminology, plurals, RTL and layout technical review pending"
     ],
-    "bundled_in_preview": true
+    "bundled_in_preview": true,
+    "human_review_required": false,
+    "review_policy": "release-policy.json"
   }
 }

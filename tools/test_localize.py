@@ -7,6 +7,19 @@ from localize import validate, extract
 from translate_offline import pieces
 
 class LocalisationChecks(unittest.TestCase):
+    def test_owner_waiver_removes_only_human_review_gate(self):
+        source={'save':'Save'}
+        record={'state':'validated','human_reviewer':None,'issues':[],
+                'reviewed_source_sha256':hashlib.sha256(json.dumps(source,sort_keys=True).encode()).hexdigest()}
+        policy={'independent_human_review_required':False,'authority':'explicit_user_instruction'}
+        with self.assertRaises(AssertionError):localize.approve_record(dict(record),source,{})
+        with self.assertRaises(AssertionError):localize.approve_record(dict(record,issues=['Layout defect']),source,policy)
+        with self.assertRaises(AssertionError):localize.approve_record(record,{'save':'Save record'},policy)
+        with self.assertRaises(AssertionError):localize.approve_record(dict(record,state='machine_translated'),source,policy)
+        localize.approve_record(record,source,policy)
+        self.assertTrue(record['release_approved'])
+        self.assertIsNone(record['human_reviewer'])
+        self.assertEqual(record['approval_basis'],'owner_waived_human_review_with_technical_checks')
     def test_placeholders_and_brand_are_protected(self):
         source={'a':'Possessory %1$d items\\n%2$s'}
         validate(source,{'a':'Possessory %1$d objets\\n%2$s'})

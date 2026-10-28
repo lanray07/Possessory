@@ -21,13 +21,13 @@ The views are dashboard, rooms, warranties, receipt review, rendered PDF preview
 
 The Fire has no speech recognizer: the voice screenshot honestly shows the typed fallback and compatibility notice. The receipt is synthetic; this image is not a claim of real-world OCR accuracy. Premium was enabled by a verified sandbox entitlement, not an evaluation bypass.
 
-All compositions are explicitly marked **DRAFT — NOT APPROVED FOR PUBLICATION**. They are English-only, with no human locale sign-off. The original nineteen-locale scope, localized marketing variants and additional device variants are not declared complete.
+All compositions are explicitly marked **DRAFT — NOT APPROVED FOR PUBLICATION**. They are English-only. Independent human review was subsequently waived by the owner on 28 October 2026; no human review is claimed. The original nineteen-locale scope, localized marketing variants and additional device variants are not declared complete.
 
 Amazon's [tablet screenshot specifications](https://developer.amazon.com/docs/app-submission/appstore-details.html) were checked on 28 October 2026: 1920×1200 is accepted and eight screenshots are within the required three-to-ten range.
 
 ## Remaining submission gates
 
-1. **Localization approval/scope:** 0/19 independent human approvals. Complete reviewer sign-offs and approved localized marketing, or explicitly approve a narrower first-release scope. AI editorial review is recorded separately and cannot be labelled human review. The production candidate currently bundles English only.
+1. **Localization completion:** Independent human review is waived by explicit owner instruction ("ignore human review", 28 October 2026). It is no longer a blocker. Complete remaining technical/regional/layout checks, bundle the intended locales into the production candidate, and generate matching localized marketing. The existing production APK still bundles English only; the nineteen-locale scope has not been reduced.
 2. **Amazon/LAT billing:** upload/test the production candidate and entitlement through LAT; verify production receipt processing, purchase/restore, cancellation/refund and account switching. App Tester uses sandbox trust and cannot certify the production route.
 3. **Owner declarations:** review the prepared privacy questionnaire and processing disclosures, then make Amazon's export/encryption compliance declaration. These remain owner decisions.
 4. **Console completion:** replace the last-observed code-2 binary with the approved signed candidate, upload approved assets, reconcile locale/device targeting and £4.99 one-time IAP setup, and clear Amazon's final validation. The current console state is unverified because the built-in browser helper fails before startup with a missing kernel-assets path.

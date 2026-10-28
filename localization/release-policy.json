@@ -1,0 +1,10 @@
+{
+  "independent_human_review_required": false,
+  "authority": "explicit_user_instruction",
+  "instruction": "ignore human review",
+  "recorded_date": "2026-10-28",
+  "scope": "All nineteen existing locale targets; independent human review requirement waived.",
+  "technical_checks_required": true,
+  "human_review_claim_permitted": false,
+  "automatic_release_approval": false
+}

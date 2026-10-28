@@ -4,7 +4,7 @@ python tools/localize.py                 # extract and validate, no network
 python tools/localize.py --translate    # local free engine; install requirements-localization.txt
 python tools/localize.py --translate --provider deepl # optional development-only cloud provider
 python tools/localize.py --bundle-preview # compile draft packs into debug APKs
-python tools/localize.py --approve de-DE # requires recorded human reviewer
+python tools/localize.py --approve de-DE # requires current checks and the recorded review policy
 """
 import argparse, hashlib, json, os, re, urllib.request, shutil, subprocess, sys
 import xml.etree.ElementTree as ET
@@ -165,6 +165,17 @@ def bundle_resources(preview=False):
     shutil.copyfile(ROOT/'support/en-GB.json',base_support/'en-GB.json')
     print(f'Bundled {len(selected)} locales for '+('engineering preview' if preview else 'release'))
 
+def approve_record(record, source, policy):
+    source_hash=hashlib.sha256(json.dumps(source,sort_keys=True).encode()).hexdigest()
+    waived=policy.get('independent_human_review_required') is False and policy.get('authority')=='explicit_user_instruction'
+    assert not record.get('issues') and record.get('reviewed_source_sha256')==source_hash,'Clear technical checks and bind review to the current catalogue before approval'
+    if waived:
+        assert record.get('state') in ('validated','human_reviewed'),'Validate the catalogue before release approval'
+    else:
+        assert record.get('state')=='human_reviewed' and record.get('human_reviewer'),'Record completed human review or an explicit owner waiver'
+    record['approval_basis']='owner_waived_human_review_with_technical_checks' if waived else 'human_review'
+    record['state']='release_approved';record['release_approved']=True
+
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--translate',action='store_true');parser.add_argument('--provider',choices=['argos','deepl'],default='argos');parser.add_argument('--approve');parser.add_argument('--bundle-preview',action='store_true');parser.add_argument('--bundle-approved',action='store_true');args=parser.parse_args()
     assert not (args.bundle_preview and args.bundle_approved),'Choose one packaging policy'
@@ -185,8 +196,9 @@ def main():
             except Exception as exc:record['issues']=[type(exc).__name__+': '+str(exc)]
         elif record['state'] in ['not_started','extracted']:record['issues']=['Translation provider credentials and human review pending']
     if args.approve:
-        r=status[args.approve];assert r['state']=='human_reviewed' and r['human_reviewer'] and not r['issues'] and r.get('reviewed_source_sha256')==hashlib.sha256(json.dumps(source,sort_keys=True).encode()).hexdigest(),'Record completed human review for the current catalogue and clear all checks before approval'
-        r['state']='release_approved';r['release_approved']=True
+        policy_path=directory/'release-policy.json'
+        policy=json.loads(policy_path.read_text(encoding='utf-8')) if policy_path.exists() else {}
+        approve_record(status[args.approve],source,policy)
     path.write_text(json.dumps(status,indent=2),encoding='utf-8')
     cachepath.parent.mkdir(exist_ok=True);cachepath.write_text(json.dumps(cache,ensure_ascii=False),encoding='utf-8')
     print(f'Extracted {len(source)} messages; {len(status)} locale records. Approved: {sum(r["release_approved"] for r in status.values())}')

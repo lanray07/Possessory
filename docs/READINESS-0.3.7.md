@@ -9,3 +9,5 @@
 - Amazon console inspection: draft APK code 2, English support only, engineering-preview listing copy, eight English screenshots, 12 Fire tablets selected. The GBP 4.99 lifetime entitlement is **Ready to Submit**, not live. Export certification is unchecked and Submit App is disabled.
 
 Before submission: complete current localized screenshot exports and production packaging, verify the signed production APK, update the Amazon draft and exercise the purchase flow in Live App Testing. The account owner must assess Amazon's export certification for the chosen markets; see [the declaration handoff](AMAZON-OWNER-DECLARATIONS.md).
+
+Later on 2 November: Amazon approved the £4.99 entitlement **for TEST only**. A separate Live App Testing draft, “Possessory 0.3.7 billing validation”, now contains the verified v2/v3-signed English billing candidate, code 10 (SHA-256 `b655ad6bb6ba5582c5aa66db391254ec9217b643787a9020f0ccbebab665a257`). The console confirms the replacement filename and version. The public listing still has code 2. Creating the draft did not invite testers, certify export compliance, submit the LAT app or release the app to customers.

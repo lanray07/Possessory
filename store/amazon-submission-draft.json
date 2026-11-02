@@ -35,7 +35,7 @@
   },
   "pricing": {
     "app_download": "Free",
-    "iap_status": "configured_draft_ready_to_submit_not_live",
+    "iap_status": "approved_test_only_not_live",
     "iap_draft_name": "Possessory Premium",
     "iap_draft_type": "Entitlement / one-time purchase",
     "iap_proposed_base_price": {
@@ -103,42 +103,39 @@
       "promotional banner"
     ],
     "remaining_required": [
-      "Localized wording corrections, production bundling and remaining manual device checks; independent human review waived",
-      "Updated candidate binary, screenshots, final listing and testing instructions after review",
-      "Updated purchase-data privacy questionnaire/operator review",
-      "Owner export-compliance declaration",
-      "Premium IAP submission and production/LAT validation"
+      "Finish and verify storefront galleries",
+      "Confirm purchase-data questionnaire and final testing instructions",
+      "Owner export declaration",
+      "Exercise Amazon-distributed purchase and restore; promote production entitlement when ready"
     ],
-    "uploaded_apk": "Possessory-amazon-release-signed.apk",
+    "uploaded_apk": "Possessory-amazon-0.3.7-localized-release-signed.apk",
     "uploaded_screenshots": 8,
     "target_devices": {
       "Fire_tablets": 12,
       "Fire_TV": 0,
       "Automotive": 0
     },
-    "last_observed_version_name": "0.2.0",
-    "last_observed_version_code": 2,
+    "last_observed_version_name": "0.3.7",
+    "last_observed_version_code": 11,
     "candidate_apk": "Possessory-amazon-0.3.7-localized-release-signed.apk",
-    "candidate_uploaded": false,
-    "candidate_screenshots": "artifacts/Possessory-0.3.3-eight-marketing-screenshots-ENGLISH.zip",
+    "candidate_uploaded": true,
+    "candidate_screenshots": "artifacts/marketing-0.3.7-localized",
     "candidate_screenshot_count": 8,
     "connection_blocker": null,
-    "candidate_screenshot_status": "English marketing assets visually checked; captured from 0.3.3 sandbox UI, provenance retained; application release remains unapproved",
+    "candidate_screenshot_status": "UK gallery verified: eight new images and no inherited screenshots. Other gallery uploads require verification.",
     "candidate_localization_status": "19 catalogues selected for production with owner waiver and technical checks"
   },
   "privacy_questionnaire_draft": "store/privacy-questionnaire-draft.json",
   "localization_release_policy": "localization/release-policy.json",
   "readiness_report": "docs/READINESS-0.3.7.md",
   "engineering_work_remaining": [
-    "Verify final signed localized artifact",
     "Finish current localized marketing exports",
-    "Run production-service LAT billing scenarios",
-    "Complete remaining manual device checks and operator export declaration"
+    "Verify Amazon-distributed billing via private LAT"
   ],
   "live_app_testing": {
     "release_name": "Possessory 0.3.7 billing validation",
-    "uploaded_version_code": 10,
-    "scope": "English billing test",
+    "uploaded_version_code": 11,
+    "scope": "Localized signed candidate; only the approved Fire account selected",
     "iap": "Approved TEST only",
     "app_test_submitted": false
   }

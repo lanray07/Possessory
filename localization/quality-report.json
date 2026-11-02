@@ -1150,9 +1150,13 @@
       },
       "unchanged_strings_requiring_context_review": [
         "garage",
+        "art",
         "app_name",
+        "description",
         "photo",
-        "ocr_page"
+        "format",
+        "premium",
+        "store:iap_title"
       ],
       "human_reviewer": null,
       "human_review_complete": false,
@@ -1180,9 +1184,13 @@
       },
       "unchanged_strings_requiring_context_review": [
         "garage",
+        "art",
         "app_name",
+        "description",
         "photo",
-        "ocr_page"
+        "format",
+        "premium",
+        "store:iap_title"
       ],
       "human_reviewer": null,
       "human_review_complete": false,
@@ -1304,7 +1312,9 @@
       },
       "unchanged_strings_requiring_context_review": [
         "app_name",
-        "column_item"
+        "premium",
+        "column_item",
+        "store:iap_title"
       ],
       "human_reviewer": null,
       "human_review_complete": false,
@@ -1334,7 +1344,9 @@
         "filter",
         "model",
         "tags",
-        "status"
+        "status",
+        "premium",
+        "store:iap_title"
       ],
       "human_reviewer": null,
       "human_review_complete": false,
@@ -1365,7 +1377,9 @@
       "unchanged_strings_requiring_context_review": [
         "app_name",
         "model",
-        "format"
+        "format",
+        "premium",
+        "store:iap_title"
       ],
       "human_reviewer": null,
       "human_review_complete": false,
@@ -1421,7 +1435,9 @@
         ]
       },
       "unchanged_strings_requiring_context_review": [
-        "app_name"
+        "app_name",
+        "premium",
+        "store:iap_title"
       ],
       "human_reviewer": null,
       "human_review_complete": false,
@@ -1453,7 +1469,9 @@
         ]
       },
       "unchanged_strings_requiring_context_review": [
-        "app_name"
+        "app_name",
+        "premium",
+        "store:iap_title"
       ],
       "human_reviewer": null,
       "human_review_complete": false,
@@ -1529,7 +1547,8 @@
       "unchanged_strings_requiring_context_review": [
         "app_name",
         "model",
-        "premium"
+        "premium",
+        "store:iap_title"
       ],
       "human_reviewer": null,
       "human_review_complete": false,

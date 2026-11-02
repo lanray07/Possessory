@@ -5,7 +5,7 @@
   <string name="kitchen">रसोई</string>
   <string name="bedroom">शयन कक्ष</string>
   <string name="bathroom">बाथरूम</string>
-  <string name="home_office">कार्यालय</string>
+  <string name="home_office">घर का कार्यालय</string>
   <string name="garage">गैरेज</string>
   <string name="garden">गार्डन</string>
   <string name="storage">भंडारण</string>
@@ -15,7 +15,7 @@
   <string name="furniture">फर्नीचर</string>
   <string name="jewellery">आभूषण</string>
   <string name="clothing">वस्त्र</string>
-  <string name="tools">उपकरण</string>
+  <string name="tools">औज़ार</string>
   <string name="art">कला</string>
   <string name="condition_new">नया</string>
   <string name="condition_good">अच्छा</string>
@@ -70,7 +70,7 @@
   <string name="all_categories">सभी श्रेणियां</string>
   <string name="category">श्रेणी</string>
   <string name="filter">फिल्टर</string>
-  <string name="sort">वर्गीकरण</string>
+  <string name="sort">क्रम बदलें</string>
   <string name="active">सक्रिय</string>
   <string name="archived">संग्रहित</string>
   <string name="expiring_soon">जल्द समाप्त होने वाली</string>
@@ -115,7 +115,7 @@
   <string name="warranty_provider">वारंटी प्रदाता</string>
   <string name="warranty_type">वारंटी प्रकार</string>
   <string name="warranty_notes">वारंटी नोट</string>
-  <string name="reminder_days">समाप्ति से पहले याद (दिन)</string>
+  <string name="reminder_days">समाप्ति से पहले याद दिलाएँ (दिन)</string>
   <string name="tags">टैग</string>
   <string name="notes">नोट</string>
   <string name="condition">सामान की हालत</string>
@@ -135,20 +135,20 @@
   <string name="scan_receipt">रसीद की समीक्षा करें और पाठ निकालें</string>
   <string name="remove_attachment">संलग्नक हटाएँ</string>
   <string name="duplicate">डुप्लिकेट</string>
-  <string name="archive">पुरालेख</string>
+  <string name="archive">संग्रहित करें</string>
   <string name="unarchive">सक्रिय करें</string>
-  <string name="delete">डिलीट</string>
+  <string name="delete">हटाएँ</string>
   <string name="delete_item">क्या यह सामान हटाना है?</string>
   <string name="delete_item_body">इसके रिकॉर्ड, फोटो, रसीद और रखरखाव इतिहास को स्थायी रूप से इस उपकरण से हटा दिया जाएगा।</string>
   <string name="review_receipt">रसीद की समीक्षा करें</string>
   <string name="receipt_preview">रसीद पूर्वावलोकन</string>
   <string name="ocr_notice">रसीद का पाठ आपके चुने हुए भाषा विकल्प में इसी डिवाइस पर निकाला जाता है। PDF का पृष्ठ चुनें, समीक्षा की छवि घुमाएँ या काटें और हर सुझाव जाँचें। मूल संलग्नक सुरक्षित रखे जाते हैं।</string>
-  <string name="rotate">रोटेट</string>
+  <string name="rotate">घुमाएँ</string>
   <string name="crop_edges">किनारे काटें</string>
   <string name="extract_text">पाठ निकालें</string>
   <string name="extracted_text">निकाले गए पाठ</string>
   <string name="ocr_unavailable">पाठ निकालना पूरा नहीं हो सका। आप विवरण स्वयं दर्ज कर सकते हैं और संलग्नक रख सकते हैं।</string>
-  <string name="apply_details">समीक्षा विवरण लागू करें</string>
+  <string name="apply_details">जाँचे गए विवरण लागू करें</string>
   <string name="maintenance_title">अपने सामान की देखभाल करें।</string>
   <string name="maintenance_subtitle">घर के रखरखाव को नियमित और आसान बनाएँ।</string>
   <string name="add_maintenance">रखरखाव जोड़ें</string>
@@ -156,9 +156,9 @@
   <string name="maintenance_empty">एक सेवा, फिल्टर परिवर्तन या अन्य रखरखाव कार्य जोड़ें।</string>
   <string name="maintenance_disclaimer">रिमाइंडर रखरखाव की योजना बनाने में मदद करते हैं। वे विशेषज्ञों द्वारा की जाने वाली सुरक्षा जाँच का विकल्प नहीं हैं।</string>
   <string name="maintenance_type">रखरखाव प्रकार</string>
-  <string name="next_due">अगली तारीख</string>
+  <string name="next_due">अगली निर्धारित तारीख</string>
   <string name="repeat_days">दोहराने का अंतराल, दिनों में (0 = एक बार)</string>
-  <string name="cost">रिकॉर्ड रखरखाव लागत</string>
+  <string name="cost">दर्ज रखरखाव खर्च</string>
   <string name="mark_complete">पूरा हुआ चिह्नित करें</string>
   <string name="remove">निकालें</string>
   <string name="reports_title">आपका घर, रिकॉर्ड पर।</string>
@@ -176,7 +176,7 @@
   <string name="report_disclaimer">उपयोगकर्ता निर्मित सूची; एक बीमाकर्ता प्रमाणित मूल्यांकन नहीं है।</string>
   <string name="export_privacy">सहेजने या साझा करने से पहले पूर्वावलोकन और जानकारी छिपाने की सेटिंग जाँचें। निर्यात की गई फ़ाइलों में निजी जानकारी हो सकती है। रिपोर्ट में निजी नोट, टैग और विवरण शामिल नहीं होते।</string>
   <string name="settings_subtitle">ऐप को अपनी पसंद के अनुसार बनाएँ।</string>
-  <string name="preferences">प्राथमिकता</string>
+  <string name="preferences">प्राथमिकताएँ</string>
   <string name="dark_theme">डार्क थीम</string>
   <string name="reminders">वैकल्पिक रिमाइंडर</string>
   <string name="reminder_timing">रोज़ाना के रिमाइंडर का समय अनुमानित है और डिवाइस की बैकग्राउंड गतिविधि संबंधी पाबंदियों और सूचना सेटिंग पर निर्भर करता है।</string>
@@ -191,7 +191,7 @@
   <string name="restore_preview">बहाल करने से पहले बैकअप की समीक्षा करें</string>
   <string name="restore_preview_body">%1$d घर · %2$d सामान · %3$d संलग्नक\n\nमौजूदा रिकॉर्ड ID रखी जाती हैं। नए रिकॉर्ड जोड़े जाते हैं। कोई मौजूदा रिकॉर्ड नहीं हटाया जाता। बैकअप का पासवर्ड वापस नहीं पाया जा सकता।</string>
   <string name="restore">पुनर्स्थापित करें</string>
-  <string name="premium">Possessory प्रीमियम</string>
+  <string name="premium">Possessory Premium</string>
   <string name="premium_body">अपने पसंदीदा सामान के लिए अधिक जगह: असीमित सामान, कई घर और अतिरिक्त सुविधाएँ।</string>
   <string name="premium_unavailable">इस इंजीनियरिंग पूर्वावलोकन में खरीदारी उपलब्ध नहीं है। स्टोर सेटअप और खरीद रसीद का सत्यापन आवश्यक है। अभी एक घर और 30 सामान की सीमा है; आपके मौजूदा रिकॉर्ड उपलब्ध रहते हैं।</string>
   <string name="restore_purchases">खरीदारियाँ बहाल करें</string>
@@ -204,7 +204,7 @@
   <string name="voice_notice">बोलने के लिए दबाएँ, फिर पहचाने गए पाठ की समीक्षा करें। पहचान की उपलब्धता डिवाइस पर निर्भर करती है और इंटरनेट की आवश्यकता हो सकती है। Possessory मूल ऑडियो रिकॉर्डिंग नहीं रखता। नीचे दिखाए गए समर्थित कमांड का उपयोग करें। अतिरिक्त कमांड के लिए Premium आवश्यक है।</string>
   <string name="listening">सुन रहा है… रोकने के लिए टैप करें</string>
   <string name="tap_to_speak">बोलने के लिए टैप करें</string>
-  <string name="voice_unavailable">भाषण या आदेश अनुपलब्ध है। नीचे समर्थित कमांडों में से एक टाइप करें।</string>
+  <string name="voice_unavailable">वाक् पहचान या कमांड उपलब्ध नहीं है। नीचे दिए गए समर्थित कमांड में से एक लिखें।</string>
   <string name="voice_command">आपका आदेश</string>
   <string name="voice_examples">खोजें … / कमरे का सामान दिखाएँ … / नया सामान जोड़ें / वारंटी दिखाएँ / मेरे सामान का सारांश दिखाएँ</string>
   <string name="review_command">कमांड की समीक्षा करें</string>
@@ -215,11 +215,11 @@
   <string name="all_conditions">सभी स्थितियों</string>
   <string name="minimum_price">न्यूनतम खरीद मूल्य</string>
   <string name="maximum_price">अधिकतम खरीद मूल्य</string>
-  <string name="purchased_after">पर या उसके बाद खरीद</string>
-  <string name="purchased_before">खरीदी पर या पहले</string>
+  <string name="purchased_after">इस तारीख को या इसके बाद खरीदा गया</string>
+  <string name="purchased_before">इस तारीख को या इससे पहले खरीदा गया</string>
   <string name="range_currency_notice">कीमत की सीमा के लिए एक मुद्रा चुनें। अलग-अलग मुद्राओं की राशियों की तुलना या मुद्रा परिवर्तन नहीं किया जाता।</string>
   <string name="apply_filters">फिल्टर लागू करें</string>
-  <string name="clear_filters">साफ़ फिल्टर</string>
+  <string name="clear_filters">फ़िल्टर साफ़ करें</string>
   <string name="save_search">खोज सहेजें</string>
   <string name="saved_searches">सहेजी गई खोजें</string>
   <string name="manage_searches">सहेजी गई खोजें प्रबंधित करें</string>
@@ -227,7 +227,7 @@
   <string name="household_currency_notice">घरेलू मुद्रा का उपयोग नए रिकॉर्ड के लिए किया जाता है। मौजूदा आइटम मुद्राएं और मान बनाए रखा जाता है।</string>
   <string name="app_lock">उपकरण अनलॉक की आवश्यकता है</string>
   <string name="unlock_notice">Possessory खोलने के लिए अपने डिवाइस के स्क्रीन लॉक का PIN, पैटर्न या पासवर्ड इस्तेमाल करें।</string>
-  <string name="app_locked">Possessory बंद है</string>
+  <string name="app_locked">Possessory लॉक है</string>
   <string name="unlock">अनलॉक</string>
   <string name="app_lock_notice">एक उपकरण पिन, पैटर्न या पासवर्ड की आवश्यकता है। Possessory अपने डिवाइस क्रेडेंशियल को स्टोर नहीं करता है। लॉकिंग स्क्रीनशॉट और हाल के ऐप पूर्वावलोकन को भी छुपाता है।</string>
   <string name="device_lock_required">ऐप लॉक को सक्षम करने से पहले सिस्टम सेटिंग्स में एक डिवाइस स्क्रीन लॉक सेट करें।</string>
@@ -290,7 +290,7 @@
   <string name="voice_receipt_command">रसीद जोड़ें</string>
   <string name="voice_read_command">मेरे वारंटी रिमाइंडर पढ़ें</string>
   <string name="voice_add_command">नया सामान जोड़ें</string>
-  <string name="review_mode_notice">REVIEW BUILD: मसौदा अनुवाद और मूल्यांकन उपकरण सक्षम। कोई खरीद या प्रीमियम पात्रता नहीं दी जाती है। Appstore प्रकाशन के लिए नहीं।</string>
+  <string name="review_mode_notice">मूल्यांकन संस्करण: अनुवाद के मसौदे और मूल्यांकन उपकरण चालू हैं। कोई खरीद या Premium उपयोग-अधिकार नहीं मिलता। Appstore पर प्रकाशित न करें।</string>
   <string name="warranty_manufacturer">निर्माता</string>
   <string name="warranty_extended">विस्तारित वारंटी</string>
   <string name="warranty_retailer">विक्रेता</string>

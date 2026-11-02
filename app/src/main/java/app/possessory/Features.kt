@@ -1412,7 +1412,8 @@ fun SettingsScreen(vm: InventoryViewModel, data: InventoryState, dark: Boolean) 
         }
         item {
             Text(
-                s(R.string.preview_build),
+                if (BuildConfig.DRAFT_TRANSLATIONS) s(R.string.preview_build)
+                else "Possessory ${BuildConfig.VERSION_NAME}",
                 fontSize = 11.sp,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )

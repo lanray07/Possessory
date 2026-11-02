@@ -1,0 +1,232 @@
+{
+  "version": "0.3.7",
+  "review_date": "2026-10-28",
+  "review_type": "AI semantic and editorial review under explicit owner waiver",
+  "human_review_claimed": false,
+  "source_catalogue_sha256": "7164c009afa46ade2a607d6d14bae9cec549dabb1d92143efc304821acf66b0f",
+  "scope": [
+    "App labels and operational messages",
+    "Destructive-action and backup semantics",
+    "Purchase/privacy/support disclosures",
+    "Store and IAP copy",
+    "Plural forms and English regional differences"
+  ],
+  "previous_review": "ai-editorial-review.json",
+  "correction_script": "tools/editorial_catalogue_pass.py",
+  "limitations": [
+    "AI review does not guarantee idiomatic perfection or replace legal review.",
+    "Current-version device layout checks and production packaging remain separate gates.",
+    "Voice recognition availability depends on installed device providers."
+  ],
+  "locales": {
+    "en-GB": {
+      "source_keys": 335,
+      "wording_pass_complete": true,
+      "files": {
+        "strings.xml": "90866d1a17910fd5b7dc30797844aa22aea144ea0676e940dc8dbb8b76e8a1c2",
+        "store.json": "7569d579e4e39c54d544fc1dfe497d5b28fc72b5f75cdb2020927c6acb6e89e2",
+        "support.json": "28d5ded9f3acec934cf2426847ba1c56244c189ecb88e2a27abeddd16e22153e"
+      },
+      "device_validation_current_version": false,
+      "production_bundled": false
+    },
+    "en-US": {
+      "source_keys": 335,
+      "wording_pass_complete": true,
+      "files": {
+        "strings.xml": "858fb09348c32ccd1530c103191a03e21ee77bd501017ffb3ef89a1c23c644b2",
+        "store.json": "eab785c1e1ee976cfd8461d0dbd61ffaacdec2878744419c119975740b032650",
+        "support.json": "28d5ded9f3acec934cf2426847ba1c56244c189ecb88e2a27abeddd16e22153e"
+      },
+      "device_validation_current_version": false,
+      "production_bundled": false
+    },
+    "en-AU": {
+      "source_keys": 335,
+      "wording_pass_complete": true,
+      "files": {
+        "strings.xml": "90866d1a17910fd5b7dc30797844aa22aea144ea0676e940dc8dbb8b76e8a1c2",
+        "store.json": "7569d579e4e39c54d544fc1dfe497d5b28fc72b5f75cdb2020927c6acb6e89e2",
+        "support.json": "28d5ded9f3acec934cf2426847ba1c56244c189ecb88e2a27abeddd16e22153e"
+      },
+      "device_validation_current_version": false,
+      "production_bundled": false
+    },
+    "es-ES": {
+      "source_keys": 335,
+      "wording_pass_complete": true,
+      "files": {
+        "strings.xml": "b71d84fabaea5fdeafe218419a3863dd6caa576fb22a1767eaa03bf132211992",
+        "store.json": "4dcc7b007ac8a16bb7ef679c2acc54ace0d7ae3fc7124e461e57840ac0aa9533",
+        "support.json": "8adba9950802dc94e110ac41a9360da7bfa8112c8590a1211e043f711c23c70b"
+      },
+      "device_validation_current_version": false,
+      "production_bundled": false
+    },
+    "es-419": {
+      "source_keys": 335,
+      "wording_pass_complete": true,
+      "files": {
+        "strings.xml": "b71d84fabaea5fdeafe218419a3863dd6caa576fb22a1767eaa03bf132211992",
+        "store.json": "4dcc7b007ac8a16bb7ef679c2acc54ace0d7ae3fc7124e461e57840ac0aa9533",
+        "support.json": "8adba9950802dc94e110ac41a9360da7bfa8112c8590a1211e043f711c23c70b"
+      },
+      "device_validation_current_version": false,
+      "production_bundled": false
+    },
+    "fr-FR": {
+      "source_keys": 335,
+      "wording_pass_complete": true,
+      "files": {
+        "strings.xml": "09aef99cedd4167ab3f75d9e71c2641b6840d67ca64bd3e042314ce9c52348fc",
+        "store.json": "f41221354e6c09cddf7854b2ec22ac269677f9a81c0fb50a4bc77617e9eb2ddb",
+        "support.json": "5c9407d108edbe1aa3bb0b2969e42c7e0a3f110a8ab974f6b5bc0bc75931ca30"
+      },
+      "device_validation_current_version": false,
+      "production_bundled": false
+    },
+    "fr-CA": {
+      "source_keys": 335,
+      "wording_pass_complete": true,
+      "files": {
+        "strings.xml": "09aef99cedd4167ab3f75d9e71c2641b6840d67ca64bd3e042314ce9c52348fc",
+        "store.json": "f41221354e6c09cddf7854b2ec22ac269677f9a81c0fb50a4bc77617e9eb2ddb",
+        "support.json": "5c9407d108edbe1aa3bb0b2969e42c7e0a3f110a8ab974f6b5bc0bc75931ca30"
+      },
+      "device_validation_current_version": false,
+      "production_bundled": false
+    },
+    "de-DE": {
+      "source_keys": 335,
+      "wording_pass_complete": true,
+      "files": {
+        "strings.xml": "b8b421d0545c9bf5845cece4793cac6bb9d4572836ee0945d0c195214806fb26",
+        "store.json": "0a1b6bb06325ab005973e1d9706770c9d4aa9e6fdf70d6a484df4552fcaeebd9",
+        "support.json": "1521f84ccd654d0b6b740f4bbd9c11b659f86b3656a2170bdca176b0ef8bd564"
+      },
+      "device_validation_current_version": false,
+      "production_bundled": false
+    },
+    "it-IT": {
+      "source_keys": 335,
+      "wording_pass_complete": true,
+      "files": {
+        "strings.xml": "3de10ebe66e707a24ea71f2a1b34e3e1dbc697cd7323fe9300bee54461a00f9d",
+        "store.json": "45a82f13823801af3f46b5ab35fed13220a289b7076512e693f87233beeb7b74",
+        "support.json": "907617b2f49281f9814d1b41c8e9f518500766721c87eda1ec228ded683ae608"
+      },
+      "device_validation_current_version": false,
+      "production_bundled": false
+    },
+    "pt-BR": {
+      "source_keys": 335,
+      "wording_pass_complete": true,
+      "files": {
+        "strings.xml": "6745d696a438a09d55521e87351902ea5267496e16217336be362346a472d84e",
+        "store.json": "8bc27e15b2204a3a525a826c6163582e78e33bdef98a2ce7df0544f57966a005",
+        "support.json": "0886cc94ae21a35f8e4a99b02337bb7bbc8005dd56286ad1930e32915c1ba8b2"
+      },
+      "device_validation_current_version": false,
+      "production_bundled": false
+    },
+    "pt-PT": {
+      "source_keys": 335,
+      "wording_pass_complete": true,
+      "files": {
+        "strings.xml": "8a637ce318a389b46efbf929bdc2cc1309f2f278a8a1137e1cb3d956afd69524",
+        "store.json": "1d97f6f4afc7c4214e9ee532f1591ff7987b6299d2af82786b2cd48b38959e46",
+        "support.json": "97fac374b85333cbd12d0f356eb6424f7c795a72df2017bd8a12595ef5a693a5"
+      },
+      "device_validation_current_version": false,
+      "production_bundled": false
+    },
+    "nl-NL": {
+      "source_keys": 335,
+      "wording_pass_complete": true,
+      "files": {
+        "strings.xml": "ad4dbb08f884d6f608073bac61fa737b23f7d2c17e1ddbdbc73c54cd92b9e3c2",
+        "store.json": "b3dd643e86310e384268e35b1610d7f3b934642137f6e5567100a57e6efbac8d",
+        "support.json": "dfaa37bb7661aa97a4c88369eec3a3225affd1adda0c7f69d5cfaf9fc4c81dff"
+      },
+      "device_validation_current_version": false,
+      "production_bundled": false
+    },
+    "pl-PL": {
+      "source_keys": 335,
+      "wording_pass_complete": true,
+      "files": {
+        "strings.xml": "7b6764fc94f07909b0170c84c427b3a0f974d025a017c34a71ebdd819d8df084",
+        "store.json": "e610e623beede6c8a67580626a682e5eb7177d2fbfa498ee4ad922fd05217c32",
+        "support.json": "55031cda99b8fbfa8d26f38aa48bba3b6d0c03f6c08aa8ccdf41099589079319"
+      },
+      "device_validation_current_version": false,
+      "production_bundled": false
+    },
+    "sv-SE": {
+      "source_keys": 335,
+      "wording_pass_complete": true,
+      "files": {
+        "strings.xml": "33d2745f7b837ab75e87b3354bcd5d0109b7ed2ccbd67aa38dc62fb7b7191bb2",
+        "store.json": "38adbfaa36fbc33c8b119d2887d13f3adbffde78323f010d959176c58f8ce7c8",
+        "support.json": "061c8e07cc1397f5da81911b800daeac77230df955624f4b873f966f6b8ebf52"
+      },
+      "device_validation_current_version": false,
+      "production_bundled": false
+    },
+    "ja-JP": {
+      "source_keys": 335,
+      "wording_pass_complete": true,
+      "files": {
+        "strings.xml": "7f2fc730784291b66b1e6237d2ee7bf21232839fbe912a23c5c81f10eba904bf",
+        "store.json": "a983280f9bb78c5bce5eabe84da61d85fd6a6b01e6bcbfc979bbd358e2a85300",
+        "support.json": "6289585610ed3fecb43b6b15e344f2c94d3b996946e7c5a388b727214c24cf8f"
+      },
+      "device_validation_current_version": false,
+      "production_bundled": false
+    },
+    "hi-IN": {
+      "source_keys": 335,
+      "wording_pass_complete": true,
+      "files": {
+        "strings.xml": "925154dc0fbbe235469adb28398d9c3dd6ebf1bb006792c176de66ac6f1a10d1",
+        "store.json": "90c638794831c653970b8308d8a1cf1705fb64bbbb05990c494f68bcf680ef1f",
+        "support.json": "b7742dd3a6d1ac7721494e37608faaa5db458ac3fe87ce42332ca3d43dd391cd"
+      },
+      "device_validation_current_version": false,
+      "production_bundled": false
+    },
+    "ar": {
+      "source_keys": 335,
+      "wording_pass_complete": true,
+      "files": {
+        "strings.xml": "b885cf0132e07818fd80e3a722d721e76ddcc78873a100e99db92a533c9611d0",
+        "store.json": "7b2e40bc0948a56a7a21f709e081e38e04b5cf89048281676e1110cd5e69095c",
+        "support.json": "92f3d3a0151264ddfe224602428e3ab51b92677b8d7acffbbc35ac72dfecc5d5"
+      },
+      "device_validation_current_version": false,
+      "production_bundled": false
+    },
+    "tr-TR": {
+      "source_keys": 335,
+      "wording_pass_complete": true,
+      "files": {
+        "strings.xml": "e30a7540e42dc9409bfa2eaedae71179d88f109e0e1c3b453f6b1fbf6bec3ea5",
+        "store.json": "c06dc5743e9e20f3b09202f05c667902c86a129c95d27c1aa3e639b988652095",
+        "support.json": "7fa1a3d1364cff8dccf0eeb83366a335204008a5ae48a83f946e864b30d4f09b"
+      },
+      "device_validation_current_version": false,
+      "production_bundled": false
+    },
+    "id-ID": {
+      "source_keys": 335,
+      "wording_pass_complete": true,
+      "files": {
+        "strings.xml": "feaf3ba8a1bd1ad78353a9a9c938940295be76422b9744070cbec143da1248ee",
+        "store.json": "0c021a1838efce29265027db9f205b6466c60bc3d99472c4f18d55b22dac827b",
+        "support.json": "512debe65fce46c7ce68edb6df5bc187187579db616992f03da1e202181c29f2"
+      },
+      "device_validation_current_version": false,
+      "production_bundled": false
+    }
+  }
+}

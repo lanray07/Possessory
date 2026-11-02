@@ -400,7 +400,10 @@ fun Possessory(vm: InventoryViewModel = viewModel()) {
                                         else adding = true
                                     }
                                 ) {
-                                    Icon(Icons.Outlined.Add, if (wide) null else s(R.string.add_item))
+                                    Icon(
+                                        Icons.Outlined.Add,
+                                        if (wide) null else s(R.string.add_item),
+                                    )
                                     if (wide)
                                         Text(s(R.string.add_item), Modifier.padding(start = 6.dp))
                                 }
@@ -734,7 +737,10 @@ fun Possessory(vm: InventoryViewModel = viewModel()) {
                     text = {
                         Text(
                             if (message == "premium_unavailable")
-                                ctx.getString(R.string.premium_unavailable)
+                                ctx.getString(
+                                    if (vm.app.billing.enabled) R.string.premium_body
+                                    else R.string.premium_unavailable
+                                )
                             else if (message == "device_lock_required")
                                 ctx.getString(R.string.device_lock_required)
                             else ctx.getString(R.string.operation_error)

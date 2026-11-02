@@ -1,7 +1,7 @@
 {
-  "title": "Possessory - Inventaris Rumah & Pelacak Warranty",
+  "title": "Possessory – Inventaris Rumah dan Garansi",
   "short_description": "Simpan barang-barang, tanda terima dan garansi rincian indah terorganisir pada perangkat Anda.",
-  "description": "Berikan semua yang kau miliki tempat. ZIP backup pada perangkat anda inventaris utama bekerja offline dan tidak diperlukan akun bebas termasuk satu rumah tangga, sampai 30 barang dan tiga lampiran per milik. pembelian premium satu kali menambah barang tak terbatas dan rumah tangga, tanda terima OCRdan (malaikat-malaikat) yang menyampaikan wahyu, PDF/CSV/JSON ekspor, pencarian tersimpan, perintah suara yang diperluas dan backup yang dilindungi oleh sandi. Premium tidak memiliki langganan; Amazon menampilkan harga lokal Anda. Verifikasi pembelian memerlukan internet, dengan akses luring yang ditandatangani untuk sampai ke 90 hari sebelum menyegarkan pengenalan suara tergantung dari penyedia perangkat anda dan mungkin menggunakan layanan jaringan. mengulang penerimaan saran sebelum menerapkannya laporan inventaris adalah catatan yang dijaga, bukan asuransi - penilaian sertifikasi.",
+  "description": "Tempat untuk semua barang Anda. Atur barang rumah tangga menurut ruangan, lengkap dengan foto, tanda terima, rincian pembelian, dan tanggal garansi. Cari catatan, pantau garansi, dan simpan cadangan ZIP pada perangkat. Inventaris dasar bekerja offline tanpa akun. Versi gratis mencakup satu rumah tangga, hingga 30 barang dan tiga lampiran per barang. Pembelian Premium sekali bayar yang opsional menambahkan barang dan rumah tangga tanpa batas, OCR tanda terima, pengingat lanjutan, perawatan, ekspor PDF/CSV/JSON, pencarian tersimpan, perintah suara tambahan, dan cadangan berkata sandi. Tidak ada langganan; Amazon menampilkan harga lokal. Verifikasi pembelian memerlukan internet; akses offline bertanda tangan berlaku hingga 90 hari sebelum diperbarui. Pengenalan suara bergantung pada penyedia perangkat dan dapat memakai layanan jaringan. Periksa saran tanda terima sebelum menerapkannya. Laporan adalah catatan inventaris yang dikelola pengguna, bukan penilaian bersertifikat dari perusahaan asuransi.",
   "hero_headline": "Catat barang di rumah",
   "hero_caption": "Simpan informasi barang Anda dengan rapi.",
   "rooms_headline": "Atur barang berdasarkan ruangan",
@@ -19,5 +19,5 @@
   "reminders_headline": "Pengingat masa berlaku garansi",
   "reminders_caption": "Pantau tanggal berakhirnya garansi yang akan datang.",
   "iap_title": "Possessory Premium",
-  "iap_description": "Satu kali upgrade untuk barang tak terbatas dan beberapa rumah tangga, tanda terima OCRdan demi rembulan di waktu purnama, bahwa kalian benar-benar akan melalui beberapa masa yang semakin lama semakin dahsyat: kematian, kebangkitan dan petaka kiamat. PDF/CSV/JSON laporan, pencarian tersimpan, perintah suara yang diperluas dan bantuan lewat - backup yang dilindungi tidak ada langganan verifikasi pembelian membutuhkan internet"
+  "iap_description": "Peningkatan sekali bayar untuk barang dan rumah tangga tanpa batas, OCR tanda terima, pengingat garansi lanjutan, perawatan, laporan PDF/CSV/JSON, pencarian tersimpan, perintah suara tambahan, dan cadangan berkata sandi. Tanpa langganan. Verifikasi pembelian memerlukan internet."
 }

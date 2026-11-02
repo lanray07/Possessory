@@ -1,7 +1,7 @@
 {
-  "title": "Possessory - Ev Inventory & Garanti Tracker",
+  "title": "Possessory – Ev Envanteri ve Garanti Takibi",
   "short_description": "Cihazlarınızda güzel bir şekilde organize edilen eşyaları, makbuzlarını ve garanti detaylarını tutun.",
-  "description": "Bir yere sahip olduğunuz her şeyi verin. Ev eşyaları fotoğraf, makbullar, satın alma detayları ve garanti tarihleri ile odaya ait Organize ev sahipliği yapın. Kayıtlarınızı arayın, komutları takip edin ve tasarruf edin. ZIP Cihazınızda yedekler. Core envanter çevrimdışı çalışır ve hiçbir hesap gerekli değildir. Free bir ev içerir, yukarı yukarı bir tane ev içerir. 30 İçeri ait üç ek. Bir-time Premium satın alma sınırsız eşya ve haneler, makbuzlamalar, OCR, gelişmiş hatırlatmalar, bakım, PDF/CSV/JSON İhracat, kurtarılmış aramalar, genişletilmiş ses komutları ve şifre korumalı yedeklemeler. Premium abonelik yok; Amazon yerel fiyatınızı gösterir. Satın alma doğrulaması interneti gerektirir, çevrimdışı erişim için kaydolun 90 Yenilenmeden önce günler cihaz sağlayıcınıza bağlıdır ve bunları uygulamadan önce bir ağ hizmeti kullanabilir.Reventory raporlar kullanıcı tarafından kabul edilen kayıtlarıdır, sigortacı onaylı değerlere bağlıdır.",
+  "description": "Sahip olduğunuz her şey için bir yer. Ev eşyalarını fotoğraf, makbuz, satın alma bilgileri ve garanti tarihleriyle odalara göre düzenleyin. Kayıtları arayın, garantileri takip edin ve cihazınıza ZIP yedekleri kaydedin. Temel envanter çevrimdışı çalışır ve hesap gerektirmez. Ücretsiz sürüm bir ev, en fazla 30 eşya ve eşya başına üç ek içerir. İsteğe bağlı tek seferlik Premium satın alımı sınırsız eşya ve ev, makbuz OCR, gelişmiş hatırlatmalar, bakım, PDF/CSV/JSON dışa aktarma, kaydedilen aramalar, genişletilmiş ses komutları ve şifreli yedekler sunar. Abonelik yoktur; Amazon yerel fiyatı gösterir. Satın alma doğrulaması internet gerektirir; imzalı çevrimdışı erişim yenilenmeden önce en fazla 90 gün sürer. Konuşma tanıma cihaz sağlayıcısına bağlıdır ve ağ hizmeti kullanabilir. Makbuz önerilerini uygulamadan önce kontrol edin. Raporlar kullanıcı tarafından tutulan envanter kayıtlarıdır; sigorta şirketince onaylanmış değerlemeler değildir.",
   "hero_headline": "Ev eşyalarınızı takip edin",
   "hero_caption": "Tüm eşyalarınızı düzenli bir yerde tutun.",
   "rooms_headline": "Eşyalarınızı odalara göre düzenleyin",
@@ -18,6 +18,6 @@
   "offline_caption": "Envanterinize internet olmadan erişin.",
   "reminders_headline": "Garanti bitiş hatırlatıcıları",
   "reminders_caption": "Yaklaşan garanti bitiş tarihlerini takip edin.",
-  "iap_title": "Possessory Premium Premium",
-  "iap_description": "Sınırsız eşya ve birden fazla hane için bir zaman yükseltme, makbul OCR, gelişmiş garanti hatırlatmaları, bakım, PDF/CSV/JSON Raporlar, kurtarılmış aramalar, genişletilmiş ses komutları ve şifre korumalı yedeklemeler. Hiçbir abonelik satın alma doğrulama internet gerektirir."
+  "iap_title": "Possessory Premium",
+  "iap_description": "Sınırsız eşya ve ev, makbuz OCR, gelişmiş garanti hatırlatmaları, bakım, PDF/CSV/JSON raporları, kaydedilen aramalar, genişletilmiş ses komutları ve şifreli yedekler için tek seferlik yükseltme. Abonelik yoktur. Satın alma doğrulaması internet gerektirir."
 }

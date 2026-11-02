@@ -1,7 +1,7 @@
 {
-  "title": "Possessory Home Inventory & Warranty Tracker",
+  "title": "Possessory – Heminventarie och garantier",
   "short_description": "Håll tillhörigheter, kvitton och garanti detaljer vackert organiserade på din enhet.",
-  "description": "Ge allt du äger en plats. Organisera hushållstillhörigheter genom rum med foton, kvitton, köp detaljer och garantidatum. Sök dina register, spåra garantier och spara ZIP säkerhetskopior på din enhet. Kärninventering fungerar offline och inget konto krävs. Gratis inkluderar ett hushåll, upp till 30 tillhörigheter och tre bilagor per tillhörighet. Ett valfritt engångsköp tillför obegränsade tillhörigheter och hushåll, kvitto OCRavancerade påminnelser, underhåll, PDF/CSV/JSON export, sparade sökningar, utökade röstkommandon och lösenordsskyddade säkerhetskopior. Premium har ingen prenumeration; Amazon visar ditt lokala pris. Inköpsverifiering kräver internet, med signerad offlineåtkomst för upp till 90 dagar före uppfriskning. Talensigenkänning beror på din enhetsleverantör och kan använda en nätverkstjänst. Granska kvittoförslag innan du tillämpar dem. Lagerrapporter är användarbehållna register, inte försäkringscertifierade värderingar.",
+  "description": "En plats för allt du äger. Ordna hemmets föremål efter rum med foton, kvitton, inköpsuppgifter och garantidatum. Sök bland poster, följ garantier och spara ZIP-säkerhetskopior på enheten. Grundfunktionerna fungerar offline utan konto. Gratisversionen omfattar ett hushåll, upp till 30 föremål och tre bilagor per föremål. Ett valfritt engångsköp av Premium ger obegränsade föremål och hushåll, kvitto-OCR, avancerade påminnelser, underhåll, PDF/CSV/JSON-export, sparade sökningar, utökade röstkommandon och lösenordsskyddade säkerhetskopior. Ingen prenumeration; Amazon visar det lokala priset. Köpverifiering kräver internet. Signerad offlineåtkomst gäller i upp till 90 dagar innan den behöver förnyas. Taligenkänning beror på enhetens leverantör och kan använda en nätverkstjänst. Kontrollera förslag från kvitton innan du tillämpar dem. Rapporterna är inventarieförteckningar som användaren sköter, inte värderingar certifierade av ett försäkringsbolag.",
   "hero_headline": "Håll koll på dina ägodelar",
   "hero_caption": "Samla dina ägodelar i en tydlig översikt.",
   "rooms_headline": "Ordna dina saker efter rum",
@@ -19,5 +19,5 @@
   "reminders_headline": "Påminnelser när garantier löper ut",
   "reminders_caption": "Håll koll på kommande garantidatum.",
   "iap_title": "Possessory Premium",
-  "iap_description": "Engångsuppgradering för obegränsade tillhörigheter och flera hushåll, kvitto OCRavancerade garantipåminnelser, underhåll, PDF/CSV/JSON Rapporter, sparade sökningar, utökade röstkommandon och lösenordsskyddade säkerhetskopior. Ingen prenumeration. Köpa verifiering kräver internet."
+  "iap_description": "Engångsköp för obegränsade föremål och hushåll, kvitto-OCR, avancerade garantipåminnelser, underhåll, PDF/CSV/JSON-rapporter, sparade sökningar, utökade röstkommandon och lösenordsskyddade säkerhetskopior. Ingen prenumeration. Köpverifiering kräver internet."
 }

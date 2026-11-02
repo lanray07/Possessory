@@ -1,8 +1,8 @@
 {
   "locale": "it-IT",
   "source_sha256": "b12817cce93d13b9c672112b7b0a4be6f6c3a47a46bdb98b36d2be0b7ecebe5d",
-  "strings_sha256": "3ab7f81faa568027834b78bdfa2485a7affcb5b42f5fc2c30842887d78038149",
+  "strings_sha256": "3de10ebe66e707a24ea71f2a1b34e3e1dbc697cd7323fe9300bee54461a00f9d",
   "catalogue_sha256": "7164c009afa46ade2a607d6d14bae9cec549dabb1d92143efc304821acf66b0f",
-  "store_sha256": "8b0b85f98c7fec2bc29323751e66a1e5aa6c49f1051e0a9de67cb007a0a71030",
-  "support_sha256": "cf8d128ed1da00b0ecd1485b67eb7fcd58086b3a123ff35d962ccf5be5b767cd"
+  "store_sha256": "45a82f13823801af3f46b5ab35fed13220a289b7076512e693f87233beeb7b74",
+  "support_sha256": "907617b2f49281f9814d1b41c8e9f518500766721c87eda1ec228ded683ae608"
 }

@@ -168,7 +168,7 @@
   <string name="with_receipts">مع الإيصالات</string>
   <string name="include_serials">تشمل الأرقام التسلسلية</string>
   <string name="include_prices">تشمل القيم المسجلة</string>
-  <string name="format">الشكل</string>
+  <string name="format">الصيغة</string>
   <string name="export_report">حفظ التقرير</string>
   <string name="export_complete">لقد تم حفظ تقريرك</string>
   <string name="report_preview">معاينة التقرير</string>
@@ -180,7 +180,7 @@
   <string name="dark_theme">المظهر الداكن</string>
   <string name="reminders">تذكيرات اختيارية</string>
   <string name="reminder_timing">مواعيد التذكيرات اليومية تقريبية وتتأثر بقيود تشغيل التطبيقات في الخلفية وإعدادات الإشعارات على الجهاز.</string>
-  <string name="language_system">ترجمة تمهيدية تم تجميعها و العمل بدون شبكة إنترنت، وهي مشاريع مصممة آلياً تنتظر مراجعة اللغة والمخطط، ولا تترجم أسماءكم ومذكراتكم الخاصة.</string>
+  <string name="language_system">الترجمات التجريبية مضمّنة وتعمل دون إنترنت. هي مسودات مولّدة آليًا تنتظر مراجعة اللغة والتخطيط. لا تُترجم أسماء مقتنياتك أو ملاحظاتك التي تدخلها بنفسك.</string>
   <string name="backup_restore">النسخ الاحتياطي والاستعادة</string>
   <string name="backup_body">احفظ ملف ZIP كاملًا يضم السجلات والمرفقات. تتحقق الاستعادة من المجاميع الاختبارية وتدمج حسب معرّف السجل؛ وتُحفظ السجلات الموجودة عند التعارض. احتفظ بنسخة احتياطية قبل إلغاء التثبيت.</string>
   <string name="encrypted_backup">نسخة احتياطية محمية بكلمة مرور</string>
@@ -235,7 +235,7 @@
   <string name="rename">تغيير الاسم</string>
   <string name="edit">تعديل</string>
   <string name="add_document">إضافة مستند</string>
-  <string name="delete_maintenance">يحذف سجل الصيانة؟</string>
+  <string name="delete_maintenance">هل تريد حذف سجل الصيانة؟</string>
   <string name="delete_maintenance_body">وهذا يزيل سجل الصيانة ووثائقه الداعمة، ويحتفظ بسجلات أخرى.</string>
   <string name="edit_maintenance">تعديل الصيانة</string>
   <string name="maintenance_date">تاريخ الصيانة</string>
@@ -271,7 +271,7 @@
   <string name="column_serial">الرقم التسلسلي</string>
   <string name="column_retailer">البائع</string>
   <string name="column_warranty">انتهاء الضمان</string>
-  <string name="no_receipt_reference">لا توجد مراجع</string>
+  <string name="no_receipt_reference">لا توجد مراجع للمرفقات</string>
   <string name="receipt_reference_note">وتحدد مراجع الملحقات الوثائق المحلية؛ ولا ترد الملفات في هذا التقرير.</string>
   <string name="voice_count_result">%d أغراض تطابق هذه الغرفة</string>
   <string name="voice_move_title">تأكيد نقل المقتنى</string>

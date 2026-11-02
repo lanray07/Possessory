@@ -1,7 +1,7 @@
 {
-  "title": "Possessory - Strona główna Tracker inwentaryzacji i gwarancji",
+  "title": "Possessory – Domowy inwentarz i gwarancje",
   "short_description": "Przechowywać rzeczy, paragony i szczegóły gwarancji pięknie zorganizowane na urządzeniu.",
-  "description": "Daj wszystko, co masz własne miejsce. Organizować rzeczy gospodarstwa domowego przez pokój ze zdjęciami, paragony, szczegóły zakupu i daty gwarancji. ZIP Kopie zapasowe na urządzeniu. Rdzeń inwentaryzacji działa offline i nie jest wymagane konto. 30 rzeczy i trzy załączniki na przynależność. Opcjonalny jednorazowy zakup Premium dodaje nieograniczone rzeczy i gospodarstwa domowe, odbiór OCR, zaawansowane przypomnienia, konserwacja, PDF/CSV/JSON export, zapisane wyszukiwanie, rozszerzone komendy głosowe i kopie zapasowe chronione hasłem. Premium nie ma subskrypcji; Amazon wyświetla lokalne ceny. Weryfikacja zakupu wymaga internetu, z podpisanym dostępem offline do 90 Na kilka dni przed odświeżaniem. Rozpoznawanie mowy zależy od dostawcy urządzenia i może korzystać z usługi sieciowej. Przed ich zastosowaniem należy zapoznać się z sugestiami dotyczącymi paragonu. Raporty inwentaryzacyjne to zapisy utrzymywane przez użytkownika, a nie wyceny certyfikowane przez ubezpieczyciela.",
+  "description": "Miejsce na wszystko, co posiadasz. Uporządkuj domowe przedmioty według pokojów, dodając zdjęcia, paragony, dane zakupu i terminy gwarancji. Przeszukuj wpisy, śledź gwarancje i zapisuj kopie ZIP na urządzeniu. Podstawowy inwentarz działa offline bez konta. Bezpłatna wersja obejmuje jedno gospodarstwo domowe, do 30 przedmiotów i trzy załączniki na przedmiot. Opcjonalny jednorazowy zakup Premium zapewnia nieograniczoną liczbę przedmiotów i gospodarstw domowych, OCR paragonów, zaawansowane przypomnienia, konserwację, eksport PDF/CSV/JSON, zapisane wyszukiwania, rozszerzone polecenia głosowe i kopie chronione hasłem. Bez subskrypcji; Amazon wyświetla lokalną cenę. Weryfikacja zakupu wymaga internetu; podpisany dostęp offline działa do 90 dni przed odnowieniem. Rozpoznawanie mowy zależy od dostawcy urządzenia i może korzystać z usługi sieciowej. Sprawdź sugestie z paragonu przed ich zastosowaniem. Raporty to wpisy prowadzone przez użytkownika, nie wyceny certyfikowane przez ubezpieczyciela.",
   "hero_headline": "Domowy spis przedmiotów",
   "hero_caption": "Przechowuj informacje o swoich rzeczach w jednym miejscu.",
   "rooms_headline": "Porządkuj rzeczy według pomieszczeń",
@@ -18,6 +18,6 @@
   "offline_caption": "Przeglądaj spis rzeczy bez internetu.",
   "reminders_headline": "Przypomnienia o końcu gwarancji",
   "reminders_caption": "Śledź zbliżające się terminy końca gwarancji.",
-  "iap_title": "Possessory Premia",
-  "iap_description": "Jednorazowa aktualizacja dla nieograniczonych rzeczy i wielu gospodarstw domowych, odbiór OCR, zaawansowane przypomnienia gwarancyjne, konserwacja, PDF/CSV/JSON raporty, zapisane wyszukiwanie, rozszerzone komendy głosowe i kopie zapasowe chronione hasłem. Brak subskrypcji."
+  "iap_title": "Possessory Premium",
+  "iap_description": "Jednorazowy zakup zapewniający nieograniczoną liczbę przedmiotów i gospodarstw domowych, OCR paragonów, zaawansowane przypomnienia gwarancyjne, konserwację, raporty PDF/CSV/JSON, zapisane wyszukiwania, rozszerzone polecenia głosowe i kopie chronione hasłem. Bez subskrypcji. Weryfikacja zakupu wymaga internetu."
 }

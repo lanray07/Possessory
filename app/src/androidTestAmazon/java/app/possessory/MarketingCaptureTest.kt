@@ -18,85 +18,219 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class MarketingCaptureTest {
     @get:Rule val ui = createAndroidComposeRule<MainActivity>()
-    @Test fun sixCoreScreens() = runBlocking {
+
+    @Test
+    fun sixCoreScreens() = runBlocking {
         Assume.assumeTrue(BuildConfig.APPLICATION_ID.endsWith(".iapqa"))
         assertTrue(BuildConfig.DEBUG)
         assertFalse(BuildConfig.REVIEW_MODE)
         val inst = InstrumentationRegistry.getInstrumentation()
         val app = inst.targetContext.applicationContext as PossessoryApp
+        val locale = InstrumentationRegistry.getArguments().getString("marketingLocale")
+        if (locale != null) {
+            require(AppLanguage.targets.any { it.first == locale })
+            inst.runOnMainSync { AppLanguage.select(app, locale) }
+            ui.activityRule.scenario.recreate()
+            ui.waitForIdle()
+        }
+        val localized = AppLanguage.apply(app)
         assertFalse(app.getSystemService(android.app.KeyguardManager::class.java).isKeyguardLocked)
         withTimeout(60000) { app.billing.state.first { it.premium && !it.busy } }
         val dao = app.db.inventory()
-        assertTrue("Only this test's disposable fixtures may exist",
-            dao.items().first().all { it.id.startsWith("marketing-") })
+        assertTrue(
+            "Only this test's disposable fixtures may exist",
+            dao.items().first().all { it.id.startsWith("marketing-") },
+        )
         val today = LocalDate.now()
         val home = Household("marketing-home", "Willow House")
-        val rooms = listOf(RoomRecord("marketing-living", home.id, "Living Room", "Living Room"),
-            RoomRecord("marketing-kitchen", home.id, "Kitchen", "Kitchen"),
-            RoomRecord("marketing-study", home.id, "Study", "Office"))
-        val names = listOf("Reading lamp", "Linen sofa", "Coffee machine", "Stand mixer", "Laptop", "Desk chair")
-        val items = names.mapIndexed { i, name -> InventoryItem("marketing-$i", name, rooms[i/2].id,
-            priceMinor = listOf(4999L,79900L,18900L,24900L,89900L,17900L)[i],
-            purchaseDate = today.minusMonths(5).toString(),
-            warrantyEnd = today.plusDays(if (i == 0) 14 else 160+i.toLong()).toString(),
-            retailer = "Willow Shop") }
-        dao.put(home); rooms.forEach { dao.put(it) }; items.forEach { dao.put(it) }
-        dao.put(Maintenance("marketing-maintenance", items[2].id, "Cleaning", today.minusDays(30).toString(), today.plusDays(7).toString()))
-        val receipt = File(app.filesDir, "attachments/marketing-receipt.png").apply { parentFile!!.mkdirs() }
+        val rooms =
+            listOf(
+                RoomRecord("marketing-living", home.id, "Living Room", "Living Room"),
+                RoomRecord("marketing-kitchen", home.id, "Kitchen", "Kitchen"),
+                RoomRecord("marketing-study", home.id, "Study", "Office"),
+            )
+        val names =
+            listOf(
+                "Reading lamp",
+                "Linen sofa",
+                "Coffee machine",
+                "Stand mixer",
+                "Laptop",
+                "Desk chair",
+            )
+        val items =
+            names.mapIndexed { i, name ->
+                InventoryItem(
+                    "marketing-$i",
+                    name,
+                    rooms[i / 2].id,
+                    priceMinor = listOf(4999L, 79900L, 18900L, 24900L, 89900L, 17900L)[i],
+                    purchaseDate = today.minusMonths(5).toString(),
+                    warrantyEnd = today.plusDays(if (i == 0) 14 else 160 + i.toLong()).toString(),
+                    retailer = "Willow Shop",
+                )
+            }
+        dao.put(home)
+        rooms.forEach { dao.put(it) }
+        items.forEach { dao.put(it) }
+        dao.put(
+            Maintenance(
+                "marketing-maintenance",
+                items[2].id,
+                "Cleaning",
+                today.minusDays(30).toString(),
+                today.plusDays(7).toString(),
+            )
+        )
+        val receipt =
+            File(app.filesDir, "attachments/marketing-receipt.png").apply { parentFile!!.mkdirs() }
         val bitmap = Bitmap.createBitmap(1200, 520, Bitmap.Config.ARGB_8888)
         bitmap.eraseColor(Color.WHITE)
-        val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = Color.BLACK; textSize = 56f }
+        val paint =
+            Paint(Paint.ANTI_ALIAS_FLAG).apply {
+                color = Color.BLACK
+                textSize = 56f
+            }
         Canvas(bitmap).apply {
             drawText("WILLOW SHOP - DEMO RECEIPT", 50f, 90f, paint)
             drawText("Reading lamp", 50f, 190f, paint)
             drawText("TOTAL GBP 49.99", 50f, 290f, paint)
             drawText(today.minusMonths(5).toString(), 50f, 390f, paint)
         }
-        receipt.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }; bitmap.recycle()
-        dao.put(Attachment("marketing-receipt", items[0].id, "Demo receipt", "image/png", receipt.name))
-        val output = File(app.getExternalFilesDir(null), "marketing-captures").apply { mkdirs() }
+        receipt.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }
+        bitmap.recycle()
+        dao.put(
+            Attachment("marketing-receipt", items[0].id, "Demo receipt", "image/png", receipt.name)
+        )
+        val output =
+            File(
+                    app.getExternalFilesDir(null),
+                    "marketing-captures" + (locale?.let { "/$it" } ?: ""),
+                )
+                .apply { mkdirs() }
         fun capture(name: String) {
-            ui.waitForIdle(); inst.waitForIdleSync(); android.os.SystemClock.sleep(700)
+            ui.waitForIdle()
+            inst.waitForIdleSync()
+            android.os.SystemClock.sleep(700)
             inst.uiAutomation.takeScreenshot().also { image ->
-                File(output, "$name.png").outputStream().use { image.compress(Bitmap.CompressFormat.PNG, 100, it) }
+                File(output, "$name.png").outputStream().use {
+                    image.compress(Bitmap.CompressFormat.PNG, 100, it)
+                }
                 image.recycle()
             }
         }
         fun page(nav: Int, heading: Int) {
-            ui.onAllNodesWithText(app.getString(nav), useUnmergedTree = true).onFirst().performScrollTo().performClick()
-            ui.waitUntil(15000) { ui.onAllNodesWithText(app.getString(heading)).fetchSemanticsNodes().isNotEmpty() }
+            ui.onAllNodesWithText(localized.getString(nav), useUnmergedTree = true)
+                .onFirst()
+                .performScrollTo()
+                .performClick()
+            ui.waitUntil(15000) {
+                ui.onAllNodesWithText(localized.getString(heading))
+                    .fetchSemanticsNodes()
+                    .isNotEmpty()
+            }
         }
-        ui.waitUntil(20000) { runCatching { ui.onAllNodesWithText("Willow House", substring = true).fetchSemanticsNodes().isNotEmpty() }.getOrDefault(false) }
-        page(R.string.overview, R.string.everything_in_place); capture("hero")
-        page(R.string.rooms, R.string.room_by_room); capture("rooms")
-        page(R.string.warranties, R.string.warranty_title); capture("warranties")
+        ui.waitUntil(20000) {
+            runCatching {
+                    ui.onAllNodesWithText("Willow House", substring = true)
+                        .fetchSemanticsNodes()
+                        .isNotEmpty()
+                }
+                .getOrDefault(false)
+        }
+        page(R.string.overview, R.string.everything_in_place)
+        capture("hero")
+        page(R.string.rooms, R.string.room_by_room)
+        capture("rooms")
+        page(R.string.warranties, R.string.warranty_title)
+        capture("warranties")
         page(R.string.reports, R.string.reports_title)
-        ui.onAllNodesWithText(app.getString(R.string.report_preview)).onFirst().performScrollTo().performClick()
+        ui.onAllNodesWithText(localized.getString(R.string.report_preview))
+            .onFirst()
+            .performScrollTo()
+            .performClick()
         ui.waitUntil(15000) { File(app.cacheDir, "report-preview.pdf").length() > 100 }
-        ui.waitUntil(20000) { ui.onAllNodesWithContentDescription(app.getString(R.string.report_preview)).fetchSemanticsNodes().isNotEmpty() }
+        ui.waitUntil(20000) {
+            ui.onAllNodesWithContentDescription(localized.getString(R.string.report_preview))
+                .fetchSemanticsNodes()
+                .isNotEmpty()
+        }
         capture("reports")
-        ui.onNodeWithText(app.getString(R.string.close)).performClick()
-        ui.onNodeWithContentDescription(app.getString(R.string.voice)).performClick()
-        ui.onNodeWithText(app.getString(R.string.voice_unavailable)).assertExists()
+        ui.onNodeWithText(localized.getString(R.string.close)).performClick()
+        ui.onNodeWithContentDescription(localized.getString(R.string.voice)).performClick()
+        ui.onNodeWithText(localized.getString(R.string.voice_unavailable)).assertExists()
         capture("voice")
         androidx.test.uiautomator.UiDevice.getInstance(inst).pressBack()
         page(R.string.inventory, R.string.your_belongings)
         ui.onNode(hasSetTextAction()).performTextReplacement("Reading lamp")
         ui.runOnIdle {
             ui.activity.currentFocus?.let { focus ->
-                ui.activity.getSystemService(android.view.inputmethod.InputMethodManager::class.java)
+                ui.activity
+                    .getSystemService(android.view.inputmethod.InputMethodManager::class.java)
                     .hideSoftInputFromWindow(focus.windowToken, 0)
                 focus.clearFocus()
             }
         }
         ui.waitForIdle()
-        ui.onAllNodes(hasScrollToNodeAction()).onLast()
+        ui.onAllNodes(hasScrollToNodeAction())
+            .onLast()
             .performScrollToNode(hasText("Reading lamp") and !hasSetTextAction())
         ui.onNode(hasText("Reading lamp") and !hasSetTextAction()).performScrollTo().performClick()
-        ui.onAllNodes(hasScrollToNodeAction()).onLast()
-            .performScrollToNode(hasText(app.getString(R.string.warranty_end)))
+        ui.onAllNodes(hasScrollToNodeAction())
+            .onLast()
+            .performScrollToNode(hasText(localized.getString(R.string.warranty_end)))
         capture("reminders")
-        // OCR and offline screenshots are completed through native UI capture after this test.
-        // The receipt loader must also be visually checked outside the Compose test clock.
+        if (locale != null) {
+            ui.onAllNodes(hasScrollToNodeAction())
+                .onLast()
+                .performScrollToNode(
+                    hasContentDescription(localized.getString(R.string.scan_receipt))
+                )
+            ui.onNodeWithContentDescription(localized.getString(R.string.scan_receipt))
+                .performClick()
+            ui.waitUntil(30000) {
+                ui.mainClock.advanceTimeBy(100)
+                ui.onAllNodesWithContentDescription(localized.getString(R.string.receipt_preview))
+                    .fetchSemanticsNodes()
+                    .isNotEmpty()
+            }
+            ui.onNodeWithText(localized.getString(R.string.extract_text))
+                .performScrollTo()
+                .performClick()
+            ui.waitUntil(60000) {
+                ui.mainClock.advanceTimeBy(100)
+                ui.onAllNodes(hasSetTextAction() and hasText("WILLOW SHOP", substring = true))
+                    .fetchSemanticsNodes()
+                    .isNotEmpty()
+            }
+            ui.onNodeWithText(localized.getString(R.string.ocr_notice)).performScrollTo()
+            capture("ocr")
+            ui.onNodeWithText(localized.getString(R.string.cancel)).performClick()
+            androidx.test.uiautomator.UiDevice.getInstance(inst).pressBack()
+            val connectivity = app.getSystemService(android.net.ConnectivityManager::class.java)
+            fun shell(command: String): String =
+                inst.uiAutomation.executeShellCommand(command).use { descriptor ->
+                    android.os.ParcelFileDescriptor.AutoCloseInputStream(descriptor).use {
+                        it.readBytes().toString(Charsets.UTF_8)
+                    }
+                }
+            val wasEnabled = shell("settings get global wifi_on").trim() == "1"
+            try {
+                shell("svc wifi disable")
+                withTimeout(15000) { while (connectivity.activeNetwork != null) delay(250) }
+                assertTrue(
+                    "Only verified cached access can support this screenshot",
+                    app.billing.state.value.premium,
+                )
+                page(R.string.inventory, R.string.your_belongings)
+                capture("offline")
+                File(output, "evidence.json")
+                    .writeText(
+                        """{"locale":"$locale","screens":8,"sandboxPremium":true,"offlineActiveNetworkNull":true,"realOcrTextVerified":true}"""
+                    )
+            } finally {
+                if (wasEnabled) shell("svc wifi enable")
+            }
+        }
     }
 }

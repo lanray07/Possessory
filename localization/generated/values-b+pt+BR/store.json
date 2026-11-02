@@ -1,7 +1,7 @@
 {
-  "title": "Possessory - Inventário e rastreador de garantia",
+  "title": "Possessory – Inventário da casa e garantias",
   "short_description": "Mantenha pertences, recibos e detalhes de garantia bem organizados em seu dispositivo.",
-  "description": "Organize pertences domésticos por quarto com fotos, recibos, detalhes de compra e datas de garantia. ZIP O inventário do núcleo funciona off-line e nenhuma conta é necessária. 30 Uma compra opcional Premium adiciona bens ilimitados e casas, recibos e... OCR, lembretes avançados, manutenção, PDF/CSV/JSON Premium não tem assinatura, Amazon exibe seu preço local. 90 O reconhecimento de fala depende do seu provedor de dispositivos e pode usar um serviço de rede, reveja as sugestões de recibo antes de aplicá-las, relatórios de inventário são registros mantidos pelo usuário, não avaliações certificadas pela seguradora.",
+  "description": "Um lugar para tudo o que possui. Organize os bens da casa por cômodo, com fotos, recibos, dados de compra e datas de garantia. Pesquise registros, acompanhe garantias e salve backups ZIP no dispositivo. O inventário básico funciona sem internet e não exige conta. A versão gratuita inclui uma casa, até 30 itens e três anexos por item. A compra única opcional Premium acrescenta itens e casas ilimitados, OCR de recibos, lembretes avançados, manutenção, exportações PDF/CSV/JSON, pesquisas salvas, comandos de voz ampliados e backups com senha. Sem assinatura; a Amazon mostra o preço local. A verificação da compra exige internet; o acesso assinado sem ligação dura até 90 dias antes de ser renovado. O reconhecimento de voz depende do fornecedor do dispositivo e pode usar um serviço de rede. Reveja as sugestões do recibo antes de as aplicar. Os relatórios são registros mantidos pelo usuário, não avaliações certificadas por uma seguradora.",
   "hero_headline": "Inventário da casa",
   "hero_caption": "Mantenha seus bens organizados.",
   "rooms_headline": "Organize seus bens por cômodo",
@@ -19,5 +19,5 @@
   "reminders_headline": "Lembretes do fim da garantia",
   "reminders_caption": "Acompanhe as próximas datas de fim da garantia.",
   "iap_title": "Possessory Premium",
-  "iap_description": "Uma vez atualização para bens ilimitados e várias famílias, recibo OCR, lembretes de garantia avançada, manutenção, PDF/CSV/JSON Relatórios, buscas salvas, comandos de voz expandidos e backups protegidos por senha."
+  "iap_description": "Compra única para itens e casas ilimitados, OCR de recibos, lembretes avançados de garantia, manutenção, relatórios PDF/CSV/JSON, pesquisas salvas, comandos de voz ampliados e backups com senha. Sem assinatura. A verificação da compra exige internet."
 }

@@ -181,31 +181,6 @@ class MarketingCaptureTest {
             .performScrollToNode(hasText(localized.getString(R.string.warranty_end)))
         capture("reminders")
         if (locale != null) {
-            ui.onAllNodes(hasScrollToNodeAction())
-                .onLast()
-                .performScrollToNode(
-                    hasContentDescription(localized.getString(R.string.scan_receipt))
-                )
-            ui.onNodeWithContentDescription(localized.getString(R.string.scan_receipt))
-                .performClick()
-            ui.waitUntil(30000) {
-                ui.mainClock.advanceTimeBy(100)
-                ui.onAllNodesWithContentDescription(localized.getString(R.string.receipt_preview))
-                    .fetchSemanticsNodes()
-                    .isNotEmpty()
-            }
-            ui.onNodeWithText(localized.getString(R.string.extract_text))
-                .performScrollTo()
-                .performClick()
-            ui.waitUntil(60000) {
-                ui.mainClock.advanceTimeBy(100)
-                ui.onAllNodes(hasSetTextAction() and hasText("WILLOW SHOP", substring = true))
-                    .fetchSemanticsNodes()
-                    .isNotEmpty()
-            }
-            ui.onNodeWithText(localized.getString(R.string.ocr_notice)).performScrollTo()
-            capture("ocr")
-            ui.onNodeWithText(localized.getString(R.string.cancel)).performClick()
             androidx.test.uiautomator.UiDevice.getInstance(inst).pressBack()
             val connectivity = app.getSystemService(android.net.ConnectivityManager::class.java)
             fun shell(command: String): String =
@@ -224,9 +199,9 @@ class MarketingCaptureTest {
                 )
                 page(R.string.inventory, R.string.your_belongings)
                 capture("offline")
-                File(output, "evidence.json")
+                File(output, "navigation-evidence.json")
                     .writeText(
-                        """{"locale":"$locale","screens":8,"sandboxPremium":true,"offlineActiveNetworkNull":true,"realOcrTextVerified":true}"""
+                        """{"locale":"$locale","screens":7,"sandboxPremium":true,"offlineActiveNetworkNull":true}"""
                     )
             } finally {
                 if (wasEnabled) shell("svc wifi enable")

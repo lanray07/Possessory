@@ -1588,12 +1588,19 @@ fun TextEntryDialog(title: String, label: String, onDismiss: () -> Unit, onSave:
 @Composable
 fun LanguagePicker() {
     val context = LocalContext.current
+    val bundled = remember(context.assets) {
+        val tags = runCatching {
+            context.assets.open("localization.json").bufferedReader().use { reader ->
+                com.google.gson.JsonParser.parseReader(reader).asJsonObject
+                    .getAsJsonArray("locales").map { it.asString }.toSet()
+            }
+        }.getOrDefault(setOf("en-GB"))
+        AppLanguage.targets.filter { it.first in tags }
+    }
     Choice(
         s(R.string.app_language),
         AppLanguage.selected(context),
-        listOf("" to s(R.string.use_device_language)) +
-            (if (BuildConfig.DRAFT_TRANSLATIONS) AppLanguage.targets
-            else AppLanguage.targets.take(1)),
+        listOf("" to s(R.string.use_device_language)) + bundled,
         { tag ->
             AppLanguage.select(context, tag)
             (context as? android.app.Activity)?.recreate()

@@ -12,8 +12,6 @@
   "warranties": "Warranty dates and terms are supplied by you. Manufacturer warranties and statutory consumer rights are separate. Possessory does not determine eligibility or provide definitive legal advice.",
   "delete": "Delete a belonging from its detail screen to remove its record, attachments and maintenance entries. To remove every local record and setting, use Delete all local data in Settings and confirm. Files you exported elsewhere are not deleted.",
   "contact_label": "Contact support",
-  "contact_email": "banksmi@mail.com",
-  "operator": "O. Bankole",
   "draft_notice": "Engineering preview support draft. Device-specific validation and translation review are pending.",
   "app_lock": "Enable device-unlock protection in Settings after setting a device PIN, pattern or password. Possessory uses the system credential screen and does not store that credential. Locking hides recent-app previews and screenshots. This is separate from at-rest encryption."
 }

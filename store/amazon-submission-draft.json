@@ -1,10 +1,10 @@
 {
-  "status": "0.3.6_engineering_candidate_not_submission_ready_not_uploaded",
+  "status": "localized_candidate_in_verification_not_publicly_submitted",
   "app": {
     "internal_title": "Possessory",
     "package_name": "app.possessory",
-    "version_name": "0.3.6",
-    "version_code": 9,
+    "version_name": "0.3.7",
+    "version_code": 11,
     "type": "Android / Fire OS",
     "category_preference": "Productivity",
     "operator": "O. Bankole",
@@ -118,21 +118,28 @@
     },
     "last_observed_version_name": "0.2.0",
     "last_observed_version_code": 2,
-    "candidate_apk": "Possessory-amazon-0.3.6-release-signed.apk",
+    "candidate_apk": "Possessory-amazon-0.3.7-localized-release-signed.apk",
     "candidate_uploaded": false,
     "candidate_screenshots": "artifacts/Possessory-0.3.3-eight-marketing-screenshots-ENGLISH.zip",
     "candidate_screenshot_count": 8,
-    "connection_blocker": "In-app browser automation initialization failed; no current console changes performed.",
+    "connection_blocker": null,
     "candidate_screenshot_status": "English marketing assets visually checked; captured from 0.3.3 sandbox UI, provenance retained; application release remains unapproved",
-    "candidate_localization_status": "Production candidate English-only; 19 corrected preview locales still require final wording approval and production bundling"
+    "candidate_localization_status": "19 catalogues selected for production with owner waiver and technical checks"
   },
   "privacy_questionnaire_draft": "store/privacy-questionnaire-draft.json",
   "localization_release_policy": "localization/release-policy.json",
-  "readiness_report": "docs/READINESS-0.3.6.md",
+  "readiness_report": "docs/READINESS-0.3.7.md",
   "engineering_work_remaining": [
-    "Complete full-catalogue wording checks and production localization bundling",
-    "Create matching localized marketing variants",
-    "Restore inbuilt-browser runtime and complete Amazon uploads/LAT setup",
-    "Complete production/LAT scenarios and remaining manual device checks"
-  ]
+    "Verify final signed localized artifact",
+    "Finish current localized marketing exports",
+    "Run production-service LAT billing scenarios",
+    "Complete remaining manual device checks and operator export declaration"
+  ],
+  "live_app_testing": {
+    "release_name": "Possessory 0.3.7 billing validation",
+    "uploaded_version_code": 10,
+    "scope": "English billing test",
+    "iap": "Approved TEST only",
+    "app_test_submitted": false
+  }
 }

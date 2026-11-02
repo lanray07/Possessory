@@ -27,6 +27,7 @@ def main():
     provenance={'version':a.version,'package':'app.possessory.iapqa','device':'Amazon KFTRWI',
         'apk_sha256':sha(a.apk),'test_apk_sha256':sha(a.test_apk),
         'test_source_sha256':sha(ROOT/'app/src/androidTestAmazon/java/app/possessory/MarketingCaptureTest.kt'),
+        'native_capture_script_sha256':sha(ROOT/'tools/capture_marketing_fire.py'),
         'approved':a.approved,'approval_scope':'Marketing assets only','uploaded':False,
         'limits':['Sandbox entitlement; not LAT certification.','Fictional English demo records are preserved as user-entered data.','The receipt image is synthetic; this does not certify real receipt accuracy.','Fire has no speech recognizer; the actual typed fallback is shown.'],
         'locales':{}}

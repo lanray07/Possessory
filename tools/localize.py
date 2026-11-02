@@ -162,7 +162,8 @@ def bundle_resources(preview=False):
         source=ROOT/'localization/generated'/('values-b+'+locale.replace('-','+'))/'support.json'
         shutil.copyfile(source,support_assets/(locale+'.json'))
     base_support=ROOT/'app/src/main/assets/support';base_support.mkdir(parents=True,exist_ok=True)
-    shutil.copyfile(ROOT/'support/en-GB.json',base_support/'en-GB.json')
+    if not (base_support/'en-GB.json').exists() or (not preview and 'en-GB' not in selected):
+        shutil.copyfile(ROOT/'support/en-GB.json',base_support/'en-GB.json')
     print(f'Bundled {len(selected)} locales for '+('engineering preview' if preview else 'release'))
 
 def approve_record(record, source, policy):

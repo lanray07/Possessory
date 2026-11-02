@@ -7,3 +7,6 @@ artifacts/billing-checks-0.3.4/*.txt -text
 artifacts/readiness-checks-0.3.6/* -text -whitespace
 artifacts/reviewer-captures-0.3.6/*.txt -text -whitespace
 artifacts/reviewer-captures-0.3.6/manifest.json -text
+artifacts/reviewer-captures-0.3.7/*.txt -text -whitespace
+artifacts/reviewer-captures-0.3.7/manifest.json -text
+app/src/main/assets/support/*.json text eol=lf

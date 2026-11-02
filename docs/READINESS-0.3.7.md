@@ -1,5 +1,9 @@
 # Possessory 0.3.7 (version code 10)
 
+**Current localized candidate: version code 11.** The code 10 results below identify the earlier English-only billing binary. Code 11 contains all 19 locale packs and support catalogues. Its production language picker reads the packaged manifest. Production verifier URL present, sandbox URL absent. Signed APK: `artifacts/Possessory-amazon-0.3.7-localized-release-signed.apk`, SHA-256 `5892adf76e2ea53f26688d5214f8542421e5eebe3a94baa0bfdec76a85389f3a`; v2/v3 signatures verified. Final build: 32 unit/render tests passed; release lint: 0 errors, 68 warnings and 9 hints. Eight localization tests passed.
+
+The 0.3.7 review APK completed 175 physical Fire captures: 19 locales × 7 screens, plus English, German and Arabic in portrait and at 200% text size. See `artifacts/reviewer-captures-0.3.7/manifest.json` and `artifacts/Possessory-0.3.7-localization-device-handoff.zip`. The ZIP identifies the separately distributed review APK by digest. Actual native receipt extraction on the Fire was checked against a synthetic receipt. The layout captures are not store marketing exports.
+
 2 November 2026: not submitted. The signed artifact from 0.3.6 is an English-only candidate and must not be uploaded as a localized release.
 
 - The Amazon release build and lint completed successfully. Lint: 0 errors, 41 warnings and 9 hints. Standalone unit/render suite: 32 tests, 0 failures and 0 errors.

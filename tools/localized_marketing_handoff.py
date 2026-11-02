@@ -19,6 +19,7 @@ def main():
     p.add_argument('--apk',type=Path,required=True)
     p.add_argument('--test-apk',type=Path,required=True)
     p.add_argument('--approved',action='store_true')
+    p.add_argument('--locale',help='Export a single complete locale while the remaining captures run')
     a=p.parse_args()
     assert all(c.isdigit() or c=='.' for c in a.version)
     status=json.loads((ROOT/'localization/status.json').read_text(encoding='utf-8'))
@@ -31,7 +32,8 @@ def main():
         'approved':a.approved,'approval_scope':'Marketing assets only','uploaded':False,
         'limits':['Sandbox entitlement; not LAT certification.','Fictional English demo records are preserved as user-entered data.','The receipt image is synthetic; this does not certify real receipt accuracy.','Fire has no speech recognizer; the actual typed fallback is shown.'],
         'locales':{}}
-    for locale in status:
+    if a.locale: assert a.locale in status
+    for locale in ([a.locale] if a.locale else status):
         captures=a.captures/locale
         evidence=json.loads((captures/'evidence.json').read_text(encoding='utf-8'))
         assert evidence['locale']==locale and evidence['screens']==8
@@ -54,8 +56,10 @@ def main():
             exports.append({'file':path.name,'sha256':sha(path)})
         copy=ROOT/'localization/generated'/('values-b+'+locale.replace('-','+'))/'store.json'
         provenance['locales'][locale]={'captures':manifest,'exports':exports,'store_copy_sha256':sha(copy),'evidence':evidence}
+    if a.locale: output=output/a.locale
     (output/'manifest.json').write_text(json.dumps(provenance,indent=2)+'\n',encoding='utf-8',newline='\n')
     archive=ROOT/'artifacts'/f'Possessory-{a.version}-152-localized-marketing-{"APPROVED" if a.approved else "DRAFT"}.zip'
+    if a.locale: archive=ROOT/'artifacts'/f'Possessory-{a.version}-{a.locale}-eight-marketing.zip'
     with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
         for path in sorted(output.rglob('*')):
             if path.is_file():z.write(path,path.relative_to(output).as_posix())

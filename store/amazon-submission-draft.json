@@ -1,5 +1,5 @@
 {
-  "status": "localized_candidate_in_verification_not_publicly_submitted",
+  "status": "amazon_ready_to_submit_awaiting_live_billing_check",
   "app": {
     "internal_title": "Possessory",
     "package_name": "app.possessory",
@@ -103,10 +103,8 @@
       "promotional banner"
     ],
     "remaining_required": [
-      "Finish and verify storefront galleries",
-      "Confirm purchase-data questionnaire and final testing instructions",
-      "Owner export declaration",
-      "Exercise Amazon-distributed purchase and restore; promote production entitlement when ready"
+      "Complete Amazon-distributed test purchase and restore on the Fire",
+      "Promote the Premium entitlement for production and verify public submission"
     ],
     "uploaded_apk": "Possessory-amazon-0.3.7-localized-release-signed.apk",
     "uploaded_screenshots": 8,
@@ -122,21 +120,21 @@
     "candidate_screenshots": "artifacts/marketing-0.3.7-localized",
     "candidate_screenshot_count": 8,
     "connection_blocker": null,
-    "candidate_screenshot_status": "UK gallery verified: eight new images and no inherited screenshots. Other gallery uploads require verification.",
+    "candidate_screenshot_status": "All 19 locale packs exported, eight images each. All 10 applicable Amazon gallery locales replaced and verified.",
     "candidate_localization_status": "19 catalogues selected for production with owner waiver and technical checks"
   },
   "privacy_questionnaire_draft": "store/privacy-questionnaire-draft.json",
   "localization_release_policy": "localization/release-policy.json",
   "readiness_report": "docs/READINESS-0.3.7.md",
   "engineering_work_remaining": [
-    "Finish current localized marketing exports",
-    "Verify Amazon-distributed billing via private LAT"
+    "Verify Amazon-distributed purchase and restore"
   ],
   "live_app_testing": {
     "release_name": "Possessory 0.3.7 billing validation",
     "uploaded_version_code": 11,
     "scope": "Localized signed candidate; only the approved Fire account selected",
     "iap": "Approved TEST only",
-    "app_test_submitted": false
+    "app_test_submitted": true,
+    "console_status": "Test in-progress; single invitation delivered"
   }
 }

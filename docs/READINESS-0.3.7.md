@@ -8,6 +8,8 @@ The review build produced 175 physical Fire layout captures, including portrait 
 
 The Fire App Tester build restored and verified a Premium licence on 0.3.7. Earlier sandbox purchase, restore and revocation coverage is documented in BILLING-0.3.4.md. An Amazon-distributed purchase and restore on this candidate are still unverified.
 
-Amazon console, 2 November: both public and private-test drafts contain signed code 11. Fourteen storefront descriptions were completed. The £4.99 one-time entitlement is approved for TEST only. The private draft has one tester group containing only the approved Fire account. Draft preparation does not send an invitation.
+Amazon console, 3 November: the private test is in progress and the single invitation was delivered. The public draft contains signed code 11 and is Ready to Submit. The publisher authorized the public export declaration. The reviewer instructions and purchase-data questionnaire have been updated. Fourteen storefront descriptions and all ten applicable Amazon screenshot galleries are complete.
 
-Release gates: verify the finished localized galleries, obtain the publisher's Amazon export declaration, submit the private test, verify Amazon-distributed purchase and restore, and confirm the production entitlement and final public submission. Neither draft has been submitted.
+The complete local marketing archive is artifacts/Possessory-0.3.7-152-localized-marketing-APPROVED.zip. Its manifest gives file hashes and records the physical Fire capture evidence for eight images in each of 19 locales.
+
+The one-time £4.99 entitlement was approved for test. The Amazon-distributed purchase and restore still require the tester account to complete two-step verification and install the private test. Production entitlement promotion and public submission remain pending.

@@ -1,5 +1,5 @@
 {
-  "status": "code_11_live_billing_blocked_code_12_in_verification",
+  "status": "public_submission_successful_2026-11-03_awaiting_amazon_review",
   "app": {
     "internal_title": "Possessory",
     "package_name": "app.possessory",
@@ -35,7 +35,7 @@
   },
   "pricing": {
     "app_download": "Free",
-    "iap_status": "approved_test_only_not_live",
+    "iap_status": "promoted_approved",
     "iap_draft_name": "Possessory Premium",
     "iap_draft_type": "Entitlement / one-time purchase",
     "iap_proposed_base_price": {
@@ -102,10 +102,7 @@
       "512px and 114px icons",
       "promotional banner"
     ],
-    "remaining_required": [
-      "Complete Amazon-distributed test purchase and restore on the Fire",
-      "Promote the Premium entitlement for production and verify public submission"
-    ],
+    "remaining_required": [],
     "uploaded_apk": "Possessory-amazon-0.3.7-localized-v12-signed.apk",
     "uploaded_screenshots": 8,
     "target_devices": {
@@ -126,15 +123,13 @@
   "privacy_questionnaire_draft": "store/privacy-questionnaire-draft.json",
   "localization_release_policy": "localization/release-policy.json",
   "readiness_report": "docs/READINESS-0.3.7.md",
-  "engineering_work_remaining": [
-    "Verify Amazon-distributed purchase and restore"
-  ],
+  "engineering_work_remaining": [],
   "live_app_testing": {
     "release_name": "Possessory 0.3.7 billing fix (12)",
     "uploaded_version_code": 12,
     "scope": "Localized signed candidate; only the approved Fire account selected",
     "iap": "Approved TEST only",
     "app_test_submitted": true,
-    "console_status": "Test submitted for code 12; previous delivered code 11 failed production SDK authentication"
+    "console_status": "Test in-progress. Code 12 installed by Amazon on Fire. Purchase completed and Premium verified. After restart, manual restore retrieved purchase updates and Premium was verified again."
   }
 }

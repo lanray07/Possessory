@@ -1,10 +1,10 @@
 {
-  "status": "amazon_ready_to_submit_awaiting_live_billing_check",
+  "status": "code_11_live_billing_blocked_code_12_in_verification",
   "app": {
     "internal_title": "Possessory",
     "package_name": "app.possessory",
     "version_name": "0.3.7",
-    "version_code": 11,
+    "version_code": 12,
     "type": "Android / Fire OS",
     "category_preference": "Productivity",
     "operator": "O. Bankole",
@@ -106,7 +106,7 @@
       "Complete Amazon-distributed test purchase and restore on the Fire",
       "Promote the Premium entitlement for production and verify public submission"
     ],
-    "uploaded_apk": "Possessory-amazon-0.3.7-localized-release-signed.apk",
+    "uploaded_apk": "Possessory-amazon-0.3.7-localized-v12-signed.apk",
     "uploaded_screenshots": 8,
     "target_devices": {
       "Fire_tablets": 12,
@@ -114,8 +114,8 @@
       "Automotive": 0
     },
     "last_observed_version_name": "0.3.7",
-    "last_observed_version_code": 11,
-    "candidate_apk": "Possessory-amazon-0.3.7-localized-release-signed.apk",
+    "last_observed_version_code": 12,
+    "candidate_apk": "Possessory-amazon-0.3.7-localized-v12-signed.apk",
     "candidate_uploaded": true,
     "candidate_screenshots": "artifacts/marketing-0.3.7-localized",
     "candidate_screenshot_count": 8,
@@ -130,11 +130,11 @@
     "Verify Amazon-distributed purchase and restore"
   ],
   "live_app_testing": {
-    "release_name": "Possessory 0.3.7 billing validation",
-    "uploaded_version_code": 11,
+    "release_name": "Possessory 0.3.7 billing fix (12)",
+    "uploaded_version_code": 12,
     "scope": "Localized signed candidate; only the approved Fire account selected",
     "iap": "Approved TEST only",
     "app_test_submitted": true,
-    "console_status": "Test in-progress; single invitation delivered"
+    "console_status": "Test submitted for code 12; previous delivered code 11 failed production SDK authentication"
   }
 }

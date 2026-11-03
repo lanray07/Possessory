@@ -13,3 +13,7 @@ Amazon console, 3 November: the private test is in progress and the single invit
 The complete local marketing archive is artifacts/Possessory-0.3.7-152-localized-marketing-APPROVED.zip. Its manifest gives file hashes and records the physical Fire capture evidence for eight images in each of 19 locales.
 
 The one-time £4.99 entitlement was approved for test. The Amazon-distributed purchase and restore still require the tester account to complete two-step verification and install the private test. Production entitlement promotion and public submission remain pending.
+
+On 3 November the Fire installed code 11 from com.amazon.venezia. Amazon's production SDK reported CERT_NOT_FOUND for AppstoreAuthenticationKey.pem. Premium purchase was disabled and restore did not grant an entitlement. Code 11 must not be submitted. The previous inventory backup was restored successfully. Code 12 adds Possessory's Amazon-issued SDK public key to the Amazon flavor. Purchase and restore must pass on the Amazon-delivered replacement before public submission.
+
+Amazon accepted the signed code 12 APK in the public draft and confirmed Test submitted for its private test. Signed candidate SHA-256 is f20c9eb0f3c19501901437b6a0b7790a30d8da5e5c3554acbfc7d2ebe3146bb8. Both APK v2 and v3 signatures verified. The 32 unit/render tests passed. No paid purchase took place. The record backup remains in the Fire Downloads folder.

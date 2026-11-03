@@ -2,6 +2,7 @@
 *.xml text eol=lf
 *.json text eol=lf
 *.properties text eol=lf
+app/src/amazon/assets/AppstoreAuthenticationKey.pem -text
 artifacts/billing-marketing-checks-0.3.2/*.txt -text
 artifacts/billing-checks-0.3.4/*.txt -text
 artifacts/readiness-checks-0.3.6/* -text -whitespace

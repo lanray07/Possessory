@@ -20,7 +20,7 @@ android {
         applicationId = "app.possessory"
         minSdk = 26
         targetSdk = 36
-        versionCode = 11
+        versionCode = 12
         versionName = "0.3.7"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField("String", "AMAZON_SKU", "\"" + providers.environmentVariable("POSSESSORY_AMAZON_SKU").getOrElse("possessory.premium.lifetime").replace("\"", "\\\"") + "\"")
